@@ -22,15 +22,15 @@
 
 👩‍🏫 As a Physics teacher, I have 5 years of experience and, although I love my job and to inspire my students to build their knowledge everyday, I also try to conquer new challenges and continue learning and growing 🙂
 
-⭐ Some of the accomplishments my students were able to get so far:
-🥇 1st place in the "Scientific Rally" (2023)
-🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2023)
-🏅 2 Honorific mentions in the "Olimpiada Morelense de Física" (2023)
-🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2019)
+⭐ Some of the accomplishments my students were able to get so far:<br>
+🥇 1st place in the "Scientific Rally" (2023)<br>
+🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2023)<br>
+🏅 2 Honorific mentions in the "Olimpiada Morelense de Física" (2023)<br>
+🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2019)<br>
 
-👀 Some of my other interests and hobbies:
-🔭 amateur astronomy
-📷 photography
-🎵 music, especially piano, traverse flute and guitar
-🌱 gardening
-🎮 videogames
+👀 Some of my other interests and hobbies:<br>
+🔭 amateur astronomy<br>
+📷 photography<br>
+🎵 music, especially piano, traverse flute and guitar<br>
+🌱 gardening<br>
+🎮 videogames<br>
