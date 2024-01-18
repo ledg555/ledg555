@@ -1,16 +1,36 @@
-### Hi there 👋
+### 😀 Hi, there!
+👦 I'm Luis, student of Software Engineering and frontend trainee, and also a physics teacher.
+👩‍💻 Currently, I'm working hard learning core concepts and tecnologies to get my first job as a software developer 😁, highschool STEM teacher, and amateur astronomer, musician and photographer.
 
-<!--
-**ledg555/ledg555** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🟢 Some tools that I feel already comfortably familiar with are:
+* HTML (and Markdown)
+* CSS
+* JavaScript
+* Visual Studio Code
+* Linux terminal
 
-Here are some ideas to get you started:
+🟡 Some things that I'm still learning to incorporate more deeply into my projects and skills are:
+* Git
+* TypeScript
+* OOP and functional programming
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔴 And the things that I'll soon incorporate into my learning trajectory:
+* React
+* Tailwind CSS
+* Zustand
+* Next / Astro
+
+👩‍🏫 As a Physics teacher, I have 5 years of experience and, although I love my job and to inspire my students to build their knowledge everyday, I also try to conquer new challenges and continue learning and growing 🙂
+
+⭐ Some of the accomplishments my students were able to get so far:
+🥇 1st place in the "Scientific Rally" (2023)
+🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2023)
+🏅 2 Honorific mentions in the "Olimpiada Morelense de Física" (2023)
+🥇 1st place in the state contest to select the delegation representatives for the "Olimpiada Mexicana de Física" (2019)
+
+👀 Some of my other interests and hobbies:
+🔭 amateur astronomy
+📷 photography
+🎵 music, especially piano, traverse flute and guitar
+🌱 gardening
+🎮 videogames
