@@ -13,9 +13,9 @@
 * Git
 * TypeScript
 * OOP and functional programming
+* React
 
 ### 🔴 I'll soon incorporate also these into my learning trajectory!
-* React
 * Tailwind CSS
 * Zustand
 * Next / Astro
