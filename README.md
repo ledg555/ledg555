@@ -1,6 +1,6 @@
 ## 😀 Hi, there!
 👦 I'm Luis, student of Software Engineering and frontend trainee, and also a highschool Physics teacher.<br>
-👩‍💻 Currently, I'm working hard learning core concepts and tecnologies to get my first job as a frontend web developer 😁
+👩‍💻 Currently, I'm working very hard learning core concepts and tecnologies to get my first job as a frontend web developer 😁
 
 ### 🟢 Tools that I feel already comfortably familiar with:
 * HTML & Markdown
@@ -12,15 +12,14 @@
 ### 🟡 Things that I'm still learning to incorporate more deeply into my projects and skills:
 * Git
 * TypeScript
-* OOP and functional programming
 * React
+* Tailwind & Shadcn
 
 ### 🔴 I'll soon incorporate also these into my learning trajectory!
-* Tailwind CSS & Shadcn
 * Zustand
 * Next & Astro
 * Docker
-* SQL
+* PostgreSQL
 
 ### 👩‍🏫 As a Physics teacher...
 Having studied a Bachelor's degree in Science, I now have 5 years of experience teaching at different levels and, although I love my job and to inspire my students to build up their knowledge everyday, I also try to conquer new challenges and continue learning and growing myself. And basically that's why you're reading this 🙂💁‍♀️
