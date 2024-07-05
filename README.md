@@ -25,6 +25,8 @@
 Having studied a Bachelor's degree in Science, I now have 5 years of experience teaching at different levels and, although I love my job and to inspire my students to build up their knowledge everyday, I also try to conquer new challenges and continue learning and growing myself. And basically that's why you're reading this 🙂💁‍♀️
 
 ### ⭐ Some accomplishments my students have gotten so far:
+🏅 Honorific mention in the "Mexican Physics Contest" national stage (2024)<br>
+🥇 1st and 3rd place in the contest to select the Morelos state delegation for the "Mexican Physics Contest" national stage (2024)<br>
 🥉 3rd place and 2 honorific mentions in the "Morelos state Physics Olympiad" (2024)<br>
 🥇 1st and 3rd place, and a honorific mention in the state stage of the "Mexican Physics Contest" (2024)<br>
 🏅 10th place in the national stage of the "International Science Contest" organized by Tecnológico de Monterrey (2024)<br>
