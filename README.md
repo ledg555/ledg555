@@ -2,7 +2,7 @@
 👦 I'm Luis, student of Software Engineering and frontend trainee, and also a highschool Physics teacher.<br>
 👩‍💻 Currently, I'm working very hard learning core concepts and tecnologies to get my first job as a frontend web developer 😁
 
-### 🟢 Tools that I feel already comfortably familiar with:
+### 🟢 Tools that I feel already comfortable to use:
 * HTML & Markdown
 * CSS
 * JavaScript
@@ -14,10 +14,11 @@
 * TypeScript
 * React
 * Tailwind & Shadcn
+* Next
 
 ### 🔴 I'll soon incorporate also these into my learning trajectory!
 * Zustand
-* Next & Astro
+* Astro
 * Docker
 * PostgreSQL
 
