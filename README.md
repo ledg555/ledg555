@@ -1,6 +1,6 @@
-## 😀 Hi, there!
-👦 I'm Luis, student of Software Engineering and frontend trainee, and also a highschool Physics teacher.<br>
-👩‍💻 Currently, I'm working very hard learning core concepts and tecnologies to get my first job as a frontend web developer 😁
+# 😀 Hi, there!
+👦 I'm Luis, student of Software Engineering and frontend developer, and also a former highschool Physics teacher.<br>
+👩‍💻 Currently, I'm working very hard learning core concepts and technologies to get my first job as a frontend web developer 😁
 
 ### 🟢 Tools that I feel already comfortable to use:
 * HTML & Markdown
@@ -8,9 +8,9 @@
 * JavaScript
 * Visual Studio Code
 * Linux terminal
+* Git
 
 ### 🟡 Things that I'm still learning to incorporate more deeply into my projects and skills:
-* Git
 * TypeScript
 * React
 * Tailwind & Shadcn
