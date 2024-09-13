@@ -30,7 +30,7 @@ Having studied a Bachelor's degree in Science, I now have 5 years of experience 
 🥇 1st and 3rd place in the contest to select the Morelos state delegation for the "Mexican Physics Contest" national stage (2024)<br>
 🥉 3rd place and 2 honorific mentions in the "Morelos state Physics Olympiad" (2024)<br>
 🥇 1st and 3rd place, and a honorific mention in the state stage of the "Mexican Physics Contest" (2024)<br>
-🏅 10th place in the national stage of the "International Science Contest" organized by Tecnológico de Monterrey (2024)<br>
+🏅 10th place in the international stage of the "International Science Contest" organized by Tecnológico de Monterrey (2024)<br>
 🏅 5th place in the "Physics Rally" organized by the UPAEP (2024)<br>
 🥇 1st place in the Morelos state "Scientific Rally" (2023)<br>
 🥇 1st place in the contest to select the Morelos state delegation for the "Mexican Physics Olympiad" (2023)<br>
