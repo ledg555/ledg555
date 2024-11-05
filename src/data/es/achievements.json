@@ -1,0 +1,48 @@
+[
+  {
+    "company": "EF SET",
+    "src": "https://cert.efset.org/T75tPh",
+    "credentials": ["C1 (Advanced) English Certification"],
+    "imgUrl": ""
+  },
+  {
+    "company": "Microsoft Learn",
+    "src": "https://learn.microsoft.com/en-us/users/ledg555/",
+    "credentials": [
+      "Crea tus primeras aplicaciones web con React",
+      "Compila aplicaciones de JavaScript con TypeScript",
+      "Introducción al control de versiones con Git"
+    ],
+    "imgUrl": ""
+  },
+  {
+    "company": "DevTalles",
+    "src": "https://cursos.devtalles.com/",
+    "credentials": [
+      "TanStack Query: un poderoso gestor de estado asíncrono",
+      "Shadcn/ui: componentes accesibles y personalizables",
+      "Visual Studio Code: mejora tu habilidad para codificar"
+    ],
+    "imgUrl": ""
+  },
+  {
+    "company": "EDteam",
+    "src": "https://www.dropbox.com/scl/fo/tekyqvhangyecny1dfq6j/AFxHbJlegYyHRhQrdjxzQh4?rlkey=p4gxahcffltuq0qv9fkw57gw0&e=1&st=ogme8e8r&dl=0",
+    "credentials": [
+      "Introducción a las API REST",
+      "Introducción a la programación orientada a objetos",
+      "Introducción a la terminal Linux",
+      "Markdown desde cero"
+    ],
+    "imgUrl": ""
+  },
+  {
+    "company": "Awards in physics olympiads and rallies",
+    "src": "",
+    "credentials": [
+      "By category: 5 first places, 3 third places, and 7 honorable mentions",
+      "By region: 12 state, 2 national, and 1 international"
+    ],
+    "imgUrl": ""
+  }
+]

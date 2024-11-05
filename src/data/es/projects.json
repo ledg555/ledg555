@@ -1,0 +1,26 @@
+[
+  {
+    "title": "",
+    "description": "",
+    "website": "",
+    "imgUrl": ""
+  },
+  {
+    "title": "Pawsome Friends",
+    "description": "Sitio web de adopción de mascotas desamparadas. Incluye página de inicio, catálogo de mascotas con filtros de búsqueda y panel de control para refugios.",
+    "website": "https://pawsome-friends.netlify.app",
+    "imgUrl": ""
+  },
+  {
+    "title": "TicTapToe",
+    "description": "Juego de tres en línea desarrollado desde cero, con diseño neumórfico, guardado automático del tablero de puntos e interruptores de forma y de jugador inicial.",
+    "website": "https://tictaptoe.netlify.app",
+    "imgUrl": ""
+  },
+  {
+    "title": "",
+    "description": "",
+    "website": "",
+    "imgUrl": ""
+  }
+]
