@@ -1,0 +1,17 @@
+[
+  {
+    "key": "about",
+    "label": "Más sobre mí",
+    "url": ""
+  },
+  {
+    "key": "projects",
+    "label": "Todos mis proyectos",
+    "url": ""
+  },
+  {
+    "key": "experience",
+    "label": "Toda mi experiencia",
+    "url": ""
+  }
+]

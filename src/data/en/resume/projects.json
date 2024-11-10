@@ -1,0 +1,26 @@
+[
+  {
+    "title": "",
+    "description": "",
+    "website": "",
+    "imgUrl": ""
+  },
+  {
+    "title": "Pawsome Friends",
+    "description": "Website for adoption of abandoned pets. Includes a Home page, a pets catalog with search filters, and an admin control panel for pet shelters.",
+    "website": "https://pawsome-friends.netlify.app",
+    "imgUrl": ""
+  },
+  {
+    "title": "TicTapToe",
+    "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar autosave, shape and starting player switches, as well as local storage of scores.",
+    "website": "https://tictaptoe.netlify.app",
+    "imgUrl": ""
+  },
+  {
+    "title": "",
+    "description": "",
+    "website": "",
+    "imgUrl": ""
+  }
+]

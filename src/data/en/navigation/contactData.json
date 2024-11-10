@@ -1,0 +1,32 @@
+[
+  {
+    "key": "resume",
+    "label": "See resume",
+    "toast": false,
+    "url": "Luis_Delgado_en.pdf"
+  },
+  {
+    "key": "email",
+    "label": "Copy email",
+    "toast": "Email copied!",
+    "url": false
+  },
+  {
+    "key": "phone",
+    "label": "Copy phone number",
+    "toast": "Phone copied!",
+    "url": false
+  },
+  {
+    "key": "github",
+    "label": "See GitHub",
+    "toast": false,
+    "url": "https://github.com/ledg555"
+  },
+  {
+    "key": "linkedin",
+    "label": "See LinkedIn",
+    "toast": false,
+    "url": "https://linkedin.com/in/ledg555"
+  }
+]
