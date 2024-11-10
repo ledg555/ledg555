@@ -9,6 +9,13 @@
   @tailwind utilities;
 }
 
+:root {
+  min-height: 100vh;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 /* :root {
   color-scheme: light dark;
