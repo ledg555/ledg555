@@ -1,4 +1,6 @@
 {
+  "title": "Habilidades",
+  "skills": {
   "languages": [
     {
       "name": "HTML",
@@ -47,4 +49,5 @@
       "website": ""
     }
   ]
+}
 }

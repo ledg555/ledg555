@@ -1,4 +1,6 @@
-[
+{
+  "title": "Aptitudes",
+  "aptitudes": [
   "Attention to detail",
   "Self-taught",
   "Empathy",
@@ -6,3 +8,4 @@
   "Mentoring",
   "Analytical thinking"
 ]
+}

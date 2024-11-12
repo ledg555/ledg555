@@ -1,4 +1,22 @@
-[
+{
+  "menuData": [
+    {
+      "key": "about",
+      "label": "Más sobre mí",
+      "url": ""
+    },
+    {
+      "key": "projects",
+      "label": "Todos mis proyectos",
+      "url": ""
+    },
+    {
+      "key": "experience",
+      "label": "Toda mi experiencia",
+      "url": ""
+    }
+  ],
+  "contactData": [
   {
     "key": "resume",
     "label": "Ver currículum",
@@ -30,3 +48,4 @@
     "url": "https://linkedin.com/in/ledg555"
   }
 ]
+}
