@@ -1,4 +1,6 @@
-[
+{
+  "title": "Reconocimientos",
+  "achievements": [
   {
     "company": "EF SET",
     "src": "https://cert.efset.org/T75tPh",
@@ -46,3 +48,4 @@
     "imgUrl": ""
   }
 ]
+}

@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import Router from "./router/Router";
 import "./i18n";
@@ -9,8 +9,10 @@ import "primeicons/primeicons.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <PrimeReactProvider value={{ unstyled: true, pt: Tailwind }}>
-      <Router />
-    </PrimeReactProvider>
+    <Suspense fallback="loading">
+      <PrimeReactProvider value={{ unstyled: true, pt: Tailwind }}>
+        <Router />
+      </PrimeReactProvider>
+    </Suspense>
   </StrictMode>
 );

@@ -1,11 +1,10 @@
 import { Button } from "primereact/button";
 import { Sidebar } from "primereact/sidebar";
-import { SelectButton } from 'primereact/selectbutton';
+import LangSwitch from "./LangSwitch";
 import { useState } from "react";
 
 export default function NavMenu() {
   const [sidebar, setSidebar] = useState(false);
-  const options = ['En', 'Es'];
 
   return (
     <>
@@ -24,11 +23,7 @@ export default function NavMenu() {
           setSidebar(false);
         }}
       >
-        <SelectButton
-          value={"value"}
-          onChange={(e) => setValue(e.value)}
-          options={options}
-        />
+        <LangSwitch/>
       </Sidebar>
     </>
   );

@@ -1,22 +1,22 @@
 {
-  "navMenuData": [
-  {
-    "key": "about",
-    "label": "More about me",
-    "url": ""
-  },
-  {
-    "key": "projects",
-    "label": "All projects",
-    "url": ""
-  },
-  {
-    "key": "experience",
-    "label": "All experience",
-    "url": ""
-  }
-],
-"contactData": [
+  "menuData": [
+    {
+      "key": "about",
+      "label": "More about me",
+      "url": ""
+    },
+    {
+      "key": "projects",
+      "label": "All projects",
+      "url": ""
+    },
+    {
+      "key": "experience",
+      "label": "All experience",
+      "url": ""
+    }
+  ],
+  "contactData": [
   {
     "key": "resume",
     "label": "See resume",
@@ -47,5 +47,4 @@
     "toast": false,
     "url": "https://linkedin.com/in/ledg555"
   }
-]  
-}
+]}

@@ -1,4 +1,7 @@
-[
+{
+  "title": "Recent experience",
+  "extendedTitle": "All my experience",
+  "jobs": [
   {
     "key": "nocountry",
     "role": "Frontend Developer",
@@ -39,3 +42,4 @@
     ]
   }
 ]
+}

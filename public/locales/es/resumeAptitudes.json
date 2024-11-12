@@ -1,8 +1,11 @@
-[
-  "Attention to detail",
-  "Self-taught",
-  "Empathy",
-  "Lifelong learning",
-  "Mentoring",
-  "Analytical thinking"
-]
+{
+  "title": "Aptitudes",
+  "aptitudes": [
+    "Atención al detalle",
+    "Autodidacta",
+    "Empatía",
+    "Aprendizaje permanente",
+    "Mentoría",
+    "Pensamiento analítico"
+  ]
+}
