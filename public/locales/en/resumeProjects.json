@@ -3,27 +3,27 @@
   "extendedTitle": "All my projects",
   "projects": [
   {
-    "title": "",
-    "description": "",
+    "title": "SmartStore",
+    "description": "Technology marketplace with shopping cart, payments simulator and registration forms for users and products.",
     "website": "",
-    "imgUrl": ""
+    "imgUrl": "/imgs/projects/Smartstore1.webp"
   },
   {
     "title": "Pawsome Friends",
     "description": "Website for adoption of abandoned pets. Includes a Home page, a pets catalog with search filters, and an admin control panel for pet shelters.",
     "website": "https://pawsome-friends.netlify.app",
-    "imgUrl": ""
+    "imgUrl": "/imgs/projects/Pawsome1.webp"
+  },
+  {
+    "title": "Issue Tracker",
+    "description": "An app to enhance performance of HTTP requests, with caching, server state management and error handling, using Axios and TanStack Query libraries.",
+    "website": "",
+    "imgUrl": "/imgs/projects/Issues1.webp"
   },
   {
     "title": "TicTapToe",
     "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar autosave, shape and starting player switches, as well as local storage of scores.",
     "website": "https://tictaptoe.netlify.app",
-    "imgUrl": ""
-  },
-  {
-    "title": "",
-    "description": "",
-    "website": "",
-    "imgUrl": ""
+    "imgUrl": "/imgs/projects/Tictaptoe1.webp"
   }
 ]}

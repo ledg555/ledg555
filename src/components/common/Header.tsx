@@ -1,6 +1,6 @@
 import { Card } from "primereact/card";
 import { SpeedDial } from "primereact/speeddial";
-import NavMenu from "./ui/NavMenu";
+import NavMenu from "./NavMenu";
 
 const contactItems = [
   {

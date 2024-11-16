@@ -1,53 +1,81 @@
 {
   "title": "Skills",
-  "skills": {
-    "languages": [
-      {
-        "name": "HTML",
-        "src": "",
-        "website": ""
-      },
-      {
-        "name": "CSS",
-        "src": "",
-        "website": ""
-      },
-      {
-        "name": "JavaScript",
-        "src": "",
-        "website": ""
-      },
-      {
-        "name": "TypeScript",
-        "src": "",
-        "website": ""
-      }
-    ],
-    "frontend frameworks": [
-      {
-        "name": "React",
-        "src": "",
-        "website": ""
-      },
-      {
-        "name": "Next",
-        "src": "",
-        "website": ""
-      }
-    ],
-    "backend frameworks": [],
-    "mobile frameworks": [],
-    "UI libraries": [
-      {
-        "name": "Tailwind CSS",
-        "src": "",
-        "website": ""
-      },
-      {
-        "name": "Shadcn",
-        "src": "",
-        "website": ""
-      }
-    ]
-  }
+  "skillSets": [
+    {
+      "type": "Languages",
+      "list": [
+        {
+          "name": "HTML",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        {
+          "name": "CSS",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        {
+          "name": "JavaScript",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        },
+        {
+          "name": "TypeScript",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        }
+      ]
+    },
+    {
+      "type": "Frontend frameworks",
+      "list": [
+        {
+          "name": "React",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        },
+        {
+          "name": "Next",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+        }
+      ]
+    },
+    {
+      "type": "Backend frameworks",
+      "list": []
+    },
+    {
+      "type": "Mobile frameworks",
+      "list": []
+    },
+    {
+      "type": "UI libraries",
+      "list": [
+        {
+          "name": "Tailwind CSS",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        },
+        {
+          "name": "Shadcn",
+          "imgUrl": "https://bestofjs.org/logos/shadcnui.svg"
+        },
+        {
+          "name": "Prime React",
+          "imgUrl": "https://cdn.worldvectorlogo.com/logos/primereact-1.svg"
+        }
+      ]
+    },
+    {
+      "type": "Other tools",
+      "list": [
+        {
+          "name": "Git",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        },
+        {
+          "name": "Docker",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+        },
+        {
+          "name": "Vitest",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg"
+        }
+      ]
+    }
+  ]
 }

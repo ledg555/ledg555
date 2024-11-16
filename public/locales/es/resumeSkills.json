@@ -1,53 +1,81 @@
 {
   "title": "Habilidades",
-  "skills": {
-  "languages": [
+  "skillSets": [
     {
-      "name": "HTML",
-      "src": "",
-      "website": ""
+      "type": "Lenguajes",
+      "list": [
+        {
+          "name": "HTML",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        {
+          "name": "CSS",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        {
+          "name": "JavaScript",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        },
+        {
+          "name": "TypeScript",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        }
+      ]
     },
     {
-      "name": "CSS",
-      "src": "",
-      "website": ""
+      "type": "Frameworks frontend",
+      "list": [
+        {
+          "name": "React",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        },
+        {
+          "name": "Next",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+        }
+      ]
     },
     {
-      "name": "JavaScript",
-      "src": "",
-      "website": ""
+      "type": "Frameworks backend",
+      "list": []
     },
     {
-      "name": "TypeScript",
-      "src": "",
-      "website": ""
-    }
-  ],
-  "frontend frameworks": [
-    {
-      "name": "React",
-      "src": "",
-      "website": ""
+      "type": "Frameworks móvil",
+      "list": []
     },
     {
-      "name": "Next",
-      "src": "",
-      "website": ""
-    }
-  ],
-  "backend frameworks": [],
-  "mobile frameworks": [],
-  "UI libraries": [
-    {
-      "name": "Tailwind CSS",
-      "src": "",
-      "website": ""
+      "type": "Bibliotecas UI",
+      "list": [
+        {
+          "name": "Tailwind CSS",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        },
+        {
+          "name": "Shadcn",
+          "imgUrl": "https://bestofjs.org/logos/shadcnui.svg"
+        },
+        {
+          "name": "Prime React",
+          "imgUrl": "https://cdn.worldvectorlogo.com/logos/primereact-1.svg"
+        }
+      ]
     },
     {
-      "name": "Shadcn",
-      "src": "",
-      "website": ""
+      "type": "Otras herramientas",
+      "list": [
+        {
+          "name": "Git",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        },
+        {
+          "name": "Docker",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+        },
+        {
+          "name": "Vitest",
+          "imgUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg"
+        }
+      ]
     }
   ]
-}
 }
