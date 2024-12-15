@@ -3,9 +3,9 @@ import Header from "../components/common/Header";
 
 export default function RootLayout() {
   return (
-    <>
+    <div className="mx-auto max-w-3xl">
       <Header></Header>
       <Outlet />
-    </>
+    </div>
   );
 }

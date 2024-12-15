@@ -13,8 +13,9 @@
   min-height: 100vh;
   background-image: url("bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* auto 100vh; */
   background-position: center;
+  background-attachment: fixed;
 }
 
 /* :root {
