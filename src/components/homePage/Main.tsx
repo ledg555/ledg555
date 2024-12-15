@@ -2,6 +2,8 @@ import { Accordion, AccordionTab } from "primereact/accordion";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
 import SkillSetCard from "./SkillSetCard";
+import JobCard from "./JobCard";
+import { Job, Project, SkillSet } from "../../types";
 
 export default function Main() {
   const { t } = useTranslation(["resumeAbout", "resumeProjects", "resumeJobs", "resumeSkills"]);
@@ -12,19 +14,23 @@ export default function Main() {
       </AccordionTab>
 
       <AccordionTab header={t("title", { ns: "resumeProjects" })}>
-        {t("projects", { ns: "resumeProjects" }).map((project) => (
+        <div className="grid grid-cols-2 gap-4">
+        {t("projects", { ns: "resumeProjects" }).map((project: Project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
+        </div>
       </AccordionTab>
 
       <AccordionTab header={t("title", { ns: "resumeJobs" })}>
-        {t("projects", { ns: "resumeProjects" }).map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        <div className="grid grid-cols-3 gap-4">
+        {t("jobs", { ns: "resumeJobs" }).map((job: Job) => (
+          <JobCard key={job.key} job={job} />
         ))}
+        </div>
       </AccordionTab>
 
       <AccordionTab header={t("title", { ns: "resumeSkills" })}>
-        {t("skillSets", { ns: "resumeSkills" }).map((skillSet) => (
+        {t("skillSets", { ns: "resumeSkills" }).map((skillSet: SkillSet) => (
           <SkillSetCard key={skillSet.type} skillSet={skillSet} />
         ))}
       </AccordionTab>

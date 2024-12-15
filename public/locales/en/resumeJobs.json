@@ -4,11 +4,12 @@
   "jobs": [
   {
     "key": "nocountry",
-    "role": "Frontend Developer",
+    "role": "Fullstack developer",
     "company": "No Country",
     "date": "2024 - present",
     "location": "Remote",
     "url": "https://www.nocountry.tech",
+    "imgUrl": "/imgs/jobs/6nocountry.webp",
     "description": [
       "In this job simulation I collaborated in two international teams to develop an accessible and responsive pet adoption web app, as well as a marketplace.",
       "I gained experience working fully remote under agile, scrum based methodologies, by using tools like Slack, Trello and GitHub Projects.",
@@ -22,6 +23,7 @@
     "date": "2023 - 2024",
     "location": "Jonacatepec, MX",
     "url": "https://www.elpenon.edu.mx/",
+    "imgUrl": "/imgs/jobs/5penon.webp",
     "description": [
       "ICT teaching assistant and Physics professor, I taught high school students the best practices and modern syntax of the programming languages JavaScript and Python.",
       "I built a conceptual design of 'MathCalc Pro', a web app to help high school students develop confidence in their reasoning and problem solving skills.",
@@ -35,6 +37,7 @@
     "date": "2022 - 2023",
     "location": "Cuernavaca, MX",
     "url": "https://progressum.edu.mx/",
+    "imgUrl": "/imgs/jobs/4progressum.webp",
     "description": [
       "High school professor in the subjects of Physics, Mathematics and ICT.",
       "I developed basic projects with my students using technologies like HTML, CSS, JavaScript, Python and Arduino, as well as the LabPlot data analysis software.",
