@@ -6,28 +6,52 @@
       "title": "SmartStore",
       "description": "Marketplace de productos tecnológicos, con carrito de compras, simulador de pagos y registro de usuarios y productos.",
       "website": "",
-      "imgUrl": "/imgs/projects/Smartstore1.webp",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Smartstore1.webp",
+          "alt": ""
+        }
+      ],
       "technologies": []
     },
     {
       "title": "Pawsome Friends",
       "description": "Sitio web de adopción de mascotas desamparadas. Incluye página de inicio, catálogo de mascotas con filtros de búsqueda y panel de control para refugios.",
       "website": "https://pawsome-friends.netlify.app",
-      "imgUrl": "/imgs/projects/Pawsome1.webp",
-      "technologies": []
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Pawsome1.webp",
+          "alt": ""
+        }
+      ],
+      "technologies": {
+        "title": "Tecnologías",
+        "techs": []
+      }
     },
     {
       "title": "Seguimiento de incidencias",
       "description": "Aplicación para mejorar el rendimiento de las peticiones HTTP mediante el manejo de la caché, el estado del servidor y errores de respuesta, usando las bibliotecas Axios y TanStack Query.",
       "website": "",
-      "imgUrl": "/imgs/projects/Issues1.webp",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Issues1.webp",
+          "alt": ""
+        }
+      ],
       "technologies": []
     },
     {
       "title": "TicTapToe",
       "description": "Juego de tres en línea desarrollado desde cero, con diseño neumórfico, guardado automático del tablero de puntos e interruptores de forma y de jugador inicial.",
       "website": "https://tictaptoe.netlify.app",
-      "imgUrl": "/imgs/projects/Tictaptoe1.webp",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Tictaptoe1.webp",
+          "alt": ""
+        }
+      ],
       "technologies": []
     }
-  ]}
+  ]
+}

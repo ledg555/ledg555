@@ -19,7 +19,7 @@ export default function JobModal({
     <Dialog
       draggable={false}
       blockScroll={true}
-      header={<JobHeaderModal jobHeader={job} />}
+      header={<JobModalHeader jobHeader={job} />}
       visible={visible}
       onHide={onHide}
       dismissableMask={true}
@@ -29,11 +29,11 @@ export default function JobModal({
   );
 }
 
-interface JobHeaderModalProps {
+interface JobModalHeader {
   jobHeader: Omit<Job, "key" | "description">;
 }
 
-function JobHeaderModal({ jobHeader }: JobHeaderModalProps) {
+function JobModalHeader({ jobHeader }: JobModalHeader) {
   return (
     <>
       <h3>
