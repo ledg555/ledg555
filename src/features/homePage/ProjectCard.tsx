@@ -1,43 +1,49 @@
 import { Card } from "primereact/card";
+import { Image } from "primereact/image";
 import { Project } from "../projects/projectTypes";
-import ProjectModal from "../projects/ProjectModal";
-import { useState } from "react";
+import { ImageInterface } from "../../types/imageType";
+import { Galleria } from "primereact/galleria";
 
 interface ProjectCardProps {
   project: Project;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const [visible, setVisible] = useState(false);
   return (
     <>
       <Card
-        onClick={() => setVisible(true)}
         title={project.title}
         header={
-          <ProjectCardHeader alt={project.title} imgUrl={project.images[0].imgUrl} />
+          <ProjectCardHeader
+            images={project.images}
+          />
         }
         className="bg-yellow-100 rounded-3xl"
       >
         <p>{project.description}</p>
       </Card>
-      <ProjectModal
-        project={project}
-        visible={visible}
-        onHide={() => {
-          if (!visible) return;
-          setVisible(false);
-        }}
-      />
     </>
   );
 }
 
-function ProjectCardHeader({ alt, imgUrl }: ProjectCardHeaderProps) {
-  return <img src={imgUrl} alt={alt} />;
+function ProjectCardHeader({ images }: ProjectCardHeaderProps) {
+  return (<Galleria
+        value={[1,2,3].map((_n) => images[0])}
+        item={projectModalGalleriaImage}
+        numVisible={5}
+        circular
+        style={{ maxWidth: "640px" }}
+        showItemNavigators
+        showItemNavigatorsOnHover
+        showIndicators
+        showThumbnails={false}
+      />);
+}
+
+function projectModalGalleriaImage(image: ImageInterface) {
+  return <Image src={image.imgUrl} alt={image.alt} /* width="250" */ preview />;
 }
 
 interface ProjectCardHeaderProps {
-  alt: string;
-  imgUrl: string;
+  images: ImageInterface[],
 }

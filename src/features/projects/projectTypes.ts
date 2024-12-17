@@ -1,4 +1,5 @@
 import { Skill } from "../skills/skillTypes";
+import {Image} from "../../types/imageType";
 
 export interface Project {
   title: string;
@@ -11,9 +12,4 @@ export interface Project {
 interface Technologies {
   title: string;
   techs: Skill[];
-}
-
-interface Image {
-  imgUrl: string;
-  alt: string;
 }
