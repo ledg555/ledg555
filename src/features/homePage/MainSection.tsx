@@ -1,8 +1,8 @@
 import { Accordion, AccordionTab } from "primereact/accordion";
-import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
-import SkillSetCard from "./SkillSetCard";
 import JobCard from "./JobCard";
+import SkillSetCard from "./SkillSetCard";
+import { useTranslation } from "react-i18next";
 import { Project } from "../projects/projectTypes";
 import { Job } from "../jobs/jobsTypes";
 import { SkillSet } from "../skills/skillTypes";

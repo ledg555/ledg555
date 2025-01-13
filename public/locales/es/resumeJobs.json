@@ -2,47 +2,47 @@
   "title": "Experiencia reciente",
   "extendedTitle": "Toda mi experiencia",
   "jobs": [
-  {
-    "key": "nocountry",
-    "role": "Desarrollador fullstack",
-    "company": "No Country",
-    "date": "2024 - presente",
-    "location": "Remoto",
-    "url": "https://www.nocountry.tech",
-    "imgUrl": "/imgs/jobs/6nocountry.webp",
-    "description": [
-      "Colaboré con dos equipos internacionales para desarrollar una aplicación de adopción de mascotas y un marketplace de tecnología, con especial atención en la accesibilidad y el diseño responsivo.",
-      "Obtuve experiencia trabajando de forma remota bajo metodologías ágiles basadas en scrum, utilizando herramientas como Slack, Trello y GitHub Projects.",
-      "Contribuí a la maquetación de las aplicaciones mediante bibliotecas UI como Shadcn y Tailwind CSS, y mejoré el manejo de estado y las peticiones con herramientas como TanStack Query y Zustand."
-    ]
-  },
-  {
-    "key": "penon",
-    "role": "Profesor STEM",
-    "company": "Colegio El Peñón",
-    "date": "2023 - 2024",
-    "location": "Jonacatepec, MX",
-    "url": "https://www.elpenon.edu.mx/",
-    "imgUrl": "/imgs/jobs/5penon.webp",
-    "description": [
-      "Profesor auxiliar de Informática y titular de Física, instruí a alumnos de bachillerato en los lenguajes de Python y JavaScript con buenas prácticas y sintaxis moderna.",
-      "Desarrollé el diseño conceptual de “MathCalc Pro”, una aplicación para ayudar a estudiantes a mejorar la confianza en sus habilidades matemáticas.",
-      "Logré que mis estudiantes obtuvieran 13 reconocimientos en concursos y olimpiadas de ciencias a nivel estatal, nacional e internacional."
-    ]
-  },
-  {
-    "key": "progressum",
-    "role": "Profesor STEM",
-    "company": "Colegio Universitario Progressum",
-    "date": "2022 - 2023",
-    "location": "Cuernavaca, MX",
-    "url": "https://progressum.edu.mx/",
-    "imgUrl": "/imgs/jobs/4progressum.webp",
-    "description": [
-      "Profesor de las asignaturas de Informática, Matemáticas y Física.",
-      "Desarrollé proyectos básicos con mis estudiantes utilizando tecnologías como HTML, CSS, JavaScript, Python y Arduino, y software de análisis de datos como LabPlot.",
-      "Logré más del 80% de admisión de mis estudiantes en la universidad de su primera elección, así como un reconocimiento en olimpiadas de ciencias a nivel estatal."
-    ]
-  }
-]
+    {
+      "key": "nocountry",
+      "role": "Desarrollador fullstack",
+      "company": "No Country",
+      "date": "2024 - presente",
+      "location": "Remoto",
+      "url": "https://www.nocountry.tech",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Colaboré con equipos internacionales en el desarrollo de aplicaciones web, con especial atención en la accesibilidad y el diseño responsivo.",
+        "Obtuve experiencia trabajando de forma remota y bajo metodologías ágiles basadas en scrum y kanban, utilizando herramientas como Slack, Trello y GitHub Projects.",
+        "Contribuí en la maquetación del frontend mediante bibliotecas como Material UI y Tailwind CSS, en el lado del backend con el apoyo en el diseño de las APIs y bases de datos, y mejoré el manejo de las peticiones http."
+      ]
+    },
+    {
+      "key": "penon",
+      "role": "Profesor STEM",
+      "company": "Colegio El Peñón",
+      "date": "2023 - 2024",
+      "location": "Jonacatepec, MX",
+      "url": "https://www.elpenon.edu.mx/",
+      "imgUrl": "/imgs/jobs/5penon.webp",
+      "description": [
+        "Profesor auxiliar de Informática y titular de Física, instruí a alumnos de bachillerato en los lenguajes de Python y JavaScript con buenas prácticas y sintaxis moderna.",
+        "Desarrollé el diseño conceptual de “MathCalc Pro”, una aplicación para ayudar a estudiantes a mejorar la confianza en sus habilidades matemáticas.",
+        "Logré que mis estudiantes obtuvieran 13 reconocimientos en concursos y olimpiadas de ciencias a nivel estatal, nacional e internacional."
+      ]
+    },
+    {
+      "key": "progressum",
+      "role": "Profesor STEM",
+      "company": "Colegio Universitario Progressum",
+      "date": "2022 - 2023",
+      "location": "Cuernavaca, MX",
+      "url": "https://progressum.edu.mx/",
+      "imgUrl": "/imgs/jobs/4progressum.webp",
+      "description": [
+        "Profesor de las asignaturas de Informática, Matemáticas y Física.",
+        "Desarrollé proyectos básicos con mis estudiantes utilizando tecnologías como HTML, CSS, JavaScript, Python y Arduino, y software de análisis de datos como LabPlot.",
+        "Logré más del 80% de admisión de mis estudiantes en la universidad de su primera elección, así como un reconocimiento en olimpiadas de ciencias a nivel estatal."
+      ]
+    }
+  ]
 }

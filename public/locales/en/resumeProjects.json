@@ -19,7 +19,7 @@
     },
     {
       "title": "Pawsome Friends",
-      "description": "Web app to promote the adoption of abandoned pets. Pet shelters can sign up to manage their registered pets, and any person who wants to adopt has to submit a form providing contact details and related info",
+      "description": "Web app to promote the adoption of abandoned pets. Shelters can sign up to manage their registered pets, and anyone who wants to adopt has to submit a form providing contact details and related info.",
       "website": "https://pawsome-friends.netlify.app",
       "images": [
         {
@@ -31,7 +31,7 @@
     },
     {
       "title": "Issue Tracker",
-      "description": "An app to enhance performance of HTTP requests, with caching, server state management and error handling, using Axios and TanStack Query libraries.",
+      "description": "An app with enhanced performance of HTTP requests using techniques like caching, server state management and error handling.",
       "website": "",
       "images": [
         {
@@ -43,7 +43,7 @@
     },
     {
       "title": "TicTapToe",
-      "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar autosave, shape and starting player switches, as well as local storage of scores.",
+      "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar, autosave, shape and starting player switches, as well as local storage of scores.",
       "website": "https://tictaptoe.netlify.app",
       "images": [
         {

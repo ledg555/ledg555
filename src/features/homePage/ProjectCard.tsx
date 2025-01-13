@@ -1,8 +1,8 @@
 import { Card } from "primereact/card";
 import { Image } from "primereact/image";
+import { Galleria } from "primereact/galleria";
 import { Project } from "../projects/projectTypes";
 import { ImageInterface } from "../../types/imageType";
-import { Galleria } from "primereact/galleria";
 
 interface ProjectCardProps {
   project: Project;

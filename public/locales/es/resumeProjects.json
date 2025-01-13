@@ -16,7 +16,7 @@
     },
     {
       "title": "Pawsome Friends",
-      "description": "Sitio web de adopción de mascotas desamparadas. Incluye página de inicio, catálogo de mascotas con filtros de búsqueda y panel de control para refugios.",
+      "description": "Sitio web que promueve la adopción de mascotas abandonadas. Incluye página de inicio, catálogo de mascotas con filtros de búsqueda y panel de control para refugios.",
       "website": "https://pawsome-friends.netlify.app",
       "images": [
         {
@@ -31,7 +31,7 @@
     },
     {
       "title": "Seguimiento de incidencias",
-      "description": "Aplicación para mejorar el rendimiento de las peticiones HTTP mediante el manejo de la caché, el estado del servidor y errores de respuesta, usando las bibliotecas Axios y TanStack Query.",
+      "description": "Aplicación con mejoras de rendimiento en las peticiones HTTP mediante el manejo de la caché, el estado del servidor y errores de respuesta, usando las bibliotecas Axios y TanStack Query.",
       "website": "",
       "images": [
         {
@@ -43,7 +43,7 @@
     },
     {
       "title": "TicTapToe",
-      "description": "Juego de tres en línea desarrollado desde cero, con diseño neumórfico, guardado automático del tablero de puntos e interruptores de forma y de jugador inicial.",
+      "description": "Juego de tres en línea desarrollado desde cero, con diseño neumórfico, guardado automático del tablero de puntos y conmutadores de forma y de jugador inicial.",
       "website": "https://tictaptoe.netlify.app",
       "images": [
         {
