@@ -1,11 +1,11 @@
 # 👋🏻 Hi, there!
 
-🧑🏻 I'm Luis, former coach of medalists of international science olimpiads, and fullstack developer with 1 year of experience.
+🧑🏻 I'm Luis, former coach of medalists of international science olimpiads, and fullstack developer with strong knowledge of the JavaScript ecosystem.
 
-🧑🏻‍💻 Currently, I'm working very hard learning core concepts and technologies to finally get my first job as a developer.
+🧑🏻‍💻 Currently, I'm working very hard everyday pushing my skills to the limit to grow and become a senior full stack developer as fast as I can.
 
 ## My current stack
-#### Languages:
+### Languages:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
   width="50rem"
   title= "HTML">
@@ -18,27 +18,39 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
   width="50rem"
   title= "TypeScript">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+  width="50rem"
+  title= "SQL"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
   width="50rem"
-  title= "TypeScript">
+  title= "Python">
 
-#### Frameworks:
+### Frameworks:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
   width="50rem"
   title= "React">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
   width="50rem"
   title= "Next">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
+  width="50rem"
+  title= "Nest">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
   width="50rem"
   title= "Express">
 
-#### Databases:
+### Databases:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
   width="50rem"
   title= "PostgreSQL">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+  width="50rem"
+  title= "Mongo">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" 
+    width="50rem"
+  title= "MySQL">
   
-#### UI libraries:
+### UI libraries:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   width="50rem"
   title= "Tailwind">
@@ -52,7 +64,7 @@
   width="50rem"
   title= "Prime React">
 
-#### Other tools:
+### Other tools:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
   width="50rem"
   title= "Visual Studio Code">
@@ -67,15 +79,12 @@
   title= "Vitest">
 
 ## Things I want to learn soon:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" 
+  width="50rem"
+  title= "AWS">
 <img src="https://reactnative.dev/img/header_logo.svg"
   width="50rem"
   title= "React Native">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
-  width="50rem"
-  title= "Nest">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-  width="50rem"
-  title= "Mongo">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
   width="50rem"
   title= "C#">
@@ -87,10 +96,10 @@
   title= "Astro">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
   width="50rem"
-  title= ".NET">
+  title= "Rust">
 
 ## 👩‍🏫 As a Physics teacher...
-Having studied a Bachelor's degree in Science, I completed 5 years of experience teaching at different levels and, although I loved my job and to inspire my students to build up their knowledge everyday, I also have huge life projects that challenged me to start again and continue learning and growing myself. And basically that's why you're reading this 🙂💁‍♀️
+Having studied a Bachelor's degree in Science, I completed 5 years of experience teaching at all levels from elementary shcool to undergraduates and, although I loved my job and to inspire my students to build up their knowledge everyday, I also have huge life projects that challenged me to start again and continue learning and growing myself. And basically that's why you're reading this 🙂💁‍♀️
 
 ## ⭐ Some accomplishments my students got during my teacher career:
 🏅 Honorific mention in the "Mexican Physics Contest" national stage (2024)<br>
@@ -107,6 +116,8 @@ Having studied a Bachelor's degree in Science, I completed 5 years of experience
 ## 👀 Some of my other interests and hobbies:
 🔭 amateur astronomy<br>
 📷 photography<br>
-🎵 music (mainly piano, flute and guitar)<br>
+🎵 music (mainly piano, flute, guitar and singing)<br>
 🌱 gardening<br>
+🏔️ outdoor activities<br>
 🎮 videogames<br>
+🧩 puzzles<br>
