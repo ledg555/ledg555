@@ -2,28 +2,56 @@
   "title": "Featured projects",
   "extendedTitle": "All my projects",
   "projects": [
-  {
-    "title": "SmartStore",
-    "description": "Technology marketplace with shopping cart, payments simulator and registration forms for users and products.",
-    "website": "",
-    "imgUrl": "/imgs/projects/Smartstore1.webp"
-  },
-  {
-    "title": "Pawsome Friends",
-    "description": "Website for adoption of abandoned pets. Includes a Home page, a pets catalog with search filters, and an admin control panel for pet shelters.",
-    "website": "https://pawsome-friends.netlify.app",
-    "imgUrl": "/imgs/projects/Pawsome1.webp"
-  },
-  {
-    "title": "Issue Tracker",
-    "description": "An app to enhance performance of HTTP requests, with caching, server state management and error handling, using Axios and TanStack Query libraries.",
-    "website": "",
-    "imgUrl": "/imgs/projects/Issues1.webp"
-  },
-  {
-    "title": "TicTapToe",
-    "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar autosave, shape and starting player switches, as well as local storage of scores.",
-    "website": "https://tictaptoe.netlify.app",
-    "imgUrl": "/imgs/projects/Tictaptoe1.webp"
-  }
-]}
+    {
+      "title": "SmartStore",
+      "description": "Technology marketplace where any user can sign up either to buy or sell products. Features a products catalog with search filters and shopping cart, a user control panel, and a payments simulator.",
+      "website": "",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Smartstore1.webp",
+          "alt": ""
+        }
+      ],
+      "technologies": {
+        "title": "Technologies",
+        "techs": []
+      }
+    },
+    {
+      "title": "Pawsome Friends",
+      "description": "Web app to promote the adoption of abandoned pets. Shelters can sign up to manage their registered pets, and anyone who wants to adopt has to submit a form providing contact details and related info.",
+      "website": "https://pawsome-friends.netlify.app",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Pawsome1.webp",
+          "alt": ""
+        }
+      ],
+      "technologies": []
+    },
+    {
+      "title": "Issue Tracker",
+      "description": "An app with enhanced performance of HTTP requests using techniques like caching, server state management and error handling.",
+      "website": "",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Issues1.webp",
+          "alt": ""
+        }
+      ],
+      "technologies": []
+    },
+    {
+      "title": "TicTapToe",
+      "description": "Cool looking tic tac toe game developed from scratch, features a neumorphic design, scores bar, autosave, shape and starting player switches, as well as local storage of scores.",
+      "website": "https://tictaptoe.netlify.app",
+      "images": [
+        {
+          "imgUrl": "/imgs/projects/Tictaptoe1.webp",
+          "alt": ""
+        }
+      ],
+      "technologies": []
+    }
+  ]
+}

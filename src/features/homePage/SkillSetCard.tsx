@@ -1,4 +1,5 @@
 import { Card } from "primereact/card";
+import { SkillSet } from "../../types";
 
 export default function SkillSetCard({ skillSet }: SkillSetCardProps) {
   if (skillSet.list.length > 0)
@@ -12,13 +13,5 @@ export default function SkillSetCard({ skillSet }: SkillSetCardProps) {
 }
 
 interface SkillSetCardProps {
-  skillSet: {
-    type: string;
-    list: SkillProps[];
-  };
-}
-
-interface SkillProps {
-  name: string;
-  imgUrl: string;
+  skillSet: SkillSet,
 }

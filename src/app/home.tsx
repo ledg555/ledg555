@@ -1,10 +1,9 @@
-import Main from "../components/homePage/Main";
+import MainSection from "../features/homePage/MainSection";
 
 export default function HomePage() {
-
   return (
     <main className="mt-6 w-full mx-auto">
-      <Main></Main>
+      <MainSection></MainSection>
     </main>
   );
 }

@@ -1,11 +1,13 @@
 import { Accordion, AccordionTab } from "primereact/accordion";
-import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
-import SkillSetCard from "./SkillSetCard";
 import JobCard from "./JobCard";
-import { Job, Project, SkillSet } from "../../types";
+import SkillSetCard from "./SkillSetCard";
+import { useTranslation } from "react-i18next";
+import { Project } from "../projects/projectTypes";
+import { Job } from "../jobs/jobsTypes";
+import { SkillSet } from "../skills/skillTypes";
 
-export default function Main() {
+export default function MainSection() {
   const { t } = useTranslation(["resumeAbout", "resumeProjects", "resumeJobs", "resumeSkills"]);
   return (
     <Accordion className="max-w-full">
