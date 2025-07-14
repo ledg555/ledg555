@@ -21,20 +21,20 @@
 }
 
 @layer tailwind-base {
-  @import 'tailwindcss';
+  @import "tailwindcss";
 }
 
 @layer tailwind-utilities {
 }
 
-:root {
+/* :root {
   min-height: 100vh;
   background-image: url("bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /* auto 100vh; */
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+} */
 
 /* :root {
   color-scheme: light dark;
