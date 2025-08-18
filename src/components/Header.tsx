@@ -1,8 +1,7 @@
 import { Card } from "primereact/card";
 import { SpeedDial } from "primereact/speeddial";
-import NavMenu from "./NavMenu";
 import { useTranslation } from "react-i18next";
-import { BiLogoWhatsapp, BiGitBranch, BiLogoLinkedin} from "react-icons/bi";
+import { BiLogoWhatsapp, BiGitBranch, BiLogoLinkedin } from "react-icons/bi";
 import { HiOutlineEnvelope, HiOutlineDocumentText } from "react-icons/hi2";
 
 const contactItems = [
@@ -40,8 +39,6 @@ export default function Header() {
         direction="down-right"
         className="left-1 top-0"
       />
-      <img src="/Luis Delgado.webp" className="relative w-12 rounded-full mx-auto bottom-8" />
-      <NavMenu></NavMenu>
     </Card>
   );
 }
