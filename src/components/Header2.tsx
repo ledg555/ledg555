@@ -1,29 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Briefcase, Code, Zap } from "lucide-react";
-import ThemeToggle from "../ui/ThemeToggle";
-import useStore from "../../store/useStore";
+import {
+  HiOutlineBolt,
+  HiOutlineComputerDesktop,
+  HiOutlineCpuChip,
+  HiOutlineRocketLaunch,
+} from "react-icons/hi2";
+import ThemeToggle from "./ThemeToggle";
+import useStore from "../store/useStore";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const { isDarkTheme } = useStore();
 
   const navItems = [
-    { to: "/", icon: Home, label: "Command Bridge" },
-    { to: "/projects", icon: Code, label: "Projects Bay" },
-    { to: "/experience", icon: Briefcase, label: "Navigation" },
-    { to: "/skills", icon: Zap, label: "Weapons Bay" },
+    { to: "/", icon: HiOutlineComputerDesktop, label: "Command Bridge" },
+    { to: "/projects", icon: HiOutlineCpuChip, label: "Projects Bay" },
+    { to: "/experience", icon: HiOutlineRocketLaunch, label: "Navigation" },
+    { to: "/skills", icon: HiOutlineBolt, label: "Weapons Bay" },
   ];
 
   return (
     <motion.header
       className={`
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b transition-all duration-300
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b border-gray-100 transition-all duration-300
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
-            : "bg-white/10 border-white/20"
+            : "bg-white/20 border-white/20"
         }
       `}
       initial={{ y: -100 }}
@@ -45,9 +50,14 @@ const Header: React.FC = () => {
               `}
               whileHover={{ scale: 1.1 }}
             >
-              <User className="w-5 h-5 text-white" />
+              <img
+                src="/Luis Delgado.webp"
+                className="rounded-full mx-auto bottom-8"
+              />
             </motion.div>
-            <span className="text-white font-bold text-xl">Portfolio</span>
+            <span className="text-white font-headings font-bold text-xl">
+              Portfolio
+            </span>
           </Link>
 
           {/* Navigation */}
@@ -68,12 +78,11 @@ const Header: React.FC = () => {
                 `}
               >
                 <item.icon size={18} />
-                <span className="text-sm">{item.label}</span>
+                <span className="gruppo-bold">{item.label}</span>
               </Link>
             ))}
           </nav>
 
-          {/* Theme toggle */}
           <ThemeToggle />
         </div>
       </div>
