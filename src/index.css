@@ -67,7 +67,8 @@
   --breakpoint-md: 640px;
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1440px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
 
   --font-headings: "Lexend Zetta", sans-serif;
   --font-text: "Gruppo", sans-serif;
