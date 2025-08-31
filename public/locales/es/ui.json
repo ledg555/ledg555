@@ -1,51 +1,66 @@
 {
-  "menuData": [
+  "navigationData": [
+    {
+      "key": "home",
+      "label": "Puente de Mando",
+      "url": "/",
+      "icon": "HiOutlineComputerDesktop"
+    },
     {
       "key": "about",
-      "label": "Más sobre mí",
-      "url": ""
+      "label": "Sobre mí",
+      "url": "/about",
+      "icon": "HiOutlineUser"
     },
     {
       "key": "projects",
-      "label": "Todos mis proyectos",
-      "url": ""
+      "label": "Archivo de Proyectos",
+      "url": "/projects",
+      "icon": "HiOutlineCpuChip"
     },
     {
       "key": "experience",
-      "label": "Toda mi experiencia",
-      "url": ""
+      "label": "Misiones Pasadas",
+      "url": "/experience",
+      "icon": "HiOutlineRocketLaunch"
+    },
+    {
+      "key": "skills",
+      "label": "Armería",
+      "url": "/skills",
+      "icon": "HiOutlineBolt"
     }
   ],
   "contactData": [
-  {
-    "key": "resume",
-    "label": "Ver currículum",
-    "toast": false,
-    "url": "Luis_Delgado_es.pdf"
-  },
-  {
-    "key": "email",
-    "label": "Copiar email",
-    "toast": "¡Email copiado!",
-    "url": false
-  },
-  {
-    "key": "phone",
-    "label": "Copiar teléfono",
-    "toast": "¡Teléfono copiado!",
-    "url": false
-  },
-  {
-    "key": "github",
-    "label": "Ver GitHub",
-    "toast": false,
-    "url": "https://github.com/ledg555"
-  },
-  {
-    "key": "linkedin",
-    "label": "Ver LinkedIn",
-    "toast": false,
-    "url": "https://linkedin.com/in/ledg555"
-  }
-]
+    {
+      "key": "resume",
+      "label": "Ver currículum",
+      "toast": false,
+      "url": "Luis_Delgado_es.pdf"
+    },
+    {
+      "key": "email",
+      "label": "Copiar email",
+      "toast": "¡Email copiado!",
+      "url": false
+    },
+    {
+      "key": "phone",
+      "label": "Copiar teléfono",
+      "toast": "¡Teléfono copiado!",
+      "url": false
+    },
+    {
+      "key": "github",
+      "label": "Ver GitHub",
+      "toast": false,
+      "url": "https://github.com/ledg555"
+    },
+    {
+      "key": "linkedin",
+      "label": "Ver LinkedIn",
+      "toast": false,
+      "url": "https://linkedin.com/in/ledg555"
+    }
+  ]
 }
