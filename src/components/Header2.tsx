@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi2";
 import ThemeToggle from "./ThemeToggle";
 import useStore from "../store/useStore";
+import LangSwitch from "./LangSwitch";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b border-gray-100 transition-all duration-300
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b border-gray-100 transition-all duration-300 px-4 py-4
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -59,7 +60,6 @@ const Header: React.FC = () => {
               Portfolio
             </span>
           </Link>
-
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
@@ -82,8 +82,8 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
-
           <ThemeToggle />
+          <LangSwitch />
         </div>
       </div>
     </motion.header>
