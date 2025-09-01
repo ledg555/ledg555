@@ -8,31 +8,31 @@ import { Job } from "../jobs/jobsTypes";
 import { SkillSet } from "../skills/skillTypes";
 
 export default function MainSection() {
-  const { t } = useTranslation(["resumeAbout", "resumeProjects", "resumeJobs", "resumeSkills"]);
+  const { t } = useTranslation(["about", "projects", "jobs", "skills"]);
   return (
     <Accordion className="max-w-full">
-      <AccordionTab header={t("title", { ns: "resumeAbout" })}>
-        <p>{t("shortDescription", { ns: "resumeAbout" })}</p>
+      <AccordionTab header={t("title", { ns: "about" })}>
+        <p>{t("shortDescription", { ns: "about" })}</p>
       </AccordionTab>
 
-      <AccordionTab header={t("title", { ns: "resumeProjects" })}>
+      <AccordionTab header={t("title", { ns: "projects" })}>
         <div className="grid grid-cols-2 gap-4">
-        {t("projects", { ns: "resumeProjects" }).map((project: Project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+          {t("projects", { ns: "projects" }).map((project: Project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </div>
       </AccordionTab>
 
-      <AccordionTab header={t("title", { ns: "resumeJobs" })}>
+      <AccordionTab header={t("title", { ns: "jobs" })}>
         <div className="grid grid-cols-3 gap-4">
-        {t("jobs", { ns: "resumeJobs" }).map((job: Job) => (
-          <JobCard key={job.key} job={job} />
-        ))}
+          {t("jobs", { ns: "jobs" }).map((job: Job) => (
+            <JobCard key={job.key} job={job} />
+          ))}
         </div>
       </AccordionTab>
 
-      <AccordionTab header={t("title", { ns: "resumeSkills" })}>
-        {t("skillSets", { ns: "resumeSkills" }).map((skillSet: SkillSet) => (
+      <AccordionTab header={t("title", { ns: "skills" })}>
+        {t("skillSets", { ns: "skills" }).map((skillSet: SkillSet) => (
           <SkillSetCard key={skillSet.type} skillSet={skillSet} />
         ))}
       </AccordionTab>

@@ -12,7 +12,7 @@ export default function LangSwitch() {
           i18n.changeLanguage(i18n.language === "en" ? "es" : "en")
         }
         className={`
-        relative w-14 h-8 rounded-full border-2 transition-all duration-300
+        relative h-8 w-8 lg:w-14 rounded-full border-2 transition-all duration-300
         ${
           isDarkTheme
             ? "bg-gray-800 border-red-500 shadow-red-500/50"
@@ -25,11 +25,11 @@ export default function LangSwitch() {
       >
         <motion.div
           className={`
-          absolute top-0.5 w-6 h-6 rounded-full flex items-center justify-center
-          transition-all duration-300
-          ${i18n.language === "en" ? "left-0.5 bg-white" : "left-6 bg-white"}
+          absolute left-[2.5px] top-0.5 flex justify-center items-center w-6 h-6 rounded-full lg:border-2
+          transition-all duration-200
+          ${i18n.language === "en" ? "lg:left-1" : "lg:left-6.5"}
         `}
-          layout
+          layout={false}
         >
           <img
             className="w-full aspect-square"

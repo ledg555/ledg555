@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
     <motion.button
       onClick={toggleTheme}
       className={`
-        relative w-14 h-8 rounded-full border-2 transition-all duration-300
+        relative h-8 w-8 lg:w-14 rounded-full border-2 transition-all duration-300
         ${
           isDarkTheme
             ? "bg-gray-800 border-red-500 shadow-red-500/50"
@@ -23,12 +23,12 @@ const ThemeToggle: React.FC = () => {
     >
       <motion.div
         className={`
-          absolute top-0.5 w-6 h-6 rounded-full flex items-center justify-center
-          transition-all duration-300
+          absolute left-[2.5px] top-0.5 flex justify-center items-center w-6 h-6 rounded-full
+          transition-all duration-200
           ${
             isDarkTheme
-              ? "left-0.5 bg-red-500 text-white"
-              : "left-6 bg-white text-blue-600"
+              ? "lg:left-1 bg-red-500 text-white"
+              : "lg:left-6.5 bg-white text-blue-600"
           }
         `}
         layout
