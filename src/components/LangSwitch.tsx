@@ -25,7 +25,7 @@ export default function LangSwitch() {
       >
         <motion.div
           className={`
-          absolute left-[2.5px] top-0.5 flex justify-center items-center w-6 h-6 rounded-full lg:border-2
+          absolute left-[2.5px] top-0.5 flex justify-center items-center w-6 h-6 rounded-full border-2
           transition-all duration-200
           ${i18n.language === "en" ? "lg:left-1" : "lg:left-6.5"}
         `}
