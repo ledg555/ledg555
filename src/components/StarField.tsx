@@ -34,13 +34,15 @@ const StarField: React.FC = () => {
     const createStars = () => {
       const stars: Star[] = [];
       for (let i = 0; i < 400; i++) {
+        const opacity = Math.random() * 0.35 + 0.65,
+          size = 1.2 * Math.random() + 0.7;
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 2 + 0.8,
+          size,
           baseHue: Math.random() * 0.91,
-          opacity: Math.random() * 0.3 + 0.7,
-          speed: Math.random() * 2,
+          opacity,
+          speed: 1.5 * Math.random() + 0.1 * (opacity + size),
         });
       }
       starsRef.current = stars;
@@ -58,7 +60,9 @@ const StarField: React.FC = () => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fillStyle = `hsla(${
-          star.baseHue <= 0.6 ? star.baseHue * 100 : star.baseHue * 100 + 120
+          star.baseHue <= 0.6
+            ? star.baseHue * 90 + 10
+            : star.baseHue * 100 + 120
         }, 100%, ${Math.random() * 30 + 70}%, ${star.opacity})`;
         ctx.fill();
 

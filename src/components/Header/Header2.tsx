@@ -7,9 +7,9 @@ import {
   HiOutlineCpuChip,
   HiOutlineRocketLaunch,
 } from "react-icons/hi2";
-import ThemeToggle from "./ThemeToggle";
-import useStore from "../store/useStore";
-import LangSwitch from "./LangSwitch";
+import ThemeToggle from "../ThemeToggle";
+import useStore from "../../store/useStore";
+import LangSwitch from "../LangSwitch";
 import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
@@ -31,11 +31,11 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`flex justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b border-gray-100 transition-all duration-300 px-4 xl:px-8 py-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-2 border-gray-100 transition-all duration-300 px-4 xl:px-8 py-4
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
-            : "bg-white/20 border-white/20"
+            : "bg-[url(/tiles/smooth/brushed_alu.png)] border-gray-200/80"
         }
       `}
       initial={{ y: -100 }}
@@ -60,9 +60,7 @@ const Header: React.FC = () => {
             className="rounded-full mx-auto bottom-8 ring-2"
           />
         </motion.div>
-        <span className="text-white font-headings font-bold text-xl">
-          Portfolio
-        </span>
+        <span className="font-headings font-bold !text-2xl">Portfolio</span>
       </Link>
       {/* Navigation */}
       <nav className="hidden md:flex items-center gap-4 lg:gap-6">
@@ -72,13 +70,13 @@ const Header: React.FC = () => {
             key={item.to}
             to={item.to}
             className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-250
+                  flex items-center gap-2 px-4 py-2 rounded-lg
                   ${
                     location.pathname === item.to
                       ? isDarkTheme
-                        ? "bg-red-500/20 text-red-300 border border-red-500/30"
-                        : "bg-radial-gradient from-sky-400 to-cyan-400 text-blue-300 border border-blue-500/30"
-                      : "text-white/70 hover:text-white hover:bg-white/10"
+                        ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30"
+                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30"
+                      : "hover:text-slate-200 hover:bg-gray-700/90"
                   }
                 `}
           >

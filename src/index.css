@@ -16,11 +16,11 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-} */
+  } */
 
 :root {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(8, 32, 32, 0.86);
   background-color: #242424;
   font-family: "Gruppo", sans-serif;
 
@@ -48,19 +48,22 @@
 }
 
 /* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+      }
+      a:hover {
+        color: #747bff;
+        }
+        button {
+          background-color: #f9f9f9;
+          }
+          } */
 
 @theme {
+  --color-screen-blue: rgb(0, 128, 255);
+  --color-screen-deep-blue: rgb(0, 24, 255);
+
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
