@@ -31,7 +31,7 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`flex justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-2 border-gray-100 transition-all duration-300 px-4 xl:px-8 py-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-8 !border-orange-400 rounded-b-full transition-all duration-300 px-4 xl:px-8 py-4 trapezoid
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"

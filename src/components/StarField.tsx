@@ -33,16 +33,16 @@ const StarField: React.FC = () => {
 
     const createStars = () => {
       const stars: Star[] = [];
-      for (let i = 0; i < 400; i++) {
+      for (let i = 0; i < 500; i++) {
         const opacity = Math.random() * 0.35 + 0.65,
-          size = 1.2 * Math.random() + 0.7;
+          size = 1.5 * Math.random() + 0.7;
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           size,
           baseHue: Math.random() * 0.91,
           opacity,
-          speed: 1.5 * Math.random() + 0.1 * (opacity + size),
+          speed: 1.5 * Math.random() + 0.08 * (opacity + size),
         });
       }
       starsRef.current = stars;
@@ -109,11 +109,12 @@ const StarField: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="fixed inset-0 z-0 pointer-events-none bg-blend-soft-light"
       style={{
         background:
-          "radial-gradient(ellipse at center, #1e3a8a 0%, #0f172a 70%, #000000 100%)",
+          "radial-gradient(ellipse at center, #1e3a8a 0%, #000 0%), url('/bg.jpg') center/cover no-repeat",
       }}
+      // bg-radial from-[#1e3a8a] from-0% to-[#000] to-100%
     />
   );
 };
