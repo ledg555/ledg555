@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "../app/layout";
-import Home from "../app/home";
 import NotFound from "../app/not-found";
-import ProjectsPage from "../app/projects/projects";
-import ExperiencePage from "../app/experience/experience";
-import AboutPage from "../app/about/about";
+import { HomePage } from "../app/home";
+import { ProjectsPage } from "../app/projects/page";
+import { ExperiencePage } from "../app/experience/page";
+import { AboutPage } from "../app/about/page";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <NotFound />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <HomePage /> },
       { path: "all-projects", element: <ProjectsPage /> },
       { path: "all-experience", element: <ExperiencePage /> },
       { path: "about-me", element: <AboutPage /> },
