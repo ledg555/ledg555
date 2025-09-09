@@ -1,11 +1,13 @@
 import { Outlet } from "react-router";
 import Header from "../components/Header/Header2";
 
-export default function RootLayout() {
+export function RootLayout() {
   return (
     <div className="mx-auto max-w-3xl relative z-10">
       <Header />
-      <Outlet />
+      <main className="pt-24 w-full">
+        <Outlet />
+      </main>
     </div>
   );
 }
