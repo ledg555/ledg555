@@ -1,5 +1,5 @@
 export interface UIInterface {
-  navigationData: NavItem[];
+  navigationData: Record<string, string>;
   contactData: ContactDatum[];
 }
 
@@ -8,11 +8,4 @@ export interface ContactDatum {
   label: string;
   toast: boolean | string;
   url: boolean | string;
-}
-
-export interface NavItem {
-  key: string;
-  label: string;
-  url: string;
-  icon: string;
 }

@@ -1,30 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router";
-import {
-  HiOutlineBolt,
-  HiOutlineComputerDesktop,
-  HiOutlineCpuChip,
-  HiOutlineRocketLaunch,
-} from "react-icons/hi2";
 import ThemeToggle from "../ThemeToggle";
 import useStore from "../../store/useStore";
 import LangSwitch from "../LangSwitch";
+import { navLinks } from "./nav-config";
+import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const { isDarkTheme } = useStore();
-
-  const navItems = [
-    { to: "/", icon: HiOutlineComputerDesktop, label: "Command Bridge" },
-    { to: "/projects", icon: HiOutlineCpuChip, label: "Project Archives" },
-    {
-      to: "/experience",
-      icon: HiOutlineRocketLaunch,
-      label: "Mission History",
-    },
-    { to: "/skills", icon: HiOutlineBolt, label: "Weapons Bay" },
-  ];
+  const { t } = useTranslation(["ui"]);
 
   return (
     <motion.header
@@ -62,15 +48,15 @@ const Header: React.FC = () => {
       </Link>
       {/* Navigation */}
       <nav className="hidden md:flex items-center gap-4 lg:gap-6">
-        {navItems.map((item) => (
+        {navLinks.map((item) => (
           <Link
-            title={item.label}
-            key={item.to}
-            to={`${item.to}`}
+            title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+            key={item.translationKey}
+            to={`${item.url}`}
             className={`
                   flex items-center gap-2 px-4 py-2 rounded-lg
                   ${
-                    location.pathname === item.to
+                    location.pathname === item.url
                       ? isDarkTheme
                         ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30"
                         : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30"
@@ -79,7 +65,9 @@ const Header: React.FC = () => {
                 `}
           >
             <item.icon className="text-[24px]" />
-            <span className="gruppo-bold hidden xl:block">{item.label}</span>
+            <span className="gruppo-bold hidden xl:block">
+              {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+            </span>
           </Link>
         ))}
       </nav>
@@ -91,4 +79,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export { Header };

@@ -1,36 +1,11 @@
 {
-  "navigationData": [
-    {
-      "key": "home",
-      "label": "Puente de Mando",
-      "url": "/",
-      "icon": "HiOutlineComputerDesktop"
-    },
-    {
-      "key": "about",
-      "label": "Sobre mí",
-      "url": "/about",
-      "icon": "HiOutlineUser"
-    },
-    {
-      "key": "projects",
-      "label": "Archivo de Proyectos",
-      "url": "/projects",
-      "icon": "HiOutlineCpuChip"
-    },
-    {
-      "key": "experience",
-      "label": "Misiones Pasadas",
-      "url": "/experience",
-      "icon": "HiOutlineRocketLaunch"
-    },
-    {
-      "key": "skills",
-      "label": "Armería",
-      "url": "/skills",
-      "icon": "HiOutlineBolt"
-    }
-  ],
+  "navigationData": {
+    "home": "Puente de Mando",
+    "about": "Sobre mí",
+    "projects": "Archivo de Proyectos",
+    "experience": "Misiones Pasadas",
+    "skills": "Armería"
+  },
   "contactData": [
     {
       "key": "resume",
