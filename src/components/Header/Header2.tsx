@@ -10,12 +10,10 @@ import {
 import ThemeToggle from "../ThemeToggle";
 import useStore from "../../store/useStore";
 import LangSwitch from "../LangSwitch";
-import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const { isDarkTheme } = useStore();
-  const { t } = useTranslation(["ui"]);
 
   const navItems = [
     { to: "/", icon: HiOutlineComputerDesktop, label: "Command Bridge" },
@@ -68,7 +66,7 @@ const Header: React.FC = () => {
           <Link
             title={item.label}
             key={item.to}
-            to={item.to}
+            to={`${item.to}`}
             className={`
                   flex items-center gap-2 px-4 py-2 rounded-lg
                   ${

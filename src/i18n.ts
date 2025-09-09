@@ -12,6 +12,13 @@ i18n
     fallbackLng: "en",
     defaultNS: "ui",
     returnObjects: true,
+    // detection: {
+    //   order: ["path", "cookie", "htmlTag", "localStorage", "subdomain"],
+    //   caches: ["cookie"],
+    // },
+    // backend: {
+    //   loadPath: "/locales/{{lng}}/ui.json",
+    // },
     react: {
       useSuspense: true,
     },
