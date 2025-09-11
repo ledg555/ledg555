@@ -1,36 +1,11 @@
 {
-  "navigationData": [
-    {
-      "key": "home",
-      "label": "Command Bridge",
-      "url": "/",
-      "icon": "HiOutlineComputerDesktop"
-    },
-    {
-      "key": "about",
-      "label": "About me",
-      "url": "/about",
-      "icon": "HiOutlineUser"
-    },
-    {
-      "key": "projects",
-      "label": "Project Archives",
-      "url": "/projects",
-      "icon": "HiOutlineCpuChip"
-    },
-    {
-      "key": "experience",
-      "label": "Mission History",
-      "url": "/experience",
-      "icon": "HiOutlineRocketLaunch"
-    },
-    {
-      "key": "skills",
-      "label": "Weapons Bay",
-      "url": "/skills",
-      "icon": "HiOutlineBolt"
-    }
-  ],
+  "navigationData": {
+    "home": "Command Bridge",
+    "about": "About me",
+    "projects": "Project Archives",
+    "experience": "Mission History",
+    "skills": "Weapons Bay"
+  },
   "contactData": [
     {
       "key": "resume",

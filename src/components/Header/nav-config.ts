@@ -7,22 +7,22 @@ import {
 
 export const navLinks = [
   {
-    translationKey: "",
+    translationKey: "home",
     url: "/",
     icon: HiOutlineComputerDesktop,
   },
   {
-    translationKey: "",
+    translationKey: "projects",
     url: "/projects",
     icon: HiOutlineCpuChip,
   },
   {
-    translationKey: "",
+    translationKey: "experience",
     url: "/experience",
     icon: HiOutlineRocketLaunch,
   },
   {
-    translationKey: "",
+    translationKey: "skills",
     url: "/skills",
     icon: HiOutlineBolt,
   },
