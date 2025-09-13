@@ -1,5 +1,6 @@
 {
   "navigationData": {
+    "shipName": "AEGIS BB-0057 Bold Dragon",
     "home": "Command Bridge",
     "about": "About me",
     "projects": "Project Archives",
@@ -11,31 +12,31 @@
       "key": "resume",
       "label": "See resume",
       "toast": false,
-      "url": "Luis_Delgado_en.pdf"
+      "action": "Luis_Delgado_en.pdf"
     },
     {
       "key": "email",
       "label": "Copy email",
       "toast": "Email copied!",
-      "url": false
+      "action": "dev.ledg5555@gmail.com"
     },
     {
       "key": "phone",
-      "label": "Copy phone number",
-      "toast": "Phone copied!",
-      "url": false
+      "label": "Send WhatsApp",
+      "toast": false,
+      "action": "http://wa.me/7772688189"
     },
     {
       "key": "github",
-      "label": "See GitHub",
+      "label": "Visit GitHub",
       "toast": false,
-      "url": "https://github.com/ledg555"
+      "action": "https://github.com/ledg555"
     },
     {
       "key": "linkedin",
-      "label": "See LinkedIn",
+      "label": "Visit LinkedIn",
       "toast": false,
-      "url": "https://linkedin.com/in/ledg555"
+      "action": "https://linkedin.com/in/ledg555"
     }
   ]
 }
