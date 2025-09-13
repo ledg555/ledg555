@@ -6,6 +6,7 @@ import useStore from "../../store/useStore";
 import LangSwitch from "../LangSwitch";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
+import { SpeedDialContact } from "../SpeedDialContact/SpeedDialContact";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`flex justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-8 !border-orange-400 rounded-b-full transition-all duration-300 px-4 xl:px-8 py-4 trapezoid
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-orange-400 rounded-b-full transition-all duration-300 px-12 py-4
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
@@ -44,22 +45,25 @@ const Header: React.FC = () => {
             className="rounded-full mx-auto bottom-8 ring-2"
           />
         </motion.div>
-        <span className="font-headings font-bold !text-2xl">Portfolio</span>
+        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-48 text-zinc-600">
+          {t("navigationData.shipName", { ns: "ui" })}
+        </span>
       </Link>
+      <SpeedDialContact />
       {/* Navigation */}
-      <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+      <nav className="hidden xs:flex justify-center flex-grow items-center gap-2 md:gap-4 lg:gap-6">
         {navLinks.map((item) => (
           <Link
             title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
             key={item.translationKey}
             to={`${item.url}`}
             className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg
+                  flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg
                   ${
                     location.pathname === item.url
                       ? isDarkTheme
-                        ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30"
-                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30"
+                        ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30 cursor-text"
+                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30 cursor-default"
                       : "hover:text-slate-200 hover:bg-gray-700/90"
                   }
                 `}
@@ -71,7 +75,7 @@ const Header: React.FC = () => {
           </Link>
         ))}
       </nav>
-      <div className="flex justify-between gap-4 xl:gap-8">
+      <div className="flex justify-end gap-4 md:gap-4 xl:gap-8 md:flex-grow md:max-w-28 lg:flex-grow-0 lg:max-w-48">
         <ThemeToggle />
         <LangSwitch />
       </div>
