@@ -1,17 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "primereact/tooltip";
-import { IconType } from "react-icons";
 import { speedDialContactIcons } from "./speed-dial-contact-config";
 import { HiOutlineChatBubbleLeft } from "react-icons/hi2";
 
-interface MenuItem {
-  icon: IconType;
-  label: string;
-  command: () => void;
-}
-
 export function SpeedDialContact() {
   const { t } = useTranslation();
+
   const speedDialContactItems = t("contactData", { ns: "ui" }).map(
     (item: {
       key: string;
@@ -23,9 +17,9 @@ export function SpeedDialContact() {
       return (
         <button
           key={item.key}
-          className="bg-red-400 rounded-full p-2 cursor-pointer hover:scale-105"
+          className="bg-green-400 rounded-full p-2.5 cursor-pointer hover:scale-110 duration-100 ease-in"
         >
-          {<Icon size={24} />}
+          {<Icon size={20} />}
         </button>
       );
     }
@@ -36,16 +30,18 @@ export function SpeedDialContact() {
         target=".speeddial-contact .p-speeddial-action"
         position="left"
       />
-      <button className="relative bg-blue-600 aspect-square p-0 rounded-full">
-        <div className="flex justify-center items-center aspect-square rounded-full p-3.5 bg-pink-300">
-          {/* <HiOutlineChatBubbleLeft size={24} /> */}
+      <button className="relative h-12 aspect-square p-0 rounded-full bg-blue-500 perspective-dramatic">
+        <div className="absolute top-0 left-0 w-full aspect-square rounded-full transform-3d animate-flip-y hover:scale-110 duration-150">
+          <div className="flex justify-center items-center aspect-square rounded-full p-2 rotate-y-180 border-3 border-black backface-hidden">
+            <HiOutlineChatBubbleLeft size={24} />
+          </div>
           <img
             src="/Luis Delgado.webp"
             alt="Luis Delgado"
-            className="w-10 rounded-full"
+            className="absolute top-0 left-0 block w-full rounded-full border-3 border-black backface-hidden"
           />
         </div>
-        <div className="absolute flex flex-col justify-between items-center gap-1.5 top-14 left-[5px]">
+        <div className="absolute flex flex-col justify-between items-center gap-1.5 top-14 left-1">
           {speedDialContactItems}
         </div>
       </button>

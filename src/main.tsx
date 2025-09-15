@@ -15,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
     value={{
       unstyled: true,
       pt: Tailwind,
+      ripple: true,
       ptOptions: {
         mergeSections: true,
         mergeProps: true,

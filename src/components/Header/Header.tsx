@@ -1,44 +1,72 @@
-import { Card } from "primereact/card";
-import { SpeedDial } from "primereact/speeddial";
+import React from "react";
+import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router";
+import ThemeToggle from "../ThemeToggle";
+import useStore from "../../store/useStore";
+import LangSwitch from "../LangSwitch";
+import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
-import { BiLogoWhatsapp, BiGitBranch, BiLogoLinkedin } from "react-icons/bi";
-import { HiOutlineEnvelope, HiOutlineDocumentText } from "react-icons/hi2";
+import { SpeedDialContact } from "../SpeedDialContact/SpeedDialContact";
+import { SpeedDialNav } from "../SpeedDialNav/SpeedDialNav";
 
-const contactItems = [
-  {
-    label: "Copiar email",
-    icon: BiLogoLinkedin,
-  },
-  {
-    label: "Copiar email",
-    icon: BiGitBranch,
-  },
-  {
-    label: "Copiar email",
-    icon: BiLogoWhatsapp,
-  },
-  {
-    label: "Copiar email",
-    icon: HiOutlineEnvelope,
-  },
-  {
-    label: "Copiar email",
-    icon: HiOutlineDocumentText,
-  },
-];
-
-export default function Header() {
+const Header: React.FC = () => {
+  const location = useLocation();
+  const { isDarkTheme } = useStore();
   const { t } = useTranslation(["ui"]);
 
   return (
-    <Card className="relative max-h-16 rounded-3xl mt-2">
-      <SpeedDial
-        model={contactItems}
-        radius={130}
-        type="quarter-circle"
-        direction="down-right"
-        className="left-1 top-0"
-      />
-    </Card>
+    <motion.header
+      className={`flex justify-between items-center gap-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-orange-400 rounded-b-full transition-all duration-300 px-12 py-4
+        ${
+          isDarkTheme
+            ? "bg-gray-900/20 border-red-500/30"
+            : "bg-[url(/tiles/smooth/brushed_alu.png)] border-gray-200/80"
+        }
+      `}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Logo */}
+      <Link to="/" className="flex items-center gap-4">
+        <SpeedDialContact />
+        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-48 text-zinc-600">
+          {t("navigationData.shipName", { ns: "ui" })}
+        </span>
+      </Link>
+      <SpeedDialNav />
+      {/* Navigation */}
+      <nav className="hidden xs:flex justify-center flex-grow items-center gap-2 md:gap-4 lg:gap-6">
+        {navLinks.map((item) => (
+          <Link
+            title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+            key={item.translationKey}
+            to={`${item.url}`}
+            className={`
+                  flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg
+                  ${
+                    location.pathname === item.url
+                      ? isDarkTheme
+                        ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30 cursor-text"
+                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30 cursor-default"
+                      : "hover:text-slate-200 hover:bg-gray-700/90"
+                  }
+                `}
+          >
+            <item.icon className="text-[24px]" />
+            <span className="gruppo-bold hidden xl:block">
+              {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+            </span>
+          </Link>
+        ))}
+      </nav>
+      <div className="flex justify-end gap-4 md:gap-4 xl:gap-8 md:flex-grow md:max-w-28 lg:flex-grow-0 lg:max-w-48">
+        <ThemeToggle />
+        <LangSwitch />
+      </div>
+    </motion.header>
   );
-}
+};
+
+export { Header };
