@@ -16,8 +16,8 @@ const Header: React.FC = () => {
 
   return (
     <motion.header
-      className={`flex justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-orange-400 rounded-b-full transition-all duration-300 px-12 py-4
+      className={`flex justify-around xs:justify-between items-center gap-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-orange-400 rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-[88px]
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
@@ -35,21 +35,20 @@ const Header: React.FC = () => {
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </Link>
-      <SpeedDialNav />
       {/* Navigation */}
-      <nav className="hidden xs:flex justify-center flex-grow items-center gap-2 md:gap-4 lg:gap-6">
+      <nav className="hidden sm:flex justify-around xl:justify-between 2xl:justify-evenly flex-grow items-center gap-1 lg:gap-6 xl:gap-4">
         {navLinks.map((item) => (
           <Link
             title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
             key={item.translationKey}
             to={`${item.url}`}
             className={`
-                  flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg
+                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 rounded-lg md:w-16 xl:w-auto xl:h-auto
                   ${
                     location.pathname === item.url
                       ? isDarkTheme
                         ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30 cursor-text"
-                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30 cursor-default"
+                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30 cursor-default w-14 h-10"
                       : "hover:text-slate-200 hover:bg-gray-700/90"
                   }
                 `}
@@ -61,10 +60,11 @@ const Header: React.FC = () => {
           </Link>
         ))}
       </nav>
-      <div className="flex justify-end gap-4 md:gap-4 xl:gap-8 md:flex-grow md:max-w-28 lg:flex-grow-0 lg:max-w-48">
+      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 flex-grow max-w-28 sm:max-w-24 lg:max-w-48">
         <ThemeToggle />
         <LangSwitch />
       </div>
+      <SpeedDialNav />
     </motion.header>
   );
 };
