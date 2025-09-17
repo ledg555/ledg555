@@ -31,12 +31,12 @@ const Header: React.FC = () => {
       {/* Logo */}
       <Link to="/" className="flex items-center gap-4">
         <SpeedDialContact />
-        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-48 text-zinc-600">
+        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-[184px] text-zinc-600">
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </Link>
       {/* Navigation */}
-      <nav className="hidden sm:flex justify-around xl:justify-between 2xl:justify-evenly flex-grow items-center gap-1 lg:gap-6 xl:gap-4">
+      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly flex-grow items-center gap-1 sm:gap-2 lg:gap-6 xl:gap-2">
         {navLinks.map((item) => (
           <Link
             title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
@@ -54,13 +54,13 @@ const Header: React.FC = () => {
                 `}
           >
             <item.icon className="text-[24px]" />
-            <span className="gruppo-bold hidden xl:block">
+            <span className="font-semibold hidden xl:block">
               {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
             </span>
           </Link>
         ))}
       </nav>
-      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 flex-grow max-w-28 sm:max-w-24 lg:max-w-48">
+      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 flex-grow max-w-28 sm:max-w-24 lg:max-w-40 lg:flex-grow-0">
         <ThemeToggle />
         <LangSwitch />
       </div>

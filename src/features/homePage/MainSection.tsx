@@ -12,7 +12,10 @@ export default function MainSection() {
   return (
     <Accordion className="max-w-full">
       <AccordionTab header={t("title", { ns: "about" })}>
-        <p>{t("shortDescription", { ns: "about" })}</p>
+        <h3 className="font-headings font-semibold">Proyectos destacados</h3>
+        <p className="font-semibold">
+          {t("shortDescription", { ns: "about" })}
+        </p>
       </AccordionTab>
 
       <AccordionTab header={t("title", { ns: "projects" })}>
