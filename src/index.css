@@ -67,7 +67,7 @@
   --font-gruppo-semibold: "Gruppo 600", sans-serif;
   --font-headings: "Lexend Zetta", sans-serif;
   --font-sans: "Gruppo", system-ui, sans-serif;
-  --font-text: "Gruppo", sans-serif;
+  --font-text: "Gruppo", system-ui, sans-serif;
 
   @keyframes flipY {
     54% {
