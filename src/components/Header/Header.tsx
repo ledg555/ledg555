@@ -29,12 +29,12 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Logo */}
-      <Link to="/" className="flex items-center gap-4">
+      <div className="flex items-center gap-4">
         <SpeedDialContact />
         <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-[184px] text-zinc-600">
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
-      </Link>
+      </div>
       {/* Navigation */}
       <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly flex-grow items-center gap-1 sm:gap-2 lg:gap-6 xl:gap-2">
         {navLinks.map((item) => (
