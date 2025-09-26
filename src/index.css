@@ -113,6 +113,20 @@
   }
 }
 
+.octagon-sm {
+  clip-path: polygon(
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 calc(100% - 8px),
+    0 8px
+  );
+  border-radius: 14px / 10px;
+}
+
 .trapezoid {
   clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
   /* background: #542437; */

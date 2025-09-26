@@ -43,13 +43,13 @@ const Header: React.FC = () => {
             key={item.translationKey}
             to={`${item.url}`}
             className={`
-                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 rounded-lg md:w-16 xl:w-auto xl:h-auto
+                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm
                   ${
                     location.pathname === item.url
                       ? isDarkTheme
                         ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30 cursor-text"
-                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-emerald-200 border border-blue-500/30 cursor-default w-14 h-10"
-                      : "hover:text-slate-200 hover:bg-gray-700/90"
+                        : "bg-[url(/tiles/screen/random_grey_variations.png)] bg-size-[96px] text-[#aff] cursor-default w-14 h-10 shadow-blue-500/50"
+                      : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-[#aff]"
                   }
                 `}
           >
@@ -70,3 +70,5 @@ const Header: React.FC = () => {
 };
 
 export { Header };
+
+/* hover:text-slate-200 hover:bg-gray-700/90 */
