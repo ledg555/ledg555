@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className={`flex justify-around xs:justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-orange-400 rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-[88px]
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-[url(/src/assets/tiles/metal/1-hixs_pattern_evolution.png)] rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-[88px]
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                     location.pathname === item.url
                       ? isDarkTheme
                         ? "bg-radial from-red-500/60 from-35% to-red-500/35 text-red-300 border border-red-500/30 cursor-text"
-                        : "bg-[url(/tiles/screen/random_grey_variations.png)] bg-size-[96px] text-[#aff] cursor-default w-14 h-10 shadow-blue-500/50"
+                        : "bg-[url(/src/assets/tiles/screen/random_grey_variations.png)] bg-size-[96px] text-[#aff] cursor-default w-14 h-10 shadow-blue-500/50"
                       : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-[#aff]"
                   }
                 `}
