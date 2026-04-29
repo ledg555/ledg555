@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import useStore from "../store/useStore";
 

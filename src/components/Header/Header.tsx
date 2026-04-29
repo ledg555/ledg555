@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
 import ThemeToggle from "../ThemeToggle";
 import useStore from "../../store/useStore";
