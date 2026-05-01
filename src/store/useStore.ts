@@ -1,20 +1,8 @@
 import { create } from "zustand";
-// import {
-//   Project,
-//   Experience,
-//   Skill,
-//   ContactInfo,
-//   PersonalInfo,
-// } from "../types";
 
 interface AppState {
   isDarkTheme: boolean;
   toggleTheme: () => void;
-  // personalInfo: PersonalInfo;
-  // contactInfo: ContactInfo;
-  // projects: Project[];
-  // experiences: Experience[];
-  // skills: Skill[];
 }
 
 const useStore = create<AppState>((set) => ({
