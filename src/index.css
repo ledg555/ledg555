@@ -55,6 +55,23 @@
   --color-screen-blue: rgb(0, 128, 255);
   --color-screen-deep-blue: rgb(0, 24, 255);
 
+  /* Kelvin Timeline Light Mode (Standard Operations) */
+  --color-hud-cyan-base: #00e5ff;
+  --color-hud-cyan-glow: rgba(0, 229, 255, 0.4);
+  --color-hud-blue-bg: rgba(0, 50, 120, 0.2);
+  --color-ship-hull-white: #f4f6f9;
+  --color-ship-metal: #b0bec5;
+
+  /* Red Alert Dark Mode */
+  --color-alert-red-base: #ff1744;
+  --color-alert-red-glow: rgba(255, 23, 68, 0.4);
+  --color-alert-red-bg: rgba(60, 0, 0, 0.6);
+  --color-ship-hull-dark: #121212;
+
+  /* Props */
+  --color-prop-yellow: #ffea00;
+  --color-prop-green: #00e676;
+
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
