@@ -7,7 +7,6 @@ import { twMerge } from "tailwind-merge";
 import "primeicons/primeicons.css";
 import Tailwind from "primereact/passthrough/tailwind";
 import StarField from "./components/StarField";
-// import { customPT } from "./pt";
 
 createRoot(document.getElementById("root")!).render(
   // <Suspense fallback="loading">
@@ -23,8 +22,8 @@ createRoot(document.getElementById("root")!).render(
       },
     }}
   >
-    <StarField />
+    {/*<StarField />*/}
     <Router />
-  </PrimeReactProvider>
+  </PrimeReactProvider>,
   // </Suspense>
 );
