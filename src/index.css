@@ -22,9 +22,27 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
-  color: rgba(8, 32, 32, 0.86);
-  background-color: #242424;
+  /*color: rgba(8, 32, 32, 0.86);
+  background-color: #242424;*/
   font-family: "Gruppo", sans-serif;
+
+  /* Standard Operations (Light Mode) */
+  --theme-hud-base: #00e5ff;
+  --theme-hud-glow: rgba(0, 229, 255, 0.4);
+  --theme-ship-bg: #f4f6f9;
+  --theme-ship-surface: #b0bec5;
+  --theme-ship-text: #334155;
+  --theme-ship-border: rgba(0, 229, 255, 0.3);
+}
+
+.dark {
+  /* Red Alert (Dark Mode) */
+  --theme-hud-base: #ff1744;
+  --theme-hud-glow: rgba(255, 23, 68, 0.4);
+  --theme-ship-bg: #080c16;
+  --theme-ship-surface: #121212;
+  --theme-ship-text: #cbd5e1;
+  --theme-ship-border: rgba(255, 23, 68, 0.3);
 }
 
 .gruppo-bold {
@@ -34,38 +52,23 @@
   text-shadow: 0.4px 0 0px;
 }
 
-/* @media (prefers-color-scheme: light) {
-    :root {
-      color: #213547;
-      background-color: #ffffff;
-      }
-      a:hover {
-        color: #747bff;
-        }
-        button {
-          background-color: #f9f9f9;
-          }
-          } */
-
 @theme {
-  --animate-flip-y: flipY 10000ms ease 0s infinite;
-  --animate-pull: pull 500ms ease 0s alternate;
-  --animate-press: press 500ms ease 0s alternate;
+  --color-hud: var(--theme-hud-base);
+  --color-hud-glow: var(--theme-hud-glow);
+  --color-ship-bg: var(--theme-ship-bg);
+  --color-ship-surface: var(--theme-ship-surface);
+  --color-ship-text: var(--theme-ship-text);
+  --color-ship-border: var(--theme-ship-border);
 
   --color-screen-blue: rgb(0, 128, 255);
   --color-screen-deep-blue: rgb(0, 24, 255);
 
   /* Kelvin Timeline Light Mode (Standard Operations) */
-  --color-hud-cyan-base: #00e5ff;
-  --color-hud-cyan-glow: rgba(0, 229, 255, 0.4);
   --color-hud-blue-bg: rgba(0, 50, 120, 0.2);
   --color-ship-hull-white: #f4f6f9;
   --color-ship-metal: #b0bec5;
 
   /* Red Alert Dark Mode */
-  --color-alert-red-base: #ff1744;
-  --color-alert-red-glow: rgba(255, 23, 68, 0.4);
-  --color-alert-red-bg: rgba(60, 0, 0, 0.6);
   --color-ship-hull-dark: #121212;
 
   /* Props */
@@ -85,49 +88,6 @@
   --font-headings: "Lexend Zetta", sans-serif;
   --font-sans: "Gruppo", system-ui, sans-serif;
   --font-text: "Gruppo", system-ui, sans-serif;
-
-  @keyframes flipY {
-    54% {
-      transform: rotateY(0deg);
-    }
-    62% {
-      transform: rotateY(180deg);
-    }
-    92% {
-      transform: rotateY(180deg);
-    }
-    100% {
-      transform: rotateY(360deg);
-    }
-  }
-
-  @keyframes press {
-    0% {
-      transform: scale(1);
-    }
-    60% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes pull {
-    0% {
-      display: none;
-      opacity: 0;
-      transform: translateY(-192px);
-    }
-    95% {
-      transform: translateY(8px);
-    }
-    100% {
-      display: block;
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
 }
 
 .octagon-sm {
