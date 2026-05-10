@@ -26,42 +26,76 @@
   background-color: #242424;*/
   font-family: "Gruppo", sans-serif;
 
-  /* Standard Operations (Light Mode) */
-  --theme-hud-base: #00e5ff;
-  --theme-hud-glow: rgba(0, 229, 255, 0.4);
-  --theme-ship-bg: #f4f6f9;
-  --theme-ship-surface: #b0bec5;
-  --theme-ship-text: #334155;
-  --theme-ship-border: rgba(0, 229, 255, 0.3);
+  /* FONDOS (La nave) */
+  --theme-bg-base: #f4f6f9; /* Lienzo principal (Antes ship-hull-white) */
+  --theme-bg-surface: #b0bec5; /* Elementos elevados: Header, SpeedDials, Cards */
+
+  /* ACENTOS (El HUD holográfico) */
+  --theme-accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
+  --theme-accent-glow: rgba(0, 229, 255, 0.4);
+
+  /* BORDES Y TEXTOS */
+  --theme-border-accent: rgba(0, 229, 255, 0.3);
+  --theme-text-base: #334155; /* Texto principal para alta legibilidad */
+
+  /* FONDOS TINTADOS (Paneles de datos holográficos) */
+  --theme-bg-panel: rgba(
+    0,
+    50,
+    120,
+    0.2
+  ); /* El azul transparente (Antes hud-blue-bg) */
+
+  /* LUCES Y ESTADOS (Props) */
+  --theme-status-safe: #00e676; /* Verde nominal (Antes prop-green) */
+  --theme-status-warn: #ffea00; /* Amarillo precaución (Antes prop-yellow) */
 }
 
 .dark {
-  /* Red Alert (Dark Mode) */
-  --theme-hud-base: #ff1744;
-  --theme-hud-glow: rgba(255, 23, 68, 0.4);
-  --theme-ship-bg: #080c16;
-  --theme-ship-surface: #121212;
-  --theme-ship-text: #cbd5e1;
-  --theme-ship-border: rgba(255, 23, 68, 0.3);
-}
+  /* FONDOS (La nave en penumbra) */
+  --theme-bg-base: #080c16; /* El espacio/niebla (Reemplaza al fondo blanco) */
+  --theme-bg-surface: #121212; /* Elementos elevados (Antes ship-hull-dark) */
 
-.gruppo-bold {
-  font-family: "Gruppo", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  text-shadow: 0.4px 0 0px;
+  /* ACENTOS (Alerta Roja) */
+  --theme-accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
+  --theme-accent-glow: rgba(255, 23, 68, 0.4);
+
+  /* BORDES Y TEXTOS */
+  --theme-border-accent: rgba(255, 23, 68, 0.3);
+  --theme-text-base: #cbd5e1; /* Texto claro para contraste en oscuro */
+
+  /* FONDOS TINTADOS (Paneles de alerta) */
+  --theme-bg-panel: rgba(
+    60,
+    0,
+    0,
+    0.6
+  ); /* El rojo transparente (Antes alert-red-bg) */
+
+  /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
+  /* En alerta roja, el verde "seguro" se vuelve naranja, y la advertencia se vuelve rojo puro */
+  --theme-status-safe: #ff9100;
+  --theme-status-warn: #ff1744;
 }
 
 @theme {
+  --color-base: var(--theme-bg-base);
+  --color-surface: var(--theme-bg-surface);
+  --color-accent-base: var(--theme-accent-base);
+  --color-accent-glow: var(--theme-accent-glow);
+  --color-border-accent: var(--theme-border-accent);
+  --color-foreground-base: var(--theme-text-base);
+
+  --color-panel: var(--theme-bg-panel);
+  --color-status-safe: var(--theme-status-safe);
+  --color-status-warn: var(--theme-status-warn);
+
   --color-hud: var(--theme-hud-base);
   --color-hud-glow: var(--theme-hud-glow);
   --color-ship-bg: var(--theme-ship-bg);
   --color-ship-surface: var(--theme-ship-surface);
   --color-ship-text: var(--theme-ship-text);
   --color-ship-border: var(--theme-ship-border);
-
-  --color-screen-blue: rgb(0, 128, 255);
-  --color-screen-deep-blue: rgb(0, 24, 255);
 
   /* Kelvin Timeline Light Mode (Standard Operations) */
   --color-hud-blue-bg: rgba(0, 50, 120, 0.2);
@@ -71,9 +105,8 @@
   /* Red Alert Dark Mode */
   --color-ship-hull-dark: #121212;
 
-  /* Props */
-  --color-prop-yellow: #ffea00;
-  --color-prop-green: #00e676;
+  --color-screen-blue: rgb(0, 128, 255);
+  --color-screen-deep-blue: rgb(0, 24, 255);
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -84,7 +117,7 @@
   --breakpoint-2xl: 1536px;
   --breakpoint-3xl: 1920px;
 
-  --font-gruppo-semibold: "Gruppo 600", sans-serif;
+  --font-text-semibold: "Gruppo 600", sans-serif;
   --font-headings: "Lexend Zetta", sans-serif;
   --font-sans: "Gruppo", system-ui, sans-serif;
   --font-text: "Gruppo", system-ui, sans-serif;
