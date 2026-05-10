@@ -28,9 +28,9 @@ export const Header: React.FC = () => {
       */}
       <div
         className="absolute inset-0 mx-4 sm:mx-8 rounded-b-3xl backdrop-blur-md
-        bg-ship-hull-white/20 dark:bg-ship-hull-dark/40
+        bg-base
         border border-t-0
-        border-hud-cyan-glow dark:border-alert-red-glow
+        border-accent-glow
         shadow-[0_4px_30px_rgba(0,229,255,0.1)] dark:shadow-[0_4px_30px_rgba(255,23,68,0.1)]
         -z-10"
       />
@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
                 transition-colors duration-300
                 ${
                   isActive
-                    ? "bg-hud-cyan-glow dark:bg-alert-red-glow text-slate-900 dark:text-white font-bold"
+                    ? "bg-accent-glow text-slate-900 dark:text-white font-bold"
                     : "bg-black/10 dark:bg-black/30 hover:bg-black/20 dark:hover:bg-black/50 text-slate-600 dark:text-slate-400"
                 }
               `}
