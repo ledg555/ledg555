@@ -90,21 +90,6 @@
   --color-status-safe: var(--theme-status-safe);
   --color-status-warn: var(--theme-status-warn);
 
-  --color-hud: var(--theme-hud-base);
-  --color-hud-glow: var(--theme-hud-glow);
-  --color-ship-bg: var(--theme-ship-bg);
-  --color-ship-surface: var(--theme-ship-surface);
-  --color-ship-text: var(--theme-ship-text);
-  --color-ship-border: var(--theme-ship-border);
-
-  /* Kelvin Timeline Light Mode (Standard Operations) */
-  --color-hud-blue-bg: rgba(0, 50, 120, 0.2);
-  --color-ship-hull-white: #f4f6f9;
-  --color-ship-metal: #b0bec5;
-
-  /* Red Alert Dark Mode */
-  --color-ship-hull-dark: #121212;
-
   --color-screen-blue: rgb(0, 128, 255);
   --color-screen-deep-blue: rgb(0, 24, 255);
 
