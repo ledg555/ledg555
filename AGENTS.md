@@ -10,17 +10,17 @@ It will feature 5 sections in 2.5D scenarios:
 4. "Magellanic Hall" (job experience trajectory page)
 5. "Armory" (skills page).
 
-### Background and HUD
+### Background and Ceiling
 
 - Space background will be composed of a nebula static image, with a 3D star field on top of it.
-- Inside the starship there'll always be a 'HUD' header with:
-  - quick actions speed dial: send email, send whatsapp, see resume, my linkedin, my github, and communications (sounds and music)
-  - quick buttons (links) to each spaceship section
-  - language (en-es) toggle button, and "Exploration" (light) - "Red alert" (dark) modes toggle button
+- Inside the starship there'll always be a header (the ship's ceiling) with:
+  - quick actions speed dial: send email, send whatsapp, see resume, my linkedin, my github
+  - quick buttons (links) to each spaceship section, which will also serve as indicators of where the user is at
+  - Toogle buttons for: language (en-es), communications (sounds and music), and "Exploration" (light) - "Red alert" (dark) modes
 
 ### Command Bridge
 
-Image will feature links to each of the ship's secitons:
+Image will feature links to each of the ship's sections:
 
 - Left door will take us to Systems Bay
 - Right door: to the Agora

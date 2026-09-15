@@ -3,10 +3,10 @@ import { RouterProvider } from "react-router/dom";
 import { RootLayout } from "../app/layout";
 import { NotFound } from "../app/not-found";
 import { HomePage } from "../app/home";
-import { AboutPage } from "../app/about/page";
-import { ProjectsPage } from "../app/projects/page";
-import { ExperiencePage } from "../app/experience/page";
-import { SkillsPage } from "../app/skills/page";
+import { AboutPage } from "../app/about";
+import { ProjectsPage } from "../app/projects";
+import { ExperiencePage } from "../app/experience";
+import { SkillsPage } from "../app/skills";
 // import LanguageRedirect from "../components/LangRedirect";
 
 const routes = [
