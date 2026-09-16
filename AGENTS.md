@@ -13,10 +13,10 @@ It will feature 5 sections in 2.5D scenarios:
 ### Background and Ceiling
 
 - Space background will be composed of a nebula static image, with a 3D star field on top of it.
-- Inside the starship there'll always be a header (the ship's ceiling) with:
-  - quick actions speed dial: send email, send whatsapp, see resume, my linkedin, my github
-  - quick buttons (links) to each spaceship section, which will also serve as indicators of where the user is at
-  - Toogle buttons for: language (en-es), communications (sounds and music), and "Exploration" (light) - "Red alert" (dark) modes
+- Inside the starship there'll always be a HUD-like header (the ship's ceiling) with:
+  - quick actions speed dial: copy email, copy whatsapp, see resume, my linkedin, my github
+  - quick buttons (navlinks) to each spaceship section, which will also serve as indicators of where the user is at
+  - Toogle buttons for: "Exploration" (light) - "Red alert" (dark) modes, communications (sounds and music), and language (en-es), in this order from left to right
 
 ### Command Bridge
 
@@ -55,7 +55,9 @@ Starship will resemble the inside of the Enterprise in Star Trek's Kelvin timeli
 
 We'll leverage mostly motion library for the 'simple' 2D animations, and maybe more complex 3D tricks for the hardest or more striking ones that will need so. Our preferred icon pack is Hero Icons, but we can use an alternative in cases where no appropriate Hero Icon exists and the alternative pairs well enough with Hero Icons style.
 
-## Other considerations
+## Other implementation notes
 
-- We'll very likely end up getting rid of prime react, as trying to customize it is a hell.
-- i18next will be extremely important spanish and english translations. I'll provide proposals of key structures for my personal data that are open to change if you come up with a better one. You'll provide proposals for the UI translations and their keys.
+- UI Libraries: We'll very likely end up getting rid of prime react
+- Rasterized textures: Although we have tile patterns in the public folder and I'd love to use some of them, we'll maybe end up getting rid of them also if they happen to not harmonize enough with the scenes
+- Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals of key structures for my personal data that are open to change if you come up with others that fit better in the UI. You'll provide proposals for the UI translations and their keys.
+-
