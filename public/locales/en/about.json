@@ -1,8 +1,19 @@
 {
-  "title": "Captain Info",
-  "name": "Luis Delgado Gallardo",
-  "designation": "Full Stack Developer",
-  "location": "MX",
-  "website": "https://linkedin.com/in/ledg555",
-  "shortDescription": "Fullstack developer with experience in React and Node, former STEM teacher and coach of medalists of international science olympiads, and photography, music and astronomy enthusiast."
+  "ui": {
+    "modalTitle": "Officer Card",
+    "labels": {
+      "designations": "Rank & Designations",
+      "description": "Summary",
+      "skills": "Core Skills"
+    }
+  },
+  "data": {
+    "badgeActive": "Active Duty",
+    "designations": [
+      "Full Stack Developer",
+      "Captain of AEGIS BB-0057 'Bold Dragon'",
+      "Astronomy & Music Enthusiast"
+    ],
+    "description": "Full Stack Developer proficient in TypeScript, React, NestJS, and Angular. Experienced building accessible and user-friendly interfaces, performant APIs, and compliance systems. Strong foundations in physics, maths and logic. Skilled solving complex system challenges. Loves gardening and puzzles."
+  }
 }

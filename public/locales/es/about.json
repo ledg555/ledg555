@@ -1,8 +1,19 @@
 {
-  "title": "Sobre mí",
-  "name": "Luis Delgado Gallardo",
-  "designation": "Desarrollador frontend",
-  "location": "Jonacatepec, MX",
-  "website": "https://linkedin.com/in/ledg555",
-  "shortDescription": "Desarrollador full stack, ex-profesor y ex-entrenador de medallistas de olimpiadas internacionales de ciencias, y aficionado a la astronomía, la fotografía y la música."
+  "ui": {
+    "modalTitle": "Ficha de Oficial",
+    "labels": {
+      "designations": "Rango y Designaciones",
+      "description": "Extracto",
+      "skills": "Habilidades principales"
+    }
+  },
+  "data": {
+    "badgeActive": "Servicio Activo",
+    "designations": [
+      "Desarrollador Full Stack",
+      "Capitán del ACTA BB-0057 'Dragón Audaz'",
+      "Aficionado a la Música y la Astronomía"
+    ],
+    "description": "Desarrollador Full Stack especializado en TypeScript, React, NestJS y Angular, con experiencia en el desarrollo de interfaces accesibles e intuitivas, APIs de alto rendimiento y sistemas de cumplimiento normativo. Sólida formación en física, matemáticas y lógica. Resolución de desafíos de software complejos. Amante de la jardinería y los puzles."
+  }
 }
