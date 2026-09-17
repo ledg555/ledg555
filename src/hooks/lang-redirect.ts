@@ -1,4 +1,4 @@
-// TODO: it doesn't work yet, but it's an idea to improve UX (adding the lang to the path)
+// TODO: it doesn't work yet, but it's an idea to improve UX (adding the lang code to the path)
 
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";

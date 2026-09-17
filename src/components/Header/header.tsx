@@ -1,15 +1,14 @@
-import React from "react";
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
-import ThemeToggle from "../ThemeToggle";
-import useStore from "../../store/useStore";
-import LangSwitch from "../LangSwitch";
+import ThemeToggle from "../theme-toggle";
+import useStore from "../../store/theme";
+import LangSwitch from "../lang-switch";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
 import { SpeedDialContact } from "../SpeedDialContact/SpeedDialContact";
 import { SpeedDialNav } from "../SpeedDialNav/SpeedDialNav";
 
-const Header: React.FC = () => {
+export function Header() {
   const location = useLocation();
   const { isDarkTheme } = useStore();
   const { t } = useTranslation(["ui"]);
@@ -69,8 +68,6 @@ const Header: React.FC = () => {
       <SpeedDialNav />
     </motion.header>
   );
-};
-
-export { Header };
+}
 
 /* hover:text-slate-200 hover:bg-gray-700/90 */

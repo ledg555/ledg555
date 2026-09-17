@@ -2,12 +2,11 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-export const WarpDriveStars = () => {
+export function WarpDriveStars() {
   const pointsRef = useRef<THREE.Points>(null);
   const starCount = 2500;
-  const warpSpeed = 15; // Unidades por segundo
+  const warpSpeed = 15;
 
-  // useMemo ensures we only calculate these initial positions once
   const [positions, colors] = useMemo(() => {
     const positionsArray = new Float32Array(starCount * 3);
     const colorsArray = new Float32Array(starCount * 3);
@@ -41,7 +40,6 @@ export const WarpDriveStars = () => {
   useFrame((_state, delta) => {
     if (!pointsRef.current) return;
 
-    // Direct mutation of the geometry array is mandatory for 60fps performance in Three.js
     const positionsAttribute = pointsRef.current.geometry.attributes.position;
     const currentPositions = positionsAttribute.array as Float32Array;
 
@@ -55,7 +53,6 @@ export const WarpDriveStars = () => {
       }
     }
 
-    // Tell Three.js that the array changed so it re-renders the buffer
     positionsAttribute.needsUpdate = true;
   });
 
@@ -87,4 +84,4 @@ export const WarpDriveStars = () => {
       />
     </points>
   );
-};
+}

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import useStore from "../store/useStore";
+import useStore from "../store/theme";
 
 export default function LangSwitch() {
   const { i18n } = useTranslation();

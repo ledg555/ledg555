@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { WarpDriveStars } from "./warp-drive-stars";
 
-export const SceneController = () => {
+export function SceneController() {
   return (
     <>
       {/* Fog creates depth perception. Matches your dark background color */}
@@ -34,4 +34,4 @@ export const SceneController = () => {
       />
     </>
   );
-};
+}

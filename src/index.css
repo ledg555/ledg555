@@ -22,8 +22,6 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
-  /*color: rgba(8, 32, 32, 0.86);
-  background-color: #242424;*/
   font-family: "Gruppo", sans-serif;
 
   /* FONDOS (La nave) */
@@ -44,7 +42,7 @@
     50,
     120,
     0.2
-  ); /* El azul transparente (Antes hud-blue-bg) */
+  ); /* Azul transp. (Antes hud-blue-bg) */
 
   /* LUCES Y ESTADOS (Props) */
   --theme-status-safe: #00e676; /* Verde nominal (Antes prop-green) */
@@ -52,8 +50,8 @@
 }
 
 .dark {
-  /* FONDOS (La nave en penumbra) */
-  --theme-bg-base: #080c16; /* El espacio/niebla (Reemplaza al fondo blanco) */
+  /* FONDOS (La nave en penumbra, modo 'red alert') */
+  --theme-bg-base: #080c16; /* Espacio/niebla (Reemplaza al fondo blanco) */
   --theme-bg-surface: #121212; /* Elementos elevados (Antes ship-hull-dark) */
 
   /* ACENTOS (Alerta Roja) */
@@ -120,9 +118,4 @@
     0 8px
   );
   border-radius: 14px / 10px;
-}
-
-.trapezoid {
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-  /* background: #542437; */
 }

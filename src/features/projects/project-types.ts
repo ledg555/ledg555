@@ -1,4 +1,4 @@
-import { Skill } from "../skills/skillTypes";
+import { Skill } from "../skills/skill-types";
 import { ImageInterface } from "../../types/imageType";
 
 export interface Project {

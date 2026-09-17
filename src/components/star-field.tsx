@@ -12,7 +12,7 @@ interface Star {
 const StarField: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const starsRef = useRef<Star[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;

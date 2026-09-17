@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { Canvas } from "@react-three/fiber";
-import { Header } from "../components/Header/Header";
+import { Header } from "../components/Header/header";
 import { SceneController } from "../components/3D/scene-controller";
 
 export function RootLayout() {
@@ -13,7 +13,7 @@ export function RootLayout() {
         </Canvas>
       </div>
 
-      {/* Capa superior: Interfaz 2D (HUD Glassmorphic) */}
+      {/* Capa superior: Interfaz 2.5D */}
       <div className="relative z-10 w-full h-full pointer-events-none flex flex-col">
         {/* pointer-events-auto reactiva el clic en el header */}
         <div className="pointer-events-auto">
