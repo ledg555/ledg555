@@ -64,5 +64,5 @@ We'll leverage mostly motion library for the 'simple' 2D animations, and maybe m
 
 ## Other notes
 
-- Rasterized textures: Although we have tile patterns in the public folder and I'd love to use some of them, we'll maybe end up getting rid of them also if they happen to not harmonize enough with the scenes
+- Textures: Although we have tile patterns in the public folder and I love some of them, we'll maybe end up changing all by a handful of PBR textures.
 - Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals for namespace keys whose data varies per language, and keep all constant data in @src/constants.
