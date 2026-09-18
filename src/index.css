@@ -1,5 +1,4 @@
-@layer tailwind-base, primereact, tailwind-utilities;
-@source '../node_modules/primereact/**/*.{js,ts,jsx,tsx}';
+@layer tailwind-base, tailwind-utilities;
 @font-face {
   src: url("./assets/fonts/Gruppo-600.woff2") format("woff2");
   font-family: "Gruppo";
