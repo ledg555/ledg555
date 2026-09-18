@@ -55,9 +55,14 @@ Starship will resemble the inside of the Enterprise in Star Trek's Kelvin timeli
 
 We'll leverage mostly motion library for the 'simple' 2D animations, and maybe more complex 3D tricks for the hardest or more striking ones that will need so. Our preferred icon pack is Hero Icons, but we can use an alternative in cases where no appropriate Hero Icon exists and the alternative pairs well enough with Hero Icons style.
 
-## Other implementation notes
+## Skills Directive
 
-- UI Libraries: We'll very likely end up getting rid of prime react
+- glassmorphism: Invoke when building panels, sci-fi console modals, overlays, or floating components over ship scenes. Implements frosted glass with specular borders, anti-banding grain for dark backgrounds, liquid refraction, and GPU/accessibility optimizations.
+- svg-animation: Invoke for interactive and programmatic vector manipulation using CSS or GSAP. Use for drawing cybernetic reticles over clickable objects (stroke draw-on), tracing navigation routes on the star map (motion path), and transitioning between icon states (morphing).
+- 3dsvg-interactive-react: Invoke to transform 2D SVG paths into extruded 3D components in React/Three.js (<SVG3D>). Ideal for ship insignias, emblems with metallic/holographic finishes, and interactive volumetric icons without requiring external GLTF models.
+- svg-animation-engineer: Invoke to generate pure vector micro-illustrations with looping physics-based animations using exclusively CSS keyframes. Use for continuous ambient elements (such as steam from mugs in the Agora or air-reactive vegetation) without overloading the JavaScript main thread.
+
+## Other notes
+
 - Rasterized textures: Although we have tile patterns in the public folder and I'd love to use some of them, we'll maybe end up getting rid of them also if they happen to not harmonize enough with the scenes
-- Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals of key structures for my personal data that are open to change if you come up with others that fit better in the UI. You'll provide proposals for the UI translations and their keys.
--
+- Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals for namespace keys whose data varies per language, and keep all constant data in @src/constants.

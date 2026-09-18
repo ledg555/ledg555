@@ -5,8 +5,8 @@ import useStore from "../../store/theme";
 import LangSwitch from "../lang-switch";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
-import { SpeedDialContact } from "../SpeedDialContact/SpeedDialContact";
-import { SpeedDialNav } from "../SpeedDialNav/SpeedDialNav";
+import { SpeedDialContact } from "../speed-dial-contact";
+import { SpeedDialNav } from "../speed-dial-nav";
 
 export function Header() {
   const location = useLocation();

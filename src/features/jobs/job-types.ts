@@ -1,10 +1,9 @@
 export interface Job {
-  key: string;
-  role: string;
   company: string;
-  date: string;
+  role: string;
+  date: string; // YYYY.MM - YYYY.MM
+  description: string[];
   location: string;
   url: string;
   imgUrl: string;
-  description: string[];
 }

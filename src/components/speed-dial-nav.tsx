@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Tooltip } from "primereact/tooltip";
 import { HiOutlinePlus } from "react-icons/hi2";
 import { useState } from "react";
 import { Link } from "react-router";
-import { navLinks } from "../Header/nav-config";
+import { navLinks } from "./header/nav-config";
 
 export function SpeedDialNav() {
   const { t } = useTranslation();
@@ -23,7 +22,6 @@ export function SpeedDialNav() {
   ));
   return (
     <>
-      <Tooltip target=".speeddial-nav .p-speeddial-action" position="left" />
       <button
         className="block sm:hidden relative h-12 aspect-square p-0 rounded-full bg-blue-500 perspective-dramatic"
         onClick={() => setOpen(!open)}
