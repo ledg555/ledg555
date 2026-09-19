@@ -15,8 +15,12 @@ function createStarTexture(): THREE.Texture {
 
   // Soft radial gradient: bright center fading to transparent edge
   const gradient = ctx.createRadialGradient(
-    size / 2, size / 2, 0,
-    size / 2, size / 2, size / 2
+    size / 2,
+    size / 2,
+    0,
+    size / 2,
+    size / 2,
+    size / 2,
   );
   gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
   gradient.addColorStop(0.3, "rgba(255, 255, 255, 0.8)");
@@ -50,7 +54,7 @@ export function WarpDriveStars() {
 
     for (let i = 0; i < starCount; i++) {
       // Cylinder distribution: scatter stars around the user, keeping the center mostly clear
-      const radius = 5 + Math.random() * 45;
+      const radius = 5 + Math.random() * 25;
       const theta = 2 * Math.PI * Math.random();
 
       positionsArray[i * 3] = radius * Math.cos(theta); // x
@@ -91,8 +95,9 @@ export function WarpDriveStars() {
     const currentPositions = positionsAttribute.array as Float32Array;
 
     // Twinkle opacity attribute
-    const opacityAttr = pointsRef.current.geometry.attributes
-      .opacity as THREE.BufferAttribute | undefined;
+    const opacityAttr = pointsRef.current.geometry.attributes.opacity as
+      | THREE.BufferAttribute
+      | undefined;
 
     for (let i = 0; i < starCount; i++) {
       // Move stars forward on the Z axis
@@ -118,26 +123,17 @@ export function WarpDriveStars() {
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          args={[positions, 3]}
-        />
-        <bufferAttribute
-          attach="attributes-color"
-          args={[colors, 3]}
-        />
-        <bufferAttribute
-          attach="attributes-opacity"
-          args={[opacities, 1]}
-        />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-color" args={[colors, 3]} />
+        <bufferAttribute attach="attributes-opacity" args={[opacities, 1]} />
       </bufferGeometry>
       {/* Circular map + AdditiveBlending = round, glowing stars */}
       <pointsMaterial
-        size={0.18}
+        size={0.4}
         map={starTexture}
         vertexColors
         transparent
-        opacity={0.8}
+        opacity={1}
         sizeAttenuation={true}
         blending={THREE.AdditiveBlending}
         depthWrite={false}

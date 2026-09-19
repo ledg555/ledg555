@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
 import ThemeToggle from "../theme-toggle";
-import useStore from "../../store/theme";
+import { useThemeStore } from "../../store/theme";
 import LangSwitch from "../lang-switch";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
@@ -10,13 +10,13 @@ import { SpeedDialNav } from "../speed-dial-nav";
 
 export function Header() {
   const location = useLocation();
-  const { isDarkTheme } = useStore();
+  const { isDarkTheme } = useThemeStore();
   const { t } = useTranslation(["ui"]);
 
   return (
     <motion.header
       className={`flex justify-around xs:justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-[url(/src/assets/tiles/metal/1-hixs_pattern_evolution.png)] rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-[88px]
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-[url(/src/assets/tiles/metal/1-hixs_pattern_evolution.png)] rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-22
         ${
           isDarkTheme
             ? "bg-gray-900/20 border-red-500/30"
@@ -30,12 +30,12 @@ export function Header() {
       {/* Logo */}
       <div className="flex items-center gap-4">
         <SpeedDialContact />
-        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:!text-base w-40 lg:w-[184px] text-zinc-600">
+        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:text-base! w-40 lg:w-46 text-zinc-600">
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </div>
       {/* Navigation */}
-      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly flex-grow items-center gap-1 sm:gap-2 lg:gap-6 xl:gap-2">
+      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly grow items-center gap-1 sm:gap-2 lg:gap-6 xl:gap-2">
         {navLinks.map((item) => (
           <Link
             title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
@@ -61,7 +61,7 @@ export function Header() {
           </Link>
         ))}
       </nav>
-      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 flex-grow max-w-28 sm:max-w-24 lg:max-w-40 lg:flex-grow-0">
+      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 grow max-w-28 sm:max-w-24 lg:max-w-40 lg:grow-0">
         <ThemeToggle />
         <LangSwitch />
       </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
-import useStore from "../store/theme";
+import { useThemeStore } from "../store/theme";
 
 const ThemeToggle: React.FC = () => {
-  const { isDarkTheme, toggleTheme } = useStore();
+  const { isDarkTheme, toggleTheme } = useThemeStore();
 
   return (
     <motion.button

@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import useStore from "../store/theme";
+import { useThemeStore } from "../store/theme";
 
 export default function LangSwitch() {
   const { i18n } = useTranslation();
-  const { isDarkTheme } = useStore();
+  const { isDarkTheme } = useThemeStore();
   return (
     <>
       <button

@@ -5,20 +5,18 @@ import { SceneController } from "../components/3D/scene-controller";
 
 export function RootLayout() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-base">
+    <div className="relative w-screen h-screen overflow-hidden bg-transparent">
       {/* Layer 0: Nebula background image (visible through the transparent Canvas) */}
+      {/* radial-gradient(ellipse at center, #1e3a8a 0%, #000 0%) not working */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          background: "url('/bg .jpg') center/cover no-repeat",
         }}
       />
 
       {/* Layer 1: 3D star field (transparent background lets nebula show through) */}
-      <div className="absolute inset-0 z-[1]">
+      <div className="absolute inset-0 z-1">
         <Canvas
           camera={{ position: [0, 0, 5], fov: 50 }}
           gl={{ alpha: true }}
@@ -35,7 +33,7 @@ export function RootLayout() {
           <Header />
         </div>
 
-        <main className="flex-1 w-full p-8 pointer-events-auto overflow-y-auto custom-scrollbar">
+        <main className="flex-1 w-full p-8 pt-22 pointer-events-auto overflow-y-auto custom-scrollbar">
           <Outlet />
         </main>
       </div>
