@@ -24,8 +24,8 @@
   font-family: "Gruppo", sans-serif;
 
   /* FONDOS (La nave) */
-  --theme-bg-base: #f4f6f9; /* Lienzo principal (Antes ship-hull-white) */
-  --theme-bg-surface: #b0bec5; /* Elementos elevados: Header, SpeedDials, Cards */
+  --theme-bg-base: #eaeaea; /* Lienzo principal (Antes ship-hull-white) */
+  --theme-bg-surface: #f4f6f9; /* Elementos elevados: Header, SpeedDials, Cards */
 
   /* ACENTOS (El HUD holográfico) */
   --theme-accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
@@ -115,6 +115,20 @@
     12px 100%,
     0 calc(100% - 8px),
     0 8px
+  );
+  border-radius: 14px / 10px;
+}
+
+.octagon-lg {
+  clip-path: polygon(
+    36px 0,
+    calc(100% - 36px) 0,
+    100% 24px,
+    100% calc(100% - 24px),
+    calc(100% - 36px) 100%,
+    36px 100%,
+    0 calc(100% - 24px),
+    0 24px
   );
   border-radius: 14px / 10px;
 }

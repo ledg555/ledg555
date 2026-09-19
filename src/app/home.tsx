@@ -33,14 +33,23 @@ interface AboutData {
 export function HomePage() {
   const { t } = useTranslation(["about", "jobs", "ui"]);
 
-  const about = t("data", { ns: "about", returnObjects: true }) as AboutData["data"];
-  const aboutLabels = t("ui.labels", { ns: "about", returnObjects: true }) as AboutData["ui"]["labels"];
+  const about = t("data", {
+    ns: "about",
+    returnObjects: true,
+  }) as AboutData["data"];
+  const aboutLabels = t("ui.labels", {
+    ns: "about",
+    returnObjects: true,
+  }) as AboutData["ui"]["labels"];
   const aboutBadge = t("data.badgeActive", { ns: "about" }) as string;
-  const jobs = t("", { ns: "jobs", returnObjects: true, defaultValue: [] }) as JobEntry[];
+  const jobs = t("", {
+    ns: "jobs",
+    returnObjects: true,
+    defaultValue: [],
+  }) as JobEntry[];
 
   return (
-    <div className="mt-4 flex flex-col gap-8 max-w-6xl mx-auto pb-12">
-
+    <div className="mt-4 flex flex-col gap-8 mx-auto pb-12">
       {/* ── Section title ─────────────────────────────────────────── */}
       <motion.h1
         className="text-3xl lg:text-4xl font-headings font-bold text-foreground-base tracking-wide"
@@ -50,16 +59,16 @@ export function HomePage() {
       >
         ⚙ Token Playground
       </motion.h1>
-      <p className="text-foreground-base/70 text-sm -mt-4">
-        Temporary UI to validate every CSS design token. Toggle Exploration ↔ Red Alert to compare.
+      <p className="text-foreground-base text-sm -mt-4">
+        Temporary UI to validate every CSS design token. Toggle Exploration ↔
+        Red Alert to compare.
       </p>
 
       {/* ── Row 1: Officer Card + Status lights ───────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
         {/* Officer card — bg-surface, border-accent, accent-base */}
         <motion.div
-          className="lg:col-span-2 bg-surface/80 backdrop-blur-sm border border-border-accent rounded-2xl p-6 flex flex-col sm:flex-row gap-6"
+          className="lg:col-span-2 bg-surface backdrop-blur-sm border border-border-accent rounded-2xl p-6 flex flex-col sm:flex-row gap-6"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -146,10 +155,14 @@ export function HomePage() {
             { label: "Warp Core", status: "safe" as const, value: "Online" },
           ].map((item) => (
             <div key={item.label} className="flex items-center justify-between">
-              <span className="text-foreground-base/80 text-sm">{item.label}</span>
+              <span className="text-foreground-base/80 text-sm">
+                {item.label}
+              </span>
               <span
                 className={`text-sm font-bold ${
-                  item.status === "safe" ? "text-status-safe" : "text-status-warn"
+                  item.status === "safe"
+                    ? "text-status-safe"
+                    : "text-status-warn"
                 }`}
               >
                 <span
@@ -169,7 +182,7 @@ export function HomePage() {
             <span className="text-xs text-foreground-base/50 uppercase tracking-widest">
               Current Position
             </span>
-            <p className="text-sm text-foreground-base font-semibold mt-1 px-3 py-2 bg-base/60 rounded-lg border border-border-accent/20">
+            <p className="text-sm text-foreground-base font-semibold mt-1 px-3 py-2 bg-base rounded-lg border border-border-accent/20">
               📍 {ABOUT.currentLocation}
             </p>
           </div>
@@ -201,7 +214,9 @@ export function HomePage() {
             <div
               className={`w-8 h-8 rounded-lg ${s.cls} border border-border-accent/40 shadow-inner`}
             />
-            <span className="text-[10px] text-foreground-base/50">{s.token}</span>
+            <span className="text-[10px] text-foreground-base/50">
+              {s.token}
+            </span>
           </div>
         ))}
       </motion.div>
@@ -210,7 +225,7 @@ export function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {/* Octagon demo */}
         <motion.div
-          className="octagon-sm bg-surface/70 border border-border-accent p-6 flex flex-col items-center gap-3"
+          className="octagon-lg bg-surface border border-border-accent p-6 flex flex-col items-center gap-3"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.35 }}
@@ -218,8 +233,9 @@ export function HomePage() {
           <span className="text-accent-base text-sm uppercase tracking-widest font-bold">
             .octagon-sm clip
           </span>
-          <p className="text-foreground-base/70 text-xs text-center">
-            This panel uses the octagon-sm utility class — a sci-fi staple clipping shape.
+          <p className="text-foreground-base text-xs text-center">
+            This panel uses the octagon-sm utility class — a sci-fi staple
+            clipping shape.
           </p>
         </motion.div>
 

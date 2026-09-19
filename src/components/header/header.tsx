@@ -30,7 +30,7 @@ export function Header() {
       {/* Logo */}
       <div className="flex items-center gap-4">
         <SpeedDialContact />
-        <span className="hidden min-[720px]:block font-headings font-bold text-sm lg:text-base! w-40 lg:w-46 text-zinc-600">
+        <span className="hidden min-[720px]:block font-headings font-bold text-sm w-40 lg:w-46 text-foreground-base">
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </div>
