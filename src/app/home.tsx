@@ -42,10 +42,9 @@ export function HomePage() {
     returnObjects: true,
   }) as AboutData["ui"]["labels"];
   const aboutBadge = t("data.badgeActive", { ns: "about" }) as string;
-  const jobs = t("", {
+  const jobs = t("data", {
     ns: "jobs",
     returnObjects: true,
-    defaultValue: [],
   }) as JobEntry[];
 
   return (
@@ -68,7 +67,7 @@ export function HomePage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Officer card — bg-surface, border-accent, accent-base */}
         <motion.div
-          className="lg:col-span-2 bg-surface backdrop-blur-sm border border-border-accent rounded-2xl p-6 flex flex-col sm:flex-row gap-6"
+          className="lg:col-span-2 bg-base backdrop-blur-sm border border-border-accent rounded-2xl p-6 flex flex-col sm:flex-row gap-6"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -182,7 +181,7 @@ export function HomePage() {
             <span className="text-xs text-foreground-base/50 uppercase tracking-widest">
               Current Position
             </span>
-            <p className="text-sm text-foreground-base font-semibold mt-1 px-3 py-2 bg-base rounded-lg border border-border-accent/20">
+            <p className="text-sm text-foreground-base font-semibold mt-1 px-3 py-2 bg-base rounded-lg border border-border-accent">
               📍 {ABOUT.currentLocation}
             </p>
           </div>
@@ -285,7 +284,7 @@ export function HomePage() {
                       {job.company} · {job.location}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface/50 text-foreground-base/60 border border-border-accent/30 shrink-0">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface text-foreground-base/60 border border-border-accent/30 shrink-0">
                     {job.date}
                   </span>
                 </div>

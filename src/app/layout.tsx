@@ -5,7 +5,7 @@ import { SceneController } from "../components/3D/scene-controller";
 
 export function RootLayout() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-transparent">
+    <div className="relative w-screen h-screen overflow-hidden bg-black">
       {/* Layer 0: Nebula background image (visible through the transparent Canvas) */}
       {/* radial-gradient(ellipse at center, #1e3a8a 0%, #000 0%) not working */}
       <div
@@ -33,7 +33,7 @@ export function RootLayout() {
           <Header />
         </div>
 
-        <main className="flex-1 w-full p-8 pt-22 pointer-events-auto overflow-y-auto custom-scrollbar">
+        <main className="flex-1 w-full p-8 pt-22 pointer-events-auto overflow-y-auto">
           <Outlet />
         </main>
       </div>
