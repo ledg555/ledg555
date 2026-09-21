@@ -14,6 +14,36 @@
 @layer tailwind-utilities {
 }
 
+@theme {
+  --color-base: var(--theme-bg-base);
+  --color-fg: var(--theme-text-base);
+  --color-surface: var(--theme-bg-surface);
+  --color-accent-base: var(--theme-accent-base);
+  --color-accent-glow: var(--theme-accent-glow);
+  --color-border-accent: var(--theme-border-accent);
+
+  --color-panel: var(--theme-bg-panel);
+  --color-status-safe: var(--theme-status-safe);
+  --color-status-warn: var(--theme-status-warn);
+
+  --color-screen-blue: rgb(0, 128, 255);
+  --color-screen-deep-blue: rgb(0, 24, 255);
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+
+  --font-text-semibold: "Gruppo 600", sans-serif;
+  --font-headings: "Lexend Zetta", sans-serif;
+  --font-sans: "Gruppo 600", system-ui, sans-serif;
+  --font-text: "Gruppo 600", system-ui, sans-serif;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -68,36 +98,6 @@
   /* En alerta roja, el verde "seguro" se vuelve naranja, y la advertencia se vuelve rojo puro */
   --theme-status-safe: #ff9100;
   --theme-status-warn: #ff1744;
-}
-
-@theme {
-  --color-base: var(--theme-bg-base);
-  --color-surface: var(--theme-bg-surface);
-  --color-accent-base: var(--theme-accent-base);
-  --color-accent-glow: var(--theme-accent-glow);
-  --color-border-accent: var(--theme-border-accent);
-  --color-foreground-base: var(--theme-text-base);
-
-  --color-panel: var(--theme-bg-panel);
-  --color-status-safe: var(--theme-status-safe);
-  --color-status-warn: var(--theme-status-warn);
-
-  --color-screen-blue: rgb(0, 128, 255);
-  --color-screen-deep-blue: rgb(0, 24, 255);
-
-  --breakpoint-*: initial;
-  --breakpoint-xs: 360px;
-  --breakpoint-sm: 480px;
-  --breakpoint-md: 640px;
-  --breakpoint-lg: 960px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1920px;
-
-  --font-text-semibold: "Gruppo 600", sans-serif;
-  --font-headings: "Lexend Zetta", sans-serif;
-  --font-sans: "Gruppo", system-ui, sans-serif;
-  --font-text: "Gruppo", system-ui, sans-serif;
 }
 
 .octagon-sm {

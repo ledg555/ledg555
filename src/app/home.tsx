@@ -51,14 +51,14 @@ export function HomePage() {
     <div className="mt-4 flex flex-col gap-8 mx-auto pb-12">
       {/* ── Section title ─────────────────────────────────────────── */}
       <motion.h1
-        className="text-3xl lg:text-4xl font-headings font-bold text-foreground-base tracking-wide"
+        className="text-3xl lg:text-4xl font-headings font-bold text-fg tracking-wide"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         ⚙ Token Playground
       </motion.h1>
-      <p className="text-foreground-base text-sm -mt-4">
+      <p className="text-fg text-sm -mt-4">
         Temporary UI to validate every CSS design token. Toggle Exploration ↔
         Red Alert to compare.
       </p>
@@ -82,7 +82,7 @@ export function HomePage() {
           </div>
 
           {/* Profile info */}
-          <div className="flex flex-col gap-2 text-foreground-base">
+          <div className="flex flex-col gap-2 text-fg">
             <h2 className="text-2xl font-headings font-bold tracking-wider">
               {ABOUT.name}
             </h2>
@@ -111,8 +111,8 @@ export function HomePage() {
               {aboutBadge}
             </span>
 
-            {/* Description — foreground-base */}
-            <p className="text-sm leading-relaxed mt-2 text-foreground-base/80">
+            {/* Description — fg */}
+            <p className="text-sm leading-relaxed mt-2 text-fg/80">
               {about.description}
             </p>
 
@@ -153,10 +153,11 @@ export function HomePage() {
             { label: "Hull Integrity", status: "warn" as const, value: "74%" },
             { label: "Warp Core", status: "safe" as const, value: "Online" },
           ].map((item) => (
-            <div key={item.label} className="flex items-center justify-between">
-              <span className="text-foreground-base/80 text-sm">
-                {item.label}
-              </span>
+            <div
+              key={item.label}
+              className="flex items-center font-bold justify-between"
+            >
+              <span className="text-accent-base text-sm">{item.label}</span>
               <span
                 className={`text-sm font-bold ${
                   item.status === "safe"
@@ -178,10 +179,10 @@ export function HomePage() {
 
           {/* Location — bg-base */}
           <div className="mt-auto pt-4 border-t border-border-accent/30">
-            <span className="text-xs text-foreground-base/50 uppercase tracking-widest">
+            <span className="text-xs text-fg/50 uppercase tracking-widest">
               Current Position
             </span>
-            <p className="text-sm text-foreground-base font-semibold mt-1 px-3 py-2 bg-base rounded-lg border border-border-accent">
+            <p className="text-sm text-fg font-semibold mt-1 px-3 py-2 bg-base rounded-lg border border-border-accent">
               📍 {ABOUT.currentLocation}
             </p>
           </div>
@@ -195,7 +196,7 @@ export function HomePage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.3 }}
       >
-        <span className="text-xs text-foreground-base/50 uppercase tracking-widest mr-2">
+        <span className="text-xs text-fg/50 uppercase tracking-widest mr-2">
           Token Swatches:
         </span>
         {[
@@ -213,9 +214,7 @@ export function HomePage() {
             <div
               className={`w-8 h-8 rounded-lg ${s.cls} border border-border-accent/40 shadow-inner`}
             />
-            <span className="text-[10px] text-foreground-base/50">
-              {s.token}
-            </span>
+            <span className="text-[10px] text-fg/50">{s.token}</span>
           </div>
         ))}
       </motion.div>
@@ -232,7 +231,7 @@ export function HomePage() {
           <span className="text-accent-base text-sm uppercase tracking-widest font-bold">
             .octagon-sm clip
           </span>
-          <p className="text-foreground-base text-xs text-center">
+          <p className="text-fg text-xs text-center">
             This panel uses the octagon-sm utility class — a sci-fi staple
             clipping shape.
           </p>
@@ -249,7 +248,7 @@ export function HomePage() {
           <span className="text-accent-base font-headings font-bold text-lg tracking-wider">
             accent-glow
           </span>
-          <span className="text-foreground-base/50 text-xs">
+          <span className="text-fg/50 text-xs">
             shadow-accent-glow / bg-accent-glow
           </span>
         </motion.div>
@@ -261,7 +260,7 @@ export function HomePage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
       >
-        <h2 className="text-2xl font-headings font-bold text-foreground-base tracking-wider mb-4">
+        <h2 className="text-2xl font-headings font-bold text-fg tracking-wider mb-4">
           Mission Log
         </h2>
 
@@ -270,21 +269,21 @@ export function HomePage() {
             jobs.map((job: JobEntry, index: number) => (
               <motion.div
                 key={job.key}
-                className="bg-panel/70 backdrop-blur-sm border border-border-accent/50 rounded-xl p-5 hover:border-accent-base/60 transition-colors duration-300"
+                className="bg-panel/70 backdrop-blur-sm border border-border-accent rounded-xl p-5 hover:border-accent-base/60 transition-colors duration-300"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.08 }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                   <div>
-                    <h3 className="text-base font-headings font-bold text-accent-base tracking-wide">
+                    <h3 className="font-headings font-bold text-accent-base tracking-wide">
                       {job.role}
                     </h3>
-                    <span className="text-sm text-foreground-base/70">
-                      {job.company} · {job.location}
+                    <span className="text-sm text-fg/70">
+                      {job.company} | {job.location}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface text-foreground-base/60 border border-border-accent/30 shrink-0">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface text-fg/60 border border-border-accent/30 shrink-0">
                     {job.date}
                   </span>
                 </div>
@@ -293,7 +292,7 @@ export function HomePage() {
                   {job.description.map((desc: string, di: number) => (
                     <li
                       key={di}
-                      className="text-sm text-foreground-base/75 before:content-['▸'] before:text-accent-base before:mr-2"
+                      className="text-sm text-fg/75 before:content-['▸'] before:text-accent-base before:mr-2"
                     >
                       {desc}
                     </li>
@@ -306,7 +305,7 @@ export function HomePage() {
 
       {/* ── Row 5: Open space — to see WarpDriveStars ─────────────── */}
       <div className="h-48 flex items-center justify-center">
-        <span className="text-foreground-base/30 text-sm italic tracking-wide">
+        <span className="text-fg/30 text-sm italic tracking-wide">
           ↑ Stars visible through transparent areas above ↑
         </span>
       </div>
