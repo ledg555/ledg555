@@ -1,72 +1,74 @@
-[
-  {
-    "key": "bfh",
-    "role": "Desarrollador Full Stack Lead (Consultant)",
-    "company": "Bond Field Holdings",
-    "date": "2025-2026",
-    "location": "Remoto",
-    "url": "https://bondfieldh.vercel.app",
-    "imgUrl": "/imgs/jobs/6nocountry.webp",
-    "description": [
-      "Diseñé e implementé el ciclo de vida completo de una plataforma web B2B (React, NestJS, PostgreSQL), automatizando inspecciones de controles volumétricos y logrando un incremento de 1,000% en la productividad operativa e ingresos.",
-      "Desarrollé un motor de validación para reportes volumétricos único en su tipo, garantizando un cumplimiento del 100% ante la normativa fiscal de combustibles en México.",
-      "Diseñé y desplegué un firewall basado en código abierto alineando la infraestructura tecnológica de empresas con las regulaciones fiscales sobre ciberseguridad en el sector de combustibles."
-    ]
-  },
-  {
-    "key": "eversoft",
-    "role": "Desarrollador Full Stack",
-    "company": "Eversoft",
-    "date": "2025",
-    "location": "Remoto",
-    "url": "https://eversoft.com",
-    "imgUrl": "/imgs/jobs/6nocountry.webp",
-    "description": [
-      "Guié a desarrolladores junior en buenas prácticas de arquitectura y code reviews, optimizando la productividad general y reduciendo la deuda técnica del equipo.",
-      "Implementé interfaces responsive para la plataforma inmobiliaria Livva aplicando patrones modernos de Angular, mejorando la UX y la reusabilidad del código.",
-      "Construí servicios backend RESTful escalables para modulos críticos como autenticación de usuarios, firma electrónica de contratos e integración de pago de servicios."
-    ]
-  },
-  {
-    "key": "nocountry",
-    "role": "Desarrollador Full Stack",
-    "company": "No Country",
-    "date": "2024 - presente",
-    "location": "Remoto",
-    "url": "https://www.nocountry.tech",
-    "imgUrl": "/imgs/jobs/6nocountry.webp",
-    "description": [
-      "Colaboré en equipos multidisciplinarios y remotos de LATAM para el desarrollo de aplicaciones web (MVPs), participando en la gestión del backlog y la planificación de sprints.",
-      "Establecí flujos de trabajo en Git (estrategias de ramas y pull requests), facilitando la colaboración asíncrona y acelerando la integración continua en equipos de múltiples desarrolladores.",
-      "Desarrollé componentes frontend accesibles y responsive con librerías como Shadcn y Material UI, y apoyé en la arquitectura de APIs REST, mejorando el rendimiento de peticiones HTTP en el cliente."
-    ]
-  },
-  {
-    "key": "penon",
-    "role": "Profesor STEM",
-    "company": "Colegio El Peñón",
-    "date": "2023 - 2024",
-    "location": "Jonacatepec, MX",
-    "url": "https://www.elpenon.edu.mx/",
-    "imgUrl": "/imgs/jobs/5penon.webp",
-    "description": [
-      "Profesor auxiliar de Informática y titular de Física, instruí a alumnos de bachillerato en los lenguajes de Python y JavaScript con buenas prácticas y sintaxis moderna.",
-      "Desarrollé el diseño conceptual de “MathCalc Pro”, una aplicación para ayudar a estudiantes a mejorar la confianza en sus habilidades matemáticas.",
-      "Logré que mis estudiantes obtuvieran 13 reconocimientos en concursos y olimpiadas de ciencias a nivel estatal, nacional e internacional."
-    ]
-  },
-  {
-    "key": "progressum",
-    "role": "Profesor STEM",
-    "company": "Colegio Universitario Progressum",
-    "date": "2022 - 2023",
-    "location": "Cuernavaca, MX",
-    "url": "https://progressum.edu.mx/",
-    "imgUrl": "/imgs/jobs/4progressum.webp",
-    "description": [
-      "Profesor de las asignaturas de Informática, Matemáticas y Física.",
-      "Desarrollé proyectos básicos con mis estudiantes utilizando tecnologías como HTML, CSS, JavaScript, Python y Arduino, y software de análisis de datos como LabPlot.",
-      "Logré más del 80% de admisión de mis estudiantes en la universidad de su primera elección, así como un reconocimiento en olimpiadas de ciencias a nivel estatal."
-    ]
-  }
-]
+{
+  "data": [
+    {
+      "key": "bfh",
+      "role": "Desarrollador Full Stack Lead (Consultant)",
+      "company": "Bond Field Holdings",
+      "date": "2025-2026",
+      "location": "Remoto",
+      "url": "https://bondfieldh.vercel.app",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Diseñé e implementé el ciclo de vida completo de una plataforma web B2B (React, NestJS, PostgreSQL), automatizando inspecciones de controles volumétricos y logrando un incremento de 1,000% en la productividad operativa e ingresos.",
+        "Desarrollé un motor de validación para reportes volumétricos único en su tipo, garantizando un cumplimiento del 100% ante la normativa fiscal de combustibles en México.",
+        "Diseñé y desplegué un firewall basado en código abierto alineando la infraestructura tecnológica de empresas con las regulaciones fiscales sobre ciberseguridad en el sector de combustibles."
+      ]
+    },
+    {
+      "key": "eversoft",
+      "role": "Desarrollador Full Stack",
+      "company": "Eversoft",
+      "date": "2025",
+      "location": "Remoto",
+      "url": "https://eversoft.com",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Guié a desarrolladores junior en buenas prácticas de arquitectura y code reviews, optimizando la productividad general y reduciendo la deuda técnica del equipo.",
+        "Implementé interfaces responsive para la plataforma inmobiliaria Livva aplicando patrones modernos de Angular, mejorando la UX y la reusabilidad del código.",
+        "Construí servicios backend RESTful escalables para modulos críticos como autenticación de usuarios, firma electrónica de contratos e integración de pago de servicios."
+      ]
+    },
+    {
+      "key": "nocountry",
+      "role": "Desarrollador Full Stack",
+      "company": "No Country",
+      "date": "2024 - presente",
+      "location": "Remoto",
+      "url": "https://www.nocountry.tech",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Colaboré en equipos multidisciplinarios y remotos de LATAM para el desarrollo de aplicaciones web (MVPs), participando en la gestión del backlog y la planificación de sprints.",
+        "Establecí flujos de trabajo en Git (estrategias de ramas y pull requests), facilitando la colaboración asíncrona y acelerando la integración continua en equipos de múltiples desarrolladores.",
+        "Desarrollé componentes frontend accesibles y responsive con librerías como Shadcn y Material UI, y apoyé en la arquitectura de APIs REST, mejorando el rendimiento de peticiones HTTP en el cliente."
+      ]
+    },
+    {
+      "key": "penon",
+      "role": "Profesor STEM",
+      "company": "Colegio El Peñón",
+      "date": "2023 - 2024",
+      "location": "Jonacatepec, MX",
+      "url": "https://www.elpenon.edu.mx/",
+      "imgUrl": "/imgs/jobs/5penon.webp",
+      "description": [
+        "Profesor auxiliar de Informática y titular de Física, instruí a alumnos de bachillerato en los lenguajes de Python y JavaScript con buenas prácticas y sintaxis moderna.",
+        "Desarrollé el diseño conceptual de “MathCalc Pro”, una aplicación para ayudar a estudiantes a mejorar la confianza en sus habilidades matemáticas.",
+        "Logré que mis estudiantes obtuvieran 13 reconocimientos en concursos y olimpiadas de ciencias a nivel estatal, nacional e internacional."
+      ]
+    },
+    {
+      "key": "progressum",
+      "role": "Profesor STEM",
+      "company": "Colegio Universitario Progressum",
+      "date": "2022 - 2023",
+      "location": "Cuernavaca, MX",
+      "url": "https://progressum.edu.mx/",
+      "imgUrl": "/imgs/jobs/4progressum.webp",
+      "description": [
+        "Profesor de las asignaturas de Informática, Matemáticas y Física.",
+        "Desarrollé proyectos básicos con mis estudiantes utilizando tecnologías como HTML, CSS, JavaScript, Python y Arduino, y software de análisis de datos como LabPlot.",
+        "Logré más del 80% de admisión de mis estudiantes en la universidad de su primera elección, así como un reconocimiento en olimpiadas de ciencias a nivel estatal."
+      ]
+    }
+  ]
+}
