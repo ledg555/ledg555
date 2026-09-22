@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { Canvas } from "@react-three/fiber";
-import { Header } from "../components/header/header";
+import { Header } from "../components/header/header-copy";
 import { SceneController } from "../components/3D/scene-controller";
 
 export function RootLayout() {
@@ -11,7 +11,7 @@ export function RootLayout() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          background: "url('/bg .jpg') center/cover no-repeat",
+          background: "url('/bg .jpg') center/cover no-repeat", /* TODO: we'll fix this later */
         }}
       />
 

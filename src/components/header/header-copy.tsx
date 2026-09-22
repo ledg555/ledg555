@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
 import ThemeToggle from "../theme-toggle";
-import { useThemeStore } from "../../store/theme";
 import LangSwitch from "../lang-switch";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
@@ -10,19 +9,14 @@ import { SpeedDialNav } from "../speed-dial-nav";
 
 export function Header() {
   const location = useLocation();
-  const { isDarkTheme } = useThemeStore();
   const { t } = useTranslation(["ui"]);
 
   return (
     <motion.header
-      className={`flex justify-around xs:justify-between items-center gap-4
+      className="flex justify-around xs:justify-between items-center gap-4
         fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 !border-[url(/src/assets/tiles/metal/1-hixs_pattern_evolution.png)] rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-22
-        ${
-          isDarkTheme
-            ? "bg-gray-900/20 border-red-500/30"
-            : "bg-[url(/tiles/smooth/brushed_alu.png)] border-gray-200/80"
-        }
-      `}
+        bg-base/90 border-gray-200/80 dark:bg-gray-900/40 dark:border-red-500/30
+      "
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -34,33 +28,107 @@ export function Header() {
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </div>
+
       {/* Navigation */}
-      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly grow items-center gap-1 sm:gap-2 lg:gap-6 xl:gap-2">
-        {navLinks.map((item) => (
-          <Link
-            title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
-            key={item.translationKey}
-            to={`${item.url}`}
-            className={`
-                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm cursor-pointer bg-radial
-                  ${
-                    location.pathname === item.url
-                      ? isDarkTheme
-                        ? "from-red-500/80 from-30% to-red-500/50 text-red-200/80 border border-red-500/30"
-                        : "from-screen-blue from-35% to-screen-deep-blue text-[#aff] w-14 h-10 shadow-blue-500/50"
-                      : isDarkTheme
-                        ? "from-red-500/70 from-45% to-red-500/50 text-black border border-red-500/30"
-                        : "from-screen-blue from-10% to-screen-deep-blue text-[#aff]"
-                  }
-                `}
-          >
-            <item.icon className="text-[24px]" />
-            <span className="font-semibold hidden xl:block">
-              {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
-            </span>
-          </Link>
-        ))}
+      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly grow items-center gap-1.5 sm:gap-2 lg:gap-4 xl:gap-3">
+        {navLinks.map((item) => {
+          const isActive = location.pathname === item.url;
+          return (
+            <Link
+              key={item.translationKey}
+              to={item.url}
+              title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+              data-active={isActive}
+              className="scifi-screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              style={{
+                background: isActive
+                  ? "var(--scifi-screen-casing-active)"
+                  : "var(--scifi-screen-casing)",
+              }}
+            >
+              {/* Screen Glass Interior */}
+              <div
+                className="relative flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm overflow-hidden transition-all duration-300"
+                style={{
+                  background: isActive
+                    ? "var(--scifi-screen-bg-active)"
+                    : "var(--scifi-screen-bg)",
+                }}
+              >
+                {/* Layer 1: CRT Micro-Scanlines Matrix */}
+                <div className="pointer-events-none absolute inset-0 scifi-screen-scanlines opacity-75" />
+
+                {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
+                <div
+                  className={`pointer-events-none absolute inset-[2px] rounded-[10px/7px] border transition-all duration-300 ${
+                    isActive
+                      ? "border-[var(--scifi-screen-border-active)] shadow-[inset_0_0_8px_var(--scifi-screen-glow-active)]"
+                      : "border-[var(--scifi-screen-border)] opacity-60 group-hover:opacity-100 group-hover:border-[var(--scifi-screen-border-active)]"
+                  }`}
+                />
+
+                {/* Layer 3: Glass Specular Glare (Top-down crystal sheen) */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-white/30 via-white/5 to-transparent transition-opacity duration-300 group-hover:opacity-100 opacity-70" />
+
+                {/* Layer 4: Tactical HUD Reticle Dots */}
+                <span
+                  className={`pointer-events-none absolute left-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
+                    isActive
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--scifi-screen-border-active)] opacity-100 scale-110"
+                      : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
+                  }`}
+                />
+                <span
+                  className={`pointer-events-none absolute right-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
+                    isActive
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--scifi-screen-border-active)] opacity-100 scale-110"
+                      : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
+                  }`}
+                />
+
+                {/* Active Underline Power Conduit */}
+                {isActive && (
+                  <motion.div
+                    layoutId="active-indicator"
+                    className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-[2px] rounded-full bg-cyan-200 dark:bg-red-200 shadow-[0_0_8px_var(--scifi-screen-border-active)]"
+                  />
+                )}
+
+                {/* Icon with Phosphor Glow */}
+                <item.icon
+                  className={`text-[22px] sm:text-[24px] z-10 transition-all duration-300 shrink-0 ${
+                    isActive
+                      ? "text-white scale-105"
+                      : "text-[var(--scifi-screen-text)] group-hover:text-white group-hover:scale-105"
+                  }`}
+                  style={{
+                    filter: isActive
+                      ? "drop-shadow(0 0 6px var(--scifi-screen-text-glow)) drop-shadow(0 0 12px var(--scifi-screen-glow-active))"
+                      : "drop-shadow(0 0 4px var(--scifi-screen-text-glow))",
+                  }}
+                />
+
+                {/* Label with Phosphor Text Glow */}
+                <span
+                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden xl:block z-10 select-none transition-all duration-300 ${
+                    isActive
+                      ? "text-white font-bold"
+                      : "text-[var(--scifi-screen-text)] group-hover:text-white"
+                  }`}
+                  style={{
+                    textShadow: isActive
+                      ? "0 0 8px var(--scifi-screen-text-glow), 0 0 14px var(--scifi-screen-glow-active)"
+                      : "0 0 5px var(--scifi-screen-text-glow)",
+                  }}
+                >
+                  {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
       </nav>
+
       <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 grow max-w-28 sm:max-w-24 lg:max-w-40 lg:grow-0">
         <ThemeToggle />
         <LangSwitch />
@@ -69,5 +137,3 @@ export function Header() {
     </motion.header>
   );
 }
-
-/* hover:text-slate-200 hover:bg-gray-700/90 */
