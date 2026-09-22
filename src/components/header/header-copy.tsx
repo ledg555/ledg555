@@ -39,12 +39,7 @@ export function Header() {
               to={item.url}
               title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
               data-active={isCurrentPath}
-              className="scifi-screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none bg-black active:bg-(--scifi-screen-casing-active)"
-              style={{
-                background: isCurrentPath
-                  ? "var(--scifi-screen-casing-active)"
-                  : "var(--scifi-screen-casing)",
-              }}
+              className={`scifi-screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none ${isCurrentPath ? "[background:var(--scifi-screen-casing-active)]" : "[background:var(--scifi-screen-casing)]"}`}
             >
               {/* Screen Glass Interior */}
               <div
