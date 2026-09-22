@@ -6,6 +6,12 @@
       "sourceType": "github",
       "computedHash": "abf349a30764951de0ff17fe6e4b0d3a5332d3682b3b97109d7a23f813406d1a"
     },
+    "3dsvg-interactive-react": {
+      "source": "reason-machines/trending-skills",
+      "sourceType": "github",
+      "skillPath": "skills/3dsvg-interactive-react/SKILL.md",
+      "computedHash": "a60c9172a1cdeae16c3ac2946452777a4bb72e04cb8422f987b027301fdc0782"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
@@ -16,6 +22,18 @@
       "sourceType": "github",
       "skillPath": "skills/glassmorphism/SKILL.md",
       "computedHash": "c98e77044561fea5e51116156d0ba600a56f9961ed18b498d72504d49aff7882"
+    },
+    "svg-animation": {
+      "source": "iart-ai/web-animation-skills",
+      "sourceType": "github",
+      "skillPath": "skills/svg-animation/SKILL.md",
+      "computedHash": "b6902577f093a1cd724052b94e633154cb42020b5001138185982fb4ce230404"
+    },
+    "svg-animation-engineer": {
+      "source": "liuyunlong2021-wq/svg-skills",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "dee3193634f87edad9c9f4da8160ebcb1f8e47ae533c3960774d624a800524b1"
     },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",

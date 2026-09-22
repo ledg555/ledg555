@@ -14,17 +14,32 @@
 @layer tailwind-utilities {
 }
 
-@theme {
-  --color-base: var(--theme-bg-base);
-  --color-fg: var(--theme-text-base);
-  --color-surface: var(--theme-bg-surface);
-  --color-accent-base: var(--theme-accent-base);
-  --color-accent-glow: var(--theme-accent-glow);
-  --color-border-accent: var(--theme-border-accent);
+@layer base {
+  body {
+    letter-spacing: 0.4px;
+  }
 
-  --color-panel: var(--theme-bg-panel);
-  --color-status-safe: var(--theme-status-safe);
-  --color-status-warn: var(--theme-status-warn);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: normal;
+  }
+}
+
+@theme {
+  --color-base: var(--bg-base);
+  --color-fg: var(--text-base);
+  --color-surface: var(--bg-surface);
+  --color-accent-base: var(--accent-base);
+  --color-accent-glow: var(--accent-glow);
+  --color-border-accent: var(--border-accent);
+
+  --color-panel: var(--bg-panel);
+  --color-status-safe: var(--status-safe);
+  --color-status-warn: var(--status-warn);
 
   --color-screen-blue: rgb(0, 128, 255);
   --color-screen-deep-blue: rgb(0, 24, 255);
@@ -38,7 +53,6 @@
   --breakpoint-2xl: 1536px;
   --breakpoint-3xl: 1920px;
 
-  --font-text-semibold: "Gruppo 600", sans-serif;
   --font-headings: "Lexend Zetta", sans-serif;
   --font-sans: "Gruppo 600", system-ui, sans-serif;
   --font-text: "Gruppo 600", system-ui, sans-serif;
@@ -52,42 +66,42 @@
 
   color-scheme: light dark;
   font-family: "Gruppo", sans-serif;
+  font-weight: 600;
 
   /* FONDOS (La nave) */
-  --theme-bg-base: #eaeaea; /* Lienzo principal (Antes ship-hull-white) */
-  --theme-bg-surface: #f4f6f9; /* Elementos elevados: Header, SpeedDials, Cards */
+  --bg-base: #eaeaea; /* Lienzo principal (Antes ship-hull-white) */
+  --bg-surface: #f4f6f9; /* Elementos elevados: Header, SpeedDials, Cards */
 
   /* ACENTOS (El HUD holográfico) */
-  --theme-accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
-  --theme-accent-glow: rgba(0, 229, 255, 0.4);
+  --accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
+  --accent-glow: rgba(0, 229, 255, 0.4);
 
   /* BORDES Y TEXTOS */
-  --theme-border-accent: rgba(0, 229, 255, 0.3);
-  --theme-text-base: #141a22; /* Texto principal para alta legibilidad */
+  --border-accent: rgba(0, 229, 255, 0.3);
+  --text-base: #141a22; /* Texto principal para alta legibilidad */
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --theme-bg-panel: rgba(0, 50, 120, 0.2);
+  --bg-panel: #02274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --theme-status-safe: #00e676; /* Verde nominal (Antes prop-green) */
-  --theme-status-warn: #ffea00; /* Amarillo precaución (Antes prop-yellow) */
+  --status-safe: #00e676; /* Verde nominal (Antes prop-green) */
+  --status-warn: #ffea00; /* Amarillo precaución (Antes prop-yellow) */
 }
 
 .dark {
-  /* FONDOS (La nave en penumbra, modo 'red alert') */
-  --theme-bg-base: #03080b; /* Espacio/niebla (Reemplaza al fondo blanco) */
-  --theme-bg-surface: #14181a; /* Elementos elevados (Antes ship-hull-dark) */
+  --bg-base: #03080b; /* Espacio/niebla (Reemplaza al fondo blanco) */
+  --bg-surface: #14181a; /* Elementos elevados (Antes ship-hull-dark) */
 
   /* ACENTOS (Alerta Roja) */
-  --theme-accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
-  --theme-accent-glow: rgba(255, 23, 68, 0.4);
+  --accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
+  --accent-glow: rgba(255, 23, 68, 0.4);
 
   /* BORDES Y TEXTOS */
-  --theme-border-accent: rgba(255, 23, 68, 0.3);
-  --theme-text-base: #cbd5e1; /* Texto claro para contraste en oscuro */
+  --border-accent: rgba(255, 23, 68, 0.3);
+  --text-base: #cbd5e1; /* Texto claro para contraste en oscuro */
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --theme-bg-panel: rgba(
+  --bg-panel: rgba(
     60,
     0,
     0,
@@ -96,8 +110,8 @@
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
   /* En alerta roja, el verde "seguro" se vuelve naranja, y la advertencia se vuelve rojo puro */
-  --theme-status-safe: #ff9100;
-  --theme-status-warn: #ff1744;
+  --status-safe: #ff9100;
+  --status-warn: #ff1744;
 }
 
 .octagon-sm {

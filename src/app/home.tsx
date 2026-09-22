@@ -83,13 +83,11 @@ export function HomePage() {
 
           {/* Profile info */}
           <div className="flex flex-col gap-2 text-fg">
-            <h2 className="text-2xl font-headings font-bold tracking-wider">
-              {ABOUT.name}
-            </h2>
+            <h2 className="text-2xl font-headings font-bold">{ABOUT.name}</h2>
 
             {/* Designations */}
             <div>
-              <span className="text-accent-base font-semibold text-sm uppercase tracking-widest">
+              <span className="text-accent-base text-sm uppercase tracking-widest">
                 {aboutLabels.designations}
               </span>
               <ul className="mt-1 flex flex-wrap gap-2">
@@ -112,7 +110,7 @@ export function HomePage() {
             </span>
 
             {/* Description — fg */}
-            <p className="text-sm leading-relaxed mt-2 text-fg/80">
+            <p className="text leading-relaxed mt-2 text-fg/80">
               {about.description}
             </p>
 
@@ -142,7 +140,7 @@ export function HomePage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h3 className="text-lg font-headings font-bold text-accent-base uppercase tracking-wider">
+          <h3 className="text-lg font-headings font-bold text-accent-base uppercase">
             Ship Status
           </h3>
 
@@ -196,8 +194,8 @@ export function HomePage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.3 }}
       >
-        <span className="text-xs text-fg/50 uppercase tracking-widest mr-2">
-          Token Swatches:
+        <span className="text-xs text-accent-base uppercase tracking-widest mr-2">
+          Token Swatches
         </span>
         {[
           { token: "bg-base", cls: "bg-base" },
@@ -214,7 +212,7 @@ export function HomePage() {
             <div
               className={`w-8 h-8 rounded-lg ${s.cls} border border-border-accent/40 shadow-inner`}
             />
-            <span className="text-[10px] text-fg/50">{s.token}</span>
+            <span className="text-[10px] text-accent-base">{s.token}</span>
           </div>
         ))}
       </motion.div>
@@ -228,7 +226,7 @@ export function HomePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.35 }}
         >
-          <span className="text-accent-base text-sm uppercase tracking-widest font-bold">
+          <span className="text-accent-base text-sm uppercase tracking-widest">
             .octagon-sm clip
           </span>
           <p className="text-fg text-xs text-center">
@@ -269,7 +267,7 @@ export function HomePage() {
             jobs.map((job: JobEntry, index: number) => (
               <motion.div
                 key={job.key}
-                className="bg-panel/70 backdrop-blur-sm border border-border-accent rounded-xl p-5 hover:border-accent-base/60 transition-colors duration-300"
+                className="bg-panel/70 backdrop-blur-x border border-border-accent rounded-xl p-5 hover:border-accent-base/60 transition-colors duration-300"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.08 }}
@@ -279,7 +277,7 @@ export function HomePage() {
                     <h3 className="font-headings font-bold text-accent-base tracking-wide">
                       {job.role}
                     </h3>
-                    <span className="text-sm text-fg/70">
+                    <span className="text-sm text-accent-base">
                       {job.company} | {job.location}
                     </span>
                   </div>

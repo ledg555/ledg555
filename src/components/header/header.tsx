@@ -42,15 +42,15 @@ export function Header() {
             key={item.translationKey}
             to={`${item.url}`}
             className={`
-                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm cursor-pointer
+                  flex justify-center items-center gap-2 px-2 sm:px-4 py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm cursor-pointer bg-radial
                   ${
                     location.pathname === item.url
                       ? isDarkTheme
-                        ? "bg-radial from-red-500/80 from-30% to-red-500/50 text-red-200/80 border border-red-500/30"
-                        : "bg-radial from-screen-blue from-35% to-screen-deep-blue text-[#aff] w-14 h-10 shadow-blue-500/50"
+                        ? "from-red-500/80 from-30% to-red-500/50 text-red-200/80 border border-red-500/30"
+                        : "from-screen-blue from-35% to-screen-deep-blue text-[#aff] w-14 h-10 shadow-blue-500/50"
                       : isDarkTheme
-                        ? "bg-radial from-red-500/70 from-45% to-red-500/50 text-black border border-red-500/30"
-                        : "bg-radial from-screen-blue from-10% to-screen-deep-blue text-[#aff]"
+                        ? "from-red-500/70 from-45% to-red-500/50 text-black border border-red-500/30"
+                        : "from-screen-blue from-10% to-screen-deep-blue text-[#aff]"
                   }
                 `}
           >
