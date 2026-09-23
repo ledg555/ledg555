@@ -39,8 +39,17 @@ export function Header() {
               to={item.url}
               title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
               data-active={isCurrentPath}
-              className={`screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none ${isCurrentPath ? "[background:var(--screen-casing-active)]" : "[background:var(--screen-casing)]"}`}
+              className={`screen-drop group relative inline-flex items-center justify-center p-[1.5px] cursor-pointer select-none`}
             >
+              {/* Capa Borde / Casing con el clip-path */}
+              <div
+                className={`absolute inset-0 octagon-sm ${
+                  isCurrentPath
+                    ? "[background:var(--screen-casing-active)]"
+                    : "[background:var(--screen-casing)]"
+                }`}
+              />
+
               {/* Screen Glass Interior */}
               <div
                 className="relative flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
