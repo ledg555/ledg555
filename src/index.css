@@ -14,29 +14,29 @@
 }
 
 @layer tailwind-utilities {
-  .scifi-screen-drop {
+  .screen-drop {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35))
-      drop-shadow(0 0 6px var(--scifi-screen-glow));
+      drop-shadow(0 0 6px var(--screen-glow));
     transition:
       filter 0.3s ease,
       transform 0.3s ease;
   }
 
-  .scifi-screen-drop:hover {
+  .screen-drop:hover {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45))
-      drop-shadow(0 0 10px var(--scifi-screen-glow));
+      drop-shadow(0 0 10px var(--screen-glow));
   }
 
-  .scifi-screen-drop[data-active="true"] {
+  .screen-drop[data-active="true"] {
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45))
-      drop-shadow(0 0 12px var(--scifi-screen-glow-active));
+      drop-shadow(0 0 12px var(--screen-glow-active));
   }
 
-  .scifi-screen-scanlines {
+  .screen-scanlines {
     background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.04) 50%,
-      rgba(0, 0, 0, 0.2) 51%
+      rgba(255, 255, 255, 0.02) 50%,
+      rgba(0, 0, 0, 0.1) 51%
     );
     background-size: 100% 4px;
   }
@@ -58,9 +58,9 @@
 }
 
 @theme {
-  --color-base: var(--bg-base);
-  --color-fg: var(--text-base);
-  --color-surface: var(--bg-surface);
+  --color-base: var(--bg-base); /* Ship hull */
+  --color-surface: var(--bg-surface); /* Raised elements, surface frames */
+  --color-fg: var(--text-base); /* Neutral texts in hull */
   --color-accent-base: var(--accent-base);
   --color-accent-glow: var(--accent-glow);
   --color-border-accent: var(--border-accent);
@@ -96,73 +96,70 @@
   font-weight: 600;
 
   /* FONDOS (La nave) */
-  --bg-base: #eaeaea; /* Ship hull */
-  --bg-surface: #f4f6f9; /* Elementos elevados: Header, SpeedDials, Cards */
-  /* ACENTOS (El HUD holográfico) */
+  --bg-base: #e5e5ea;
+  --bg-surface: #f4f6f9;
   --accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
   --accent-glow: rgba(0, 229, 255, 0.4);
   /* BORDES Y TEXTOS */
   --border-accent: rgba(0, 229, 255, 0.3);
-  --text-base: #141a22; /* Texto principal para alta legibilidad */
+  --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
   --bg-panel: #02274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --status-safe: #00e676; /* Verde nominal (Antes prop-green) */
-  --status-warn: #ffea00; /* Amarillo precaución (Antes prop-yellow) */
+  --status-safe: #00e676;
+  --status-warn: #ffea00;
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
-  --scifi-screen-casing: linear-gradient(
+  --screen-casing: linear-gradient(
     180deg,
     rgba(180, 220, 255, 0.9) 0%,
     rgba(16, 42, 88, 0.95) 25%,
     rgba(3, 12, 32, 0.98) 100%
   );
-  --scifi-screen-casing-active: linear-gradient(
+  --screen-casing-active: linear-gradient(
     180deg,
     rgba(210, 250, 255, 1) 0%,
     rgba(0, 160, 255, 0.95) 25%,
     rgba(5, 26, 75, 0.98) 100%
   );
-  --scifi-screen-border: rgba(0, 229, 255, 0.55);
-  --scifi-screen-border-active: rgba(0, 245, 255, 0.95);
-  --scifi-screen-glow: rgba(0, 180, 255, 0.45);
-  --scifi-screen-glow-active: rgba(0, 229, 255, 0.85);
-  --scifi-screen-bg: radial-gradient(
+  --screen-border: rgba(0, 229, 255, 0.55);
+  --screen-border-active: rgba(0, 245, 255, 0.95);
+  --screen-glow: rgba(0, 180, 255, 0.45);
+  --screen-glow-active: rgba(0, 229, 255, 0.85);
+  --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #186bf0 0%,
     #0c3687 45%,
     #031336 90%
   );
-  --scifi-screen-bg-hover: radial-gradient(
+  --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
     #2b84ff 0%,
     #124cb5 45%,
     #051b4c 90%
   );
-  --scifi-screen-bg-active: radial-gradient(
+  --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
     #00e5ff 0%,
     #155eef 35%,
     #072163 80%,
     #031033 100%
   );
-  --scifi-screen-text: #e0f7ff;
-  --scifi-screen-text-glow: rgba(0, 229, 255, 0.8);
+  --screen-text: #e0f7ff;
+  --screen-text-glow: rgba(0, 229, 255, 0.8);
 }
 
 .dark {
   --bg-base: #03080b;
   --bg-surface: #14181a;
 
-  /* ACENTOS (Alerta Roja) */
   --accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
   --accent-glow: rgba(255, 23, 68, 0.4);
 
-  /* BORDES Y TEXTOS */
   --border-accent: rgba(255, 23, 68, 0.3);
-  --text-base: #cbd5e1; /* Texto claro para contraste en oscuro */
+  --text-base: #cbd5e1;
 
   /* FONDOS TINTADOS (Paneles de alerta) */
   --bg-panel: rgba(
@@ -173,48 +170,47 @@
   ); /* El rojo transparente (Antes alert-red-bg) */
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  /* En alerta roja, el verde "seguro" se vuelve naranja, y la advertencia se vuelve rojo puro */
   --status-safe: #ff9100;
   --status-warn: #ff1744;
 
   /* PANTALLAS SCIFI (Alerta Roja) */
-  --scifi-screen-casing: linear-gradient(
+  --screen-casing: linear-gradient(
     180deg,
     rgba(255, 140, 160, 0.85) 0%,
     rgba(85, 12, 24, 0.95) 25%,
     rgba(25, 2, 6, 0.98) 100%
   );
-  --scifi-screen-casing-active: linear-gradient(
+  --screen-casing-active: linear-gradient(
     180deg,
     rgba(255, 190, 200, 1) 0%,
     rgba(255, 23, 68, 0.95) 25%,
     rgba(65, 5, 14, 0.98) 100%
   );
-  --scifi-screen-border: rgba(255, 23, 68, 0.55);
-  --scifi-screen-border-active: rgba(255, 55, 95, 0.95);
-  --scifi-screen-glow: rgba(255, 23, 68, 0.45);
-  --scifi-screen-glow-active: rgba(255, 23, 68, 0.85);
-  --scifi-screen-bg: radial-gradient(
+  --screen-border: rgba(255, 23, 68, 0.55);
+  --screen-border-active: rgba(255, 55, 95, 0.95);
+  --screen-glow: rgba(255, 23, 68, 0.45);
+  --screen-glow-active: rgba(255, 23, 68, 0.85);
+  --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #b91c1c 0%,
     #6b0b18 45%,
     #1f0206 90%
   );
-  --scifi-screen-bg-hover: radial-gradient(
+  --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
     #dc2626 0%,
     #880e1f 45%,
     #2a0309 90%
   );
-  --scifi-screen-bg-active: radial-gradient(
+  --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
     #ff1744 0%,
     #b91c1c 35%,
     #500510 80%,
     #200105 100%
   );
-  --scifi-screen-text: #ffe5e8;
-  --scifi-screen-text-glow: rgba(255, 23, 68, 0.8);
+  --screen-text: #ffe5e8;
+  --screen-text-glow: rgba(255, 23, 68, 0.8);
 }
 
 .octagon-sm {

@@ -15,7 +15,7 @@ export function Header() {
     <motion.header
       className="flex justify-around xs:justify-between items-center gap-4
         fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 border-b-surface rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-22
-        bg-base/90
+        bg-base
       "
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -39,26 +39,26 @@ export function Header() {
               to={item.url}
               title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
               data-active={isCurrentPath}
-              className={`scifi-screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none ${isCurrentPath ? "[background:var(--scifi-screen-casing-active)]" : "[background:var(--scifi-screen-casing)]"}`}
+              className={`screen-drop group relative inline-flex items-center justify-center p-[1.5px] octagon-sm cursor-pointer select-none ${isCurrentPath ? "[background:var(--screen-casing-active)]" : "[background:var(--screen-casing)]"}`}
             >
               {/* Screen Glass Interior */}
               <div
                 className="relative flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
                 style={{
                   background: isCurrentPath
-                    ? "var(--scifi-screen-bg-active)"
-                    : "var(--scifi-screen-bg)",
+                    ? "var(--screen-bg-active)"
+                    : "var(--screen-bg)",
                 }}
               >
                 {/* Layer 1: CRT Micro-Scanlines Matrix */}
-                <div className="pointer-events-none absolute inset-0 scifi-screen-scanlines opacity-75" />
+                <div className="pointer-events-none absolute inset-0 screen-scanlines" />
 
                 {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
                 <div
                   className={`pointer-events-none absolute inset-0.5 rounded-[10px/7px] border transition-all duration-300 ${
                     isCurrentPath
-                      ? "border-(--scifi-screen-border-active) shadow-[inset_0_0_8px_var(--scifi-screen-glow-active)]"
-                      : "border-(--scifi-screen-border) opacity-60 group-hover:opacity-100 group-hover:border-(--scifi-screen-border-active)"
+                      ? "border-(--screen-border-active) shadow-[inset_0_0_8px_var(--screen-glow-active)]"
+                      : "border-(--screen-border) opacity-60 group-hover:opacity-100 group-hover:border-(--screen-border-active)"
                   }`}
                 />
 
@@ -69,14 +69,14 @@ export function Header() {
                 <span
                   className={`pointer-events-none absolute left-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
                     isCurrentPath
-                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--scifi-screen-border-active)] opacity-100 scale-110"
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
                       : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
                   }`}
                 />
                 <span
                   className={`pointer-events-none absolute right-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
                     isCurrentPath
-                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--scifi-screen-border-active)] opacity-100 scale-110"
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
                       : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
                   }`}
                 />
@@ -85,7 +85,7 @@ export function Header() {
                 {isCurrentPath && (
                   <motion.div
                     layoutId="active-indicator"
-                    className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-0.5 rounded-full bg-cyan-200 dark:bg-red-200 shadow-[0_0_8px_var(--scifi-screen-border-active)]"
+                    className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-0.5 rounded-full bg-cyan-200 dark:bg-red-200 shadow-[0_0_8px_var(--screen-border-active)]"
                   />
                 )}
 
@@ -93,27 +93,27 @@ export function Header() {
                 <item.icon
                   className={`text-[22px] sm:text-[24px] z-10 transition-all duration-300 shrink-0 ${
                     isCurrentPath
-                      ? "text-white scale-105"
-                      : "text-(--scifi-screen-text) group-hover:text-white group-hover:scale-105"
+                      ? "text-white"
+                      : "text-(--screen-text) group-hover:text-white group-hover:scale-105"
                   }`}
                   style={{
                     filter: isCurrentPath
-                      ? "drop-shadow(0 0 6px var(--scifi-screen-text-glow)) drop-shadow(0 0 12px var(--scifi-screen-glow-active))"
-                      : "drop-shadow(0 0 4px var(--scifi-screen-text-glow))",
+                      ? "drop-shadow(0 0 6px var(--screen-text-glow)) drop-shadow(0 0 12px var(--screen-glow-active))"
+                      : "drop-shadow(0 0 4px var(--screen-text-glow))",
                   }}
                 />
 
                 {/* Label with Phosphor Text Glow */}
                 <span
-                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden xl:block z-10 select-none transition-all duration-300 ${
+                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden xl:block z-10 select-none transition-all duration-100 ${
                     isCurrentPath
                       ? "text-white font-bold"
-                      : "text-(--scifi-screen-text) group-hover:text-white"
+                      : "text-(--screen-text) group-hover:text-white"
                   }`}
                   style={{
                     textShadow: isCurrentPath
-                      ? "0 0 8px var(--scifi-screen-text-glow), 0 0 14px var(--scifi-screen-glow-active)"
-                      : "0 0 5px var(--scifi-screen-text-glow)",
+                      ? "0 0 8px var(--screen-text-glow), 0 0 14px var(--screen-glow-active)"
+                      : "0 0 5px var(--screen-text-glow)",
                   }}
                 >
                   {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
