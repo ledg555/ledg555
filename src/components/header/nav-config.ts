@@ -26,4 +26,9 @@ export const navLinks = [
     url: "/skills",
     icon: HiOutlineBolt,
   },
+  {
+    translationKey: "contact",
+    url: "/contact",
+    icon: HiOutlineBolt,
+  },
 ];

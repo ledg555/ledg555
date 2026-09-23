@@ -1,11 +1,12 @@
 {
   "navigationData": {
     "shipName": "ACTA BB-0057 Dragón Audaz",
-    "home": "Puente",
     "about": "Sobre mí",
+    "home": "Puente",
     "projects": "Bahía de Sistemas",
     "experience": "Sala de Magallanes",
-    "skills": "Armería"
+    "skills": "Armería",
+    "contact": "Ágora"
   },
   "contactData": [
     {

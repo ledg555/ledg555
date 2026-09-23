@@ -1,11 +1,12 @@
 {
   "navigationData": {
     "shipName": "AEGIS BB-0057 Bold Dragon",
-    "home": "Command Bridge",
     "about": "About me",
+    "home": "Command Bridge",
     "projects": "Systems Bay",
     "experience": "Magellanic Hall",
-    "skills": "Armory"
+    "skills": "Armory",
+    "contact": "Agora"
   },
   "contactData": [
     {
