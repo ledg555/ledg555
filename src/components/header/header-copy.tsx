@@ -54,7 +54,7 @@ export function Header() {
                 }}
               >
                 {/* Layer 1: CRT Micro-Scanlines Matrix */}
-                <div className="pointer-events-none absolute inset-0 screen-scanlines" />
+                <div className="screen screen-glare pointer-events-none absolute inset-0 screen-scanlines" />
 
                 {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
                 <div
