@@ -93,6 +93,7 @@ export function Header() {
                 {/* Active Underline Power Conduit */}
                 {isCurrentPath && (
                   <motion.div
+                    transition={{ duration: 0.2 }}
                     layoutId="active-indicator"
                     className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-0.5 rounded-full bg-cyan-200 dark:bg-red-200 shadow-[0_0_8px_var(--screen-border-active)]"
                   />
@@ -100,7 +101,7 @@ export function Header() {
 
                 {/* Icon with Phosphor Glow */}
                 <item.icon
-                  className={`text-[22px] sm:text-[24px] z-10 transition-all duration-300 shrink-0 ${
+                  className={`text-[22px] z-10 transition-all duration-300 shrink-0 ${
                     isCurrentPath
                       ? "text-white"
                       : "text-(--screen-text) group-hover:text-white group-hover:scale-105"

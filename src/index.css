@@ -17,9 +17,7 @@
   .screen-drop {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35))
       drop-shadow(0 0 6px var(--screen-glow));
-    transition:
-      filter 0.3s ease,
-      transform 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   .screen-drop:hover {
@@ -32,13 +30,69 @@
       drop-shadow(0 0 12px var(--screen-glow-active));
   }
 
+  .screen {
+    --dot-color: var(--screen-border);
+    --screen-bg-current: var(--screen-bg);
+
+    /* Variables por defecto (vacías o transparentes) para cada capa */
+    --layer-glance: none;
+    --layer-dot-left: none;
+    --layer-dot-right: none;
+    --layer-scanlines: none;
+    --layer-bg: var(--screen-bg-current);
+
+    --size-glance: 100% 100%;
+    --size-dot-left: 100% 100%;
+    --size-dot-right: 100% 100%;
+    --size-scanlines: 100% 4px;
+    --size-bg: 100% 100%;
+
+    /* Ensamblaje final usando las variables */
+    background-image:
+      var(--layer-glance), var(--layer-dot-left), var(--layer-dot-right),
+      var(--layer-scanlines), var(--layer-bg);
+    background-size:
+      var(--size-glance), var(--size-dot-left), var(--size-dot-right),
+      var(--size-scanlines), var(--size-bg);
+  }
+
+  .screen[data-active="true"] {
+    --dot-color: var(--screen-border-active);
+    --screen-bg-current: var(--screen-bg-active);
+  }
+
+  /* 2. Clases independientes para cada capa */
+  .screen-glare {
+    --layer-glance: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.05) 45%,
+      transparent 45%
+    );
+  }
+
+  .screen-dots-left {
+    --layer-dot-left: radial-gradient(
+      circle 2px at 8px 8px,
+      var(--dot-color, #fff) 99%,
+      transparent 100%
+    );
+  }
+
+  .screen-dots-right {
+    --layer-dot-right: radial-gradient(
+      circle 2px at calc(100% - 8px) 8px,
+      var(--dot-color, #fff) 99%,
+      transparent 100%
+    );
+  }
+
   .screen-scanlines {
-    background-image: linear-gradient(
+    --layer-scanlines: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.02) 50%,
       rgba(0, 0, 0, 0.1) 51%
     );
-    background-size: 100% 4px;
   }
 }
 

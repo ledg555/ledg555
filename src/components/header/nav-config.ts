@@ -1,8 +1,9 @@
 import {
   HiOutlineComputerDesktop,
-  HiOutlineCpuChip,
+  HiOutlineCommandLine,
   HiOutlineRocketLaunch,
   HiOutlineBolt,
+  HiOutlineUsers,
 } from "react-icons/hi2";
 
 export const navLinks = [
@@ -14,7 +15,7 @@ export const navLinks = [
   {
     translationKey: "projects",
     url: "/projects",
-    icon: HiOutlineCpuChip,
+    icon: HiOutlineCommandLine,
   },
   {
     translationKey: "experience",
@@ -29,6 +30,6 @@ export const navLinks = [
   {
     translationKey: "contact",
     url: "/contact",
-    icon: HiOutlineBolt,
+    icon: HiOutlineUsers,
   },
 ];
