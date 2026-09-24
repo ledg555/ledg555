@@ -35,7 +35,7 @@
     --screen-bg-current: var(--screen-bg);
 
     /* Variables por defecto (vacías o transparentes) para cada capa */
-    --layer-glance: none;
+    --layer-glare: none;
     --layer-dot-left: none;
     --layer-dot-right: none;
     --layer-scanlines: none;
@@ -49,7 +49,7 @@
 
     /* Ensamblaje final usando las variables */
     background-image:
-      var(--layer-glance), var(--layer-dot-left), var(--layer-dot-right),
+      var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
       var(--layer-scanlines), var(--layer-bg);
     background-size:
       var(--size-glance), var(--size-dot-left), var(--size-dot-right),
@@ -63,7 +63,7 @@
 
   /* 2. Clases independientes para cada capa */
   .screen-glare {
-    --layer-glance: linear-gradient(
+    --layer-glare: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.3) 0%,
       rgba(255, 255, 255, 0.05) 45%,
