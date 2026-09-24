@@ -39,16 +39,10 @@ export function Header() {
               to={item.url}
               title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
               data-active={isCurrentPath}
-              className={`screen-drop group relative inline-flex items-center justify-center p-[1.5px] cursor-pointer select-none`}
+              className="screen-drop group relative inline-flex items-center justify-center p-[1.5px] cursor-pointer select-none"
             >
-              {/* Capa Borde / Casing con el clip-path */}
-              <div
-                className={`absolute inset-0 octagon-sm ${
-                  isCurrentPath
-                    ? "[background:var(--screen-casing-active)]"
-                    : "[background:var(--screen-casing)]"
-                }`}
-              />
+              {/* Capa Borde / Casing con clip-path */}
+              <div className="absolute inset-0 octagon-sm [background:var(--screen-casing-active)] data-[active=true]:[background:var(--screen-casing-active)]" />
 
               {/* Screen Glass Interior */}
               <div
