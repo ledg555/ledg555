@@ -209,7 +209,7 @@
   --bg-base: #03080b;
   --bg-surface: #14181a;
 
-  --accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
+  --accent-base: #ff1730; /* Color principal de UI (Antes alert-red-base) */
   --accent-glow: rgba(255, 23, 68, 0.4);
 
   --border-accent: rgba(255, 23, 68, 0.3);
@@ -224,8 +224,8 @@
   ); /* El rojo transparente (Antes alert-red-bg) */
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  --status-safe: #ff9100;
-  --status-warn: #ff1744;
+  --status-safe: #ff9c10;
+  --status-warn: #f26c25;
 
   /* PANTALLAS SCIFI (Alerta Roja) */
   --screen-casing: linear-gradient(

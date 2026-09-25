@@ -2,16 +2,13 @@ import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { useThemeStore } from "../store/theme";
 
-export default function LangSwitch() {
+export function LangBtn() {
   const { i18n } = useTranslation();
   const { isDarkTheme } = useThemeStore();
   return (
-    <>
-      <button
-        onClick={() =>
-          i18n.changeLanguage(i18n.language === "en" ? "es" : "en")
-        }
-        className={`
+    <button
+      onClick={() => i18n.changeLanguage(i18n.language === "en" ? "es" : "en")}
+      className={`
         relative h-8 w-8 lg:w-14 rounded-full border-2 hover:scale-105 transition-all duration-100
         ${
           isDarkTheme
@@ -20,22 +17,21 @@ export default function LangSwitch() {
         }
         shadow-lg hover:shadow-xl
       `}
-      >
-        <motion.div
-          className={`
+    >
+      <motion.div
+        className={`
           absolute left-[2.1px] top-0.5 flex justify-center items-center w-6 h-6 rounded-full border-2 border-white
           transition-all duration-200
           ${i18n.language === "en" ? "lg:left-0.5" : "lg:left-[26.4px]"}
         `}
-          layout={false}
-        >
-          <img
-            className="w-full aspect-square"
-            src={i18n.language === "en" ? "/english.png" : "/español.png"}
-            alt={i18n.language === "en" ? "English" : "Español"}
-          />
-        </motion.div>
-      </button>
-    </>
+        layout={false}
+      >
+        <img
+          className="w-full aspect-square"
+          src={i18n.language === "en" ? "/english.png" : "/español.png"}
+          alt={i18n.language === "en" ? "English" : "Español"}
+        />
+      </motion.div>
+    </button>
   );
 }

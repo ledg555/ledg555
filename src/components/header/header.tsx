@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
-import ThemeToggle from "../theme-toggle";
+import { ThemeBtn } from "../theme-btn";
 import { useThemeStore } from "../../store/theme";
-import LangSwitch from "../lang-switch";
+import { LangBtn } from "../lang-btn";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
 import { SpeedDialContact } from "../speed-dial-contact";
@@ -62,8 +62,8 @@ export function Header() {
         ))}
       </nav>
       <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 grow max-w-28 sm:max-w-24 lg:max-w-40 lg:grow-0">
-        <ThemeToggle />
-        <LangSwitch />
+        <ThemeBtn />
+        <LangBtn />
       </div>
       <SpeedDialNav />
     </motion.header>

@@ -1,6 +1,8 @@
 import { Navigate, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 
+// TODO: This will be to later add language as url segment, like
+// /(en-es)/projects, or /(en-es)/contact. Don't mess with it yet
 export default function LanguageRedirect() {
   const location = useLocation();
   const { i18n } = useTranslation();

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
-import ThemeToggle from "../theme-toggle";
-import LangSwitch from "../lang-switch";
+import { LangBtn } from "../lang-btn";
+import { ThemeBtn } from "../theme-btn";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
 import { SpeedDialContact } from "../speed-dial-contact";
@@ -54,7 +54,10 @@ export function Header() {
                 }}
               >
                 {/* Layer 1: CRT Micro-Scanlines Matrix */}
-                <div className="screen screen-glare pointer-events-none absolute inset-0 screen-scanlines" />
+                <div
+                  data-active={isCurrentPath}
+                  className="screen screen-glare pointer-events-none absolute inset-0 screen-scanlines screen-dots-left screen-dots-right"
+                />
 
                 {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
                 <div
@@ -69,7 +72,7 @@ export function Header() {
                 <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-linear-to-b from-white/30 via-white/5 to-transparent transition-opacity duration-300 group-hover:opacity-100 opacity-70" />
 
                 {/* Layer 4: Tactical HUD Reticle Dots */}
-                <span
+                {/* <span
                   className={`pointer-events-none absolute left-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
                     isCurrentPath
                       ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
@@ -82,7 +85,7 @@ export function Header() {
                       ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
                       : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
                   }`}
-                />
+                /> */}
 
                 {/* Active Underline Power Conduit */}
                 {isCurrentPath && (
@@ -129,8 +132,8 @@ export function Header() {
       </nav>
 
       <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 grow max-w-28 sm:max-w-24 lg:max-w-40 lg:grow-0">
-        <ThemeToggle />
-        <LangSwitch />
+        <ThemeBtn />
+        <LangBtn />
       </div>
       <SpeedDialNav />
     </motion.header>

@@ -1,9 +1,11 @@
-import React from "react";
 import { motion } from "motion/react";
-import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
+import {
+  HiOutlineExclamationTriangle,
+  HiOutlineSparkles,
+} from "react-icons/hi2";
 import { useThemeStore } from "../store/theme";
 
-const ThemeToggle: React.FC = () => {
+export function ThemeBtn() {
   const { isDarkTheme, toggleTheme } = useThemeStore();
 
   return (
@@ -33,10 +35,8 @@ const ThemeToggle: React.FC = () => {
         `}
         layout
       >
-        {isDarkTheme ? <HiOutlineMoon /> : <HiOutlineSun />}
+        {isDarkTheme ? <HiOutlineExclamationTriangle /> : <HiOutlineSparkles />}
       </motion.div>
     </motion.button>
   );
-};
-
-export default ThemeToggle;
+}
