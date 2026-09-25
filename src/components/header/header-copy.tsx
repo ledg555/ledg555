@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
+import { TransmissionBtn } from "../transmission-btn";
 import { LangBtn } from "../lang-btn";
 import { ThemeBtn } from "../theme-btn";
 import { navLinks } from "./nav-config";
@@ -131,9 +132,13 @@ export function Header() {
         })}
       </nav>
 
-      <div className="flex justify-around sm:justify-between lg:justify-end gap-4 lg:gap-8 2xl:gap-12 grow max-w-28 sm:max-w-24 lg:max-w-40 lg:grow-0">
-        <ThemeBtn />
+      {/* Ship Master Actions (Comms / Audio, Lang, Red Alert Mode) */}
+      <div className="flex items-center justify-end gap-2 xs:gap-2.5 sm:gap-3 lg:gap-3.5 shrink-0">
+        <TransmissionBtn />
         <LangBtn />
+        <div className="ml-1 sm:ml-1.5 flex items-center">
+          <ThemeBtn />
+        </div>
       </div>
       <SpeedDialNav />
     </motion.header>
