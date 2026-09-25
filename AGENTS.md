@@ -66,3 +66,4 @@ We'll leverage mostly motion library for the 'simple' 2D animations, and maybe m
 
 - Textures: Although we have tile patterns in the public folder and I love some of them, we'll maybe end up changing all by a handful of PBR textures.
 - Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals for namespace keys whose data varies per language, and keep all constant data in @src/constants.
+- Performance: Since the website is intended to display nicely also on mobile devices, be aware of any expensive computations that could casuse frame drops. The obvious ones (though there may be more) are geometric prop animations (use scale(), translate(), etc. or motion if it's a complex one) as well as filter animations (use pseudo-element opacity for things like drop-shadow() if animation is absolutely necessary; otherwise, we can completely forget about it).
