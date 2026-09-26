@@ -33,8 +33,8 @@ export function LangBtn() {
           transition-colors duration-300
           ${
             isDarkTheme
-              ? "bg-gradient-to-b from-[#252830] via-[#181b22] to-[#0c0e12] border border-[#f59e0b]/30 shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
-              : "bg-gradient-to-b from-[#d8dce4] via-[#bcc4d0] to-[#929daa] border border-[#f59e0b]/40 shadow-[inset_0_2px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
+              ? "bg-gradient-to-b from-[#252830] via-[#181b22] to-[#0c0e12] shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
+              : "bg-gradient-to-b from-[#d8dce4] via-[#bcc4d0] to-[#929daa] shadow-[inset_0_2px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
           }
         `}
       >
@@ -63,7 +63,7 @@ export function LangBtn() {
             whileHover={{ scale: 1.03 }}
             whileTap={{
               y: 3,
-              scale: 0.96,
+              scale: 0.97,
               boxShadow: isDarkTheme
                 ? "0 0px 0 #0a0c0e, inset 0 2px 4px rgba(0,0,0,0.9)"
                 : "0 0px 0 #6f7b8b, inset 0 2px 4px rgba(0,0,0,0.6)",
@@ -73,28 +73,17 @@ export function LangBtn() {
             {/* Concentric Milled Tactile Groove */}
             <div className="absolute inset-[3px] rounded-full border border-black/20 dark:border-white/10 pointer-events-none" />
 
-            {/* Tactical Amber Bezel Rim Accent */}
-            <div className="absolute inset-0 rounded-full border border-amber-500/20 pointer-events-none" />
-
             {/* Inner Emblem Badge: Sci-Fi Tactical Flag Badge with subtle matrix overlay */}
-            <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden border border-amber-400/40 shadow-[0_0_4px_rgba(245,158,11,0.25)]">
-              <img
+            <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shadow-[0_0_4px_rgba(245,158,11,0.25)]">
+              {/*<img
                 src={isEs ? "/español.png" : "/english.png"}
                 alt={isEs ? "Español" : "English"}
                 className="w-full h-full object-cover saturate-80 contrast-110 brightness-95"
-              />
+              />*/}
               {/* Sci-Fi Tactical Matte Filter Overlay */}
               <div className="absolute inset-0 bg-amber-500/10 mix-blend-color pointer-events-none" />
               <div className="absolute inset-0 shadow-[inset_0_0_3px_rgba(0,0,0,0.6)] pointer-events-none" />
             </div>
-
-            {/* Micro Status-Warn Amber LED Dot at 12 o'clock */}
-            <span
-              className={`
-                absolute top-[2px] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full
-                bg-amber-400 shadow-[0_0_4px_#f59e0b]
-              `}
-            />
           </motion.button>
         </div>
       </div>

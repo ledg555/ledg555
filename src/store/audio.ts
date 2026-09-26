@@ -33,7 +33,7 @@ function getBgMusic(): HTMLAudioElement | null {
   if (!bgMusic) {
     bgMusic = new Audio(raindropOgg);
     bgMusic.loop = true;
-    bgMusic.volume = 0.45;
+    bgMusic.volume = 1;
   }
   return bgMusic;
 }

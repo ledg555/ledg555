@@ -39,8 +39,8 @@ export function TransmissionBtn() {
           transition-colors duration-300
           ${
             isDarkTheme
-              ? "bg-gradient-to-b from-[#222831] via-[#161a20] to-[#0c0e12] border border-[#ff9c10]/30 shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
-              : "bg-gradient-to-b from-[#d5dae2] via-[#b8c0cc] to-[#8d98a8] border border-[#10b981]/40 shadow-[inset_0_2px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
+              ? "bg-gradient-to-b from-[#222831] via-[#161a20] to-[#0c0e12] shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
+              : "bg-gradient-to-b from-[#d5dae2] via-[#b8c0cc] to-[#8d98a8] shadow-[inset_0_2px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
           }
         `}
       >
