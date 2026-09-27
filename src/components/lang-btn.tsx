@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { useThemeStore } from "../store/theme";
 import { useAudioStore } from "../store/audio";
+import { MxIcon } from "../assets/icons/mx";
+import { UsIcon } from "../assets/icons/us";
 
 export function LangBtn() {
   const { i18n } = useTranslation();
@@ -9,6 +11,7 @@ export function LangBtn() {
   const { isSoundActive, playSfx } = useAudioStore();
 
   const isEs = i18n.language === "es";
+  const Icon = isEs ? MxIcon : UsIcon;
 
   const handleToggleLang = () => {
     if (isSoundActive) {
@@ -75,11 +78,7 @@ export function LangBtn() {
 
             {/* Inner Emblem Badge: Sci-Fi Tactical Flag Badge with subtle matrix overlay */}
             <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shadow-[0_0_4px_rgba(245,158,11,0.25)]">
-              {/*<img
-                src={isEs ? "/español.png" : "/english.png"}
-                alt={isEs ? "Español" : "English"}
-                className="w-full h-full object-cover saturate-80 contrast-110 brightness-95"
-              />*/}
+              <Icon className="w-3/4 h-3/4 object-cover overflow-visible text-status-warn"></Icon>
               {/* Sci-Fi Tactical Matte Filter Overlay */}
               <div className="absolute inset-0 bg-amber-500/10 mix-blend-color pointer-events-none" />
               <div className="absolute inset-0 shadow-[inset_0_0_3px_rgba(0,0,0,0.6)] pointer-events-none" />
