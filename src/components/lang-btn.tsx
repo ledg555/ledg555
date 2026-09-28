@@ -36,8 +36,8 @@ export function LangBtn() {
           transition-colors duration-300
           ${
             isDarkTheme
-              ? "bg-gradient-to-b from-[#252830] via-[#181b22] to-[#0c0e12] shadow-[inset_0_2px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
-              : "bg-gradient-to-b from-[#d8dce4] via-[#bcc4d0] to-[#929daa] shadow-[inset_0_2px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
+              ? "bg-gradient-to-b from-[#252830] via-[#181b22] to-[#0c0e12] shadow-[inset_0_0px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
+              : "bg-gradient-to-b from-[#d5dae2] via-[#bcc4d0] to-[#929daa] shadow-[inset_0_0px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
           }
         `}
       >
@@ -59,8 +59,8 @@ export function LangBtn() {
               transition-colors duration-200
               ${
                 isDarkTheme
-                  ? "bg-gradient-to-b from-[#2c323e] via-[#1f242d] to-[#12151b] border-t border-t-white/20 border-b border-b-black/80 shadow-[0_3px_0_#0a0c0e,0_4px_6px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-2px_2px_rgba(0,0,0,0.5)]"
-                  : "bg-gradient-to-b from-[#eaeff6] via-[#cfd8e5] to-[#9faab9] border-t border-t-white/80 border-b border-b-[#5e6878] shadow-[0_3px_0_#6f7b8b,0_4px_5px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-2px_2px_rgba(0,0,0,0.35)]"
+                  ? "bg-gradient-to-b from-[#2c323e] via-[#1f242d] to-[#12151b] border-b border-b-black/80 shadow-[0_3px_0_#0a0c0e,0_4px_6px_rgba(0,0,0,0.6),inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_2px_rgba(0,0,0,0.5)]"
+                  : "bg-gradient-to-b from-[#eaeff6] via-[#cfd8e5] to-[#9faab9] border-b border-b-[#5e6878] shadow-[0_3px_0_#6b7685,0_4px_5px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.9),inset_0_-2px_2px_rgba(0,0,0,0.35)]"
               }
             `}
             whileHover={{ scale: 1.03 }}

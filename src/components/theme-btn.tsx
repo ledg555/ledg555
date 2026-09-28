@@ -46,7 +46,7 @@ export function ThemeBtn() {
           ${
             isDarkTheme
               ? "bg-gradient-to-b from-[#18314e] via-[#0f2137] to-[#071322] border-2 border-[#00e5ff]/60 shadow-[0_0_4px_rgba(0,229,255,0.4),inset_0_2px_4px_rgba(0,0,0,0.9)]"
-              : "bg-gradient-to-b from-[#451218] via-[#2a0b0f] to-[#170507] border-2 border-[#ef4444]/60 shadow-[0_2px_8px_rgba(239,68,68,0.35),inset_0_2px_3px_rgba(0,0,0,0.8)]"
+              : "bg-gradient-to-b from-[#451218] via-[#2a0b0f] to-[#170507] border-2 border-[#ef4444]/60 shadow-[0_1px_8px_rgba(239,68,68,0.3),inset_0_2px_3px_rgba(0,0,0,0.8)]"
           }
         `}
       >
@@ -73,7 +73,7 @@ export function ThemeBtn() {
         />
 
         {/* Inner Socket Well */}
-        <div className="w-full h-full rounded-full bg-[#080a0d] p-[2px] shadow-[inset_0_3px_6px_rgba(0,0,0,0.98)] flex items-center justify-center overflow-hidden">
+        <div className="w-full h-full rounded-full bg-[#080a0d] p-0.5 shadow-[inset_0_3px_6px_rgba(0,0,0,0.98)] flex items-center justify-center overflow-hidden">
           {/* Physical Matte Tactile Button Cap */}
           <motion.button
             onClick={handleToggleTheme}
@@ -85,24 +85,22 @@ export function ThemeBtn() {
               transition-colors duration-300
               ${
                 isDarkTheme
-                  ? "bg-gradient-to-b from-[#0284c7] via-[#0369a1] to-[#0c4a6e] border-t border-[#7dd3fc]/80 border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
-                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-t border-t-white/40 border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,0_4px_8px_rgba(0,0,0,0.5),inset_0_1.5px_0_rgba(255,255,255,0.4),inset_0_-2px_2px_rgba(0,0,0,0.6)]"
+                  ? "bg-gradient-to-b from-[#0284c7] via-[#0369a1] to-[#0c4a6e] border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
+                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,0_4px_8px_rgba(0,0,0,0.5),inset_0_1.5px_0_rgba(255,255,255,0.4),inset_0_-2px_2px_rgba(0,0,0,0.6)]"
               }
             `}
             animate={{
-              y: isDarkTheme ? 2.5 : 0,
+              y: isDarkTheme ? 2 : 0,
             }}
             whileHover={{
               scale: isDarkTheme ? 0.98 : 1.03,
-              boxShadow: isDarkTheme
-                ? "inset 0 2px 4px rgba(0,0,0,0.6), 0 0 14px rgba(0,229,255,0.6)"
-                : "0 4px 0 #5f0a0a, 0 6px 12px rgba(239,68,68,0.45), inset 0 1.5px 0 rgba(255,255,255,0.5)",
+              boxShadow: "none",
             }}
             whileTap={{
               y: 3.5,
               scale: 0.95,
             }}
-            transition={{ type: "spring", stiffness: 500, damping: 26 }}
+            transition={{ type: "spring", stiffness: 700, damping: 25 }}
           >
             {/* Concentric Milled Tactile Groove */}
             <div
