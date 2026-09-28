@@ -41,7 +41,7 @@
     --layer-scanlines: none;
     --layer-bg: var(--screen-bg-current);
 
-    --size-glance: 100% 100%;
+    --size-glare: 100% 100%;
     --size-dot-left: 100% 100%;
     --size-dot-right: 100% 100%;
     --size-scanlines: 100% 4px;
@@ -52,7 +52,7 @@
       var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
       var(--layer-scanlines), var(--layer-bg);
     background-size:
-      var(--size-glance), var(--size-dot-left), var(--size-dot-right),
+      var(--size-glare), var(--size-dot-left), var(--size-dot-right),
       var(--size-scanlines), var(--size-bg);
   }
 
@@ -94,6 +94,18 @@
       rgba(0, 0, 0, 0.01) 51%
     );
   }
+
+  .warning-lines {
+    /* Usamos 135deg para que las franjas bajen de izquierda a derecha */
+    background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 204, 0, 0.7) /* Amarillo de seguridad (con 70% opacidad) */,
+      rgba(255, 204, 0, 0.7) 6px /* Ancho de la franja amarilla */,
+      rgba(0, 0, 0, 0.8) 6px /* Inicio de la franja negra (con 80% opacidad) */,
+      rgba(0, 0, 0, 0.8) 12px
+        /* Ancho total del ciclo (10px amarillo + 10px negro) */
+    );
+  }
 }
 
 @layer base {
@@ -130,10 +142,12 @@
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
-  --breakpoint-lg: 960px;
+  --breakpoint-lm: 768px;
+  --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1920px;
+  --breakpoint-2xl: 1384px;
+  --breakpoint-3xl: 1536px;
+  --breakpoint-4xl: 1920px;
 
   --font-headings: "Lexend Zetta", sans-serif;
   --font-sans: "Gruppo 600", system-ui, sans-serif;
@@ -293,4 +307,25 @@
     0 24px
   );
   border-radius: 14px / 10px;
+}
+
+.rhombus {
+  clip-path: polygon(
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 calc(100% - 12px),
+    0 12px
+  );
+  border-radius: 14px / 10px;
+}
+
+@utility smallcaps {
+  /* The modern way */
+  font-variant-caps: small-caps;
+  /* The low-level way for maximum compatibility */
+  font-feature-settings: "smcp" on;
 }

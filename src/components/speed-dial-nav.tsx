@@ -23,7 +23,7 @@ export function SpeedDialNav() {
   return (
     <>
       <button
-        className="block sm:hidden relative h-12 aspect-square p-0 rounded-full bg-blue-500 perspective-dramatic"
+        className="block lm:hidden relative h-12 aspect-square p-0 rounded-full bg-blue-500 perspective-dramatic"
         onClick={() => setOpen(!open)}
       >
         <div
