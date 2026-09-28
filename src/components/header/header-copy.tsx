@@ -14,8 +14,8 @@ export function Header() {
 
   return (
     <motion.header
-      className="flex justify-around xs:justify-between items-center gap-4
-        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 border-b-surface rounded-b-full transition-all duration-300 px-8 xs:px-10 2xl:px-16 py-4 h-22
+      className="flex justify-between items-center gap-3 sm:gap-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 border-b-surface rounded-b-full transition-all duration-300 px-8 sm:px-12 lg:px-16 py-4 h-22
         bg-base
       "
       initial={{ y: -100 }}
@@ -23,15 +23,15 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       {/* Logo */}
-      <div className="flex items-center gap-4">
+      <div className="hidden xs:flex items-center gap-4">
         <SpeedDialContact />
-        <span className="hidden min-[720px]:block font-headings font-bold text-sm w-40 lg:w-46 text-fg">
+        <span className="hidden md:block lm:hidden lg:block font-headings font-bold text-sm w-40 text-fg tracking-tight">
           {t("navigationData.shipName", { ns: "ui" })}
         </span>
       </div>
 
       {/* Navigation */}
-      <nav className="hidden sm:flex justify-around lg:justify-evenly 2xl:justify-evenly grow items-center gap-1.5 sm:gap-2 lg:gap-4 xl:gap-3">
+      <nav className="hidden lm:flex lm:justify-evenly grow items-center gap-4">
         {navLinks.map((item) => {
           const isCurrentPath = location.pathname === item.url;
           return (
@@ -40,14 +40,14 @@ export function Header() {
               to={item.url}
               title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
               data-active={isCurrentPath}
-              className="screen-drop group relative inline-flex items-center justify-center p-[1.5px] cursor-pointer select-none"
+              className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
             >
               {/* Capa Borde / Casing con clip-path */}
               <div className="absolute inset-0 octagon-sm [background:var(--screen-casing-active)] data-[active=true]:[background:var(--screen-casing-active)]" />
 
               {/* Screen Glass Interior */}
               <div
-                className="relative flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 md:w-16 xl:w-auto xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
+                className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
                 style={{
                   background: isCurrentPath
                     ? "var(--screen-bg-active)"
@@ -113,7 +113,7 @@ export function Header() {
 
                 {/* Label with Phosphor Text Glow */}
                 <span
-                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden xl:block z-10 select-none transition-all duration-100 ${
+                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden 2xl:block z-10 select-none transition-all duration-100 ${
                     isCurrentPath
                       ? "text-white font-bold"
                       : "text-(--screen-text) group-hover:text-white"
@@ -133,12 +133,12 @@ export function Header() {
       </nav>
 
       {/* Ship Master Actions (Comms / Audio, Lang, Red Alert Mode) */}
-      <div className="flex items-center justify-end gap-2 xs:gap-2.5 sm:gap-3 lg:gap-3.5 shrink-0">
-        <TransmissionBtn />
-        <LangBtn />
-        <div className="ml-1 sm:ml-1.5 flex items-center">
-          <ThemeBtn />
+      <div className="flex justify-between items-center gap-3 sm:gap-6">
+        <div className="flex justify-between items-center gap-2 sm:gap-3">
+          <TransmissionBtn />
+          <LangBtn />
         </div>
+        <ThemeBtn />
       </div>
       <SpeedDialNav />
     </motion.header>

@@ -26,25 +26,26 @@ export function ThemeBtn() {
 
   const titleText = isDarkTheme
     ? isEs
-      ? "Alerta Roja Activa (Clic para restablecer Modo Exploración)"
-      : "Red Alert Active (Click to restore Exploration Mode)"
+      ? "Alerta Roja (Clic para volver a Modo Exploración)"
+      : "Red Alert (Click to restore Exploration Mode)"
     : isEs
       ? "Modo Exploración (Clic para activar Alerta Roja)"
       : "Exploration Mode (Click to initiate Red Alert)";
 
   return (
     <div
-      className="relative flex items-center justify-center select-none"
+      className="relative flex items-center justify-center select-none bg-gray-600 w-14 h-14 lm:mr-2"
       title={titleText}
     >
+      <div className="absolute w-full h-full border-2 border-gray-600 warning-lines rounded-xl" />
       {/* Heavy Sci-Fi Master Collar / Housing (Ligeramente más grande) */}
       <div
         className={`
-          relative w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center p-[2.5px]
+          relative w-12 h-12 rounded-full flex items-center justify-center p-[2.5px]
           transition-all duration-300
           ${
             isDarkTheme
-              ? "bg-gradient-to-b from-[#18314e] via-[#0f2137] to-[#071322] border-2 border-[#00e5ff]/60 shadow-[0_0_12px_rgba(0,229,255,0.4),inset_0_2px_4px_rgba(0,0,0,0.9)]"
+              ? "bg-gradient-to-b from-[#18314e] via-[#0f2137] to-[#071322] border-2 border-[#00e5ff]/60 shadow-[0_0_4px_rgba(0,229,255,0.4),inset_0_2px_4px_rgba(0,0,0,0.9)]"
               : "bg-gradient-to-b from-[#451218] via-[#2a0b0f] to-[#170507] border-2 border-[#ef4444]/60 shadow-[0_2px_8px_rgba(239,68,68,0.35),inset_0_2px_3px_rgba(0,0,0,0.8)]"
           }
         `}
@@ -81,11 +82,11 @@ export function ThemeBtn() {
             aria-pressed={isDarkTheme}
             className={`
               relative w-full h-full rounded-full flex items-center justify-center cursor-pointer outline-none overflow-hidden
-              transition-all duration-300
+              transition-colors duration-300
               ${
                 isDarkTheme
                   ? "bg-gradient-to-b from-[#0284c7] via-[#0369a1] to-[#0c4a6e] border-t border-[#7dd3fc]/80 border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
-                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-t border-white/40 border-b border-[#450a0a] shadow-[0_3px_0_#5f0a0a,0_4px_8px_rgba(0,0,0,0.5),inset_0_1.5px_0_rgba(255,255,255,0.4),inset_0_-2px_2px_rgba(0,0,0,0.6)]"
+                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-t border-t-white/40 border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,0_4px_8px_rgba(0,0,0,0.5),inset_0_1.5px_0_rgba(255,255,255,0.4),inset_0_-2px_2px_rgba(0,0,0,0.6)]"
               }
             `}
             animate={{
@@ -106,13 +107,13 @@ export function ThemeBtn() {
             {/* Concentric Milled Tactile Groove */}
             <div
               className={`absolute inset-[3px] rounded-full border pointer-events-none transition-colors ${
-                isDarkTheme ? "border-cyan-300/30" : "border-black/30"
+                isDarkTheme ? "border-cyan-300/40" : "border-black/30"
               }`}
             />
 
             {/* In Dark Mode (Red Alert): Master Blue Energy Glow Core */}
             {isDarkTheme && (
-              <div className="pointer-events-none absolute inset-0 rounded-full bg-[#00e5ff]/20 animate-pulse" />
+              <div className="pointer-events-none absolute inset-0 rounded-full bg-[#00e5ff]/30 animate-pulse" />
             )}
 
             {/* Master Icon with Phosphor / Tactical Illumination */}
