@@ -1,26 +1,23 @@
-import {
-  HiOutlineComputerDesktop,
-  HiOutlineCommandLine,
-  HiOutlineRocketLaunch,
-  HiOutlineBolt,
-  HiOutlineUsers,
-} from "react-icons/hi2";
+import { MdOutlineAnchor } from "react-icons/md";
+import { LuOrbit } from "react-icons/lu";
+import { LuTerminal } from "react-icons/lu";
+import { HiOutlineBolt, HiOutlineUsers } from "react-icons/hi2";
 
 export const navLinks = [
   {
     translationKey: "home",
     url: "/",
-    icon: HiOutlineComputerDesktop,
+    icon: MdOutlineAnchor,
   },
   {
     translationKey: "projects",
     url: "/projects",
-    icon: HiOutlineCommandLine,
+    icon: LuTerminal,
   },
   {
     translationKey: "experience",
     url: "/experience",
-    icon: HiOutlineRocketLaunch,
+    icon: LuOrbit,
   },
   {
     translationKey: "skills",
