@@ -29,71 +29,87 @@
   }
 }
 
-@layer tailwind-utilities {
-  .screen {
-    --dot-color: var(--screen-border);
-    --screen-bg-current: var(--screen-bg);
+@utility screen {
+  /* Defaults */
+  --dot-color: var(--screen-border);
+  --screen-bg-current: var(--screen-bg);
 
-    /* Variables por defecto (vacías o transparentes) para cada capa */
-    --layer-glare: none;
-    --layer-dot-left: none;
-    --layer-dot-right: none;
-    --layer-scanlines: none;
-    --layer-bg: var(--screen-bg-current);
+  /* bg assembly layers */
+  --layer-glare: none;
+  --layer-dot-left: none;
+  --layer-dot-right: none;
+  --layer-scanlines: none;
+  --layer-bg: var(--screen-bg-current);
 
-    --size-glare: 100% 100%;
-    --size-dot-left: 100% 100%;
-    --size-dot-right: 100% 100%;
-    --size-scanlines: 100% 4px;
-    --size-bg: 100% 100%;
+  --size-glare: 100% 100%;
+  --size-dot-left: 100% 100%;
+  --size-dot-right: 100% 100%;
+  --size-scanlines: 100% 4px;
+  --size-bg: 100% 100%;
 
-    /* Ensamblaje final usando las variables */
-    background-image:
-      var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
-      var(--layer-scanlines), var(--layer-bg);
-    background-size:
-      var(--size-glare), var(--size-dot-left), var(--size-dot-right),
-      var(--size-scanlines), var(--size-bg);
-  }
+  background-image:
+    var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
+    var(--layer-scanlines), var(--layer-bg);
+  background-size:
+    var(--size-glare), var(--size-dot-left), var(--size-dot-right),
+    var(--size-scanlines), var(--size-bg);
 
-  .screen[data-active="true"] {
+  /* State: Active HUD Override */
+  &[data-active="true"] {
     --dot-color: var(--screen-border-active);
     --screen-bg-current: var(--screen-bg-active);
   }
 
-  /* 2. Clases independientes para cada capa */
-  .screen-glare {
-    --layer-glare: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0.05) 45%,
-      transparent 45%
-    );
+  /* --- DYNAMIC STATS OVERRIDES --- */
+  /* Override --dot-color based on component status */
+  &[data-status="error"] {
+    --dot-color: var(--color-red-500, #ef4444);
   }
 
-  .screen-dots-left {
-    --layer-dot-left: radial-gradient(
-      circle 2px at 8px 8px,
-      var(--dot-color, #fff) 99%,
-      transparent 100%
-    );
+  &[data-status="warning"] {
+    --dot-color: var(--color-amber-500, #f59e0b);
   }
 
-  .screen-dots-right {
-    --layer-dot-right: radial-gradient(
-      circle 2px at calc(100% - 8px) 8px,
-      var(--dot-color, #fff) 99%,
-      transparent 100%
-    );
+  &[data-status="success"] {
+    --dot-color: var(--color-emerald-500, #10b981);
   }
 
-  .screen-scanlines {
-    --layer-scanlines: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.02) 50%,
-      rgba(0, 0, 0, 0.01) 51%
-    );
+  &[data-status="info"] {
+    --dot-color: var(--color-sky-500, #0ea5e9);
   }
+}
+
+@utility screen-glare {
+  --layer-glare: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.05) 45%,
+    transparent 45%
+  );
+}
+
+@utility screen-dots-left {
+  --layer-dot-left: radial-gradient(
+    circle 2px at 8px 8px,
+    var(--dot-color, #fff) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-dots-right {
+  --layer-dot-right: radial-gradient(
+    circle 2px at calc(100% - 8px) 8px,
+    var(--dot-color, #fff) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-scanlines {
+  --layer-scanlines: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(0, 0, 0, 0.01) 51%
+  );
 }
 
 @utility warning-lines {
