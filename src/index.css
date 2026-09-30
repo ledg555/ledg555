@@ -13,23 +13,23 @@
   @import "tailwindcss";
 }
 
-@layer tailwind-utilities {
-  .screen-drop {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35))
-      drop-shadow(0 0 6px var(--screen-glow));
-    transition: transform 0.3s ease;
-  }
+@utility screen-drop {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 6px var(--screen-glow));
+  transition: transform 0.3s ease;
 
-  .screen-drop:hover {
+  &:hover {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45))
       drop-shadow(0 0 10px var(--screen-glow));
   }
 
-  .screen-drop[data-active="true"] {
+  &[data-active="true"] {
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45))
       drop-shadow(0 0 12px var(--screen-glow-active));
   }
+}
 
+@layer tailwind-utilities {
   .screen {
     --dot-color: var(--screen-border);
     --screen-bg-current: var(--screen-bg);
@@ -94,18 +94,16 @@
       rgba(0, 0, 0, 0.01) 51%
     );
   }
+}
 
-  .warning-lines {
-    /* Usamos 135deg para que las franjas bajen de izquierda a derecha */
-    background-image: repeating-linear-gradient(
-      135deg,
-      rgba(255, 204, 0, 0.7) /* Amarillo de seguridad (con 70% opacidad) */,
-      rgba(255, 204, 0, 0.7) 6px /* Ancho de la franja amarilla */,
-      rgba(0, 0, 0, 0.8) 6px /* Inicio de la franja negra (con 80% opacidad) */,
-      rgba(0, 0, 0, 0.8) 12px
-        /* Ancho total del ciclo (10px amarillo + 10px negro) */
-    );
-  }
+@utility warning-lines {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 204, 0, 0.7),
+    rgba(255, 204, 0, 0.7) 6px,
+    rgba(0, 0, 0, 0.8) 6px,
+    rgba(0, 0, 0, 0.8) 12px
+  );
 }
 
 @layer base {

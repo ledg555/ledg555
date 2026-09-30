@@ -100,7 +100,7 @@ export function ThemeBtn() {
               y: 3.5,
               scale: 0.95,
             }}
-            transition={{ type: "spring", stiffness: 700, damping: 25 }}
+            transition={{ type: "spring", stiffness: 700, damping: 38 }}
           >
             {/* Concentric Milled Tactile Groove */}
             <div
