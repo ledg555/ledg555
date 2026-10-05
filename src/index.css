@@ -111,10 +111,10 @@
 @utility warning-lines {
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(255, 204, 0, 0.7),
-    rgba(255, 204, 0, 0.7) 6px,
-    rgba(0, 0, 0, 0.8) 6px,
-    rgba(0, 0, 0, 0.8) 12px
+    #c9a81d,
+    #c9a81d 6px,
+    #0c0e12 6px,
+    #0c0e12 12px
   );
 }
 

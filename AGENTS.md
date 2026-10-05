@@ -53,7 +53,8 @@ Starship will resemble the inside of the Enterprise in Star Trek's Kelvin timeli
 
 1. We'll need a css token palette for each group of shades (no need to define all 50 to 950 values, though: just as we need them).
 2. Use **ONLY** 6-digit hex values for css tokens. Leverage Tailwind to apply alpha channel (e.g. "bg-screen/60") when really needed (like in glassmorphic elements or holographic effects).
-3. You always must define whatever new color you need instead of hardcoding it. However, always be critical about if there's no already existing shade that could do the job. If not, give it a semantic name and a tiny comment about where it's used and other places where it could be used in the future, to stay aware of it.
+3. You always must define whatever new color you need instead of hardcoding it. However, always be critical about if there's not an already existing shade that could do the job. If that's the case, give it a semantic name and a tiny comment about where it's used (with concise alpha channel usage explanations if needed) and other places where it could be used in the future, to stay aware of it.
+4. If for any reason a color token needs rename for UI consistency and clarity, leave suggestion in chat and I'll perform rename task by myself.
 
 ### Animations & Icons
 
