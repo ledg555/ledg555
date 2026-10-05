@@ -176,7 +176,7 @@ export function HomePage() {
           ))}
 
           {/* Location — bg-base */}
-          <div className="mt-auto pt-4 border-t border-border-accent/30">
+          <div className="mt-auto pt-4 border-t border-border-accent">
             <span className="text-xs text-fg/50 uppercase tracking-widest">
               Current Position
             </span>
@@ -205,12 +205,11 @@ export function HomePage() {
           { token: "panel", cls: "bg-panel" },
           { token: "status-safe", cls: "bg-status-safe" },
           { token: "status-warn", cls: "bg-status-warn" },
-          { token: "screen-blue", cls: "bg-screen-blue" },
-          { token: "screen-deep-blue", cls: "bg-screen-deep-blue" },
+          { token: "deep-blue", cls: "bg-deep-blue" },
         ].map((s) => (
           <div key={s.token} className="flex flex-col items-center gap-1">
             <div
-              className={`w-8 h-8 rounded-lg ${s.cls} border border-border-accent/40 shadow-inner`}
+              className={`w-8 h-8 rounded-lg ${s.cls} border border-border-accent shadow-inner`}
             />
             <span className="text-[10px] text-accent-base">{s.token}</span>
           </div>
@@ -267,7 +266,7 @@ export function HomePage() {
             jobs.map((job: JobEntry, index: number) => (
               <motion.div
                 key={job.key}
-                className="bg-panel/70 backdrop-blur-x border border-border-accent rounded-xl p-5 hover:border-accent-base/60 transition-colors duration-300"
+                className="bg-panel/70 backdrop-blur-x border border-border-accent rounded-xl p-5 hover:border-accent-base transition-colors duration-300"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.08 }}
@@ -281,7 +280,7 @@ export function HomePage() {
                       {job.company} | {job.location}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface text-fg/60 border border-border-accent/30 shrink-0">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface text-fg/60 border border-border-accent shrink-0">
                     {job.date}
                   </span>
                 </div>

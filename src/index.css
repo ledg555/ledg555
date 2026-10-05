@@ -82,9 +82,9 @@
 @utility screen-glare {
   --layer-glare: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.05) 45%,
-    transparent 45%
+    #ffffff4d 0%,
+    #ffffff0d 55%,
+    transparent 55%
   );
 }
 
@@ -105,11 +105,7 @@
 }
 
 @utility screen-scanlines {
-  --layer-scanlines: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.02) 50%,
-    rgba(0, 0, 0, 0.01) 51%
-  );
+  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
 }
 
 @utility warning-lines {
@@ -139,9 +135,9 @@
 
 @theme {
   --color-base: var(--bg-base); /* Ship hull */
-  --color-surface: var(--bg-surface); /* Raised elements, surface frames */
+  --color-surface: var(--bg-surface); /* Raised elements, hull surface frames */
   --color-fg: var(--text-base); /* Neutral texts in hull */
-  --color-accent-base: var(--accent-base);
+  --color-accent-base: var(--accent-base); /* Color principal de UI */
   --color-accent-glow: var(--accent-glow);
   --color-border-accent: var(--border-accent);
 
@@ -149,8 +145,7 @@
   --color-status-safe: var(--status-safe);
   --color-status-warn: var(--status-warn);
 
-  --color-screen-blue: rgb(0, 128, 255);
-  --color-screen-deep-blue: rgb(0, 24, 255);
+  --color-deep-blue: #0018ff;
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -180,14 +175,14 @@
   /* FONDOS (La nave) */
   --bg-base: #e5e5ea;
   --bg-surface: #f4f6f9;
-  --accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
+  --accent-base: #00e5ff;
   --accent-glow: rgba(0, 229, 255, 0.4);
   /* BORDES Y TEXTOS */
   --border-accent: rgba(0, 229, 255, 0.3);
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --bg-panel: #02274b;
+  --bg-panel: #00274b;
 
   /* LUCES Y ESTADOS (Props) */
   --status-safe: #00e676;
@@ -196,15 +191,15 @@
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
     180deg,
-    rgba(180, 220, 255, 0.9) 0%,
-    rgba(16, 42, 88, 0.95) 25%,
-    rgba(3, 12, 32, 0.98) 100%
+    #b4dcff 0%,
+    #102a58 25%,
+    #030c20 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    rgba(210, 250, 255, 1) 0%,
-    rgba(0, 160, 255, 0.95) 25%,
-    rgba(5, 26, 75, 0.98) 100%
+    #d2faff 0%,
+    #00a0ff 40%,
+    #051a4b 100%
   );
   --screen-border: rgba(0, 229, 255, 0.55);
   --screen-border-active: rgba(0, 245, 255, 0.95);
@@ -237,7 +232,7 @@
   --bg-base: #03080b;
   --bg-surface: #14181a;
 
-  --accent-base: #ff1730; /* Color principal de UI (Antes alert-red-base) */
+  --accent-base: #ff1730;
   --accent-glow: rgba(255, 23, 68, 0.4);
 
   --border-accent: rgba(255, 23, 68, 0.3);
@@ -258,18 +253,18 @@
   /* PANTALLAS SCIFI (Alerta Roja) */
   --screen-casing: linear-gradient(
     180deg,
-    rgba(255, 140, 160, 0.85) 0%,
-    rgba(85, 12, 24, 0.95) 25%,
-    rgba(25, 2, 6, 0.98) 100%
+    #d87788 0%,
+    #550c18 25%,
+    #190206 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    rgba(255, 190, 200, 1) 0%,
-    rgba(255, 23, 68, 0.95) 25%,
-    rgba(65, 5, 14, 0.98) 100%
+    #ffbec8 0%,
+    #f21540 25%,
+    #41050e 100%
   );
   --screen-border: rgba(255, 23, 68, 0.55);
-  --screen-border-active: rgba(255, 55, 95, 0.95);
+  --screen-border-active: #ff4167;
   --screen-glow: rgba(255, 23, 68, 0.45);
   --screen-glow-active: rgba(255, 23, 68, 0.85);
   --screen-bg: radial-gradient(

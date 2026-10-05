@@ -52,8 +52,8 @@ A high command briefing room. It will feature a central table with 8 seats and h
 Starship will resemble the inside of the Enterprise in Star Trek's Kelvin timeline. Unlike the old ones, this Enterprise is filled with brilliant, ceramic-like walls and lots of colorish buttons and led lights everywhere in control panels. In "Exploration" mode, those colorish elements are gonna always have shades of blues, reds, greens and yellows. In "Red Alert" mode, all walls will turn to deep shades of grays and all colorish buttons and led lights will turn to more faint shades of only reds, yellows and oranges. Some directives:
 
 1. We'll need a css token palette for each group of shades (no need to define all 50 to 950 values, though: just as we need them).
-2. Use **ONLY** 6-digit hex values for css tokens. Apply alpha channel with Tailwind (e.g. "bg-screen/60") when really needed (like in glassmorphic elements or holographic effects).
-3. You must define whatever new color you need instead of hardcoding it. However, always be critical about if there's no already existing shade that could do the job. If not, give it a semantic name and a tiny comment about where it's used and other places where it could be used in the future, to stay aware of it.
+2. Use **ONLY** 6-digit hex values for css tokens. Leverage Tailwind to apply alpha channel (e.g. "bg-screen/60") when really needed (like in glassmorphic elements or holographic effects).
+3. You always must define whatever new color you need instead of hardcoding it. However, always be critical about if there's no already existing shade that could do the job. If not, give it a semantic name and a tiny comment about where it's used and other places where it could be used in the future, to stay aware of it.
 
 ### Animations & Icons
 
