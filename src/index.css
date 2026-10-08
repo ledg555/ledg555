@@ -163,7 +163,19 @@
   --font-text: "Gruppo 600", system-ui, sans-serif;
 }
 
+/* ==========================================================================
+   DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
+   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or 
+   Tailwind's opacity syntax (ej. bg-(--accent-base)/40).
+   ========================================================================== */
 :root {
+  /* --- LIGHT PALETTE (EXPLORATION) --- */
+  --primitive-space-navy: #051b4c;   /* Mid Void Backgrounds */
+
+  /* --- DARK PALETTE (RED ALERT) --- */
+  --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
+  --primitive-alert-void: #1a0206; /* Deep Red Void Background */
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -192,14 +204,14 @@
   --screen-casing: linear-gradient(
     180deg,
     #b4dcff 0%,
-    #102a58 25%,
+    var(--primitive-space-navy) 25%,
     #030c20 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
     #d2faff 0%,
     #00a0ff 40%,
-    #051a4b 100%
+    var(--primitive-space-navy) 100%
   );
   --screen-border: #00e5ff8c;
   --screen-border-active: #00f5fff2;
@@ -215,7 +227,7 @@
     135% 120% at 50% 5%,
     #2b84ff 0%,
     #124cb5 45%,
-    #051b4c 90%
+    var(--primitive-space-navy) 90%
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
@@ -250,7 +262,7 @@
     180deg,
     #d87788 0%,
     #550c18 25%,
-    #190206 100%
+    var(--primitive-alert-void) 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
@@ -266,20 +278,20 @@
     135% 120% at 50% 5%,
     #b91c1c 0%,
     #6b0b18 45%,
-    #1f0206 90%
+    var(--primitive-alert-void) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
     #dc2626 0%,
     #880e1f 45%,
-    #2a0309 90%
+    var(--primitive-alert-navy) 90%
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
     #ff1744 0%,
     #b91c1c 35%,
     #500510 80%,
-    #200105 100%
+    var(--primitive-alert-void) 100%
   );
   --screen-text: #ffe5e8;
   --screen-text-glow: #ff1744cc;
