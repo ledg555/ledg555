@@ -170,6 +170,7 @@
    ========================================================================== */
 :root {
   /* --- LIGHT PALETTE (EXPLORATION) --- */
+  --primitive-cyan: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-space-navy: #051b4c; /* Mid Void Backgrounds */
 
   /* --- DARK PALETTE (RED ALERT) --- */
@@ -188,10 +189,10 @@
   /* FONDOS (La nave) */
   --bg-base: #e5e5ea;
   --bg-surface: #f4f6f9;
-  --accent-base: #00e5ff;
-  --accent-glow: #00e5ff66;
-  /* BORDES Y TEXTOS */
-  --border-accent: #00e5ff4d;
+
+ --accent-base: var(--primitive-cyan);
+  --accent-glow: color-mix(in srgb, var(--primitive-cyan) 40%, transparent);
+  --border-accent: color-mix(in srgb, var(--primitive-cyan) 30%, transparent);
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
@@ -214,10 +215,18 @@
     #00a0ff 40%,
     var(--primitive-space-navy) 100%
   );
-  --screen-border: #00e5ff8c;
-  --screen-border-active: #00f5fff2;
+  --screen-border: color-mix(in srgb, var(--primitive-cyan) 50%, transparent);
+  --screen-border-active: color-mix(
+    in srgb,
+    var(--primitive-cyan) 95%,
+    transparent
+  );
   --screen-glow: #00b4ff73;
-  --screen-glow-active: #00e5ffd9;
+  --screen-glow-active: color-mix(
+    in srgb,
+    var(--primitive-cyan) 85%,
+    transparent
+  );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #186bf0 0%,
@@ -232,13 +241,17 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    #00e5ff 0%,
+    var(--primitive-cyan) 0%,
     #155eef 35%,
     #072163 80%,
     #031033 100%
   );
   --screen-text: #e0f7ff;
-  --screen-text-glow: #00e5ffcc;
+  --screen-text-glow: color-mix(
+    in srgb,
+    var(--primitive-cyan) 80%,
+    transparent
+  );
 }
 
 .dark {
