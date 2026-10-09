@@ -165,16 +165,17 @@
 
 /* ==========================================================================
    DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
-   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or 
+   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or
    Tailwind's opacity syntax (ej. bg-(--accent-base)/40).
    ========================================================================== */
 :root {
   /* --- LIGHT PALETTE (EXPLORATION) --- */
-  --primitive-space-navy: #051b4c;   /* Mid Void Backgrounds */
+  --primitive-space-navy: #051b4c; /* Mid Void Backgrounds */
 
   /* --- DARK PALETTE (RED ALERT) --- */
+  --primitive-red-alert: #ff1744; /* Emergency UI Glow & Primary Crimson (#FF1730) */
   --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
-  --primitive-alert-void: #1a0206; /* Deep Red Void Background */
+  --primitive-alert-void: #1a0206; /* Deep Red Void Background (#1F0206) */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -244,10 +245,18 @@
   --bg-base: #03080b;
   --bg-surface: #14181a;
 
-  --accent-base: #ff1730;
-  --accent-glow: #ff174466;
+  --accent-base: var(--primitive-red-alert);
+  --accent-glow: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 40%,
+    transparent
+  );
 
-  --border-accent: #ff17444d;
+  --border-accent: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 30%,
+    transparent
+  );
   --text-base: #cbd5e1;
 
   /* FONDOS TINTADOS (Paneles de alerta) */
@@ -270,10 +279,23 @@
     #f21540 25%,
     #41050e 100%
   );
-  --screen-border: #ff17448c;
+
+  --screen-border: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 55%,
+    transparent
+  );
   --screen-border-active: #ff4167;
-  --screen-glow: #ff174473;
-  --screen-glow-active: #ff1744d9;
+  --screen-glow: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 45%,
+    transparent
+  );
+  --screen-glow-active: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 85%,
+    transparent
+  );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #b91c1c 0%,
@@ -288,13 +310,17 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    #ff1744 0%,
+    var(--primitive-red-alert) 0%,
     #b91c1c 35%,
     #500510 80%,
     var(--primitive-alert-void) 100%
   );
   --screen-text: #ffe5e8;
-  --screen-text-glow: #ff1744cc;
+  --screen-text-glow: color-mix(
+    in srgb,
+    var(--primitive-red-alert) 80%,
+    transparent
+  );
 }
 
 .octagon-sm {
