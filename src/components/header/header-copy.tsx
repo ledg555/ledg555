@@ -43,7 +43,7 @@ export function Header() {
               className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
             >
               {/* Capa Borde / Casing con clip-path */}
-              <div className="absolute inset-0 octagon-sm [background:var(--screen-casing)] data-[active=true]:[background:var(--screen-casing-active)]" />
+              <div data-active={isCurrentPath} className="absolute inset-0 octagon-sm [background:var(--screen-casing)] data-[active=true]:[background:var(--screen-casing-active)]" />
 
               {/* Screen Glass Interior */}
               <div

@@ -19,7 +19,7 @@
   transition: transform 0.3s ease;
 
   &:hover {
-    filter: drop-shadow(0 4px 8px #00000073)
+    filter: drop-shadow(0 3px 4px #00000073)
       drop-shadow(0 0 10px var(--screen-glow));
   }
 
@@ -118,21 +118,6 @@
   );
 }
 
-@layer base {
-  body {
-    letter-spacing: 0.4px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: normal;
-  }
-}
-
 @theme {
   --color-base: var(--bg-base); /* Ship hull */
   --color-surface: var(--bg-surface); /* Raised elements, hull surface frames */
@@ -169,11 +154,10 @@
    Tailwind's opacity syntax (ej. bg-(--accent-base)/40).
    ========================================================================== */
 :root {
-  /* --- LIGHT PALETTE (EXPLORATION) --- */
   --primitive-cyan: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-space-navy: #051b4c; /* Mid Void Backgrounds */
+  --primitive-space-void: #031336; /* Deep Void Backgrounds */
 
-  /* --- DARK PALETTE (RED ALERT) --- */
   --primitive-red-alert: #ff1744; /* Emergency UI Glow & Primary Crimson A400 (#FF1730) */
   --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
   --primitive-alert-void: #1a0206; /* Deep Red Void Background (#1F0206) */
@@ -207,7 +191,7 @@
     180deg,
     #b4dcff 0%,
     var(--primitive-space-navy) 25%,
-    #030c20 100%
+    #030e2e 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
@@ -231,7 +215,7 @@
     135% 120% at 50% 5%,
     #186bf0 0%,
     #0c3687 45%,
-    #031336 90%
+    var(--primitive-space-void) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
@@ -244,7 +228,7 @@
     var(--primitive-cyan) 0%,
     #155eef 35%,
     #072163 80%,
-    #031033 100%
+    var(--primitive-space-void) 100%
   );
   --screen-text: #e0f7ff;
   --screen-text-glow: color-mix(
@@ -383,4 +367,19 @@
   font-variant-caps: small-caps;
   /* The low-level way for maximum compatibility */
   font-feature-settings: "smcp" on;
+}
+
+@layer base {
+  body {
+    letter-spacing: 0.4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: normal;
+  }
 }
