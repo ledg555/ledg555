@@ -41,7 +41,7 @@ export function ThemeBtn() {
       {/* Heavy Sci-Fi Master Collar / Housing (Ligeramente más grande) */}
       <div
         className={`
-          relative w-12 h-12 rounded-full flex items-center justify-center p-[2.5px]
+          relative w-12 h-12 rounded-full flex items-center justify-center p-[2px]
           transition-all duration-300
           ${
             isDarkTheme
@@ -52,22 +52,22 @@ export function ThemeBtn() {
       >
         {/* Corner / Perimeter Precision Micro-Screws */}
         <span
-          className={`absolute top-0.5 left-1/2 -translate-x-1/2 w-[2px] h-[3px] rounded-full ${
+          className={`absolute top-0.5 left-1/2 -translate-x-1/2 w-[2px] h-[5px] rounded-full ${
             isDarkTheme ? "bg-[#00e5ff]/60" : "bg-[#ef4444]/60"
           }`}
         />
         <span
-          className={`absolute bottom-0.5 left-1/2 -translate-x-1/2 w-[2px] h-[3px] rounded-full ${
+          className={`absolute bottom-px left-1/2 -translate-x-1/2 w-[2px] h-[3px] rounded-full ${
             isDarkTheme ? "bg-[#00e5ff]/60" : "bg-[#ef4444]/60"
           }`}
         />
         <span
-          className={`absolute top-1/2 left-0.5 -translate-y-1/2 w-[3px] h-[2px] rounded-full ${
+          className={`absolute top-1/2 left-px -translate-y-1/2 w-[5px] h-[2px] rounded-full ${
             isDarkTheme ? "bg-[#00e5ff]/60" : "bg-[#ef4444]/60"
           }`}
         />
         <span
-          className={`absolute top-1/2 right-0.5 -translate-y-1/2 w-[3px] h-[2px] rounded-full ${
+          className={`absolute top-1/2 right-px -translate-y-1/2 w-[5px] h-[2px] rounded-full ${
             isDarkTheme ? "bg-[#00e5ff]/60" : "bg-[#ef4444]/60"
           }`}
         />
@@ -86,15 +86,14 @@ export function ThemeBtn() {
               ${
                 isDarkTheme
                   ? "bg-gradient-to-b from-[#0284c7] via-[#0369a1] to-[#0c4a6e] border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
-                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,0_4px_8px_rgba(0,0,0,0.5),inset_0_1.5px_0_rgba(255,255,255,0.4),inset_0_-2px_2px_rgba(0,0,0,0.6)]"
+                  : "bg-gradient-to-b from-[#ef4444] via-[#dc2626] to-[#991b1b] border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,inset_0_1.5px_1px_rgba(255,255,255,0.15)] hover:shadow-[0_3px_0_#5f0a0a,inset_0_-2px_2px_rgba(0,0,0,0.6)]"
               }
             `}
             animate={{
               y: isDarkTheme ? 2 : 0,
             }}
             whileHover={{
-              scale: isDarkTheme ? 0.98 : 1.03,
-              boxShadow: "none",
+              scale: isDarkTheme ? 0.98 : 0.98,
             }}
             whileTap={{
               y: 3.5,
@@ -118,7 +117,7 @@ export function ThemeBtn() {
             {isDarkTheme ? (
               <HiOutlineSparkles className="relative z-10 text-[20px] sm:text-[22px] text-[#e0f7ff] drop-shadow-[0_0_8px_#00e5ff]" />
             ) : (
-              <HiOutlineExclamationTriangle className="relative z-10 text-[20px] sm:text-[22px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]" />
+              <HiOutlineExclamationTriangle className="relative z-10 text-[20px] sm:text-[22px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]" />
             )}
           </motion.button>
         </div>
