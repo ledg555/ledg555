@@ -154,10 +154,14 @@
    Tailwind's opacity syntax (ej. bg-(--accent-base)/40).
    ========================================================================== */
 :root {
+  --primitive-ceramic-50: #f4f6f9;
+  --primitive-ceramic-100: #e5e5ea;
   --primitive-cyan: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-space-navy: #051b4c; /* Mid Void Backgrounds */
   --primitive-space-void: #031336; /* Deep Void Backgrounds */
 
+  --primitive-ceramic-950: #03080b;
+  --primitive-ceramic-700: #14181a;
   --primitive-red-alert: #ff1744; /* Emergency UI Glow & Primary Crimson A400 (#FF1730) */
   --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
   --primitive-alert-void: #1a0206; /* Deep Red Void Background (#1F0206) */
@@ -171,10 +175,10 @@
   font-weight: 600;
 
   /* FONDOS (La nave) */
-  --bg-base: #e5e5ea;
-  --bg-surface: #f4f6f9;
+  --bg-base: var(--primitive-ceramic-100);
+  --bg-surface: var(--primitive-ceramic-50);
 
- --accent-base: var(--primitive-cyan);
+  --accent-base: var(--primitive-cyan);
   --accent-glow: color-mix(in srgb, var(--primitive-cyan) 40%, transparent);
   --border-accent: color-mix(in srgb, var(--primitive-cyan) 30%, transparent);
   --text-base: #141a22;
@@ -239,8 +243,8 @@
 }
 
 .dark {
-  --bg-base: #03080b;
-  --bg-surface: #14181a;
+  --bg-base: var(--primitive-ceramic-950);
+  --bg-surface: var(--primitive-ceramic-700);
 
   --accent-base: var(--primitive-red-alert);
   --accent-glow: color-mix(
