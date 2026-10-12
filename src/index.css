@@ -82,9 +82,9 @@
 @utility screen-glare {
   --layer-glare: linear-gradient(
     180deg,
-    #ffffff4d 0%,
-    #ffffff0d 55%,
-    transparent 55%
+    #ffffff40 0%,
+    #ffffff0d 45%,
+    transparent 65%
   );
 }
 
@@ -157,6 +157,7 @@
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
   --primitive-cyan: #00e5ff; /* Primary UI Glow & Active HUDs */
+  --primitive-blue-dark: #0c3687; /* Screen Radial Body */
   --primitive-space-navy: #051b4c; /* Mid Void Backgrounds */
   --primitive-space-void: #031336; /* Deep Void Backgrounds */
 
@@ -218,8 +219,7 @@
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #186bf0 0%,
-    #0c3687 45%,
-    var(--primitive-space-void) 90%
+    var(--primitive-blue-dark) 45% var(--primitive-space-void) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
@@ -230,8 +230,8 @@
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
     var(--primitive-cyan) 0%,
-    #155eef 35%,
-    #072163 80%,
+    #155eef 40%,
+    var(--primitive-blue-dark) 80%,
     var(--primitive-space-void) 100%
   );
   --screen-text: #e0f7ff;

@@ -43,21 +43,24 @@ export function Header() {
               className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
             >
               {/* Capa Borde / Casing con clip-path */}
-              <div data-active={isCurrentPath} className="absolute inset-0 octagon-sm [background:var(--screen-casing)] data-[active=true]:[background:var(--screen-casing-active)]" />
+              <div
+                data-active={isCurrentPath}
+                className="absolute inset-0 octagon-sm [background:var(--screen-casing)] data-[active=true]:[background:var(--screen-casing-active)]"
+              />
 
               {/* Screen Glass Interior */}
               <div
                 className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
                 style={{
-                  background: isCurrentPath
+                  background: isCurrentPath // Is doing nothing
                     ? "var(--screen-bg-active)"
                     : "var(--screen-bg)",
                 }}
               >
-                {/* Layer 1: CRT Micro-Scanlines Matrix */}
+                {/* Layer 1: CRT Micro-Scanlines & Glare */}
                 <div
                   data-active={isCurrentPath}
-                  className="screen screen-glare pointer-events-none absolute inset-0 screen-scanlines screen-dots-left screen-dots-right"
+                  className="absolute inset-0 pointer-events-none screen screen-glare screen-scanline screen-dots-left screen-dots-right"
                 />
 
                 {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
@@ -70,7 +73,7 @@ export function Header() {
                 />
 
                 {/* Layer 3: Glass Specular Glare (Top-down crystal sheen) */}
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-linear-to-b from-white/30 via-white/5 to-transparent transition-opacity duration-300 group-hover:opacity-100 opacity-70" />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-linear-to-b from-white/30 via-white/5 to-transparent transition-opacity duration-300 group-hover:opacity-100 opacity-55" />
 
                 {/* Layer 4: Tactical HUD Reticle Dots */}
                 {/* <span
