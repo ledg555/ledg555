@@ -219,7 +219,8 @@
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     #186bf0 0%,
-    var(--primitive-blue-dark) 45% var(--primitive-space-void) 90%
+    var(--primitive-blue-dark) 45%,
+    var(--primitive-space-void) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
