@@ -49,14 +49,7 @@ export function Header() {
               />
 
               {/* Screen Glass Interior */}
-              <div
-                className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0"
-                style={{
-                  background: isCurrentPath // Is doing nothing
-                    ? "var(--screen-bg-active)"
-                    : "var(--screen-bg)",
-                }}
-              >
+              <div className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0">
                 {/* Layer 1: CRT Micro-Scanlines & Glare */}
                 <div
                   data-active={isCurrentPath}

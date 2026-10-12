@@ -32,14 +32,13 @@
 @utility screen {
   /* Defaults */
   --dot-color: var(--screen-border);
-  --screen-bg-current: var(--screen-bg);
 
   /* bg assembly layers */
   --layer-glare: none;
   --layer-dot-left: none;
   --layer-dot-right: none;
   --layer-scanlines: none;
-  --layer-bg: var(--screen-bg-current);
+  --layer-bg: var(--screen-bg);
 
   --size-glare: 100% 100%;
   --size-dot-left: 100% 100%;
@@ -57,7 +56,11 @@
   /* State: Active HUD Override */
   &[data-active="true"] {
     --dot-color: var(--screen-border-active);
-    --screen-bg-current: var(--screen-bg-active);
+    --layer-bg: var(--screen-bg-active);
+  }
+
+  .group:hover &:not([data-active="true"]) {
+    --layer-bg: var(--screen-bg-hover);
   }
 
   /* --- DYNAMIC STATS OVERRIDES --- */
