@@ -16,7 +16,8 @@
 :root {
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
-  --primitive-cyan: #00e5ff; /* Primary UI Glow & Active HUDs */
+  --primitive-cyan-100: #bffbff; /* Casing Highlight */
+  --primitive-cyan-400: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-blue-mid: #155eef; /* Screen Radial Center */
   --primitive-blue-dark: #0c3687; /* Screen Radial Body */
   --primitive-void-mid: #051b4c; /* Mid Void Backgrounds */
@@ -40,9 +41,9 @@
   --bg-base: var(--primitive-ceramic-100);
   --bg-surface: var(--primitive-ceramic-50);
 
-  --accent-base: var(--primitive-cyan);
-  --accent-glow: color-mix(in srgb, var(--primitive-cyan) 40%, transparent);
-  --border-accent: color-mix(in srgb, var(--primitive-cyan) 30%, transparent);
+  --accent-base: var(--primitive-cyan-400);
+  --accent-glow: color-mix(in srgb, var(--primitive-cyan-400) 40%, transparent);
+  --border-accent: color-mix(in srgb, var(--primitive-cyan-400) 30%, transparent);
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
@@ -61,20 +62,20 @@
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    #d2faff 0%,
+    var(--primitive-cyan-100) 0%,
     #00a0ff 40%,
     var(--primitive-void-mid) 100%
   );
-  --screen-border: color-mix(in srgb, var(--primitive-cyan) 50%, transparent);
+  --screen-border: color-mix(in srgb, var(--primitive-cyan-400) 50%, transparent);
   --screen-border-active: color-mix(
     in srgb,
-    var(--primitive-cyan) 95%,
+    var(--primitive-cyan-400) 95%,
     transparent
   );
   --screen-glow: #00b4ff73;
   --screen-glow-active: color-mix(
     in srgb,
-    var(--primitive-cyan) 85%,
+    var(--primitive-cyan-400) 85%,
     transparent
   );
   --screen-bg: radial-gradient(
@@ -91,7 +92,7 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-cyan) 0%,
+    var(--primitive-cyan-400) 0%,
     var(--primitive-blue-mid) 35%,
     var(--primitive-blue-dark) 80%,
     var(--primitive-void-deep) 100%
@@ -99,7 +100,7 @@
   --screen-text: #e0f7ff;
   --screen-text-glow: color-mix(
     in srgb,
-    var(--primitive-cyan) 80%,
+    var(--primitive-cyan-400) 80%,
     transparent
   );
 }
