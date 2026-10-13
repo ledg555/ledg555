@@ -1,4 +1,4 @@
-@layer tailwind-base, tailwind-utilities;
+@import "tailwindcss";
 @font-face {
   src: url("./assets/fonts/Gruppo-600.woff2") format("woff2");
   font-family: "Gruppo";
@@ -6,150 +6,7 @@
   font-weight: 600;
   font-display: swap;
 }
-
 @custom-variant dark (&:where(.dark, .dark *));
-
-@layer tailwind-base {
-  @import "tailwindcss";
-}
-
-@utility screen-drop {
-  filter: drop-shadow(0 2px 4px #00000059)
-    drop-shadow(0 0 6px var(--screen-glow));
-  transition: transform 0.3s ease;
-
-  &:hover {
-    filter: drop-shadow(0 3px 4px #00000073)
-      drop-shadow(0 0 10px var(--screen-glow));
-  }
-
-  &[data-active="true"] {
-    filter: drop-shadow(0 3px 6px #00000073)
-      drop-shadow(0 0 12px var(--screen-glow-active));
-  }
-}
-
-@utility screen {
-  /* Defaults */
-  --dot-color: var(--screen-border);
-
-  /* bg assembly layers */
-  --layer-glare: none;
-  --layer-dot-left: none;
-  --layer-dot-right: none;
-  --layer-scanlines: none;
-  --layer-bg: var(--screen-bg);
-
-  --size-glare: 100% 100%;
-  --size-dot-left: 100% 100%;
-  --size-dot-right: 100% 100%;
-  --size-scanlines: 100% 4px;
-  --size-bg: 100% 100%;
-
-  background-image:
-    var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
-    var(--layer-scanlines), var(--layer-bg);
-  background-size:
-    var(--size-glare), var(--size-dot-left), var(--size-dot-right),
-    var(--size-scanlines), var(--size-bg);
-
-  /* State: Active HUD Override */
-  &[data-active="true"] {
-    --dot-color: var(--screen-border-active);
-    --layer-bg: var(--screen-bg-active);
-  }
-
-  .group:hover &:not([data-active="true"]) {
-    --layer-bg: var(--screen-bg-hover);
-  }
-
-  /* --- DYNAMIC STATS OVERRIDES --- */
-  /* Override --dot-color based on component status */
-  &[data-status="error"] {
-    --dot-color: var(--color-red-500, #ef4444);
-  }
-
-  &[data-status="warning"] {
-    --dot-color: var(--color-amber-500, #f59e0b);
-  }
-
-  &[data-status="success"] {
-    --dot-color: var(--color-emerald-500, #10b981);
-  }
-
-  &[data-status="info"] {
-    --dot-color: var(--color-sky-500, #0ea5e9);
-  }
-}
-
-@utility screen-glare {
-  --layer-glare: linear-gradient(
-    180deg,
-    #ffffff40 0%,
-    #ffffff0d 50%,
-    transparent 75%
-  );
-}
-
-@utility screen-dots-left {
-  --layer-dot-left: radial-gradient(
-    circle 2px at 8px 8px,
-    var(--dot-color, #fff) 99%,
-    transparent 100%
-  );
-}
-
-@utility screen-dots-right {
-  --layer-dot-right: radial-gradient(
-    circle 2px at calc(100% - 8px) 8px,
-    var(--dot-color, #fff) 99%,
-    transparent 100%
-  );
-}
-
-@utility screen-scanlines {
-  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
-}
-
-@utility warning-lines {
-  background-image: repeating-linear-gradient(
-    135deg,
-    #c9a81d,
-    #c9a81d 6px,
-    #0c0e12 6px,
-    #0c0e12 12px
-  );
-}
-
-@theme {
-  --color-base: var(--bg-base); /* Ship hull */
-  --color-surface: var(--bg-surface); /* Raised elements, hull surface frames */
-  --color-fg: var(--text-base); /* Neutral texts in hull */
-  --color-accent-base: var(--accent-base); /* Color principal de UI */
-  --color-accent-glow: var(--accent-glow);
-  --color-border-accent: var(--border-accent);
-
-  --color-panel: var(--bg-panel);
-  --color-status-safe: var(--status-safe);
-  --color-status-warn: var(--status-warn);
-
-  --color-deep-blue: #0018ff;
-
-  --breakpoint-*: initial;
-  --breakpoint-xs: 360px;
-  --breakpoint-sm: 480px;
-  --breakpoint-md: 640px;
-  --breakpoint-lm: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1384px;
-  --breakpoint-3xl: 1536px;
-  --breakpoint-4xl: 1920px;
-
-  --font-headings: "Lexend Zetta", sans-serif;
-  --font-sans: "Gruppo 600", system-ui, sans-serif;
-  --font-text: "Gruppo 600", system-ui, sans-serif;
-}
 
 /* ==========================================================================
    DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
@@ -329,6 +186,166 @@
   );
 }
 
+@theme {
+  --color-base: var(--bg-base); /* Ship hull */
+  --color-surface: var(--bg-surface); /* Raised elements, hull surface frames */
+  --color-fg: var(--text-base); /* Neutral texts in hull */
+  --color-accent-base: var(--accent-base); /* Color principal de UI */
+  --color-accent-glow: var(--accent-glow);
+  --color-border-accent: var(--border-accent);
+
+  --color-panel: var(--bg-panel);
+  --color-status-safe: var(--status-safe);
+  --color-status-warn: var(--status-warn);
+
+  --color-deep-blue: #0018ff;
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 640px;
+  --breakpoint-lm: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1384px;
+  --breakpoint-3xl: 1536px;
+  --breakpoint-4xl: 1920px;
+
+  --font-headings: "Lexend Zetta", sans-serif;
+  --font-sans: "Gruppo 600", system-ui, sans-serif;
+  --font-text: "Gruppo 600", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    letter-spacing: 0.4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: normal;
+  }
+}
+
+@utility screen-drop {
+  filter: drop-shadow(0 2px 4px #00000059)
+    drop-shadow(0 0 6px var(--screen-glow));
+  transition: transform 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 3px 4px #00000073)
+      drop-shadow(0 0 10px var(--screen-glow));
+  }
+
+  &[data-active="true"] {
+    filter: drop-shadow(0 3px 6px #00000073)
+      drop-shadow(0 0 12px var(--screen-glow-active));
+  }
+}
+
+@utility screen {
+  /* Defaults */
+  --dot-color: var(--screen-border);
+
+  /* bg assembly layers */
+  --layer-glare: none;
+  --layer-dot-left: none;
+  --layer-dot-right: none;
+  --layer-scanlines: none;
+  --layer-bg: var(--screen-bg);
+
+  --size-glare: 100% 100%;
+  --size-dot-left: 100% 100%;
+  --size-dot-right: 100% 100%;
+  --size-scanlines: 100% 4px;
+  --size-bg: 100% 100%;
+
+  background-image:
+    var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
+    var(--layer-scanlines), var(--layer-bg);
+  background-size:
+    var(--size-glare), var(--size-dot-left), var(--size-dot-right),
+    var(--size-scanlines), var(--size-bg);
+
+  /* State: Active HUD Override */
+  &[data-active="true"] {
+    --dot-color: var(--screen-border-active);
+    --layer-bg: var(--screen-bg-active);
+  }
+
+  .group:hover &:not([data-active="true"]) {
+    --layer-bg: var(--screen-bg-hover);
+  }
+
+  /* --- DYNAMIC STATS OVERRIDES --- */
+  /* Override --dot-color based on component status */
+  &[data-status="error"] {
+    --dot-color: var(--color-red-500, #ef4444);
+  }
+
+  &[data-status="warning"] {
+    --dot-color: var(--color-amber-500, #f59e0b);
+  }
+
+  &[data-status="success"] {
+    --dot-color: var(--color-emerald-500, #10b981);
+  }
+
+  &[data-status="info"] {
+    --dot-color: var(--color-sky-500, #0ea5e9);
+  }
+}
+
+@utility screen-glare {
+  --layer-glare: linear-gradient(
+    180deg,
+    #ffffff40 0%,
+    #ffffff0d 50%,
+    transparent 75%
+  );
+}
+
+@utility screen-dots-left {
+  --layer-dot-left: radial-gradient(
+    circle 2px at 8px 8px,
+    var(--dot-color, #fff) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-dots-right {
+  --layer-dot-right: radial-gradient(
+    circle 2px at calc(100% - 8px) 8px,
+    var(--dot-color, #fff) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-scanlines {
+  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
+}
+
+@utility warning-lines {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #c9a81d,
+    #c9a81d 6px,
+    #0c0e12 6px,
+    #0c0e12 12px
+  );
+}
+
+@utility smallcaps {
+  /* The modern way */
+  font-variant-caps: small-caps;
+  /* The low-level way for maximum compatibility */
+  font-feature-settings: "smcp" on;
+}
+
 .octagon-sm {
   clip-path: polygon(
     12px 0,
@@ -369,26 +386,4 @@
     0 12px
   );
   border-radius: 14px / 10px;
-}
-
-@utility smallcaps {
-  /* The modern way */
-  font-variant-caps: small-caps;
-  /* The low-level way for maximum compatibility */
-  font-feature-settings: "smcp" on;
-}
-
-@layer base {
-  body {
-    letter-spacing: 0.4px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: normal;
-  }
 }
