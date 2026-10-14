@@ -16,12 +16,17 @@
 :root {
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
-  --primitive-cyan-100: #bffbff; /* Casing Highlight */
-  --primitive-cyan-400: #00e5ff; /* Primary UI Glow & Active HUDs */
-  --primitive-blue-mid: #155eef; /* Screen Radial Center */
-  --primitive-blue-dark: #0c3687; /* Screen Radial Body */
-  --primitive-void-mid: #051b4c; /* Mid Void Backgrounds */
-  --primitive-void-deep: #031336; /* Deep Void Backgrounds */
+  --primitive-aqua-100: #bffbff; /* Casing Highlight */
+  --primitive-aqua-400: #00e5ff; /* Primary UI Glow & Active HUDs */
+  --primitive-aqua-500: #00b4ff;
+  --primitive-azure-200: #00a0ff;
+  --primitive-azure-300: #0b84ff;
+  --primitive-azure-400: #0058ef; /* Screen Radial Center */
+  --primitive-azure-600: #084cb5;
+  --primitive-azure-700: #0c3687; /* Screen Radial Body */
+  --primitive-void-700: #051b4c; /* Mid Void Backgrounds */
+  --primitive-void-800: #031336; /* Deep Void Backgrounds */
+  --primitive-void-900: #030e2e;
 
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
@@ -41,11 +46,11 @@
   --bg-base: var(--primitive-ceramic-100);
   --bg-surface: var(--primitive-ceramic-50);
 
-  --accent-base: var(--primitive-cyan-400);
-  --accent-glow: color-mix(in srgb, var(--primitive-cyan-400) 40%, transparent);
+  --accent-base: var(--primitive-aqua-400);
+  --accent-glow: color-mix(in srgb, var(--primitive-aqua-400) 40%, transparent);
   --border-accent: color-mix(
     in srgb,
-    var(--primitive-cyan-400) 30%,
+    var(--primitive-aqua-400) 30%,
     transparent
   );
   --text-base: #141a22;
@@ -61,54 +66,54 @@
   --screen-casing: linear-gradient(
     180deg,
     #b4dcff 0%,
-    var(--primitive-void-mid) 25%,
-    #030e2e 100%
+    var(--primitive-void-700) 25%,
+    var(--primitive-void-900) 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    var(--primitive-cyan-100) 0%,
-    #00a0ff 40%,
-    var(--primitive-void-mid) 100%
+    var(--primitive-aqua-100) 0%,
+    var(--primitive-azure-200) 45%,
+    var(--primitive-void-700) 100%
   );
   --screen-border: color-mix(
     in srgb,
-    var(--primitive-cyan-400) 50%,
+    var(--primitive-aqua-400) 50%,
     transparent
   );
   --screen-border-active: color-mix(
     in srgb,
-    var(--primitive-cyan-400) 95%,
+    var(--primitive-aqua-400) 95%,
     transparent
   );
-  --screen-glow: #00b4ff73;
+  --screen-glow: color-mix(in srgb, var(--primitive-aqua-500) 45%, transparent);
   --screen-glow-active: color-mix(
     in srgb,
-    var(--primitive-cyan-400) 85%,
+    var(--primitive-aqua-400) 85%,
     transparent
   );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
-    var(--primitive-blue-mid) 0%,
-    var(--primitive-blue-dark) 45%,
-    var(--primitive-void-deep) 90%
+    var(--primitive-azure-400) 0%,
+    var(--primitive-azure-700) 45%,
+    var(--primitive-void-800) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
-    #2b84ff 0%,
-    #124cb5 45%,
-    var(--primitive-void-mid) 90%
+    var(--primitive-azure-300) 0%,
+    var(--primitive-azure-600) 45%,
+    var(--primitive-void-700) 90%
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-cyan-400) 0%,
-    var(--primitive-blue-mid) 35%,
-    var(--primitive-blue-dark) 80%,
-    var(--primitive-void-deep) 100%
+    var(--primitive-aqua-400) 0%,
+    var(--primitive-azure-400) 35%,
+    var(--primitive-azure-700) 80%,
+    var(--primitive-void-800) 100%
   );
   --screen-text: #e0f7ff;
   --screen-text-glow: color-mix(
     in srgb,
-    var(--primitive-cyan-400) 80%,
+    var(--primitive-aqua-400) 80%,
     transparent
   );
 }
