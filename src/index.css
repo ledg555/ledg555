@@ -11,7 +11,7 @@
 /* ==========================================================================
    DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
    RULE OF THUMB: Don't use alpha channel here. Use color-mix() or
-   Tailwind's opacity syntax (ej. bg-(--accent-base)/40).
+   Tailwind's opacity syntax (ej. bg-(--accent-base)/40) in upper layers
    ========================================================================== */
 :root {
   --primitive-ceramic-50: #f4f6f9;
@@ -43,7 +43,11 @@
 
   --accent-base: var(--primitive-cyan-400);
   --accent-glow: color-mix(in srgb, var(--primitive-cyan-400) 40%, transparent);
-  --border-accent: color-mix(in srgb, var(--primitive-cyan-400) 30%, transparent);
+  --border-accent: color-mix(
+    in srgb,
+    var(--primitive-cyan-400) 30%,
+    transparent
+  );
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
@@ -66,7 +70,11 @@
     #00a0ff 40%,
     var(--primitive-void-mid) 100%
   );
-  --screen-border: color-mix(in srgb, var(--primitive-cyan-400) 50%, transparent);
+  --screen-border: color-mix(
+    in srgb,
+    var(--primitive-cyan-400) 50%,
+    transparent
+  );
   --screen-border-active: color-mix(
     in srgb,
     var(--primitive-cyan-400) 95%,
