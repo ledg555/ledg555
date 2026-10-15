@@ -31,7 +31,8 @@
 
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
-  --primitive-red-alert: #ff1744; /* Emergency UI Glow & Primary Crimson A400 (#FF1730) */
+  --primitive-crimson-400: #ff1744;
+  --primitive-xxx-400: #b91c1c;
   --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
   --primitive-alert-void: #1a0206; /* Deep Red Void Background (#1F0206) */
 
@@ -127,16 +128,16 @@
   --bg-base: var(--primitive-ceramic-950);
   --bg-surface: var(--primitive-ceramic-700);
 
-  --accent-base: var(--primitive-red-alert);
+  --accent-base: var(--primitive-crimson-400);
   --accent-glow: color-mix(
     in srgb,
-    var(--primitive-red-alert) 40%,
+    var(--primitive-crimson-400) 40%,
     transparent
   );
 
   --border-accent: color-mix(
     in srgb,
-    var(--primitive-red-alert) 30%,
+    var(--primitive-crimson-400) 30%,
     transparent
   );
   --text-base: #cbd5e1;
@@ -164,18 +165,18 @@
 
   --screen-border: color-mix(
     in srgb,
-    var(--primitive-red-alert) 55%,
+    var(--primitive-crimson-400) 55%,
     transparent
   );
   --screen-border-active: #ff4167;
   --screen-glow: color-mix(
     in srgb,
-    var(--primitive-red-alert) 45%,
+    var(--primitive-crimson-400) 45%,
     transparent
   );
   --screen-glow-active: color-mix(
     in srgb,
-    var(--primitive-red-alert) 85%,
+    var(--primitive-crimson-400) 85%,
     transparent
   );
   --screen-bg: radial-gradient(
@@ -192,7 +193,7 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-red-alert) 0%,
+    var(--primitive-crimson-400) 0%,
     #b91c1c 35%,
     #500510 80%,
     var(--primitive-alert-void) 100%
@@ -200,7 +201,7 @@
   --screen-text: #ffe5e8;
   --screen-text-glow: color-mix(
     in srgb,
-    var(--primitive-red-alert) 80%,
+    var(--primitive-crimson-400) 80%,
     transparent
   );
 }
