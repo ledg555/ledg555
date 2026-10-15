@@ -85,7 +85,11 @@
     var(--primitive-aqua-400) 95%,
     transparent
   );
-  --screen-glow: color-mix(in srgb, var(--primitive-aqua-500) 45%, transparent);
+  --screen-glow: color-mix(
+    in srgb,
+    var(--primitive-azure-200) 45%,
+    transparent
+  );
   --screen-glow-active: color-mix(
     in srgb,
     var(--primitive-aqua-400) 85%,
@@ -246,17 +250,17 @@
 }
 
 @utility screen-drop {
-  filter: drop-shadow(0 2px 4px #00000059)
-    drop-shadow(0 0 6px var(--screen-glow));
+  filter: drop-shadow(0 2px 2px #00000059)
+    drop-shadow(0 0px 6px var(--screen-glow));
   transition: transform 0.3s ease;
 
   &:hover {
-    filter: drop-shadow(0 3px 4px #00000073)
+    filter: drop-shadow(0 3px 2px #00000073)
       drop-shadow(0 0 10px var(--screen-glow));
   }
 
   &[data-active="true"] {
-    filter: drop-shadow(0 3px 6px #00000073)
+    filter: drop-shadow(0 3px 2px #00000073)
       drop-shadow(0 0 12px var(--screen-glow-active));
   }
 }
