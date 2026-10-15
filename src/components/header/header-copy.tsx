@@ -58,7 +58,7 @@ export function Header() {
 
                 {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
                 <div
-                  className={`pointer-events-none absolute inset-0.5 rounded-[10px/7px] border transition-all duration-300 ${
+                  className={`pointer-events-none absolute inset-0.5 rounded-[12px/8px] border transition-all duration-300 ${
                     isCurrentPath
                       ? "border-(--screen-border-active) shadow-[inset_0_0_8px_var(--screen-glow-active)]"
                       : "border-(--screen-border) opacity-60 group-hover:opacity-100 group-hover:border-(--screen-border-active)"

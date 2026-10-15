@@ -19,6 +19,7 @@
   --primitive-aqua-100: #bffbff; /* Casing Highlight */
   --primitive-aqua-400: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-aqua-500: #00b4ff;
+  --primitive-azure-50: #b4dcff;
   --primitive-azure-200: #00a0ff;
   --primitive-azure-300: #0b84ff;
   --primitive-azure-400: #0058ef; /* Screen Radial Center */
@@ -65,7 +66,7 @@
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
     180deg,
-    #b4dcff 0%,
+    var(--primitive-azure-50) 0%,
     var(--primitive-void-700) 25%,
     var(--primitive-void-900) 100%
   );
