@@ -19,15 +19,15 @@
   --primitive-aqua-100: #bffbff; /* Casing Highlight */
   --primitive-aqua-400: #00e5ff; /* Primary UI Glow & Active HUDs */
   --primitive-aqua-500: #00b4ff;
-  --primitive-azure-50: #b4dcff;
-  --primitive-azure-200: #00a0ff;
-  --primitive-azure-300: #0b84ff;
-  --primitive-azure-400: #0058ef; /* Screen Radial Center */
-  --primitive-azure-600: #084cb5;
-  --primitive-azure-700: #0c3687; /* Screen Radial Body */
-  --primitive-void-700: #051b4c; /* Mid Void Backgrounds */
-  --primitive-void-800: #031336; /* Deep Void Backgrounds */
-  --primitive-void-900: #030e2e;
+  --primitive-azure-100: #ccdfff;
+  --primitive-azure-300: #3d94ff;
+  --primitive-azure-400: #1d76ff;
+  --primitive-azure-500: #0058ef; /* Screen Radial Center. Pivot color */
+  --primitive-azure-550: #014cb8;
+  --primitive-azure-650: #003482; /* Screen Radial Body */
+  --primitive-azure-750: #001d51; /* Mid Void Backgrounds */
+  --primitive-azure-800: #00133a; /* Deep Void Backgrounds */
+  --primitive-azure-850: #000a28;
 
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
@@ -67,15 +67,15 @@
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
     180deg,
-    var(--primitive-azure-50) 0%,
-    var(--primitive-void-700) 25%,
-    var(--primitive-void-900) 100%
+    var(--primitive-azure-100) 0%,
+    var(--primitive-azure-750) 25%,
+    var(--primitive-azure-850) 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
     var(--primitive-aqua-100) 0%,
-    var(--primitive-azure-200) 45%,
-    var(--primitive-void-700) 100%
+    var(--primitive-azure-300) 45%,
+    var(--primitive-azure-750) 100%
   );
   --screen-border: color-mix(
     in srgb,
@@ -89,7 +89,7 @@
   );
   --screen-glow: color-mix(
     in srgb,
-    var(--primitive-azure-200) 45%,
+    var(--primitive-azure-300) 45%,
     transparent
   );
   --screen-glow-active: color-mix(
@@ -99,22 +99,22 @@
   );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
-    var(--primitive-azure-400) 0%,
-    var(--primitive-azure-700) 45%,
-    var(--primitive-void-800) 90%
+    var(--primitive-azure-500) 0%,
+    var(--primitive-azure-650) 45%,
+    var(--primitive-azure-800) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
-    var(--primitive-azure-300) 0%,
-    var(--primitive-azure-600) 45%,
-    var(--primitive-void-700) 90%
+    var(--primitive-azure-400) 0%,
+    var(--primitive-azure-550) 45%,
+    var(--primitive-azure-750) 90%
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
     var(--primitive-aqua-400) 0%,
-    var(--primitive-azure-400) 35%,
-    var(--primitive-azure-700) 80%,
-    var(--primitive-void-800) 100%
+    var(--primitive-azure-500) 35%,
+    var(--primitive-azure-650) 80%,
+    var(--primitive-azure-800) 100%
   );
   --screen-text: #e0f7ff;
   --screen-text-glow: color-mix(
