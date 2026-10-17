@@ -31,16 +31,24 @@
   --primitive-crimson-100: #ffd1cf;
   --primitive-crimson-350: #ff1744;
   --primitive-crimson-500: #bb0129;
-  --primitive-siren-50: #fee8e8;
-  --primitive-siren-100: #ffd1d1;
-  --primitive-siren-300: #ff6170; /* ?? */
-  --primitive-siren-400: #ed0146;
-  --primitive-siren-500: #ba0135;
-  --primitive-siren-550: #a1012c;
-  --primitive-siren-650: #72001d;
-  --primitive-siren-750: #46000e;
-  --primitive-siren-800: #320007;
-  --primitive-siren-850: #1e0003;
+--primitive-siren-50:  #ffe9e6; /* L=95% (0.95), C=0.0249 */
+--primitive-siren-100: #ffd2cc; /* L=90% (0.90), C=0.0520 */
+--primitive-siren-150: #ffbab1; /* L=85% (0.85), C=0.0817 */
+--primitive-siren-200: #ffa196; /* L=80% (0.80), C=0.1145 */
+--primitive-siren-250: #ff8579; /* L=75% (0.75), C=0.1507 */
+--primitive-siren-300: #ff645a; /* L=70% (0.70), C=0.1910 */
+--primitive-siren-350: #ff3534; /* L=65% (0.65), C=0.2359 */
+--primitive-siren-400: #f0001b; /* L=60% (0.60), C=0.2445 */
+--primitive-siren-500: #bc0013; /* L=50% (0.50), C=0.2038 */
+--primitive-siren-550: #a3000f; /* L=45% (0.45), C=0.1834 */
+--primitive-siren-600: #8b000b; /* L=40% (0.40), C=0.1630 */
+--primitive-siren-650: #730007; /* L=35% (0.35), C=0.1426 */
+--primitive-siren-700: #5d0005; /* L=30% (0.30), C=0.1223 */
+--primitive-siren-750: #470003; /* L=25% (0.25), C=0.1019 */
+--primitive-siren-800: #320001; /* L=20% (0.20), C=0.0815 */
+--primitive-siren-850: #1f0001; /* L=15% (0.15), C=0.0611 */
+--primitive-siren-900: #0d0000; /* L=10% (0.10), C=0.0408 */
+--primitive-siren-950: #020000; /* L=5%  (0.05), C=0.0204 */
 
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
