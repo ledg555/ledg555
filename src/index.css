@@ -16,9 +16,8 @@
 :root {
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
-  --primitive-aqua-100: #bffbff; /* Casing Highlight */
+  --primitive-aqua-50: #ccf8ff; /* Casing Highlight */
   --primitive-aqua-400: #00e5ff; /* Primary UI Glow & Active HUDs */
-  --primitive-aqua-500: #00b4ff;
   --primitive-azure-100: #ccdfff;
   --primitive-azure-300: #3d94ff;
   --primitive-azure-400: #1d76ff;
@@ -29,12 +28,24 @@
   --primitive-azure-800: #00133a; /* Deep Void Backgrounds */
   --primitive-azure-850: #000a28;
 
+  --primitive-crimson-100: #ffd1cf;
+  --primitive-crimson-350: #ff1744;
+  --primitive-crimson-500: #bb0129;
+  --primitive-siren-50: #fee8e8;
+  --primitive-siren-100: #ffd1d1;
+  --primitive-siren-300: #ff6170; /* ?? */
+  --primitive-siren-400: #ed0146;
+  --primitive-siren-500: #ba0135;
+  --primitive-siren-550: #a1012c;
+  --primitive-siren-650: #72001d;
+  --primitive-siren-750: #46000e;
+  --primitive-siren-800: #320007;
+  --primitive-siren-850: #1e0003;
+
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
-  --primitive-crimson-400: #ff1744;
+  
   --primitive-xxx-400: #b91c1c;
-  --primitive-alert-navy: #2a0309; /* Mid Red Void Background */
-  --primitive-alert-void: #1a0206; /* Deep Red Void Background (#1F0206) */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -73,7 +84,7 @@
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    var(--primitive-aqua-100) 0%,
+    var(--primitive-aqua-50) 0%,
     var(--primitive-azure-300) 45%,
     var(--primitive-azure-750) 100%
   );
@@ -116,7 +127,7 @@
     var(--primitive-azure-650) 80%,
     var(--primitive-azure-800) 100%
   );
-  --screen-text: #e0f7ff;
+  --screen-text: var(--primitive-siren-50);
   --screen-text-glow: color-mix(
     in srgb,
     var(--primitive-aqua-400) 80%,
@@ -128,16 +139,16 @@
   --bg-base: var(--primitive-ceramic-950);
   --bg-surface: var(--primitive-ceramic-700);
 
-  --accent-base: var(--primitive-crimson-400);
+  --accent-base: var(--primitive-crimson-350);
   --accent-glow: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 40%,
+    var(--primitive-crimson-350) 40%,
     transparent
   );
 
   --border-accent: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 30%,
+    var(--primitive-crimson-350) 30%,
     transparent
   );
   --text-base: #cbd5e1;
@@ -152,56 +163,56 @@
   /* PANTALLAS SCIFI (Alerta Roja) */
   --screen-casing: linear-gradient(
     180deg,
-    #d87788 0%,
-    #550c18 25%,
-    var(--primitive-alert-void) 100%
+    var(--primitive-siren-100) 0%,
+    var(--primitive-siren-750) 25%,
+    var(--primitive-siren-850) 100%
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    #ffbec8 0%,
-    #f21540 25%,
-    #41050e 100%
+    var(--primitive-crimson-100) 0%,
+    var(--primitive-crimson-350) 25%,
+    var(--primitive-siren-750) 100%
   );
 
   --screen-border: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 55%,
+    var(--primitive-crimson-350) 55%,
     transparent
   );
-  --screen-border-active: #ff4167;
+  --screen-border-active: var(--primitive-crimson-350);
   --screen-glow: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 45%,
+    var(--primitive-crimson-350) 45%,
     transparent
   );
   --screen-glow-active: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 85%,
+    var(--primitive-crimson-350) 85%,
     transparent
   );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
-    #b91c1c 0%,
-    #6b0b18 45%,
-    var(--primitive-alert-void) 90%
+    var(--primitive-siren-500) 0%,
+    var(--primitive-siren-650) 45%,
+    var(--primitive-siren-850) 90%
   );
   --screen-bg-hover: radial-gradient(
     135% 120% at 50% 5%,
-    #dc2626 0%,
-    #880e1f 45%,
-    var(--primitive-alert-navy) 90%
+    var(--primitive-siren-400) 0%,
+    var(--primitive-siren-550) 45%,
+    var(--primitive-siren-800) 90%
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-crimson-400) 0%,
-    #b91c1c 35%,
-    #500510 80%,
-    var(--primitive-alert-void) 100%
+    var(--primitive-crimson-350) 0%,
+    var(--primitive-siren-500) 35%,
+    var(--primitive-siren-650) 80%,
+    var(--primitive-siren-850) 100%
   );
   --screen-text: #ffe5e8;
   --screen-text-glow: color-mix(
     in srgb,
-    var(--primitive-crimson-400) 80%,
+    var(--primitive-crimson-350) 80%,
     transparent
   );
 }
