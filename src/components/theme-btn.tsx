@@ -85,8 +85,8 @@ export function ThemeBtn() {
               transition-colors duration-300
               ${
                 isDarkTheme
-                  ? "bg-gradient-to-b from-[#0284c7] via-[#0369a1] to-[#0c4a6e] border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.6),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
-                  : "bg-gradient-to-b from-(--primitive-siren-350) via-(--primitive-siren-500) to-(--primitive-siren-600) border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,inset_0_1.5px_1px_rgba(255,255,255,0.15)] hover:shadow-[0_3px_0_#5f0a0a,inset_0_-2px_2px_rgba(0,0,0,0.6)]"
+                  ? "bg-gradient-to-b from-(--primitive-azure-400) via-(--primitive-azure-500) to-(--primitive-azure-650) border-b border-[#082f49] shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(0,229,255,0.4),0_0_8px_rgba(0,229,255,0.3)]"
+                  : "bg-gradient-to-b from-(--primitive-siren-350) via-(--primitive-siren-400) to-(--primitive-siren-500) border-b border-b-[#450a0a] shadow-[0_3px_0_#5f0a0a,inset_0_1.5px_1px_rgba(255,255,255,0.15)] hover:shadow-[0_3px_0_#5f0a0a,inset_0_-2px_2px_rgba(0,0,0,0.6)]"
               }
             `}
             animate={{
@@ -104,13 +104,15 @@ export function ThemeBtn() {
             {/* Concentric Milled Tactile Groove */}
             <div
               className={`absolute inset-[3px] rounded-full border pointer-events-none transition-colors ${
-                isDarkTheme ? "border-cyan-300/40" : "border-black/30"
+                isDarkTheme
+                  ? "border-(--primitive-azure-300)/80"
+                  : "border-black/30"
               }`}
             />
 
             {/* In Dark Mode (Red Alert): Master Blue Energy Glow Core */}
             {isDarkTheme && (
-              <div className="pointer-events-none absolute inset-0 rounded-full bg-[#00e5ff]/30 animate-pulse" />
+              <div className="pointer-events-none absolute inset-0 rounded-full bg-(--primitive-azure-400)/25 animate-pulse" />
             )}
 
             {/* Master Icon with Phosphor / Tactical Illumination */}
