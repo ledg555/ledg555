@@ -16,27 +16,97 @@
 :root {
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
-  --primitive-aqua-50: #ccf8ff; /* Casing Highlight */
-  --primitive-aqua-400: #00e5ff; /* Primary UI Glow & Active HUDs */
+  --primitive-aqua-50: #ccf8ff;
+  --primitive-aqua-400: #00e5ff;
   --primitive-azure-100: #ccdfff;
   --primitive-azure-300: #3d94ff;
   --primitive-azure-400: #1d76ff;
   --primitive-azure-500: #0058ef; /* Screen Radial Center. Pivot color */
   --primitive-azure-550: #014cb8;
-  --primitive-azure-650: #003482; /* Screen Radial Body */
-  --primitive-azure-750: #001d51; /* Mid Void Backgrounds */
-  --primitive-azure-800: #00133a; /* Deep Void Backgrounds */
+  --primitive-azure-650: #003482;
+  --primitive-azure-750: #001d51;
+  --primitive-azure-800: #00133a;
   --primitive-azure-850: #000a28;
 
   --primitive-mint-50: #caffca;
-  --primitive-mint-200: #02e36a;
+  --primitive-mint-100: #80ff88;
+  --primitive-mint-150: #00f847;
+  --primitive-mint-200: #00e540;
+  --primitive-mint-250: #00d23a;
+  --primitive-mint-300: #00bf34;
+  --primitive-mint-350: #00ad2f;
+  --primitive-mint-400: #009b29;
+  --primitive-mint-450: #008a23;
+  --primitive-mint-500: #00791e;
+  --primitive-mint-550: #006818;
+  --primitive-mint-600: #005813;
+  --primitive-mint-650: #00480e;
+  --primitive-mint-700: #003909;
+  --primitive-mint-750: #002b05;
+  --primitive-mint-800: #001d03;
+  --primitive-mint-850: #001001;
+  --primitive-mint-900: #000500;
+  --primitive-mint-950: #000100;
+
+  --primitive-sulfur-50: #f4facb;
+  --primitive-sulfur-100: #f5ea00;
+  --primitive-sulfur-150: #e4d000;
+  --primitive-sulfur-200: #cfbc00;
+  --primitive-sulfur-250: #bba900;
+  --primitive-sulfur-300: #a99700;
+  --primitive-sulfur-350: #968600;
+  --primitive-sulfur-400: #847600;
+  --primitive-sulfur-450: #736600;
+  --primitive-sulfur-500: #635800;
+  --primitive-sulfur-550: #554a00;
+  --primitive-sulfur-600: #473d00;
+  --primitive-sulfur-650: #3a3100;
+  --primitive-sulfur-700: #2e2600;
+  --primitive-sulfur-750: #231c00;
+  --primitive-sulfur-800: #191400;
+  --primitive-sulfur-850: #100c00;
+  --primitive-sulfur-900: #090600;
+  --primitive-sulfur-950: #020100;
 
   --primitive-topaz-50: #ffedc7;
+  --primitive-topaz-100: #ffe193;
+  --primitive-topaz-150: #ffc949;
   --primitive-topaz-200: #eeb403;
+  --primitive-topaz-250: #d6a000;
+  --primitive-topaz-300: #c59300;
   --primitive-topaz-350: #b48701;
+  --primitive-topaz-400: #a37900;
+  --primitive-topaz-450: #936d00;
+  --primitive-topaz-500: #836000;
+  --primitive-topaz-550: #735400;
+  --primitive-topaz-600: #634700;
+  --primitive-topaz-650: #533b00;
+  --primitive-topaz-700: #432f00;
+  --primitive-topaz-750: #342300;
+  --primitive-topaz-800: #251800;
+  --primitive-topaz-850: #170e00;
+  --primitive-topaz-900: #0c0600;
+  --primitive-topaz-950: #020100;
 
+  --primitive-tangerine-50: #ffe8db;
   --primitive-tangerine-100: #ffd4bc;
+  --primitive-tangerine-150: #ffbf93;
+  --primitive-tangerine-200: #ffa45e;
+  --primitive-tangerine-250: #ff8821;
   --primitive-tangerine-300: #f57400;
+  --primitive-tangerine-350: #e46600;
+  --primitive-tangerine-400: #cc5700;
+  --primitive-tangerine-450: #b54800;
+  --primitive-tangerine-500: #9f3b00;
+  --primitive-tangerine-550: #8a2f00;
+  --primitive-tangerine-600: #752400;
+  --primitive-tangerine-650: #621b00;
+  --primitive-tangerine-700: #4f1200;
+  --primitive-tangerine-750: #3e0b00;
+  --primitive-tangerine-800: #2d0600;
+  --primitive-tangerine-850: #1d0200;
+  --primitive-tangerine-900: #0f0000;
+  --primitive-tangerine-950: #030000;
 
   --primitive-crimson-50: #ffe8e8;
   --primitive-crimson-100: #ffd1d0;
@@ -106,8 +176,8 @@
   --bg-panel: #00274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --status-safe: #02e36a;
-  --status-warn: #ffea00;
+  --status-safe: var(--primitive-mint-200);
+  --status-warn: var(--primitive-sulfur-100);
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
@@ -196,7 +266,7 @@
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
   --status-safe: var(--primitive-topaz-200); /* #ff9c10 */
-  --status-warn: var(--primitive-tangerine-300); /* #f26c25 */
+  --status-warn: var(--primitive-tangerine-250); /* #f26c25 */
   /* PANTALLAS SCIFI (Alerta Roja) */
   --screen-casing: linear-gradient(
     180deg,
@@ -351,20 +421,20 @@
 
   /* --- DYNAMIC STATS OVERRIDES --- */
   /* Override --dot-color based on component status */
-  &[data-status="error"] {
-    --dot-color: var(--color-red-500, #ef4444);
+  &[data-status="danger"] {
+    --dot-color: var(--color-red-500);
   }
 
   &[data-status="warning"] {
-    --dot-color: var(--color-status-warning);
+    --dot-color: var(--color-status-warn);
   }
 
-  &[data-status="success"] {
+  &[data-status="safe"] {
     --dot-color: var(--color-status-safe);
   }
 
   &[data-status="info"] {
-    --dot-color: var(--color-sky-500, #0ea5e9);
+    --dot-color: var(--color-sky-500);
   }
 }
 
@@ -380,7 +450,7 @@
 @utility screen-dots-left {
   --layer-dot-left: radial-gradient(
     circle 2px at 8px 8px,
-    var(--dot-color, #fff) 99%,
+    var(--dot-color) 99%,
     transparent 100%
   );
 }
@@ -388,7 +458,7 @@
 @utility screen-dots-right {
   --layer-dot-right: radial-gradient(
     circle 2px at calc(100% - 8px) 8px,
-    var(--dot-color, #fff) 99%,
+    var(--dot-color) 99%,
     transparent 100%
   );
 }

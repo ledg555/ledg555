@@ -53,6 +53,7 @@ export function Header() {
                 {/* Layer 1: CRT Micro-Scanlines & Glare */}
                 <div
                   data-active={isCurrentPath}
+                  data-status="safe"
                   className="absolute inset-0 pointer-events-none screen screen-glare screen-scanline screen-dots-left screen-dots-right"
                 />
 
