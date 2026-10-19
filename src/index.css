@@ -28,31 +28,57 @@
   --primitive-azure-800: #00133a; /* Deep Void Backgrounds */
   --primitive-azure-850: #000a28;
 
-  --primitive-crimson-100: #ffd1cf;
-  --primitive-crimson-350: #ff1744;
-  --primitive-crimson-500: #bb0129;
---primitive-siren-50:  #ffe9e6; /* L=95% (0.95), C=0.0249 */
---primitive-siren-100: #ffd2cc; /* L=90% (0.90), C=0.0520 */
---primitive-siren-150: #ffbab1; /* L=85% (0.85), C=0.0817 */
---primitive-siren-200: #ffa196; /* L=80% (0.80), C=0.1145 */
---primitive-siren-250: #ff8579; /* L=75% (0.75), C=0.1507 */
---primitive-siren-300: #ff645a; /* L=70% (0.70), C=0.1910 */
---primitive-siren-350: #ff3534; /* L=65% (0.65), C=0.2359 */
---primitive-siren-400: #f0001b; /* L=60% (0.60), C=0.2445 */
---primitive-siren-500: #bc0013; /* L=50% (0.50), C=0.2038 */
---primitive-siren-550: #a3000f; /* L=45% (0.45), C=0.1834 */
---primitive-siren-600: #8b000b; /* L=40% (0.40), C=0.1630 */
---primitive-siren-650: #730007; /* L=35% (0.35), C=0.1426 */
---primitive-siren-700: #5d0005; /* L=30% (0.30), C=0.1223 */
---primitive-siren-750: #470003; /* L=25% (0.25), C=0.1019 */
---primitive-siren-800: #320001; /* L=20% (0.20), C=0.0815 */
---primitive-siren-850: #1f0001; /* L=15% (0.15), C=0.0611 */
---primitive-siren-900: #0d0000; /* L=10% (0.10), C=0.0408 */
---primitive-siren-950: #020000; /* L=5%  (0.05), C=0.0204 */
+  --primitive-mint-50: #caffca;
+  --primitive-mint-200: #02e36a;
+
+  --primitive-topaz-50: #ffedc7;
+  --primitive-topaz-200: #eeb403;
+  --primitive-topaz-350: #b48701;
+
+  --primitive-tangerine-100: #ffd4bc;
+  --primitive-tangerine-300: #f57400;
+
+  --primitive-crimson-50: #ffe8e8;
+  --primitive-crimson-100: #ffd1d0;
+  --primitive-crimson-150: #ffb9b8;
+  --primitive-crimson-200: #ff9fa0;
+  --primitive-crimson-250: #ff8387;
+  --primitive-crimson-300: #ff616c;
+  --primitive-crimson-350: #ff2f50;
+  --primitive-crimson-400: #ee0040;
+  --primitive-crimson-500: #ba0030;
+  --primitive-crimson-550: #a20029;
+  --primitive-crimson-600: #8a0021;
+  --primitive-crimson-650: #72001a;
+  --primitive-crimson-700: #5c0013;
+  --primitive-crimson-750: #46000c;
+  --primitive-crimson-800: #320006;
+  --primitive-crimson-850: #1e0003;
+  --primitive-crimson-900: #0d0001;
+  --primitive-crimson-950: #020000;
+
+  --primitive-siren-50: #ffe9e6;
+  --primitive-siren-100: #ffd2cc;
+  --primitive-siren-150: #ffbab1;
+  --primitive-siren-200: #ffa196;
+  --primitive-siren-250: #ff8579;
+  --primitive-siren-300: #ff645a;
+  --primitive-siren-350: #ff3534;
+  --primitive-siren-400: #f0001b;
+  --primitive-siren-500: #bc0013;
+  --primitive-siren-550: #a3000f;
+  --primitive-siren-600: #8b000b;
+  --primitive-siren-650: #730007;
+  --primitive-siren-700: #5d0005;
+  --primitive-siren-750: #470003;
+  --primitive-siren-800: #320001;
+  --primitive-siren-850: #1f0001;
+  --primitive-siren-900: #0d0000;
+  --primitive-siren-950: #020000;
 
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
-  
+
   --primitive-xxx-400: #b91c1c;
 
   font-synthesis: none;
@@ -80,7 +106,7 @@
   --bg-panel: #00274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --status-safe: #00e676;
+  --status-safe: #02e36a;
   --status-warn: #ffea00;
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
@@ -147,10 +173,10 @@
   --bg-base: var(--primitive-ceramic-950);
   --bg-surface: var(--primitive-ceramic-700);
 
-  --accent-base: var(--primitive-crimson-350);
+  --accent-base: var(--primitive-siren-400);
   --accent-glow: color-mix(
     in srgb,
-    var(--primitive-crimson-350) 40%,
+    var(--primitive-crimson-400) 40%,
     transparent
   );
 
@@ -162,12 +188,15 @@
   --text-base: #cbd5e1;
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --bg-panel: #3c000099; /* El rojo transparente (Antes alert-red-bg) */
+  --bg-panel: color-mix(
+    in srgb,
+    var(--primitive-siren-750) 55%,
+    transparent
+  ); /* El rojo transparente (Antes alert-red-bg) */
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  --status-safe: #ff9c10;
-  --status-warn: #f26c25;
-
+  --status-safe: var(--primitive-topaz-200); /* #ff9c10 */
+  --status-warn: var(--primitive-tangerine-300); /* #f26c25 */
   /* PANTALLAS SCIFI (Alerta Roja) */
   --screen-casing: linear-gradient(
     180deg,
@@ -177,17 +206,17 @@
   );
   --screen-casing-active: linear-gradient(
     180deg,
-    var(--primitive-crimson-100) 0%,
-    var(--primitive-crimson-350) 25%,
+    var(--primitive-siren-100) 0%,
+    var(--primitive-siren-350) 25%,
     var(--primitive-siren-750) 100%
   );
 
   --screen-border: color-mix(
     in srgb,
-    var(--primitive-crimson-350) 55%,
+    var(--primitive-siren-350) 55%,
     transparent
   );
-  --screen-border-active: var(--primitive-crimson-350);
+  --screen-border-active: var(--primitive-siren-350);
   --screen-glow: color-mix(
     in srgb,
     var(--primitive-crimson-350) 45%,
@@ -212,12 +241,12 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-crimson-350) 0%,
+    var(--primitive-siren-350) 0%,
     var(--primitive-siren-500) 35%,
     var(--primitive-siren-650) 80%,
     var(--primitive-siren-850) 100%
   );
-  --screen-text: #ffe5e8;
+  --screen-text: var(--primitive-siren-50);
   --screen-text-glow: color-mix(
     in srgb,
     var(--primitive-crimson-350) 80%,
@@ -327,11 +356,11 @@
   }
 
   &[data-status="warning"] {
-    --dot-color: var(--color-amber-500, #f59e0b);
+    --dot-color: var(--color-status-warning);
   }
 
   &[data-status="success"] {
-    --dot-color: var(--color-emerald-500, #10b981);
+    --dot-color: var(--color-status-safe);
   }
 
   &[data-status="info"] {

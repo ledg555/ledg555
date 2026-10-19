@@ -78,7 +78,7 @@ export function LangBtn() {
 
             {/* Inner Emblem Badge: Sci-Fi Tactical Flag Badge with subtle matrix overlay */}
             <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shadow-[0_0_4px_rgba(245,158,11,0.25)]">
-              <Icon className="w-3/4 h-3/4 overflow-visible text-yellow-600"></Icon>
+              <Icon className="w-3/4 h-3/4 overflow-visible text-status-safe"></Icon>
               {/* Sci-Fi Tactical Matte Filter Overlay */}
               <div className="absolute inset-0 bg-amber-500/10 mix-blend-color pointer-events-none" />
               {/*<div className="absolute inset-0 shadow-[inset_0_0_3px_rgba(0,0,0,0.6)] pointer-events-none" />*/}
