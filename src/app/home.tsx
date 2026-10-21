@@ -103,9 +103,9 @@ export function HomePage() {
               </ul>
             </div>
 
-            {/* Active badge — status-safe */}
-            <span className="mt-1 inline-flex items-center gap-1.5 w-fit text-xs font-bold px-3 py-1 rounded-full bg-status-safe/20 text-status-safe border border-status-safe/40">
-              <span className="w-2 h-2 rounded-full bg-status-safe animate-pulse" />
+            {/* Active badge — screen-safe-base */}
+            <span className="mt-1 inline-flex items-center gap-1.5 w-fit text-xs font-bold px-3 py-1 rounded-full bg-screen-safe-base/20 text-screen-safe-base border border-screen-safe-base/40">
+              <span className="w-2 h-2 rounded-full bg-screen-safe-base animate-pulse" />
               {aboutBadge}
             </span>
 
@@ -133,7 +133,7 @@ export function HomePage() {
           </div>
         </motion.div>
 
-        {/* Status panel — status-safe, status-warn, bg-panel */}
+        {/* Status panel — screen-safe-base, screen-warn-base, bg-panel */}
         <motion.div
           className="bg-panel/90 backdrop-blur-md border border-border-accent rounded-2xl p-6 flex flex-col gap-4"
           initial={{ opacity: 0, x: 40 }}
@@ -159,15 +159,15 @@ export function HomePage() {
               <span
                 className={`text-sm font-bold ${
                   item.status === "safe"
-                    ? "text-status-safe"
-                    : "text-status-warn"
+                    ? "text-screen-safe-base"
+                    : "text-screen-warn-base"
                 }`}
               >
                 <span
                   className={`inline-block w-2 h-2 rounded-full mr-1.5 ${
                     item.status === "safe"
-                      ? "bg-status-safe shadow-sm shadow-status-safe/50"
-                      : "bg-status-warn shadow-sm shadow-status-warn/50"
+                      ? "bg-screen-safe-base shadow-sm shadow-screen-safe-base/50"
+                      : "bg-screen-warn-base shadow-sm shadow-screen-warn-base/50"
                   }`}
                 />
                 {item.value}
@@ -203,8 +203,8 @@ export function HomePage() {
           { token: "accent-base", cls: "bg-accent-base" },
           { token: "accent-glow", cls: "bg-accent-glow" },
           { token: "panel", cls: "bg-panel" },
-          { token: "status-safe", cls: "bg-status-safe" },
-          { token: "status-warn", cls: "bg-status-warn" },
+          { token: "screen-safe-base", cls: "bg-screen-safe-base" },
+          { token: "screen-warn-base", cls: "bg-screen-warn-base" },
           { token: "deep-blue", cls: "bg-deep-blue" },
         ].map((s) => (
           <div key={s.token} className="flex flex-col items-center gap-1">

@@ -68,25 +68,26 @@
   --primitive-sulfur-900: #090600;
   --primitive-sulfur-950: #020100;
 
-  --primitive-topaz-50: #ffedc7;
-  --primitive-topaz-100: #ffe193;
-  --primitive-topaz-150: #ffc949;
-  --primitive-topaz-200: #eeb403;
-  --primitive-topaz-250: #d6a000;
-  --primitive-topaz-300: #c59300;
-  --primitive-topaz-350: #b48701;
-  --primitive-topaz-400: #a37900;
-  --primitive-topaz-450: #936d00;
-  --primitive-topaz-500: #836000;
-  --primitive-topaz-550: #735400;
-  --primitive-topaz-600: #634700;
-  --primitive-topaz-650: #533b00;
-  --primitive-topaz-700: #432f00;
-  --primitive-topaz-750: #342300;
-  --primitive-topaz-800: #251800;
-  --primitive-topaz-850: #170e00;
-  --primitive-topaz-900: #0c0600;
-  --primitive-topaz-950: #020100;
+--primitive-topaz-50: #ffedbe;
+  --primitive-topaz-100: #ffda74;
+  --primitive-topaz-150: #fac700;
+  --primitive-topaz-200: #e6b700;
+  --primitive-topaz-250: #d4a800;
+  --primitive-topaz-300: #c19900;
+  --primitive-topaz-350: #af8a00;
+  --primitive-topaz-400: #9d7c00;
+  --primitive-topaz-450: #8b6e00;
+  --primitive-topaz-500: #7a6000;
+  --primitive-topaz-550: #695200;
+  --primitive-topaz-600: #594500;
+  --primitive-topaz-650: #493800;
+  --primitive-topaz-700: #3a2c00;
+  --primitive-topaz-750: #2b2000;
+  --primitive-topaz-800: #1d1500;
+  --primitive-topaz-850: #100a00;
+  --primitive-topaz-900: #050300;
+  --primitive-topaz-950: #010000;
+
 
   --primitive-tangerine-50: #ffe8db;
   --primitive-tangerine-100: #ffd4bc;
@@ -149,7 +150,6 @@
   --primitive-ceramic-950: #03080b;
   --primitive-ceramic-700: #14181a;
 
-  --primitive-xxx-400: #b91c1c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -176,8 +176,10 @@
   --bg-panel: #00274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --status-safe: var(--primitive-mint-200);
-  --status-warn: var(--primitive-sulfur-100);
+  --screen-safe-base: var(--primitive-mint-150);
+  --screen-warn-base: var(--primitive-sulfur-100);
+  --screen-danger-base: var(--primitive-siren-400);
+  --warning-stripe: var(--primitive-sulfur-100);
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
@@ -265,9 +267,11 @@
   ); /* El rojo transparente (Antes alert-red-bg) */
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  --status-safe: var(--primitive-topaz-200); /* #ff9c10 */
-  --status-warn: var(--primitive-tangerine-250); /* #f26c25 */
-  /* PANTALLAS SCIFI (Alerta Roja) */
+  --screen-safe-base: var(--primitive-topaz-200);
+  --screen-warn-base: var(--primitive-tangerine-300);
+  --screen-danger-base: var(--primitive-siren-100);
+  --warning-stripe: var(--primitive-topaz-200);
+
   --screen-casing: linear-gradient(
     180deg,
     var(--primitive-siren-100) 0%,
@@ -333,10 +337,10 @@
   --color-border-accent: var(--border-accent);
 
   --color-panel: var(--bg-panel);
-  --color-status-safe: var(--status-safe);
-  --color-status-warn: var(--status-warn);
-
-  --color-deep-blue: #0018ff;
+  --color-screen-safe-base: var(--screen-safe-base);
+  --color-screen-warn-base: var(--screen-warn-base);
+  --color-screen-danger-base: var(--screen-danger-base);
+  --color-warning-stripe: var(--warning-stripe);
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -393,21 +397,19 @@
   --layer-glare: none;
   --layer-dot-left: none;
   --layer-dot-right: none;
-  --layer-scanlines: none;
   --layer-bg: var(--screen-bg);
 
   --size-glare: 100% 100%;
   --size-dot-left: 100% 100%;
   --size-dot-right: 100% 100%;
-  --size-scanlines: 100% 4px;
   --size-bg: 100% 100%;
 
   background-image:
     var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
-    var(--layer-scanlines), var(--layer-bg);
+    var(--layer-bg);
   background-size:
     var(--size-glare), var(--size-dot-left), var(--size-dot-right),
-    var(--size-scanlines), var(--size-bg);
+    var(--size-bg);
 
   /* State: Active HUD Override */
   &[data-active="true"] {
@@ -422,15 +424,15 @@
   /* --- DYNAMIC STATS OVERRIDES --- */
   /* Override --dot-color based on component status */
   &[data-status="danger"] {
-    --dot-color: var(--color-red-500);
+    --dot-color: var(--color-screen-danger-base);
   }
 
   &[data-status="warning"] {
-    --dot-color: var(--color-status-warn);
+    --dot-color: var(--color-screen-warn-base);
   }
 
   &[data-status="safe"] {
-    --dot-color: var(--color-status-safe);
+    --dot-color: var(--color-screen-safe-base);
   }
 
   &[data-status="info"] {
@@ -463,15 +465,11 @@
   );
 }
 
-@utility screen-scanlines {
-  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
-}
-
 @utility warning-lines {
   background-image: repeating-linear-gradient(
     135deg,
-    #c9a81d,
-    #c9a81d 6px,
+    var(--color-warning-stripe),
+    var(--color-warning-stripe) 6px,
     #0c0e12 6px,
     #0c0e12 12px
   );

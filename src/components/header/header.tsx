@@ -50,10 +50,9 @@ export function Header() {
 
               {/* Screen Glass Interior */}
               <div className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0">
-                {/* Layer 1: CRT Micro-Scanlines & Glare */}
+                {/* Layer 1: Glare */}
                 <div
                   data-active={isCurrentPath}
-                  data-status="safe"
                   className="absolute inset-0 pointer-events-none screen screen-glare screen-scanline screen-dots-left screen-dots-right"
                 />
 

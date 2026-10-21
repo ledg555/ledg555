@@ -29,7 +29,7 @@ export function LangBtn() {
       className="relative flex items-center justify-center select-none"
       title={titleText}
     >
-      {/* Outer Sci-Fi Bezel Socket (Matte Housing with Status-Warn Accent) */}
+      {/* Outer Sci-Fi Bezel Socket (Matte Housing with screen-warn-base Accent) */}
       <div
         className={`
           relative w-12 h-12 rounded-full flex items-center justify-center p-1.5
@@ -78,7 +78,7 @@ export function LangBtn() {
 
             {/* Inner Emblem Badge: Sci-Fi Tactical Flag Badge with subtle matrix overlay */}
             <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shadow-[0_0_4px_rgba(245,158,11,0.25)]">
-              <Icon className="w-3/4 h-3/4 overflow-visible text-status-safe"></Icon>
+              <Icon className="w-3/4 h-3/4 overflow-visible text-screen-safe-base"></Icon>
               {/* Sci-Fi Tactical Matte Filter Overlay */}
               <div className="absolute inset-0 bg-amber-500/10 mix-blend-color pointer-events-none" />
               {/*<div className="absolute inset-0 shadow-[inset_0_0_3px_rgba(0,0,0,0.6)] pointer-events-none" />*/}
