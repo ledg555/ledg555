@@ -1,0 +1,143 @@
+import { motion } from "motion/react";
+import { Link, useLocation } from "react-router";
+import { TransmissionBtn } from "../transmission-btn";
+import { LangBtn } from "../lang-btn";
+import { ThemeBtn } from "../theme-btn";
+import { navLinks } from "./nav-config";
+import { useTranslation } from "react-i18next";
+import { SpeedDialContact } from "../speed-dial-contact";
+import { SpeedDialNav } from "../speed-dial-nav";
+
+export function Header() {
+  const location = useLocation();
+  const { t } = useTranslation(["ui"]);
+
+  return (
+    <motion.header
+      className="flex justify-between items-center gap-3 sm:gap-4
+        fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b-6 border-b-surface rounded-b-full transition-all duration-300 px-8 sm:px-12 lg:px-16 py-4 h-22
+        bg-base
+      "
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Logo */}
+      <div className="hidden xs:flex items-center gap-4">
+        <SpeedDialContact />
+        <span className="hidden md:block lm:hidden lg:block font-headings font-bold text-sm w-41 text-fg tracking-tight">
+          {t("navigationData.shipName", { ns: "ui" })}
+        </span>
+      </div>
+
+      {/* Navigation */}
+      <nav className="hidden lm:flex lm:justify-evenly grow items-center gap-4">
+        {navLinks.map((item) => {
+          const isCurrentPath = location.pathname === item.url;
+          return (
+            <Link
+              key={item.translationKey}
+              to={item.url}
+              title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+              data-active={isCurrentPath}
+              className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
+            >
+              {/* Capa Borde / Casing con clip-path */}
+              <div
+                data-active={isCurrentPath}
+                className="absolute inset-0 octagon-sm [background:var(--screen-casing)] data-[active=true]:[background:var(--screen-casing-active)]"
+              />
+
+              {/* Screen Glass Interior */}
+              <div className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0">
+                {/* Layer 1: CRT Micro-Scanlines & Glare */}
+                <div
+                  data-active={isCurrentPath}
+                  data-status="safe"
+                  className="absolute inset-0 pointer-events-none screen screen-glare screen-scanline screen-dots-left screen-dots-right"
+                />
+
+                {/* Layer 2: HUD Inset Wireframe & Reticle Frame */}
+                <div
+                  className={`pointer-events-none absolute inset-0.5 rounded-[12px/8px] border transition-all duration-300 ${
+                    isCurrentPath
+                      ? "border-(--screen-border-active) shadow-[inset_0_0_8px_var(--screen-glow-active)]"
+                      : "border-(--screen-border) opacity-60 group-hover:opacity-100 group-hover:border-(--screen-border-active)"
+                  }`}
+                />
+
+                {/* Layer 3: Glass Specular Glare (Top-down crystal sheen) */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-linear-to-b from-white/30 via-white/5 to-transparent transition-opacity duration-300 group-hover:opacity-100 opacity-55" />
+
+                {/* Layer 4: Tactical HUD Reticle Dots */}
+                {/* <span
+                  className={`pointer-events-none absolute left-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
+                    isCurrentPath
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
+                      : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
+                  }`}
+                />
+                <span
+                  className={`pointer-events-none absolute right-1.5 top-1.5 w-1 h-1 rounded-full transition-all duration-300 ${
+                    isCurrentPath
+                      ? "bg-cyan-200 dark:bg-red-200 shadow-[0_0_4px_var(--screen-border-active)] opacity-100 scale-110"
+                      : "bg-cyan-400 dark:bg-red-400 opacity-40 group-hover:opacity-80"
+                  }`}
+                /> */}
+
+                {/* Active Underline Power Conduit */}
+                {isCurrentPath && (
+                  <motion.div
+                    transition={{ duration: 0.2 }}
+                    layoutId="active-indicator"
+                    className="pointer-events-none absolute bottom-0.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-0.5 rounded-full bg-cyan-200 dark:bg-red-200 shadow-[0_0_8px_var(--screen-border-active)]"
+                  />
+                )}
+
+                {/* Icon with Phosphor Glow */}
+                <item.icon
+                  className={`text-[22px] z-10 transition-all duration-300 shrink-0 ${
+                    isCurrentPath
+                      ? "text-white"
+                      : "text-(--screen-text) group-hover:text-white group-hover:scale-105"
+                  }`}
+                  style={{
+                    filter: isCurrentPath
+                      ? "drop-shadow(0 0 6px var(--screen-text-glow)) drop-shadow(0 0 12px var(--screen-glow-active))"
+                      : "drop-shadow(0 0 4px var(--screen-text-glow))",
+                  }}
+                />
+
+                {/* Label with Phosphor Text Glow */}
+                <span
+                  className={`font-semibold text-xs sm:text-sm tracking-wide hidden 2xl:block z-10 select-none transition-all duration-100 ${
+                    isCurrentPath
+                      ? "text-white font-bold"
+                      : "text-(--screen-text) group-hover:text-white"
+                  }`}
+                  style={{
+                    textShadow: isCurrentPath
+                      ? "0 0 8px var(--screen-text-glow), 0 0 14px var(--screen-glow-active)"
+                      : "0 0 5px var(--screen-text-glow)",
+                  }}
+                >
+                  {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Ship Master Actions (Comms / Audio, Lang, Red Alert Mode) */}
+      <div className="flex justify-between items-center gap-3 sm:gap-6">
+        <div className="flex justify-between items-center gap-2 sm:gap-3">
+          <TransmissionBtn />
+          <LangBtn />
+        </div>
+        <ThemeBtn />
+      </div>
+      <SpeedDialNav />
+    </motion.header>
+  );
+}
