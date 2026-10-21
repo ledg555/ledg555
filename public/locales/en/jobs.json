@@ -1,19 +1,45 @@
 {
-  "title": "Recent experience",
-  "extendedTitle": "All my experience",
-  "jobs": [
+  "data": [
+    {
+      "key": "bfh",
+      "role": "Lead Full Stack Developer (Consultant)",
+      "company": "Bond Field Holdings",
+      "date": "2025-2026",
+      "location": "Remote",
+      "url": "https://bondfieldh.vercel.app",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Architected and delivered an end-to-end web platform (React, NestJS, PostgreSQL), automating volumetric control inspections and driving a 1,000% boost in operational productivity and revenue.",
+        "Engineered a unique validation engine for hydrocarbon report data, ensuring 100% regulatory compliance with government volumetric standards.",
+        "Designed and deployed an open-source based firewall, aligning infrastructure with strict tax and cybersecurity compliance regulations for the hydrocarbon and petroleum products sector."
+      ]
+    },
+    {
+      "key": "eversoft",
+      "role": "Full Stack Developer",
+      "company": "Eversoft",
+      "date": "2025",
+      "location": "Remote",
+      "url": "https://eversoft.com",
+      "imgUrl": "/imgs/jobs/6nocountry.webp",
+      "description": [
+        "Mentored junior developers on clean code standards, code reviews, and framework best practices, improving overall code quality and team efficiency.",
+        "Engineered responsive frontend interfaces for the Livva real estate platform applying cutting-edge Angular features and patterns, optimizing end-user experience and component reusability.",
+        "Developed scalable RESTful backend services, building core application modules including authentication, digital contract signing and bill payment integration."
+      ]
+    },
     {
       "key": "nocountry",
-      "role": "Fullstack developer",
+      "role": "Full Stack Developer",
       "company": "No Country",
       "date": "2024 - present",
       "location": "Remote",
       "url": "https://www.nocountry.tech",
       "imgUrl": "/imgs/jobs/6nocountry.webp",
       "description": [
-        "I collaborated with international teams in the development of web applications, with a strong focus on accessibility and responsive design.",
-        "I gained experience working fully remote under agile, scrum and kanban based workflows, by using tools such as Slack, Trello and GitHub Projects.",
-        "I contributed to the layout of the frontend using libraries such as Material UI and Tailwind CSS, on the backend side by supporting the API and database designs, and improved handling of http requests."
+        "Collaborated in cross-functional, distributed teams across LATAM, leveraging Agile/Scrum methodologies to estimate features, manage sprint backlogs, and deliver web application MVPs.",
+        "Established Git branching and pull-request workflows, ensuring seamless asynchronous code integration and conflict-free collaboration among multi-developer teams.",
+        "Developed accessible, responsive frontend components and supported backend API design, implementing UI libraries (Shadcn, Material UI) and optimizing client-side HTTP request performance."
       ]
     },
     {

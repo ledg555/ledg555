@@ -1,6 +1,6 @@
 # 👋🏻 Hi, there!
 
-👩🏻‍💻 I'm Luis, fullstack developer with strong knowledge of the JavaScript ecosystem, former STEM professor 👩🏻‍🏫 and coach of medalists 🏅 of international science olimpiads 👩🏻‍🔬, and photography 📷, music 🎹 and astronomy 👩🏻‍🚀 enthusiast.
+👩🏻‍💻 I'm Luis, full stack developer with strong knowledge of the JavaScript ecosystem, former STEM professor 👩🏻‍🏫 and coach of medalists 🏅 of international science olimpiads 👩🏻‍🔬, and photography 📷, music 🎹 and astronomy 👩🏻‍🚀 enthusiast.
 
 ## My current stack
 

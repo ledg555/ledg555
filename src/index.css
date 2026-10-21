@@ -1,5 +1,4 @@
-@layer tailwind-base, primereact, tailwind-utilities;
-@source '../node_modules/primereact/**/*.{js,ts,jsx,tsx}';
+@import "tailwindcss";
 @font-face {
   src: url("./assets/fonts/Gruppo-600.woff2") format("woff2");
   font-family: "Gruppo";
@@ -7,105 +6,482 @@
   font-weight: 600;
   font-display: swap;
 }
+@custom-variant dark (&:where(.dark, .dark *));
 
-@layer tailwind-base {
-  @import "tailwindcss";
-}
-
-@layer tailwind-utilities {
-}
-
+/* ==========================================================================
+   DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
+   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or
+   Tailwind's opacity syntax (ej. bg-(--accent-base)/40) in upper layers
+   ========================================================================== */
 :root {
+  --primitive-ceramic-50: #f4f6f9;
+  --primitive-ceramic-100: #e5e5ea;
+  --primitive-aqua-50: #ccf8ff;
+  --primitive-aqua-400: #00e5ff;
+  --primitive-azure-100: #ccdfff;
+  --primitive-azure-300: #3d94ff;
+  --primitive-azure-400: #1d76ff;
+  --primitive-azure-500: #0058ef; /* Screen Radial Center. Pivot color */
+  --primitive-azure-550: #014cb8;
+  --primitive-azure-650: #003482;
+  --primitive-azure-750: #001d51;
+  --primitive-azure-800: #00133a;
+  --primitive-azure-850: #000a28;
+
+  --primitive-mint-50: #caffca;
+  --primitive-mint-100: #80ff88;
+  --primitive-mint-150: #00f847;
+  --primitive-mint-200: #00e540;
+  --primitive-mint-250: #00d23a;
+  --primitive-mint-300: #00bf34;
+  --primitive-mint-350: #00ad2f;
+  --primitive-mint-400: #009b29;
+  --primitive-mint-450: #008a23;
+  --primitive-mint-500: #00791e;
+  --primitive-mint-550: #006818;
+  --primitive-mint-600: #005813;
+  --primitive-mint-650: #00480e;
+  --primitive-mint-700: #003909;
+  --primitive-mint-750: #002b05;
+  --primitive-mint-800: #001d03;
+  --primitive-mint-850: #001001;
+  --primitive-mint-900: #000500;
+  --primitive-mint-950: #000100;
+
+  --primitive-sulfur-50: #f4facb;
+  --primitive-sulfur-100: #f5ea00;
+  --primitive-sulfur-150: #e4d000;
+  --primitive-sulfur-200: #cfbc00;
+  --primitive-sulfur-250: #bba900;
+  --primitive-sulfur-300: #a99700;
+  --primitive-sulfur-350: #968600;
+  --primitive-sulfur-400: #847600;
+  --primitive-sulfur-450: #736600;
+  --primitive-sulfur-500: #635800;
+  --primitive-sulfur-550: #554a00;
+  --primitive-sulfur-600: #473d00;
+  --primitive-sulfur-650: #3a3100;
+  --primitive-sulfur-700: #2e2600;
+  --primitive-sulfur-750: #231c00;
+  --primitive-sulfur-800: #191400;
+  --primitive-sulfur-850: #100c00;
+  --primitive-sulfur-900: #090600;
+  --primitive-sulfur-950: #020100;
+
+  --primitive-topaz-50: #ffedc7;
+  --primitive-topaz-100: #ffe193;
+  --primitive-topaz-150: #ffc949;
+  --primitive-topaz-200: #eeb403;
+  --primitive-topaz-250: #d6a000;
+  --primitive-topaz-300: #c59300;
+  --primitive-topaz-350: #b48701;
+  --primitive-topaz-400: #a37900;
+  --primitive-topaz-450: #936d00;
+  --primitive-topaz-500: #836000;
+  --primitive-topaz-550: #735400;
+  --primitive-topaz-600: #634700;
+  --primitive-topaz-650: #533b00;
+  --primitive-topaz-700: #432f00;
+  --primitive-topaz-750: #342300;
+  --primitive-topaz-800: #251800;
+  --primitive-topaz-850: #170e00;
+  --primitive-topaz-900: #0c0600;
+  --primitive-topaz-950: #020100;
+
+  --primitive-tangerine-50: #ffe8db;
+  --primitive-tangerine-100: #ffd4bc;
+  --primitive-tangerine-150: #ffbf93;
+  --primitive-tangerine-200: #ffa45e;
+  --primitive-tangerine-250: #ff8821;
+  --primitive-tangerine-300: #f57400;
+  --primitive-tangerine-350: #e46600;
+  --primitive-tangerine-400: #cc5700;
+  --primitive-tangerine-450: #b54800;
+  --primitive-tangerine-500: #9f3b00;
+  --primitive-tangerine-550: #8a2f00;
+  --primitive-tangerine-600: #752400;
+  --primitive-tangerine-650: #621b00;
+  --primitive-tangerine-700: #4f1200;
+  --primitive-tangerine-750: #3e0b00;
+  --primitive-tangerine-800: #2d0600;
+  --primitive-tangerine-850: #1d0200;
+  --primitive-tangerine-900: #0f0000;
+  --primitive-tangerine-950: #030000;
+
+  --primitive-crimson-50: #ffe8e8;
+  --primitive-crimson-100: #ffd1d0;
+  --primitive-crimson-150: #ffb9b8;
+  --primitive-crimson-200: #ff9fa0;
+  --primitive-crimson-250: #ff8387;
+  --primitive-crimson-300: #ff616c;
+  --primitive-crimson-350: #ff2f50;
+  --primitive-crimson-400: #ee0040;
+  --primitive-crimson-500: #ba0030;
+  --primitive-crimson-550: #a20029;
+  --primitive-crimson-600: #8a0021;
+  --primitive-crimson-650: #72001a;
+  --primitive-crimson-700: #5c0013;
+  --primitive-crimson-750: #46000c;
+  --primitive-crimson-800: #320006;
+  --primitive-crimson-850: #1e0003;
+  --primitive-crimson-900: #0d0001;
+  --primitive-crimson-950: #020000;
+
+  --primitive-siren-50: #ffe9e6;
+  --primitive-siren-100: #ffd2cc;
+  --primitive-siren-150: #ffbab1;
+  --primitive-siren-200: #ffa196;
+  --primitive-siren-250: #ff8579;
+  --primitive-siren-300: #ff645a;
+  --primitive-siren-350: #ff3534;
+  --primitive-siren-400: #f0001b;
+  --primitive-siren-500: #bc0013;
+  --primitive-siren-550: #a3000f;
+  --primitive-siren-600: #8b000b;
+  --primitive-siren-650: #730007;
+  --primitive-siren-700: #5d0005;
+  --primitive-siren-750: #470003;
+  --primitive-siren-800: #320001;
+  --primitive-siren-850: #1f0001;
+  --primitive-siren-900: #0d0000;
+  --primitive-siren-950: #020000;
+
+  --primitive-ceramic-950: #03080b;
+  --primitive-ceramic-700: #14181a;
+
+  --primitive-xxx-400: #b91c1c;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   color-scheme: light dark;
-  /*color: rgba(8, 32, 32, 0.86);
-  background-color: #242424;*/
   font-family: "Gruppo", sans-serif;
+  font-weight: 600;
 
   /* FONDOS (La nave) */
-  --theme-bg-base: #f4f6f9; /* Lienzo principal (Antes ship-hull-white) */
-  --theme-bg-surface: #b0bec5; /* Elementos elevados: Header, SpeedDials, Cards */
+  --bg-base: var(--primitive-ceramic-100);
+  --bg-surface: var(--primitive-ceramic-50);
 
-  /* ACENTOS (El HUD holográfico) */
-  --theme-accent-base: #00e5ff; /* Color principal de UI (Antes hud-cyan-base) */
-  --theme-accent-glow: rgba(0, 229, 255, 0.4);
-
-  /* BORDES Y TEXTOS */
-  --theme-border-accent: rgba(0, 229, 255, 0.3);
-  --theme-text-base: #334155; /* Texto principal para alta legibilidad */
+  --accent-base: var(--primitive-aqua-400);
+  --accent-glow: color-mix(in srgb, var(--primitive-aqua-400) 40%, transparent);
+  --border-accent: color-mix(
+    in srgb,
+    var(--primitive-aqua-400) 30%,
+    transparent
+  );
+  --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --theme-bg-panel: rgba(
-    0,
-    50,
-    120,
-    0.2
-  ); /* El azul transparente (Antes hud-blue-bg) */
+  --bg-panel: #00274b;
 
   /* LUCES Y ESTADOS (Props) */
-  --theme-status-safe: #00e676; /* Verde nominal (Antes prop-green) */
-  --theme-status-warn: #ffea00; /* Amarillo precaución (Antes prop-yellow) */
+  --status-safe: var(--primitive-mint-200);
+  --status-warn: var(--primitive-sulfur-100);
+
+  /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
+  --screen-casing: linear-gradient(
+    180deg,
+    var(--primitive-azure-100) 0%,
+    var(--primitive-azure-750) 25%,
+    var(--primitive-azure-850) 100%
+  );
+  --screen-casing-active: linear-gradient(
+    180deg,
+    var(--primitive-aqua-50) 0%,
+    var(--primitive-azure-300) 45%,
+    var(--primitive-azure-750) 100%
+  );
+  --screen-border: color-mix(
+    in srgb,
+    var(--primitive-aqua-400) 50%,
+    transparent
+  );
+  --screen-border-active: color-mix(
+    in srgb,
+    var(--primitive-aqua-400) 95%,
+    transparent
+  );
+  --screen-glow: color-mix(
+    in srgb,
+    var(--primitive-azure-300) 45%,
+    transparent
+  );
+  --screen-glow-active: color-mix(
+    in srgb,
+    var(--primitive-aqua-400) 85%,
+    transparent
+  );
+  --screen-bg: radial-gradient(
+    135% 120% at 50% 5%,
+    var(--primitive-azure-500) 0%,
+    var(--primitive-azure-650) 45%,
+    var(--primitive-azure-800) 90%
+  );
+  --screen-bg-hover: radial-gradient(
+    135% 120% at 50% 5%,
+    var(--primitive-azure-400) 0%,
+    var(--primitive-azure-550) 45%,
+    var(--primitive-azure-750) 90%
+  );
+  --screen-bg-active: radial-gradient(
+    135% 120% at 50% 0%,
+    var(--primitive-aqua-400) 0%,
+    var(--primitive-azure-500) 35%,
+    var(--primitive-azure-650) 80%,
+    var(--primitive-azure-800) 100%
+  );
+  --screen-text: var(--primitive-siren-50);
+  --screen-text-glow: color-mix(
+    in srgb,
+    var(--primitive-aqua-400) 80%,
+    transparent
+  );
 }
 
 .dark {
-  /* FONDOS (La nave en penumbra) */
-  --theme-bg-base: #080c16; /* El espacio/niebla (Reemplaza al fondo blanco) */
-  --theme-bg-surface: #121212; /* Elementos elevados (Antes ship-hull-dark) */
+  --bg-base: var(--primitive-ceramic-950);
+  --bg-surface: var(--primitive-ceramic-700);
 
-  /* ACENTOS (Alerta Roja) */
-  --theme-accent-base: #ff1744; /* Color principal de UI (Antes alert-red-base) */
-  --theme-accent-glow: rgba(255, 23, 68, 0.4);
+  --accent-base: var(--primitive-siren-400);
+  --accent-glow: color-mix(
+    in srgb,
+    var(--primitive-crimson-400) 40%,
+    transparent
+  );
 
-  /* BORDES Y TEXTOS */
-  --theme-border-accent: rgba(255, 23, 68, 0.3);
-  --theme-text-base: #cbd5e1; /* Texto claro para contraste en oscuro */
+  --border-accent: color-mix(
+    in srgb,
+    var(--primitive-crimson-350) 30%,
+    transparent
+  );
+  --text-base: #cbd5e1;
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --theme-bg-panel: rgba(
-    60,
-    0,
-    0,
-    0.6
+  --bg-panel: color-mix(
+    in srgb,
+    var(--primitive-siren-750) 55%,
+    transparent
   ); /* El rojo transparente (Antes alert-red-bg) */
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  /* En alerta roja, el verde "seguro" se vuelve naranja, y la advertencia se vuelve rojo puro */
-  --theme-status-safe: #ff9100;
-  --theme-status-warn: #ff1744;
+  --status-safe: var(--primitive-topaz-200); /* #ff9c10 */
+  --status-warn: var(--primitive-tangerine-250); /* #f26c25 */
+  /* PANTALLAS SCIFI (Alerta Roja) */
+  --screen-casing: linear-gradient(
+    180deg,
+    var(--primitive-siren-100) 0%,
+    var(--primitive-siren-750) 25%,
+    var(--primitive-siren-850) 100%
+  );
+  --screen-casing-active: linear-gradient(
+    180deg,
+    var(--primitive-siren-100) 0%,
+    var(--primitive-siren-350) 25%,
+    var(--primitive-siren-750) 100%
+  );
+
+  --screen-border: color-mix(
+    in srgb,
+    var(--primitive-siren-350) 55%,
+    transparent
+  );
+  --screen-border-active: var(--primitive-siren-350);
+  --screen-glow: color-mix(
+    in srgb,
+    var(--primitive-crimson-350) 45%,
+    transparent
+  );
+  --screen-glow-active: color-mix(
+    in srgb,
+    var(--primitive-crimson-350) 85%,
+    transparent
+  );
+  --screen-bg: radial-gradient(
+    135% 120% at 50% 5%,
+    var(--primitive-siren-500) 0%,
+    var(--primitive-siren-650) 45%,
+    var(--primitive-siren-850) 90%
+  );
+  --screen-bg-hover: radial-gradient(
+    135% 120% at 50% 5%,
+    var(--primitive-siren-400) 0%,
+    var(--primitive-siren-550) 45%,
+    var(--primitive-siren-800) 90%
+  );
+  --screen-bg-active: radial-gradient(
+    135% 120% at 50% 0%,
+    var(--primitive-siren-350) 0%,
+    var(--primitive-siren-500) 35%,
+    var(--primitive-siren-650) 80%,
+    var(--primitive-siren-850) 100%
+  );
+  --screen-text: var(--primitive-siren-50);
+  --screen-text-glow: color-mix(
+    in srgb,
+    var(--primitive-crimson-350) 80%,
+    transparent
+  );
 }
 
 @theme {
-  --color-base: var(--theme-bg-base);
-  --color-surface: var(--theme-bg-surface);
-  --color-accent-base: var(--theme-accent-base);
-  --color-accent-glow: var(--theme-accent-glow);
-  --color-border-accent: var(--theme-border-accent);
-  --color-foreground-base: var(--theme-text-base);
+  --color-base: var(--bg-base); /* Ship hull */
+  --color-surface: var(--bg-surface); /* Raised elements, hull surface frames */
+  --color-fg: var(--text-base); /* Neutral texts in hull */
+  --color-accent-base: var(--accent-base); /* Color principal de UI */
+  --color-accent-glow: var(--accent-glow);
+  --color-border-accent: var(--border-accent);
 
-  --color-panel: var(--theme-bg-panel);
-  --color-status-safe: var(--theme-status-safe);
-  --color-status-warn: var(--theme-status-warn);
+  --color-panel: var(--bg-panel);
+  --color-status-safe: var(--status-safe);
+  --color-status-warn: var(--status-warn);
 
-  --color-screen-blue: rgb(0, 128, 255);
-  --color-screen-deep-blue: rgb(0, 24, 255);
+  --color-deep-blue: #0018ff;
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
-  --breakpoint-lg: 960px;
+  --breakpoint-lm: 768px;
+  --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1920px;
+  --breakpoint-2xl: 1384px;
+  --breakpoint-3xl: 1536px;
+  --breakpoint-4xl: 1920px;
 
-  --font-text-semibold: "Gruppo 600", sans-serif;
   --font-headings: "Lexend Zetta", sans-serif;
-  --font-sans: "Gruppo", system-ui, sans-serif;
-  --font-text: "Gruppo", system-ui, sans-serif;
+  --font-sans: "Gruppo 600", system-ui, sans-serif;
+  --font-text: "Gruppo 600", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    letter-spacing: 0.4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: normal;
+  }
+}
+
+@utility screen-drop {
+  filter: drop-shadow(0 2px 2px #00000059)
+    drop-shadow(0 0px 6px var(--screen-glow));
+  transition: transform 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 3px 2px #00000073)
+      drop-shadow(0 0 10px var(--screen-glow));
+  }
+
+  &[data-active="true"] {
+    filter: drop-shadow(0 3px 2px #00000073)
+      drop-shadow(0 0 12px var(--screen-glow-active));
+  }
+}
+
+@utility screen {
+  /* Defaults */
+  --dot-color: var(--screen-border);
+
+  /* bg assembly layers */
+  --layer-glare: none;
+  --layer-dot-left: none;
+  --layer-dot-right: none;
+  --layer-scanlines: none;
+  --layer-bg: var(--screen-bg);
+
+  --size-glare: 100% 100%;
+  --size-dot-left: 100% 100%;
+  --size-dot-right: 100% 100%;
+  --size-scanlines: 100% 4px;
+  --size-bg: 100% 100%;
+
+  background-image:
+    var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
+    var(--layer-scanlines), var(--layer-bg);
+  background-size:
+    var(--size-glare), var(--size-dot-left), var(--size-dot-right),
+    var(--size-scanlines), var(--size-bg);
+
+  /* State: Active HUD Override */
+  &[data-active="true"] {
+    --dot-color: var(--screen-border-active);
+    --layer-bg: var(--screen-bg-active);
+  }
+
+  .group:hover &:not([data-active="true"]) {
+    --layer-bg: var(--screen-bg-hover);
+  }
+
+  /* --- DYNAMIC STATS OVERRIDES --- */
+  /* Override --dot-color based on component status */
+  &[data-status="danger"] {
+    --dot-color: var(--color-red-500);
+  }
+
+  &[data-status="warning"] {
+    --dot-color: var(--color-status-warn);
+  }
+
+  &[data-status="safe"] {
+    --dot-color: var(--color-status-safe);
+  }
+
+  &[data-status="info"] {
+    --dot-color: var(--color-sky-500);
+  }
+}
+
+@utility screen-glare {
+  --layer-glare: linear-gradient(
+    180deg,
+    #ffffff40 0%,
+    #ffffff0d 50%,
+    transparent 75%
+  );
+}
+
+@utility screen-dots-left {
+  --layer-dot-left: radial-gradient(
+    circle 2px at 8px 8px,
+    var(--dot-color) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-dots-right {
+  --layer-dot-right: radial-gradient(
+    circle 2px at calc(100% - 8px) 8px,
+    var(--dot-color) 99%,
+    transparent 100%
+  );
+}
+
+@utility screen-scanlines {
+  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
+}
+
+@utility warning-lines {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #c9a81d,
+    #c9a81d 6px,
+    #0c0e12 6px,
+    #0c0e12 12px
+  );
+}
+
+@utility smallcaps {
+  /* The modern way */
+  font-variant-caps: small-caps;
+  /* The low-level way for maximum compatibility */
+  font-feature-settings: "smcp" on;
 }
 
 .octagon-sm {
@@ -122,7 +498,30 @@
   border-radius: 14px / 10px;
 }
 
-.trapezoid {
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-  /* background: #542437; */
+.octagon-lg {
+  clip-path: polygon(
+    36px 0,
+    calc(100% - 36px) 0,
+    100% 24px,
+    100% calc(100% - 24px),
+    calc(100% - 36px) 100%,
+    36px 100%,
+    0 calc(100% - 24px),
+    0 24px
+  );
+  border-radius: 14px / 10px;
+}
+
+.rhombus {
+  clip-path: polygon(
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 calc(100% - 12px),
+    0 12px
+  );
+  border-radius: 14px / 10px;
 }

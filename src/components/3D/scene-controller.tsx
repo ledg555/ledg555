@@ -1,8 +1,7 @@
 import { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
 import { WarpDriveStars } from "./warp-drive-stars";
 
-export const SceneController = () => {
+export function SceneController() {
   return (
     <>
       {/* Fog creates depth perception. Matches your dark background color */}
@@ -22,16 +21,6 @@ export const SceneController = () => {
       <Suspense fallback={null}>
         <WarpDriveStars />
       </Suspense>
-
-      {/* OrbitControls temporarily added for development.
-          Allows you to drag and look around the starfield.
-          We will restrict or remove this once the UI is in place. */}
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        maxPolarAngle={Math.PI / 1.5}
-        minPolarAngle={Math.PI / 3}
-      />
     </>
   );
-};
+}
