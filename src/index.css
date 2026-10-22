@@ -18,24 +18,51 @@
   --primitive-ceramic-100: #e5e5ea;
   --primitive-ceramic-700: #14181a;
   --primitive-ceramic-950: #03080b;
-  /* Exploration mode glow */
+  /* Exploration mode glow, H ~ 208° */
   --primitive-aqua-50: #ccf8ff;
-  --primitive-aqua-400: #00e5ff;
-  /* Exploration mode screens */
+  --primitive-aqua-100: #8ef0ff;
+  --primitive-aqua-150: #0be7ff; /* Pivot calibrado a L = 0.85 (alt. R=0: #00e7ff) */
+  --primitive-aqua-200: #00d5eb;
+  --primitive-aqua-250: #00c4d8;
+  --primitive-aqua-300: #00b2c5;
+  --primitive-aqua-350: #00a1b2;
+  --primitive-aqua-400: #0091a0;
+  --primitive-aqua-450: #00808e;
+  --primitive-aqua-500: #00707c;
+  --primitive-aqua-550: #00606b;
+  --primitive-aqua-600: #00505a;
+  --primitive-aqua-650: #003f48;
+  --primitive-aqua-700: #002f37;
+  --primitive-aqua-750: #001f25;
+  --primitive-aqua-800: #001014;
+  --primitive-aqua-850: #00080b;
+  --primitive-aqua-900: #000305;
+  --primitive-aqua-950: #000101;
+  /* Exploration mode screens, H ~ 260° */
+  --primitive-azure-50: #e5efff;
   --primitive-azure-100: #ccdfff;
-  --primitive-azure-300: #3d94ff;
-  --primitive-azure-400: #1d76ff;
-  --primitive-azure-500: #0058ef; /* Screen Radial Center. Pivot color */
-  --primitive-azure-550: #014cb8;
+  --primitive-azure-150: #b2cfff;
+  --primitive-azure-200: #98bfff;
+  --primitive-azure-250: #7daeff;
+  --primitive-azure-300: #3d94ff; /* #629dff con pivote calibrado */
+  --primitive-azure-350: #448bff;
+  --primitive-azure-400: #1d76ff; /* #2177ff con pivote calibrado */
+  --primitive-azure-450: #0065f1;
+  --primitive-azure-500: #0058d4; /* Pivot */
+  --primitive-azure-550: #004cb8;
+  --primitive-azure-600: #003f9d;
   --primitive-azure-650: #003482;
+  --primitive-azure-700: #002869;
   --primitive-azure-750: #001d51;
   --primitive-azure-800: #00133a;
   --primitive-azure-850: #000a28;
-  /* Exploration mode status safe */
+  --primitive-azure-900: #000310;
+  --primitive-azure-950: #000002;
+  /* Exploration mode status safe, H ~ 145° */
   --primitive-mint-50: #caffca;
   --primitive-mint-100: #80ff88;
   --primitive-mint-150: #00f847;
-  --primitive-mint-200: #00e540;
+  --primitive-mint-200: #00e540; /* Pivot */
   --primitive-mint-250: #00d23a;
   --primitive-mint-300: #00bf34;
   --primitive-mint-350: #00ad2f;
@@ -51,9 +78,9 @@
   --primitive-mint-850: #001001;
   --primitive-mint-900: #000500;
   --primitive-mint-950: #000100;
-  /* Exploration mode status warn */
+  /* Exploration mode status warn, H ~ 102° */
   --primitive-sulfur-50: #f4facb;
-  --primitive-sulfur-100: #f5ea00;
+  --primitive-sulfur-100: #f5ea00; /* Pivot */
   --primitive-sulfur-150: #e4d000;
   --primitive-sulfur-200: #cfbc00;
   --primitive-sulfur-250: #bba900;
@@ -71,11 +98,11 @@
   --primitive-sulfur-850: #100c00;
   --primitive-sulfur-900: #090600;
   --primitive-sulfur-950: #020100;
-  /* Red Alert mode status safe */
+  /* Red Alert mode status safe, H ~ 90° */
   --primitive-topaz-50: #ffedbe;
   --primitive-topaz-100: #ffda74;
   --primitive-topaz-150: #fac700;
-  --primitive-topaz-200: #e6b700;
+  --primitive-topaz-200: #e6b700; /* Pivot */
   --primitive-topaz-250: #d4a800;
   --primitive-topaz-300: #c19900;
   --primitive-topaz-350: #af8a00;
@@ -91,13 +118,13 @@
   --primitive-topaz-850: #100a00;
   --primitive-topaz-900: #050300;
   --primitive-topaz-950: #010000;
-  /* Red Alert mode status warn */
+  /* Red Alert mode status warn, H ~ 45° */
   --primitive-tangerine-50: #ffe8db;
   --primitive-tangerine-100: #ffd4bc;
   --primitive-tangerine-150: #ffbf93;
   --primitive-tangerine-200: #ffa45e;
   --primitive-tangerine-250: #ff8821;
-  --primitive-tangerine-300: #f57400;
+  --primitive-tangerine-300: #f57400; /* Pivot */
   --primitive-tangerine-350: #e46600;
   --primitive-tangerine-400: #cc5700;
   --primitive-tangerine-450: #b54800;
@@ -111,7 +138,7 @@
   --primitive-tangerine-850: #1d0200;
   --primitive-tangerine-900: #0f0000;
   --primitive-tangerine-950: #030000;
-  /* Red Alert mode glow */
+  /* Red Alert mode glow, H ~ 19.5° */
   --primitive-crimson-50: #ffe8e8;
   --primitive-crimson-100: #ffd1d0;
   --primitive-crimson-150: #ffb9b8;
@@ -119,7 +146,8 @@
   --primitive-crimson-250: #ff8387;
   --primitive-crimson-300: #ff616c;
   --primitive-crimson-350: #ff2f50;
-  --primitive-crimson-400: #ee0040;
+  --primitive-crimson-400: #ee0040; /* Pivot */
+  --primitive-crimson-450: #d40038;
   --primitive-crimson-500: #ba0030;
   --primitive-crimson-550: #a20029;
   --primitive-crimson-600: #8a0021;
@@ -130,7 +158,7 @@
   --primitive-crimson-850: #1e0003;
   --primitive-crimson-900: #0d0001;
   --primitive-crimson-950: #020000;
-  /* Status danger & Red Alert mode screen */
+  /* Status danger & Red Alert mode screen, H ~ 27° */
   --primitive-siren-50: #ffe9e6;
   --primitive-siren-100: #ffd2cc;
   --primitive-siren-150: #ffbab1;
@@ -138,7 +166,8 @@
   --primitive-siren-250: #ff8579;
   --primitive-siren-300: #ff645a;
   --primitive-siren-350: #ff3534;
-  --primitive-siren-400: #f0001b;
+  --primitive-siren-400: #f0001b; /* Pivot */
+  --primitive-siren-450: #d50017;
   --primitive-siren-500: #bc0013;
   --primitive-siren-550: #a3000f;
   --primitive-siren-600: #8b000b;
@@ -162,9 +191,9 @@
   --bg-base: var(--primitive-ceramic-100);
   --bg-surface: var(--primitive-ceramic-50);
 
-  --accent-base: var(--primitive-aqua-400);
-  --accent-glow: color-mix(in srgb, var(--primitive-aqua-400) 40%, transparent);
-  --border-accent: var(--primitive-aqua-400);
+  --accent-base: var(--primitive-aqua-150);
+  --accent-glow: color-mix(in srgb, var(--primitive-aqua-150) 40%, transparent);
+  --border-accent: var(--primitive-aqua-150);
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
@@ -191,12 +220,12 @@
   );
   --screen-border: color-mix(
     in srgb,
-    var(--primitive-aqua-400) 50%,
+    var(--primitive-aqua-150) 50%,
     transparent
   );
   --screen-border-active: color-mix(
     in srgb,
-    var(--primitive-aqua-400) 95%,
+    var(--primitive-aqua-150) 95%,
     transparent
   );
   --screen-glow: color-mix(
@@ -206,7 +235,7 @@
   );
   --screen-glow-active: color-mix(
     in srgb,
-    var(--primitive-aqua-400) 85%,
+    var(--primitive-aqua-150) 85%,
     transparent
   );
   --screen-bg: radial-gradient(
@@ -223,7 +252,7 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-aqua-400) 0%,
+    var(--primitive-aqua-150) 0%,
     var(--primitive-azure-500) 35%,
     var(--primitive-azure-650) 80%,
     var(--primitive-azure-800) 100%
@@ -231,7 +260,7 @@
   --screen-text: var(--primitive-siren-50);
   --screen-text-glow: color-mix(
     in srgb,
-    var(--primitive-aqua-400) 80%,
+    var(--primitive-aqua-150) 80%,
     transparent
   );
 }
