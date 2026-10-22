@@ -290,7 +290,7 @@
   );
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
-    var(--primitive-siren-500) 0%,
+    var(--primitive-siren-550) 0%,
     var(--primitive-siren-650) 45%,
     var(--primitive-siren-850) 90%
   );
