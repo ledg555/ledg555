@@ -16,8 +16,12 @@
 :root {
   --primitive-ceramic-50: #f4f6f9;
   --primitive-ceramic-100: #e5e5ea;
+  --primitive-ceramic-700: #14181a;
+  --primitive-ceramic-950: #03080b;
+  /* Exploration mode glow */
   --primitive-aqua-50: #ccf8ff;
   --primitive-aqua-400: #00e5ff;
+  /* Exploration mode screens */
   --primitive-azure-100: #ccdfff;
   --primitive-azure-300: #3d94ff;
   --primitive-azure-400: #1d76ff;
@@ -27,7 +31,7 @@
   --primitive-azure-750: #001d51;
   --primitive-azure-800: #00133a;
   --primitive-azure-850: #000a28;
-
+  /* Exploration mode status safe */
   --primitive-mint-50: #caffca;
   --primitive-mint-100: #80ff88;
   --primitive-mint-150: #00f847;
@@ -47,7 +51,7 @@
   --primitive-mint-850: #001001;
   --primitive-mint-900: #000500;
   --primitive-mint-950: #000100;
-
+  /* Exploration mode status warn */
   --primitive-sulfur-50: #f4facb;
   --primitive-sulfur-100: #f5ea00;
   --primitive-sulfur-150: #e4d000;
@@ -67,8 +71,8 @@
   --primitive-sulfur-850: #100c00;
   --primitive-sulfur-900: #090600;
   --primitive-sulfur-950: #020100;
-
---primitive-topaz-50: #ffedbe;
+  /* Red Alert mode status safe */
+  --primitive-topaz-50: #ffedbe;
   --primitive-topaz-100: #ffda74;
   --primitive-topaz-150: #fac700;
   --primitive-topaz-200: #e6b700;
@@ -87,8 +91,7 @@
   --primitive-topaz-850: #100a00;
   --primitive-topaz-900: #050300;
   --primitive-topaz-950: #010000;
-
-
+  /* Red Alert mode status warn */
   --primitive-tangerine-50: #ffe8db;
   --primitive-tangerine-100: #ffd4bc;
   --primitive-tangerine-150: #ffbf93;
@@ -108,7 +111,7 @@
   --primitive-tangerine-850: #1d0200;
   --primitive-tangerine-900: #0f0000;
   --primitive-tangerine-950: #030000;
-
+  /* Red Alert mode glow */
   --primitive-crimson-50: #ffe8e8;
   --primitive-crimson-100: #ffd1d0;
   --primitive-crimson-150: #ffb9b8;
@@ -127,7 +130,7 @@
   --primitive-crimson-850: #1e0003;
   --primitive-crimson-900: #0d0001;
   --primitive-crimson-950: #020000;
-
+  /* Status danger & Red Alert mode screen */
   --primitive-siren-50: #ffe9e6;
   --primitive-siren-100: #ffd2cc;
   --primitive-siren-150: #ffbab1;
@@ -147,10 +150,6 @@
   --primitive-siren-900: #0d0000;
   --primitive-siren-950: #020000;
 
-  --primitive-ceramic-950: #03080b;
-  --primitive-ceramic-700: #14181a;
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -165,15 +164,11 @@
 
   --accent-base: var(--primitive-aqua-400);
   --accent-glow: color-mix(in srgb, var(--primitive-aqua-400) 40%, transparent);
-  --border-accent: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 30%,
-    transparent
-  );
+  --border-accent: var(--primitive-aqua-400);
   --text-base: #141a22;
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --bg-panel: #00274b;
+  --bg-panel: color-mix(in srgb, var(--primitive-azure-650) 45%, transparent);
 
   /* LUCES Y ESTADOS (Props) */
   --screen-safe-base: var(--primitive-mint-150);
@@ -252,19 +247,11 @@
     transparent
   );
 
-  --border-accent: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 30%,
-    transparent
-  );
+  --border-accent: var(--primitive-siren-500);
   --text-base: #cbd5e1;
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --bg-panel: color-mix(
-    in srgb,
-    var(--primitive-siren-750) 55%,
-    transparent
-  ); /* El rojo transparente (Antes alert-red-bg) */
+  --bg-panel: color-mix(in srgb, var(--primitive-siren-650) 45%, transparent);
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
   --screen-safe-base: var(--primitive-topaz-200);
@@ -293,7 +280,7 @@
   --screen-border-active: var(--primitive-siren-350);
   --screen-glow: color-mix(
     in srgb,
-    var(--primitive-crimson-350) 45%,
+    var(--primitive-crimson-350) 40%,
     transparent
   );
   --screen-glow-active: color-mix(
