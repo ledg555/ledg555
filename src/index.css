@@ -15,8 +15,8 @@
    ========================================================================== */
 :root {
   /* Ship hull, walls, surfaces */
-  --primitive-ceramic-50: #eceff0;  /* (formerly #f4f6f9) */
-  --primitive-ceramic-100: #dadfe2; /* (formerly #e5e5ea) */
+  --primitive-ceramic-50: #eceff0; /* (formerly f4f6f9) */
+  --primitive-ceramic-100: #dadfe2; /* (formerly e5e5ea) */
   --primitive-ceramic-150: #caced2;
   --primitive-ceramic-200: #babec2;
   --primitive-ceramic-250: #aaafb2;
@@ -30,34 +30,34 @@
   --primitive-ceramic-650: #383b3d;
   --primitive-ceramic-700: #2c2e30;
   --primitive-ceramic-750: #202223;
-  --primitive-ceramic-800: #151617; /* (formerly #14181a) */
+  --primitive-ceramic-800: #151617; /* (formerly 14181a) */
   --primitive-ceramic-850: #0a0b0c;
   --primitive-ceramic-900: #030304;
-  --primitive-ceramic-950: #010102; /* (formerly #03080b) */
-/* Metal frames and elements */
-  --primitive-titanium-50: #eceff2;  /* Cap highlight light (#eaeff6) */
-  --primitive-titanium-100: #dadee5; /* Bezel highlight light (#d5dae2) */
-  --primitive-titanium-150: #c9ced7; /* Cap mid light (#cfd8e5) */
-  --primitive-titanium-200: #b7bec9; /* Bezel mid light (#bcc4d0) */
-  --primitive-titanium-250: #a7aebb; /* Cap shade light (#9faab9) */
-  --primitive-titanium-300: #979fac; /* Bezel shade light (#929daa) */
+  --primitive-ceramic-950: #010102; /* (formerly 03080b) */
+  /* Metal frames and elements */
+  --primitive-titanium-50: #eceff2; /* Cap highlight light (eaeff6) */
+  --primitive-titanium-100: #dadee5; /* Bezel highlight light (d5dae2) */
+  --primitive-titanium-150: #c9ced7; /* Cap mid light (cfd8e5) */
+  --primitive-titanium-200: #b7bec9; /* Bezel mid light (bcc4d0) */
+  --primitive-titanium-250: #a7aebb; /* Cap shade light (9faab9) */
+  --primitive-titanium-300: #979fac; /* Bezel shade light (929daa) */
   --primitive-titanium-350: #87909e;
-  --primitive-titanium-400: #788190; /* Groove / shadow light (#6b7685) */
+  --primitive-titanium-400: #788190; /* Groove / shadow light (6b7685) */
   --primitive-titanium-450: #697281; /* Bevel rim light */
-  --primitive-titanium-500: #5b6472; /* Bottom border light (#5e6878) */
+  --primitive-titanium-500: #5b6472; /* Bottom border light (5e6878) */
   --primitive-titanium-550: #4d5664;
   --primitive-titanium-600: #404855;
   --primitive-titanium-650: #333b47;
-  --primitive-titanium-700: #272e39; /* Cap highlight dark (#2c323e) */
-  --primitive-titanium-750: #1c222b; /* Cap/Bezel mid dark (#1f242d/#252830) */
-  --primitive-titanium-800: #12161e; /* Cap/Bezel shade dark (#12151b/#181b22) */
-  --primitive-titanium-850: #080b11; /* Bezel base & well dark (#0c0e12/#0a0c0f) */
+  --primitive-titanium-700: #272e39; /* Cap highlight dark (2c323e) */
+  --primitive-titanium-750: #1c222b; /* Cap/Bezel mid dark (1f242d/252830) */
+  --primitive-titanium-800: #12161e; /* Cap/Bezel shade dark (12151b/181b22) */
+  --primitive-titanium-850: #080b11; /* Bezel base & well dark (0c0e12/0a0c0f) */
   --primitive-titanium-900: #020306; /* Cavity deep shadow */
   --primitive-titanium-950: #000001; /* Deep seam */
   /* Exploration mode glare, halos and high energy elements H ~ 208° */
   --primitive-aqua-50: #ccf8ff;
   --primitive-aqua-100: #8ef0ff;
-  --primitive-aqua-150: #0be7ff; /* Pivot calibrado a L = 0.85 (alt. R=0: #00e7ff) */
+  --primitive-aqua-150: #0be7ff; /* Pivot calibrado a L = 0.85 (alt. R=0: 00e7ff) */
   --primitive-aqua-200: #00d5eb;
   --primitive-aqua-250: #00c4d8;
   --primitive-aqua-300: #00b2c5;
@@ -80,9 +80,9 @@
   --primitive-azure-150: #b2cfff;
   --primitive-azure-200: #98bfff;
   --primitive-azure-250: #7daeff;
-  --primitive-azure-300: #3d94ff; /* #629dff con pivote calibrado */
+  --primitive-azure-300: #3d94ff;
   --primitive-azure-350: #448bff;
-  --primitive-azure-400: #1d76ff; /* #2177ff con pivote calibrado */
+  --primitive-azure-400: #1d76ff;
   --primitive-azure-450: #0065f1;
   --primitive-azure-500: #0058d4; /* Pivot */
   --primitive-azure-550: #004cb8;
@@ -230,7 +230,7 @@
   --accent-base: var(--primitive-aqua-150);
   --accent-glow: color-mix(in srgb, var(--primitive-aqua-150) 40%, transparent);
   --border-accent: var(--primitive-aqua-150);
-  --text-base: #141a22;
+  --text-base: var(--primitive-titanium-750);
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
   --bg-panel: color-mix(in srgb, var(--primitive-azure-650) 45%, transparent);
@@ -293,10 +293,37 @@
     var(--primitive-azure-650) 80%,
     var(--primitive-azure-800) 100%
   );
+  --screen-glare: linear-gradient(
+    180deg,
+    #ffffff40 0%,
+    #ffffff0d 50%,
+    transparent 75%
+  );
   --screen-text: var(--primitive-siren-50);
   --screen-text-glow: color-mix(
     in srgb,
     var(--primitive-aqua-150) 80%,
+    transparent
+  );
+
+  --btn-bezel-bg: linear-gradient(
+    180deg,
+    var(--primitive-titanium-100) 0%,
+    var(--primitive-titanium-200) 50%,
+    var(--primitive-titanium-300) 100%
+  );
+  --btn-well-bg: var(--primitive-titanium-850);
+  --btn-cap-bg: linear-gradient(
+    180deg,
+    var(--primitive-titanium-50) 0%,
+    var(--primitive-titanium-150) 50%,
+    var(--primitive-titanium-250) 100%
+  );
+  --btn-cap-border-b: var(--primitive-titanium-500);
+  --btn-cap-shadow-color: var(--primitive-titanium-400);
+  --btn-screw-color: color-mix(
+    in srgb,
+    var(--primitive-ceramic-950) 40%,
     transparent
   );
 }
@@ -313,7 +340,7 @@
   );
 
   --border-accent: var(--primitive-siren-500);
-  --text-base: #cbd5e1;
+  --text-base: var(--primitive-titanium-200);
 
   /* FONDOS TINTADOS (Paneles de alerta) */
   --bg-panel: color-mix(in srgb, var(--primitive-siren-650) 45%, transparent);
@@ -372,12 +399,39 @@
     var(--primitive-siren-650) 80%,
     var(--primitive-siren-850) 100%
   );
+  --screen-glare: linear-gradient(
+    180deg,
+    #ffffff40 0%,
+    #ffffff0d 50%,
+    transparent 75%
+  );
   --screen-text: var(--primitive-siren-50);
   --screen-text-glow: color-mix(
     in srgb,
     var(--primitive-crimson-350) 80%,
     transparent
   );
+
+  --btn-bezel-bg: linear-gradient(
+    180deg,
+    var(--primitive-titanium-600) 0%,
+    var(--primitive-titanium-650) 50%,
+    var(--primitive-titanium-750) 100%
+  );
+  --btn-well-bg: var(--primitive-titanium-900);
+  --btn-cap-bg: linear-gradient(
+    180deg,
+    var(--primitive-titanium-700) 0%,
+    var(--primitive-titanium-750) 50%,
+    var(--primitive-titanium-800) 100%
+  );
+  --btn-cap-border-b: color-mix(
+    in srgb,
+    var(--primitive-ceramic-950) 80%,
+    transparent
+  );
+  --btn-cap-shadow-color: var(--primitive-titanium-950);
+  --btn-screw-color: color-mix(in srgb, #ffffff 20%, transparent);
 }
 
 @theme {
@@ -393,6 +447,15 @@
   --color-screen-warn-base: var(--screen-warn-base);
   --color-screen-danger-base: var(--screen-danger-base);
   --color-warning-stripe: var(--warning-stripe);
+
+  --background-image-btn-bezel-bg: var(--btn-bezel-bg);
+  --background-image-btn-cap-bg: var(--btn-cap-bg);
+
+  /* Colores sólidos del botón: Mapeados a color */
+  --color-btn-well-bg: var(--btn-well-bg);
+  --color-btn-cap-border-b: var(--btn-cap-border-b);
+  --color-btn-cap-shadow-color: var(--btn-cap-shadow-color);
+  --color-btn-screw-color: var(--btn-screw-color);
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -493,12 +556,7 @@
 }
 
 @utility screen-glare {
-  --layer-glare: linear-gradient(
-    180deg,
-    #ffffff40 0%,
-    #ffffff0d 50%,
-    transparent 75%
-  );
+  --layer-glare: var(--screen-glare);
 }
 
 @utility screen-dots-left {
@@ -522,8 +580,8 @@
     135deg,
     var(--color-warning-stripe),
     var(--color-warning-stripe) 6px,
-    #0c0e12 6px,
-    #0c0e12 12px
+    var(--primitive-ceramic-850) 6px,
+    var(--primitive-ceramic-850) 12px
   );
 }
 

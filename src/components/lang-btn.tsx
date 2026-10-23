@@ -31,21 +31,16 @@ export function LangBtn() {
     >
       {/* Outer Sci-Fi Bezel Socket (Matte Housing with screen-warn-base Accent) */}
       <div
-        className={`
-          relative w-12 h-12 rounded-full flex items-center justify-center p-1.5
-          transition-colors duration-300
-          ${
-            isDarkTheme
-              ? "bg-gradient-to-b from-[#252830] via-[#181b22] to-[#0c0e12] shadow-[inset_0_0px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]"
-              : "bg-gradient-to-b from-[#d5dae2] via-[#bcc4d0] to-[#929daa] shadow-[inset_0_0px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)]"
-          }
-        `}
+        className="
+          relative w-12 h-12 rounded-full flex justify-center items-center p-1.5
+          transition-colors duration-300 bg-btn-bezel-bg shadow-[inset_0_0px_3px_rgba(0,0,0,0.6),0_2px_4px_rgba(0,0,0,0.25)] dark:shadow-[inset_0_0px_4px_rgba(0,0,0,0.9),0_2px_4px_rgba(0,0,0,0.6)]
+        "
       >
         {/* Screws on bezel */}
-        <span className="absolute top-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] bg-black/40 dark:bg-white/20 rounded-full" />
-        <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] bg-black/40 dark:bg-white/20 rounded-full" />
-        <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-[3px] h-[3px] bg-black/40 dark:bg-white/20 rounded-full" />
-        <span className="absolute top-1/2 right-0.5 -translate-y-1/2 w-[3px] h-[3px] bg-black/40 dark:bg-white/20 rounded-full" />
+        <span className="absolute top-0.5 left-1/2 -translate-x-1/2 w-0.75 h-0.75 bg-black/40 dark:bg-white/30 rounded-full" />
+        <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-0.75 h-0.75 bg-black/40 dark:bg-white/30 rounded-full" />
+        <span className="absolute top-1/2 left-0.5 -translate-y-1/2 w-0.75 h-0.75 bg-black/40 dark:bg-white/30 rounded-full" />
+        <span className="absolute top-1/2 right-0.5 -translate-y-1/2 w-0.75 h-0.75 bg-black/40 dark:bg-white/30 rounded-full" />
 
         {/* Inner socket well */}
         <div className="w-full h-full rounded-full bg-[#0a0c0f] p-[2.5px] shadow-[inset_0_3px_6px_rgba(0,0,0,0.95)] flex items-center justify-center overflow-hidden">
@@ -59,8 +54,8 @@ export function LangBtn() {
               transition-colors duration-200
               ${
                 isDarkTheme
-                  ? "bg-gradient-to-b from-[#2c323e] via-[#1f242d] to-[#12151b] border-b border-b-black/80 shadow-[0_3px_0_#0a0c0e,0_4px_6px_rgba(0,0,0,0.6),inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_2px_rgba(0,0,0,0.5)]"
-                  : "bg-gradient-to-b from-[#eaeff6] via-[#cfd8e5] to-[#9faab9] border-b border-b-[#5e6878] shadow-[0_3px_0_#6b7685,0_4px_5px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.9),inset_0_-2px_2px_rgba(0,0,0,0.35)]"
+                  ? "bg-linear-to-b from-[#2c323e] via-[#1f242d] to-[#12151b] border-b border-b-black/80 shadow-[0_3px_0_#0a0c0e,0_4px_6px_rgba(0,0,0,0.6),inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_2px_rgba(0,0,0,0.5)]"
+                  : "bg-linear-to-b from-[#eaeff6] via-[#cfd8e5] to-[#9faab9] border-b border-b-[#5e6878] shadow-[0_3px_0_#6b7685,0_4px_5px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.9),inset_0_-2px_2px_rgba(0,0,0,0.35)]"
               }
             `}
             whileHover={{ scale: 1.03 }}
@@ -74,7 +69,7 @@ export function LangBtn() {
             transition={{ type: "spring", stiffness: 600, damping: 25 }}
           >
             {/* Concentric Milled Tactile Groove */}
-            <div className="absolute inset-[3px] rounded-full border border-black/20 dark:border-white/10 pointer-events-none" />
+            <div className="absolute inset-0.75 rounded-full border border-black/20 dark:border-white/10 pointer-events-none" />
 
             {/* Inner Emblem Badge: Sci-Fi Tactical Flag Badge with subtle matrix overlay */}
             <div className="relative z-10 flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shadow-[0_0_4px_rgba(245,158,11,0.25)]">
