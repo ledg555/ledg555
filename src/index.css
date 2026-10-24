@@ -10,7 +10,7 @@
 
 /* ==========================================================================
    DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
-   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or
+   RULE OF THUMB: Don't use alpha channel here. Use rgb() RCS function or
    Tailwind's opacity syntax (ej. bg-(--accent-base)/40) in upper layers
    ========================================================================== */
 :root {
@@ -228,12 +228,12 @@
   --bg-surface: var(--primitive-ceramic-50);
 
   --accent-base: var(--primitive-aqua-150);
-  --accent-glow: color-mix(in srgb, var(--primitive-aqua-150) 40%, transparent);
+  --accent-glow: rgb(from var(--primitive-aqua-150) r g b / 40%);
   --border-accent: var(--primitive-aqua-150);
   --text-base: var(--primitive-titanium-750);
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --bg-panel: color-mix(in srgb, var(--primitive-azure-650) 45%, transparent);
+  --bg-panel: rgb(from var(--primitive-azure-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Props) */
   --screen-safe-base: var(--primitive-mint-150);
@@ -254,26 +254,10 @@
     var(--primitive-azure-300) 45%,
     var(--primitive-azure-750) 100%
   );
-  --screen-border: color-mix(
-    in srgb,
-    var(--primitive-aqua-150) 50%,
-    transparent
-  );
-  --screen-border-active: color-mix(
-    in srgb,
-    var(--primitive-aqua-150) 95%,
-    transparent
-  );
-  --screen-glow: color-mix(
-    in srgb,
-    var(--primitive-azure-300) 45%,
-    transparent
-  );
-  --screen-glow-active: color-mix(
-    in srgb,
-    var(--primitive-aqua-150) 85%,
-    transparent
-  );
+  --screen-border: rgb(from var(--primitive-aqua-150) r g b / 50%);
+  --screen-border-active: rgb(from var(--primitive-aqua-150) r g b / 95%);
+  --screen-glow: rgb(from var(--primitive-azure-300) r g b / 45%);
+  --screen-glow-active: rgb(from var(--primitive-aqua-150) r g b / 85%);
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     var(--primitive-azure-500) 0%,
@@ -293,18 +277,8 @@
     var(--primitive-azure-650) 80%,
     var(--primitive-azure-800) 100%
   );
-  --screen-glare: linear-gradient(
-    180deg,
-    #ffffff40 0%,
-    #ffffff0d 50%,
-    transparent 75%
-  );
   --screen-text: var(--primitive-siren-50);
-  --screen-text-glow: color-mix(
-    in srgb,
-    var(--primitive-aqua-150) 80%,
-    transparent
-  );
+  --screen-text-glow: rgb(from var(--primitive-aqua-150) r g b / 80%);
 
   --btn-bezel-bg: linear-gradient(
     180deg,
@@ -321,11 +295,7 @@
   );
   --btn-cap-border-b: var(--primitive-titanium-500);
   --btn-cap-shadow-color: var(--primitive-titanium-400);
-  --btn-screw-color: color-mix(
-    in srgb,
-    var(--primitive-ceramic-950) 40%,
-    transparent
-  );
+  --btn-screw-color: rgb(from var(--primitive-ceramic-950) r g b / 40%);
 }
 
 .dark {
@@ -333,17 +303,13 @@
   --bg-surface: var(--primitive-ceramic-800);
 
   --accent-base: var(--primitive-siren-400);
-  --accent-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-400) 40%,
-    transparent
-  );
+  --accent-glow: rgb(from var(--primitive-crimson-400) r g b / 40%);
 
   --border-accent: var(--primitive-siren-500);
   --text-base: var(--primitive-titanium-200);
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --bg-panel: color-mix(in srgb, var(--primitive-siren-650) 45%, transparent);
+  --bg-panel: rgb(from var(--primitive-siren-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
   --screen-safe-base: var(--primitive-topaz-200);
@@ -364,22 +330,10 @@
     var(--primitive-siren-750) 100%
   );
 
-  --screen-border: color-mix(
-    in srgb,
-    var(--primitive-siren-350) 55%,
-    transparent
-  );
+  --screen-border: rgb(from var(--primitive-siren-350) r g b / 55%);
   --screen-border-active: var(--primitive-siren-350);
-  --screen-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 40%,
-    transparent
-  );
-  --screen-glow-active: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 85%,
-    transparent
-  );
+  --screen-glow: rgb(from var(--primitive-crimson-350) r g b / 40%);
+  --screen-glow-active: rgb(from var(--primitive-crimson-350) r g b / 85%);
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     var(--primitive-siren-550) 0%,
@@ -399,18 +353,8 @@
     var(--primitive-siren-650) 80%,
     var(--primitive-siren-850) 100%
   );
-  --screen-glare: linear-gradient(
-    180deg,
-    #ffffff40 0%,
-    #ffffff0d 50%,
-    transparent 75%
-  );
   --screen-text: var(--primitive-siren-50);
-  --screen-text-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 80%,
-    transparent
-  );
+  --screen-text-glow: rgb(from var(--primitive-crimson-350) r g b / 80%);
 
   --btn-bezel-bg: linear-gradient(
     180deg,
@@ -425,13 +369,9 @@
     var(--primitive-titanium-750) 50%,
     var(--primitive-titanium-800) 100%
   );
-  --btn-cap-border-b: color-mix(
-    in srgb,
-    var(--primitive-ceramic-950) 80%,
-    transparent
-  );
+  --btn-cap-border-b: rgb(from var(--primitive-ceramic-950) r g b / 80%);
   --btn-cap-shadow-color: var(--primitive-titanium-950);
-  --btn-screw-color: color-mix(in srgb, #ffffff 20%, transparent);
+  --btn-screw-color: rgb(from white r g b / 20%);
 }
 
 @theme {
@@ -489,17 +429,17 @@
 }
 
 @utility screen-drop {
-  filter: drop-shadow(0 2px 2px #00000059)
+  filter: drop-shadow(0 2px 2px rgb(from black r g b / 35%))
     drop-shadow(0 0px 6px var(--screen-glow));
   transition: transform 0.3s ease;
 
   &:hover {
-    filter: drop-shadow(0 3px 2px #00000073)
+    filter: drop-shadow(0 3px 2px rgb(from black r g b / 45%))
       drop-shadow(0 0 10px var(--screen-glow));
   }
 
   &[data-active="true"] {
-    filter: drop-shadow(0 3px 2px #00000073)
+    filter: drop-shadow(0 3px 2px rgb(from black r g b / 45%))
       drop-shadow(0 0 12px var(--screen-glow-active));
   }
 }
@@ -556,7 +496,12 @@
 }
 
 @utility screen-glare {
-  --layer-glare: var(--screen-glare);
+  --layer-glare: linear-gradient(
+    180deg,
+    rgb(from white r g b / 25%) 0%,
+    rgb(from white r g b / 5%) 50%,
+    transparent 75%
+  );
 }
 
 @utility screen-dots-left {
