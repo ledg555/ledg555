@@ -3,8 +3,8 @@ import {
   HiOutlineExclamationTriangle,
   HiOutlineSparkles,
 } from "react-icons/hi2";
-import { useThemeStore } from "../store/theme";
-import { useAudioStore } from "../store/audio";
+import { useThemeStore } from "../../store/theme";
+import { useAudioStore } from "../../store/audio";
 import { useTranslation } from "react-i18next";
 
 export function ThemeBtn() {
@@ -37,7 +37,7 @@ export function ThemeBtn() {
       className="relative flex items-center justify-center select-none bg-gray-600 w-14 h-14 lm:mr-2"
       title={titleText}
     >
-      <div className="absolute w-full h-full border-2 border-gray-600 warning-lines rounded-xl" />
+      <div className="absolute w-full h-full border-2 border-gray-600 warning-lines-md rounded-xl" />
       {/* Heavy Sci-Fi Master Collar / Housing (Ligeramente más grande) */}
       <div
         className={`

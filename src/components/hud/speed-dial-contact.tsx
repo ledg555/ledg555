@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { speedDialContactIcons } from "../constants/ui/speed-dial-contact-config";
 import { HiXMark } from "react-icons/hi2";
+import { speedDialContactIcons } from "../../constants/ui/speed-dial-contact-config";
 
 export function SpeedDialContact() {
   const { t } = useTranslation(["ui"]);

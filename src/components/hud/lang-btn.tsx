@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { useThemeStore } from "../store/theme";
-import { useAudioStore } from "../store/audio";
-import { MxIcon } from "../assets/icons/mx";
-import { UsIcon } from "../assets/icons/us";
+import { MxIcon } from "../../assets/icons/mx";
+import { UsIcon } from "../../assets/icons/us";
+import { useAudioStore } from "../../store/audio";
+import { useThemeStore } from "../../store/theme";
 
 export function LangBtn() {
   const { i18n } = useTranslation();

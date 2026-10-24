@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { HiOutlineSignal } from "react-icons/hi2";
-import { useAudioStore } from "../store/audio";
-import { useThemeStore } from "../store/theme";
 import { useTranslation } from "react-i18next";
+import { useAudioStore } from "../../store/audio";
+import { useThemeStore } from "../../store/theme";
 
 export function TransmissionBtn() {
   const { isSoundActive, toggleSound, playSfx } = useAudioStore();

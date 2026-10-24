@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
-import { TransmissionBtn } from "../transmission-btn";
-import { LangBtn } from "../lang-btn";
-import { ThemeBtn } from "../theme-btn";
+import { ThemeBtn } from "./theme-btn";
 import { navLinks } from "./nav-config";
 import { useTranslation } from "react-i18next";
-import { SpeedDialContact } from "../speed-dial-contact";
-import { SpeedDialNav } from "../speed-dial-nav";
+import { LangBtn } from "./lang-btn";
+import { SpeedDialContact } from "./speed-dial-contact";
+import { SpeedDialNav } from "./speed-dial-nav";
+import { TransmissionBtn } from "./transmission-btn";
 
 export function Header() {
   const location = useLocation();

@@ -520,7 +520,7 @@
   );
 }
 
-@utility warning-lines {
+@utility warning-lines-md {
   background-image: repeating-linear-gradient(
     135deg,
     var(--color-warning-stripe),
