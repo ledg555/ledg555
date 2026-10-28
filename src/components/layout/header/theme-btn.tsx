@@ -3,8 +3,8 @@ import {
   HiOutlineExclamationTriangle,
   HiOutlineSparkles,
 } from "react-icons/hi2";
-import { useThemeStore } from "../../store/theme";
-import { useAudioStore } from "../../store/audio";
+import { useThemeStore } from "../../../store/theme";
+import { useAudioStore } from "../../../store/audio";
 import { useTranslation } from "react-i18next";
 
 export function ThemeBtn() {

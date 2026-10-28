@@ -1,4 +1,4 @@
-/* This file is unused, but we'll delete it later  */
+/* This file is deprecated, but we'll delete it later  */
 
 import { useEffect, useRef } from "react";
 

@@ -38,7 +38,7 @@ function createStarTexture(): THREE.Texture {
 /** Max delta (seconds) per frame — prevents the "tab-switch wave" effect. */
 const MAX_DELTA = 0.1;
 
-export function WarpDriveStars() {
+export function StarField() {
   const pointsRef = useRef<THREE.Points>(null);
   const starCount = 2500;
   const warpSpeed = 15;

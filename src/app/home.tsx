@@ -300,7 +300,7 @@ export function HomePage() {
         </div>
       </motion.div>
 
-      {/* ── Row 5: Open space — to see WarpDriveStars ─────────────── */}
+      {/* ── Row 5: Open space — to see StarField ─────────────── */}
       <div className="h-48 flex items-center justify-center">
         <span className="text-fg/30 text-sm italic tracking-wide">
           ↑ Stars visible through transparent areas above ↑
