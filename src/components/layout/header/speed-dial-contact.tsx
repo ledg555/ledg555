@@ -2,18 +2,24 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { HiXMark } from "react-icons/hi2";
-import { speedDialContactIcons } from "../../../constants/ui/speed-dial-contact-config";
+import { common } from "../../../constants/common";
 
 export function SpeedDialContact() {
   const { t } = useTranslation(["ui"]);
   const [isOpen, setIsOpen] = useState(false);
+  const {
+    header: { quickActions },
+  } = common;
 
-  // t() retorna un array u objeto dependiendo de tu JSON. Asumimos array según tu código.
-  const contactItems = t("contactData", { returnObjects: true }) as Array<{
-    key: string;
-    label: string;
-    action: string;
-  }>;
+  const { quickActions } = t("common");
+
+  const handleItemClick = (
+    key: string,
+    action: string | ((lang: string) => string),
+  ) => {
+    console.log(key, action);
+    return undefined;
+  };
 
   return (
     <div className="relative flex items-center">
@@ -28,10 +34,10 @@ export function SpeedDialContact() {
         <motion.div
           animate={{ rotateY: isOpen ? 180 : 0 }}
           transition={{ duration: 1.5, type: "spring", bounce: 0.4 }}
-          className="w-full h-full [transform-style:preserve-3d]"
+          className="w-full h-full transform-3d"
         >
           {/* Cara Frontal (Tu foto) */}
-          <div className="absolute inset-0 [backface-visibility:hidden]">
+          <div className="absolute inset-0 backface-hidden">
             <img
               src="/Luis Delgado.webp"
               alt="Comms"
@@ -40,7 +46,7 @@ export function SpeedDialContact() {
           </div>
           {/* Cara Trasera (Icono de Cerrar/Chat) */}
           <div
-            className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]
+            className="absolute inset-0 backface-hidden transform-[rotateY(180deg)]
             bg-slate-900 flex items-center justify-center text-hud rounded-full"
           >
             <HiXMark size={24} />
@@ -65,13 +71,12 @@ export function SpeedDialContact() {
               },
             }}
           >
-            {contactItems.map((item) => {
-              const Icon = speedDialContactIcons[item.key];
+            {quickActions.map((item) => {
+              const Icon = item.icon;
               return (
-                <motion.a
+                <motion.button
                   key={item.key}
-                  href={item.action}
-                  target="_blank"
+                  onClick={handleItemClick(item.key, item.action)}
                   rel="noopener noreferrer"
                   title={item.label}
                   variants={{
@@ -85,7 +90,7 @@ export function SpeedDialContact() {
                     transition-colors duration-200"
                 >
                   {Icon && <Icon size={18} />}
-                </motion.a>
+                </motion.button>
               );
             })}
           </motion.div>

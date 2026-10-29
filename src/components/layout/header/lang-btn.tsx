@@ -21,8 +21,8 @@ export function LangBtn() {
   };
 
   const titleText = isEs
-    ? "Idioma: Español (Clic para cambiar a Inglés)"
-    : "Language: English (Click to switch to Spanish)";
+    ? "Idioma: Es (Clic para cambiar a En)"
+    : "Language: En (Click to switch to Es)";
 
   return (
     <div

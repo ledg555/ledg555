@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
 import { ThemeBtn } from "./theme-btn";
-import { navLinks } from "./nav-config";
+import { navLinks } from "../../../constants/common";
 import { useTranslation } from "react-i18next";
 import { LangBtn } from "./lang-btn";
 import { SpeedDialContact } from "./speed-dial-contact";
@@ -26,7 +26,7 @@ export function Header() {
       <div className="hidden xs:flex items-center gap-4">
         <SpeedDialContact />
         <span className="hidden md:block lm:hidden lg:block font-headings font-bold text-sm w-41 text-fg tracking-tight">
-          {t("navigationData.shipName", { ns: "common" })}
+          {t("shipName", { ns: "common" })}
         </span>
       </div>
 

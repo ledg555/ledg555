@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { HiOutlinePlus } from "react-icons/hi2";
 import { useState } from "react";
 import { Link } from "react-router";
-import { navLinks } from "./nav-config";
+import { navLinks } from "../../../constants/common";
 
 export function SpeedDialNav() {
   const { t } = useTranslation();
