@@ -236,9 +236,12 @@
   --bg-panel: rgb(from var(--primitive-azure-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Props) */
-  --screen-safe-base: var(--primitive-mint-150);
-  --screen-warn-base: var(--primitive-sulfur-100);
-  --screen-danger-base: var(--primitive-siren-400);
+  --screen-safe: var(--primitive-mint-150);
+  --hull-safe: var(--primitive-mint-450);
+  --screen-warn: var(--primitive-sulfur-100);
+  --hull-warn: var(--primitive-sulfur-300);
+  --screen-danger: var(--primitive-siren-400);
+  --hull-danger: var(--primitive-siren-450);
   --warning-stripe: var(--primitive-sulfur-100);
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
@@ -280,22 +283,22 @@
   --screen-text: var(--primitive-siren-50);
   --screen-text-glow: rgb(from var(--primitive-aqua-150) r g b / 80%);
 
-  --btn-bezel-bg: linear-gradient(
+  --btn-bezel: linear-gradient(
     180deg,
     var(--primitive-titanium-100) 0%,
     var(--primitive-titanium-200) 50%,
     var(--primitive-titanium-300) 100%
   );
-  --btn-well-bg: var(--primitive-titanium-850);
-  --btn-cap-bg: linear-gradient(
+  --btn-well: var(--primitive-titanium-850);
+  --btn-cap: linear-gradient(
     180deg,
     var(--primitive-titanium-50) 0%,
     var(--primitive-titanium-150) 50%,
     var(--primitive-titanium-250) 100%
   );
   --btn-cap-border-b: var(--primitive-titanium-500);
-  --btn-cap-shadow-color: var(--primitive-titanium-400);
-  --btn-screw-color: rgb(from var(--primitive-ceramic-950) r g b / 40%);
+  --btn-cap-shadow: var(--primitive-titanium-400);
+  --btn-screw: rgb(from var(--primitive-ceramic-950) r g b / 40%);
 }
 
 .dark {
@@ -312,9 +315,12 @@
   --bg-panel: rgb(from var(--primitive-siren-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  --screen-safe-base: var(--primitive-topaz-200);
-  --screen-warn-base: var(--primitive-tangerine-300);
-  --screen-danger-base: var(--primitive-siren-100);
+  --screen-safe: var(--primitive-topaz-200);
+  --hull-safe: var(--primitive-topaz-200);
+  --screen-warn: var(--primitive-tangerine-300);
+  --hull-warn: var(--primitive-tangerine-300);
+  --screen-danger: var(--primitive-siren-100);
+  --hull-danger: var(--primitive-siren-400);
   --warning-stripe: var(--primitive-topaz-200);
 
   --screen-casing: linear-gradient(
@@ -356,22 +362,22 @@
   --screen-text: var(--primitive-siren-50);
   --screen-text-glow: rgb(from var(--primitive-crimson-350) r g b / 80%);
 
-  --btn-bezel-bg: linear-gradient(
+  --btn-bezel: linear-gradient(
     180deg,
     var(--primitive-titanium-600) 0%,
     var(--primitive-titanium-650) 50%,
     var(--primitive-titanium-750) 100%
   );
-  --btn-well-bg: var(--primitive-titanium-900);
-  --btn-cap-bg: linear-gradient(
+  --btn-well: var(--primitive-titanium-900);
+  --btn-cap: linear-gradient(
     180deg,
     var(--primitive-titanium-700) 0%,
     var(--primitive-titanium-750) 50%,
     var(--primitive-titanium-800) 100%
   );
   --btn-cap-border-b: rgb(from var(--primitive-ceramic-950) r g b / 80%);
-  --btn-cap-shadow-color: var(--primitive-titanium-950);
-  --btn-screw-color: rgb(from white r g b / 20%);
+  --btn-cap-shadow: var(--primitive-titanium-950);
+  --btn-screw: rgb(from white r g b / 20%);
 }
 
 @theme {
@@ -383,19 +389,22 @@
   --color-border-accent: var(--border-accent);
 
   --color-panel: var(--bg-panel);
-  --color-screen-safe-base: var(--screen-safe-base);
-  --color-screen-warn-base: var(--screen-warn-base);
-  --color-screen-danger-base: var(--screen-danger-base);
+  --color-screen-safe: var(--screen-safe);
+  --color-hull-safe: var(--hull-safe);
+  --color-screen-warn: var(--screen-warn);
+  --color-hull-warn: var(--hull-warn);
+  --color-screen-danger: var(--screen-danger);
+  --color-hull-danger: var(--hull-danger);
   --color-warning-stripe: var(--warning-stripe);
 
-  --background-image-btn-bezel-bg: var(--btn-bezel-bg);
-  --background-image-btn-cap-bg: var(--btn-cap-bg);
+  --background-image-btn-bezel: var(--btn-bezel);
+  --background-image-btn-cap: var(--btn-cap);
 
   /* Colores sólidos del botón: Mapeados a color */
-  --color-btn-well-bg: var(--btn-well-bg);
+  --color-btn-well: var(--btn-well);
   --color-btn-cap-border-b: var(--btn-cap-border-b);
-  --color-btn-cap-shadow-color: var(--btn-cap-shadow-color);
-  --color-btn-screw-color: var(--btn-screw-color);
+  --color-btn-cap-shadow: var(--btn-cap-shadow);
+  --color-btn-screw: var(--btn-screw);
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -479,15 +488,15 @@
   /* --- DYNAMIC STATS OVERRIDES --- */
   /* Override --dot-color based on component status */
   &[data-status="danger"] {
-    --dot-color: var(--color-screen-danger-base);
+    --dot-color: var(--color-screen-danger);
   }
 
   &[data-status="warning"] {
-    --dot-color: var(--color-screen-warn-base);
+    --dot-color: var(--color-screen-warn);
   }
 
   &[data-status="safe"] {
-    --dot-color: var(--color-screen-safe-base);
+    --dot-color: var(--color-screen-safe);
   }
 
   &[data-status="info"] {

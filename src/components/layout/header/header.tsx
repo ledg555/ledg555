@@ -10,7 +10,7 @@ import { TransmissionBtn } from "./transmission-btn";
 
 export function Header() {
   const location = useLocation();
-  const { t } = useTranslation(["ui"]);
+  const { t } = useTranslation(["common"]);
 
   return (
     <motion.header
@@ -26,7 +26,7 @@ export function Header() {
       <div className="hidden xs:flex items-center gap-4">
         <SpeedDialContact />
         <span className="hidden md:block lm:hidden lg:block font-headings font-bold text-sm w-41 text-fg tracking-tight">
-          {t("navigationData.shipName", { ns: "ui" })}
+          {t("navigationData.shipName", { ns: "common" })}
         </span>
       </div>
 
@@ -38,7 +38,9 @@ export function Header() {
             <Link
               key={item.translationKey}
               to={item.url}
-              title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+              title={t(`navigationData.${item.translationKey}`, {
+                ns: "common",
+              })}
               data-active={isCurrentPath}
               className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
             >
@@ -120,7 +122,7 @@ export function Header() {
                       : "0 0 5px var(--screen-text-glow)",
                   }}
                 >
-                  {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+                  {t(`navigationData.${item.translationKey}`, { ns: "common" })}
                 </span>
               </div>
             </Link>
