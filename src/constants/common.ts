@@ -12,7 +12,33 @@ import { BiGitBranch, BiLogoLinkedin } from "react-icons/bi";
 
 export const common = {
   header: {
-    navlinks: [], // TODO
+    navlinks: [
+      {
+        key: "home",
+        url: "/",
+        icon: MdOutlineAnchor,
+      },
+      {
+        key: "projects",
+        url: "/projects",
+        icon: LuTerminal,
+      },
+      {
+        key: "experience",
+        url: "/experience",
+        icon: LuOrbit,
+      },
+      {
+        key: "skills",
+        url: "/skills",
+        icon: HiOutlineBolt,
+      },
+      {
+        key: "contact",
+        url: "/contact",
+        icon: HiOutlineUsers,
+      },
+    ], // TODO
     quickActions: [
       {
         key: "resume",
@@ -50,27 +76,27 @@ export const common = {
 
 export const navLinks = [
   {
-    translationKey: "home",
+    key: "home",
     url: "/",
     icon: MdOutlineAnchor,
   },
   {
-    translationKey: "projects",
+    key: "projects",
     url: "/projects",
     icon: LuTerminal,
   },
   {
-    translationKey: "experience",
+    key: "experience",
     url: "/experience",
     icon: LuOrbit,
   },
   {
-    translationKey: "skills",
+    key: "skills",
     url: "/skills",
     icon: HiOutlineBolt,
   },
   {
-    translationKey: "contact",
+    key: "contact",
     url: "/contact",
     icon: HiOutlineUsers,
   },

@@ -31,12 +31,12 @@ interface AboutData {
 
 // ── Component ───────────────────────────────────────────────────────────
 export function HomePage() {
-  const { t } = useTranslation(["about", "jobs", "ui"]);
+  const { t } = useTranslation(["about", "jobs"]);
 
   const about = t("data", {
     ns: "about",
     returnObjects: true,
-  }) as AboutData["data"];
+  });
   const aboutLabels = t("ui.labels", {
     ns: "about",
     returnObjects: true,

@@ -36,9 +36,9 @@ export function Header() {
           const isCurrentPath = location.pathname === item.url;
           return (
             <Link
-              key={item.translationKey}
+              key={item.key}
               to={item.url}
-              title={t(`navigationData.${item.translationKey}`, {
+              title={t(`navigationData.${item.key}`, {
                 ns: "common",
               })}
               data-active={isCurrentPath}
@@ -122,7 +122,7 @@ export function Header() {
                       : "0 0 5px var(--screen-text-glow)",
                   }}
                 >
-                  {t(`navigationData.${item.translationKey}`, { ns: "common" })}
+                  {t(`navigationData.${item.key}`, { ns: "common" })}
                 </span>
               </div>
             </Link>
