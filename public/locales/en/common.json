@@ -1,6 +1,5 @@
 {
   "shipName": "AEGIS BB-0057 BOLD DRAGON",
-  "header": {},
   "navigationData": {
     "about": "About me",
     "home": "Command Bridge",
@@ -9,36 +8,26 @@
     "skills": "Armory",
     "contact": "Agora"
   },
-  "contactData": [
-    {
-      "key": "resume",
+  "quickActions": {
+    "resume": {
       "label": "See resume",
-      "toast": false,
-      "action": "Luis_Delgado_en.pdf"
+      "toastMsg": null
     },
-    {
-      "key": "email",
+    "email": {
       "label": "Copy email",
-      "toast": "Email copied!",
-      "action": "dev.ledg5555@gmail.com"
+      "toastMsg": "Email copied!"
     },
-    {
-      "key": "phone",
-      "label": "Send WhatsApp",
-      "toast": false,
-      "action": "http://wa.me/7772688189"
+    "phone": {
+      "label": "Copy phone number",
+      "toastMsg": "Phone number copied!"
     },
-    {
-      "key": "github",
+    "github": {
       "label": "Visit GitHub",
-      "toast": false,
-      "action": "https://github.com/ledg555"
+      "toastMsg": null
     },
-    {
-      "key": "linkedin",
+    "linkedin": {
       "label": "Visit LinkedIn",
-      "toast": false,
-      "action": "https://linkedin.com/in/ledg555"
+      "toastMsg": null
     }
-  ]
+  }
 }

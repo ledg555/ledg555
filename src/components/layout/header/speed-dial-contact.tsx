@@ -5,13 +5,9 @@ import { HiXMark } from "react-icons/hi2";
 import { common } from "../../../constants/common";
 
 export function SpeedDialContact() {
-  const { t } = useTranslation(["ui"]);
+  const { t } = useTranslation(["common"]);
   const [isOpen, setIsOpen] = useState(false);
-  const {
-    header: { quickActions },
-  } = common;
-
-  const { quickActions } = t("common");
+  const actionsCfg = common.header.quickActions;
 
   const handleItemClick = (
     key: string,
@@ -71,14 +67,14 @@ export function SpeedDialContact() {
               },
             }}
           >
-            {quickActions.map((item) => {
+            {actionsCfg.map((item) => {
               const Icon = item.icon;
               return (
                 <motion.button
                   key={item.key}
                   onClick={handleItemClick(item.key, item.action)}
                   rel="noopener noreferrer"
-                  title={item.label}
+                  title={t(`quickActions.${item.key}.label`, { ns: "common" })}
                   variants={{
                     open: { y: 0, opacity: 1, scale: 1 },
                     closed: { y: -20, opacity: 0, scale: 0.5 },

@@ -12,7 +12,7 @@ import { BiGitBranch, BiLogoLinkedin } from "react-icons/bi";
 
 export const common = {
   header: {
-    navlinks: [],
+    navlinks: [], // TODO
     quickActions: [
       {
         key: "resume",
@@ -22,7 +22,7 @@ export const common = {
       },
       {
         key: "email",
-        action: "dev.ledg5555@gmail.com",
+        action: "contact@ledg.space",
         hasToast: true,
         icon: HiOutlineEnvelope,
       },
