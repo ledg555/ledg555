@@ -1,0 +1,32 @@
+{
+  "shipName": "ACTA BB-0057 DRAGÓN AUDAZ",
+  "navigationData": {
+    "home": "Puente",
+    "projects": "Bahía de Sistemas",
+    "experience": "Sala de Magallanes",
+    "skills": "Armería",
+    "contact": "Ágora"
+  },
+  "quickActions": {
+    "resume": {
+      "label": "Ver currículum",
+      "toastMsg": null
+    },
+    "email": {
+      "label": "Copiar correo",
+      "toastMsg": "¡Se copió el correo!"
+    },
+    "phone": {
+      "label": "Copiar teléfono",
+      "toastMsg": "¡Se copió el teléfono!"
+    },
+    "github": {
+      "label": "Visitar GitHub",
+      "toastMsg": null
+    },
+    "linkedin": {
+      "label": "Visitar LinkedIn",
+      "toastMsg": null
+    }
+  }
+}

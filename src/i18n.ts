@@ -10,7 +10,7 @@ i18n
   .init({
     debug: true,
     fallbackLng: "en",
-    defaultNS: "ui",
+    defaultNS: "common",
     returnObjects: true,
     // detection: {
     //   order: ["path", "cookie", "htmlTag", "localStorage", "subdomain"],

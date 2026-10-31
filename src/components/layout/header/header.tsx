@@ -1,16 +1,16 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router";
-import { TransmissionBtn } from "../transmission-btn";
-import { LangBtn } from "../lang-btn";
-import { ThemeBtn } from "../theme-btn";
-import { navLinks } from "./nav-config";
+import { ThemeBtn } from "./theme-btn";
+import { navLinks } from "../../../constants/common";
 import { useTranslation } from "react-i18next";
-import { SpeedDialContact } from "../speed-dial-contact";
-import { SpeedDialNav } from "../speed-dial-nav";
+import { LangBtn } from "./lang-btn";
+import { SpeedDialContact } from "./speed-dial-contact";
+import { SpeedDialNav } from "./speed-dial-nav";
+import { TransmissionBtn } from "./transmission-btn";
 
 export function Header() {
   const location = useLocation();
-  const { t } = useTranslation(["ui"]);
+  const { t } = useTranslation(["common"]);
 
   return (
     <motion.header
@@ -26,7 +26,7 @@ export function Header() {
       <div className="hidden xs:flex items-center gap-4">
         <SpeedDialContact />
         <span className="hidden md:block lm:hidden lg:block font-headings font-bold text-sm w-41 text-fg tracking-tight">
-          {t("navigationData.shipName", { ns: "ui" })}
+          {t("shipName", { ns: "common" })}
         </span>
       </div>
 
@@ -36,9 +36,11 @@ export function Header() {
           const isCurrentPath = location.pathname === item.url;
           return (
             <Link
-              key={item.translationKey}
+              key={item.key}
               to={item.url}
-              title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+              title={t(`navigationData.${item.key}`, {
+                ns: "common",
+              })}
               data-active={isCurrentPath}
               className="grow 2xl:grow-0 screen-drop group relative inline-flex items-center justify-center p-[1.5px] lm:max-w-20 2xl:max-w-none cursor-pointer select-none"
             >
@@ -50,10 +52,9 @@ export function Header() {
 
               {/* Screen Glass Interior */}
               <div className="relative grow 2xl:grow-0 flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 lm:max-w-20 2xl:max-w-none xl:h-auto octagon-sm overflow-hidden transition-all duration-250 group-hover:-translate-y-0.5 group-active:translate-y-0">
-                {/* Layer 1: CRT Micro-Scanlines & Glare */}
+                {/* Layer 1: Glare */}
                 <div
                   data-active={isCurrentPath}
-                  data-status="safe"
                   className="absolute inset-0 pointer-events-none screen screen-glare screen-scanline screen-dots-left screen-dots-right"
                 />
 
@@ -121,7 +122,7 @@ export function Header() {
                       : "0 0 5px var(--screen-text-glow)",
                   }}
                 >
-                  {t(`navigationData.${item.translationKey}`, { ns: "ui" })}
+                  {t(`navigationData.${item.key}`, { ns: "common" })}
                 </span>
               </div>
             </Link>
