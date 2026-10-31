@@ -31,12 +31,12 @@ interface AboutData {
 
 // ── Component ───────────────────────────────────────────────────────────
 export function HomePage() {
-  const { t } = useTranslation(["about", "jobs", "ui"]);
+  const { t } = useTranslation(["about", "jobs"]);
 
   const about = t("data", {
     ns: "about",
     returnObjects: true,
-  }) as AboutData["data"];
+  });
   const aboutLabels = t("ui.labels", {
     ns: "about",
     returnObjects: true,
@@ -103,9 +103,9 @@ export function HomePage() {
               </ul>
             </div>
 
-            {/* Active badge — status-safe */}
-            <span className="mt-1 inline-flex items-center gap-1.5 w-fit text-xs font-bold px-3 py-1 rounded-full bg-status-safe/20 text-status-safe border border-status-safe/40">
-              <span className="w-2 h-2 rounded-full bg-status-safe animate-pulse" />
+            {/* Active badge — screen-safe */}
+            <span className="mt-1 inline-flex items-center gap-1.5 w-fit text-xs font-bold px-3 py-1 rounded-full bg-screen-safe/20 text-screen-safe border border-screen-safe/40">
+              <span className="w-2 h-2 rounded-full bg-screen-safe animate-pulse" />
               {aboutBadge}
             </span>
 
@@ -133,7 +133,7 @@ export function HomePage() {
           </div>
         </motion.div>
 
-        {/* Status panel — status-safe, status-warn, bg-panel */}
+        {/* Status panel — screen-safe, screen-warn, bg-panel */}
         <motion.div
           className="bg-panel/90 backdrop-blur-md border border-border-accent rounded-2xl p-6 flex flex-col gap-4"
           initial={{ opacity: 0, x: 40 }}
@@ -159,15 +159,15 @@ export function HomePage() {
               <span
                 className={`text-sm font-bold ${
                   item.status === "safe"
-                    ? "text-status-safe"
-                    : "text-status-warn"
+                    ? "text-screen-safe"
+                    : "text-screen-warn"
                 }`}
               >
                 <span
                   className={`inline-block w-2 h-2 rounded-full mr-1.5 ${
                     item.status === "safe"
-                      ? "bg-status-safe shadow-sm shadow-status-safe/50"
-                      : "bg-status-warn shadow-sm shadow-status-warn/50"
+                      ? "bg-screen-safe shadow-sm shadow-screen-safe/50"
+                      : "bg-screen-warn shadow-sm shadow-screen-warn/50"
                   }`}
                 />
                 {item.value}
@@ -203,8 +203,8 @@ export function HomePage() {
           { token: "accent-base", cls: "bg-accent-base" },
           { token: "accent-glow", cls: "bg-accent-glow" },
           { token: "panel", cls: "bg-panel" },
-          { token: "status-safe", cls: "bg-status-safe" },
-          { token: "status-warn", cls: "bg-status-warn" },
+          { token: "screen-safe", cls: "bg-screen-safe" },
+          { token: "screen-warn", cls: "bg-screen-warn" },
           { token: "deep-blue", cls: "bg-deep-blue" },
         ].map((s) => (
           <div key={s.token} className="flex flex-col items-center gap-1">
@@ -300,7 +300,7 @@ export function HomePage() {
         </div>
       </motion.div>
 
-      {/* ── Row 5: Open space — to see WarpDriveStars ─────────────── */}
+      {/* ── Row 5: Open space — to see StarField ─────────────── */}
       <div className="h-48 flex items-center justify-center">
         <span className="text-fg/30 text-sm italic tracking-wide">
           ↑ Stars visible through transparent areas above ↑

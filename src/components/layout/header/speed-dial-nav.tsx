@@ -2,16 +2,16 @@ import { useTranslation } from "react-i18next";
 import { HiOutlinePlus } from "react-icons/hi2";
 import { useState } from "react";
 import { Link } from "react-router";
-import { navLinks } from "./header/nav-config";
+import { common } from "../../../constants/common";
 
 export function SpeedDialNav() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["common"]);
   const [open, setOpen] = useState(false);
 
-  const speedDialContactItems = navLinks.map((item) => (
+  const speedDialContactItems = common.header.navlinks.map((item) => (
     <Link
-      title={t(`navigationData.${item.translationKey}`, { ns: "ui" })}
-      key={item.translationKey}
+      title={t(`navigationData.${item.key}`, { ns: "common" })}
+      key={item.key}
       to={`${item.url}`}
       className={`bg-green-400 p-2.5 rounded-full cursor-pointer hover:scale-110 duration-100 ease-in ${
         open && "animate-pull"

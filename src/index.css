@@ -10,28 +10,95 @@
 
 /* ==========================================================================
    DESIGN TOKENS: LAYER 1 - COLOR PRIMITIVES (PURE 6 DIGIT HEX)
-   RULE OF THUMB: Don't use alpha channel here. Use color-mix() or
+   RULE OF THUMB: Don't use alpha channel here. Use rgb() RCS function or
    Tailwind's opacity syntax (ej. bg-(--accent-base)/40) in upper layers
    ========================================================================== */
 :root {
-  --primitive-ceramic-50: #f4f6f9;
-  --primitive-ceramic-100: #e5e5ea;
+  /* Ship hull, walls, surfaces */
+  --primitive-ceramic-50: #eceff0; /* (formerly f4f6f9) */
+  --primitive-ceramic-100: #dadfe2; /* (formerly e5e5ea) */
+  --primitive-ceramic-150: #caced2;
+  --primitive-ceramic-200: #babec2;
+  --primitive-ceramic-250: #aaafb2;
+  --primitive-ceramic-300: #9a9fa2;
+  --primitive-ceramic-350: #8b9093;
+  --primitive-ceramic-400: #7c8184;
+  --primitive-ceramic-450: #6e7275;
+  --primitive-ceramic-500: #606467;
+  --primitive-ceramic-550: #525658;
+  --primitive-ceramic-600: #45484a;
+  --primitive-ceramic-650: #383b3d;
+  --primitive-ceramic-700: #2c2e30;
+  --primitive-ceramic-750: #202223;
+  --primitive-ceramic-800: #151617; /* (formerly 14181a) */
+  --primitive-ceramic-850: #0a0b0c;
+  --primitive-ceramic-900: #030304;
+  --primitive-ceramic-950: #010102; /* (formerly 03080b) */
+  /* Metal frames and elements */
+  --primitive-titanium-50: #eceff2; /* Cap highlight light (eaeff6) */
+  --primitive-titanium-100: #dadee5; /* Bezel highlight light (d5dae2) */
+  --primitive-titanium-150: #c9ced7; /* Cap mid light (cfd8e5) */
+  --primitive-titanium-200: #b7bec9; /* Bezel mid light (bcc4d0) */
+  --primitive-titanium-250: #a7aebb; /* Cap shade light (9faab9) */
+  --primitive-titanium-300: #979fac; /* Bezel shade light (929daa) */
+  --primitive-titanium-350: #87909e;
+  --primitive-titanium-400: #788190; /* Groove / shadow light (6b7685) */
+  --primitive-titanium-450: #697281; /* Bevel rim light */
+  --primitive-titanium-500: #5b6472; /* Bottom border light (5e6878) */
+  --primitive-titanium-550: #4d5664;
+  --primitive-titanium-600: #404855;
+  --primitive-titanium-650: #333b47;
+  --primitive-titanium-700: #272e39; /* Cap highlight dark (2c323e) */
+  --primitive-titanium-750: #1c222b; /* Cap/Bezel mid dark (1f242d/252830) */
+  --primitive-titanium-800: #12161e; /* Cap/Bezel shade dark (12151b/181b22) */
+  --primitive-titanium-850: #080b11; /* Bezel base & well dark (0c0e12/0a0c0f) */
+  --primitive-titanium-900: #020306; /* Cavity deep shadow */
+  --primitive-titanium-950: #000001; /* Deep seam */
+  /* Exploration mode glare, halos and high energy elements H ~ 208° */
   --primitive-aqua-50: #ccf8ff;
-  --primitive-aqua-400: #00e5ff;
+  --primitive-aqua-100: #8ef0ff;
+  --primitive-aqua-150: #0be7ff; /* Pivot calibrado a L = 0.85 (alt. R=0: 00e7ff) */
+  --primitive-aqua-200: #00d5eb;
+  --primitive-aqua-250: #00c4d8;
+  --primitive-aqua-300: #00b2c5;
+  --primitive-aqua-350: #00a1b2;
+  --primitive-aqua-400: #0091a0;
+  --primitive-aqua-450: #00808e;
+  --primitive-aqua-500: #00707c;
+  --primitive-aqua-550: #00606b;
+  --primitive-aqua-600: #00505a;
+  --primitive-aqua-650: #003f48;
+  --primitive-aqua-700: #002f37;
+  --primitive-aqua-750: #001f25;
+  --primitive-aqua-800: #001014;
+  --primitive-aqua-850: #00080b;
+  --primitive-aqua-900: #000305;
+  --primitive-aqua-950: #000101;
+  /* Exploration mode screens, H ~ 260° */
+  --primitive-azure-50: #e5efff;
   --primitive-azure-100: #ccdfff;
+  --primitive-azure-150: #b2cfff;
+  --primitive-azure-200: #98bfff;
+  --primitive-azure-250: #7daeff;
   --primitive-azure-300: #3d94ff;
+  --primitive-azure-350: #448bff;
   --primitive-azure-400: #1d76ff;
-  --primitive-azure-500: #0058ef; /* Screen Radial Center. Pivot color */
-  --primitive-azure-550: #014cb8;
+  --primitive-azure-450: #0065f1;
+  --primitive-azure-500: #0058d4; /* Pivot */
+  --primitive-azure-550: #004cb8;
+  --primitive-azure-600: #003f9d;
   --primitive-azure-650: #003482;
+  --primitive-azure-700: #002869;
   --primitive-azure-750: #001d51;
   --primitive-azure-800: #00133a;
   --primitive-azure-850: #000a28;
-
+  --primitive-azure-900: #000310;
+  --primitive-azure-950: #000002;
+  /* Exploration mode status safe, H ~ 145° */
   --primitive-mint-50: #caffca;
   --primitive-mint-100: #80ff88;
   --primitive-mint-150: #00f847;
-  --primitive-mint-200: #00e540;
+  --primitive-mint-200: #00e540; /* Pivot */
   --primitive-mint-250: #00d23a;
   --primitive-mint-300: #00bf34;
   --primitive-mint-350: #00ad2f;
@@ -47,9 +114,9 @@
   --primitive-mint-850: #001001;
   --primitive-mint-900: #000500;
   --primitive-mint-950: #000100;
-
+  /* Exploration mode status warn, H ~ 102° */
   --primitive-sulfur-50: #f4facb;
-  --primitive-sulfur-100: #f5ea00;
+  --primitive-sulfur-100: #f5ea00; /* Pivot */
   --primitive-sulfur-150: #e4d000;
   --primitive-sulfur-200: #cfbc00;
   --primitive-sulfur-250: #bba900;
@@ -67,33 +134,33 @@
   --primitive-sulfur-850: #100c00;
   --primitive-sulfur-900: #090600;
   --primitive-sulfur-950: #020100;
-
-  --primitive-topaz-50: #ffedc7;
-  --primitive-topaz-100: #ffe193;
-  --primitive-topaz-150: #ffc949;
-  --primitive-topaz-200: #eeb403;
-  --primitive-topaz-250: #d6a000;
-  --primitive-topaz-300: #c59300;
-  --primitive-topaz-350: #b48701;
-  --primitive-topaz-400: #a37900;
-  --primitive-topaz-450: #936d00;
-  --primitive-topaz-500: #836000;
-  --primitive-topaz-550: #735400;
-  --primitive-topaz-600: #634700;
-  --primitive-topaz-650: #533b00;
-  --primitive-topaz-700: #432f00;
-  --primitive-topaz-750: #342300;
-  --primitive-topaz-800: #251800;
-  --primitive-topaz-850: #170e00;
-  --primitive-topaz-900: #0c0600;
-  --primitive-topaz-950: #020100;
-
+  /* Red Alert mode status safe, H ~ 90° */
+  --primitive-topaz-50: #ffedbe;
+  --primitive-topaz-100: #ffda74;
+  --primitive-topaz-150: #fac700;
+  --primitive-topaz-200: #e6b700; /* Pivot */
+  --primitive-topaz-250: #d4a800;
+  --primitive-topaz-300: #c19900;
+  --primitive-topaz-350: #af8a00;
+  --primitive-topaz-400: #9d7c00;
+  --primitive-topaz-450: #8b6e00;
+  --primitive-topaz-500: #7a6000;
+  --primitive-topaz-550: #695200;
+  --primitive-topaz-600: #594500;
+  --primitive-topaz-650: #493800;
+  --primitive-topaz-700: #3a2c00;
+  --primitive-topaz-750: #2b2000;
+  --primitive-topaz-800: #1d1500;
+  --primitive-topaz-850: #100a00;
+  --primitive-topaz-900: #050300;
+  --primitive-topaz-950: #010000;
+  /* Red Alert mode status warn, H ~ 45° */
   --primitive-tangerine-50: #ffe8db;
   --primitive-tangerine-100: #ffd4bc;
   --primitive-tangerine-150: #ffbf93;
   --primitive-tangerine-200: #ffa45e;
   --primitive-tangerine-250: #ff8821;
-  --primitive-tangerine-300: #f57400;
+  --primitive-tangerine-300: #f57400; /* Pivot */
   --primitive-tangerine-350: #e46600;
   --primitive-tangerine-400: #cc5700;
   --primitive-tangerine-450: #b54800;
@@ -107,7 +174,7 @@
   --primitive-tangerine-850: #1d0200;
   --primitive-tangerine-900: #0f0000;
   --primitive-tangerine-950: #030000;
-
+  /* Red Alert mode glare and halos, H ~ 19.5° */
   --primitive-crimson-50: #ffe8e8;
   --primitive-crimson-100: #ffd1d0;
   --primitive-crimson-150: #ffb9b8;
@@ -115,7 +182,8 @@
   --primitive-crimson-250: #ff8387;
   --primitive-crimson-300: #ff616c;
   --primitive-crimson-350: #ff2f50;
-  --primitive-crimson-400: #ee0040;
+  --primitive-crimson-400: #ee0040; /* Pivot */
+  --primitive-crimson-450: #d40038;
   --primitive-crimson-500: #ba0030;
   --primitive-crimson-550: #a20029;
   --primitive-crimson-600: #8a0021;
@@ -126,7 +194,7 @@
   --primitive-crimson-850: #1e0003;
   --primitive-crimson-900: #0d0001;
   --primitive-crimson-950: #020000;
-
+  /* Status danger & Red Alert mode screen and high energy elements, H ~ 27° */
   --primitive-siren-50: #ffe9e6;
   --primitive-siren-100: #ffd2cc;
   --primitive-siren-150: #ffbab1;
@@ -134,7 +202,8 @@
   --primitive-siren-250: #ff8579;
   --primitive-siren-300: #ff645a;
   --primitive-siren-350: #ff3534;
-  --primitive-siren-400: #f0001b;
+  --primitive-siren-400: #f0001b; /* Pivot */
+  --primitive-siren-450: #d50017;
   --primitive-siren-500: #bc0013;
   --primitive-siren-550: #a3000f;
   --primitive-siren-600: #8b000b;
@@ -145,11 +214,6 @@
   --primitive-siren-850: #1f0001;
   --primitive-siren-900: #0d0000;
   --primitive-siren-950: #020000;
-
-  --primitive-ceramic-950: #03080b;
-  --primitive-ceramic-700: #14181a;
-
-  --primitive-xxx-400: #b91c1c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -163,21 +227,22 @@
   --bg-base: var(--primitive-ceramic-100);
   --bg-surface: var(--primitive-ceramic-50);
 
-  --accent-base: var(--primitive-aqua-400);
-  --accent-glow: color-mix(in srgb, var(--primitive-aqua-400) 40%, transparent);
-  --border-accent: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 30%,
-    transparent
-  );
-  --text-base: #141a22;
+  --accent-base: var(--primitive-aqua-150);
+  --accent-glow: rgb(from var(--primitive-aqua-150) r g b / 40%);
+  --border-accent: var(--primitive-aqua-150);
+  --text-base: var(--primitive-titanium-750);
 
   /* FONDOS TINTADOS (Paneles de datos holográficos) */
-  --bg-panel: #00274b;
+  --bg-panel: rgb(from var(--primitive-azure-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Props) */
-  --status-safe: var(--primitive-mint-200);
-  --status-warn: var(--primitive-sulfur-100);
+  --screen-safe: var(--primitive-mint-150);
+  --hull-safe: var(--primitive-mint-450);
+  --screen-warn: var(--primitive-sulfur-100);
+  --hull-warn: var(--primitive-sulfur-300);
+  --screen-danger: var(--primitive-siren-400);
+  --hull-danger: var(--primitive-siren-450);
+  --warning-stripe: var(--primitive-sulfur-100);
 
   /* PANTALLAS SCIFI (Navlinks, Terminales, HUDs) */
   --screen-casing: linear-gradient(
@@ -192,26 +257,10 @@
     var(--primitive-azure-300) 45%,
     var(--primitive-azure-750) 100%
   );
-  --screen-border: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 50%,
-    transparent
-  );
-  --screen-border-active: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 95%,
-    transparent
-  );
-  --screen-glow: color-mix(
-    in srgb,
-    var(--primitive-azure-300) 45%,
-    transparent
-  );
-  --screen-glow-active: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 85%,
-    transparent
-  );
+  --screen-border: rgb(from var(--primitive-aqua-150) r g b / 50%);
+  --screen-border-active: rgb(from var(--primitive-aqua-150) r g b / 95%);
+  --screen-glow: rgb(from var(--primitive-azure-300) r g b / 45%);
+  --screen-glow-active: rgb(from var(--primitive-aqua-150) r g b / 85%);
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
     var(--primitive-azure-500) 0%,
@@ -226,48 +275,54 @@
   );
   --screen-bg-active: radial-gradient(
     135% 120% at 50% 0%,
-    var(--primitive-aqua-400) 0%,
+    var(--primitive-aqua-150) 0%,
     var(--primitive-azure-500) 35%,
     var(--primitive-azure-650) 80%,
     var(--primitive-azure-800) 100%
   );
   --screen-text: var(--primitive-siren-50);
-  --screen-text-glow: color-mix(
-    in srgb,
-    var(--primitive-aqua-400) 80%,
-    transparent
+  --screen-text-glow: rgb(from var(--primitive-aqua-150) r g b / 80%);
+
+  --btn-bezel: linear-gradient(
+    180deg,
+    var(--primitive-titanium-100) 0%,
+    var(--primitive-titanium-200) 50%,
+    var(--primitive-titanium-300) 100%
   );
+  --btn-well: var(--primitive-titanium-850);
+  --btn-cap: linear-gradient(
+    180deg,
+    var(--primitive-titanium-50) 0%,
+    var(--primitive-titanium-150) 50%,
+    var(--primitive-titanium-250) 100%
+  );
+  --btn-cap-border-b: var(--primitive-titanium-500);
+  --btn-cap-shadow: var(--primitive-titanium-400);
+  --btn-screw: rgb(from var(--primitive-ceramic-950) r g b / 40%);
 }
 
 .dark {
-  --bg-base: var(--primitive-ceramic-950);
-  --bg-surface: var(--primitive-ceramic-700);
+  --bg-base: var(--primitive-ceramic-900);
+  --bg-surface: var(--primitive-ceramic-800);
 
   --accent-base: var(--primitive-siren-400);
-  --accent-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-400) 40%,
-    transparent
-  );
+  --accent-glow: rgb(from var(--primitive-crimson-400) r g b / 40%);
 
-  --border-accent: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 30%,
-    transparent
-  );
-  --text-base: #cbd5e1;
+  --border-accent: var(--primitive-siren-500);
+  --text-base: var(--primitive-titanium-200);
 
   /* FONDOS TINTADOS (Paneles de alerta) */
-  --bg-panel: color-mix(
-    in srgb,
-    var(--primitive-siren-750) 55%,
-    transparent
-  ); /* El rojo transparente (Antes alert-red-bg) */
+  --bg-panel: rgb(from var(--primitive-siren-650) r g b / 45%);
 
   /* LUCES Y ESTADOS (Sobreescritura para Alerta Roja) */
-  --status-safe: var(--primitive-topaz-200); /* #ff9c10 */
-  --status-warn: var(--primitive-tangerine-250); /* #f26c25 */
-  /* PANTALLAS SCIFI (Alerta Roja) */
+  --screen-safe: var(--primitive-topaz-200);
+  --hull-safe: var(--primitive-topaz-200);
+  --screen-warn: var(--primitive-tangerine-300);
+  --hull-warn: var(--primitive-tangerine-300);
+  --screen-danger: var(--primitive-siren-100);
+  --hull-danger: var(--primitive-siren-400);
+  --warning-stripe: var(--primitive-topaz-200);
+
   --screen-casing: linear-gradient(
     180deg,
     var(--primitive-siren-100) 0%,
@@ -281,25 +336,13 @@
     var(--primitive-siren-750) 100%
   );
 
-  --screen-border: color-mix(
-    in srgb,
-    var(--primitive-siren-350) 55%,
-    transparent
-  );
+  --screen-border: rgb(from var(--primitive-siren-350) r g b / 55%);
   --screen-border-active: var(--primitive-siren-350);
-  --screen-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 45%,
-    transparent
-  );
-  --screen-glow-active: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 85%,
-    transparent
-  );
+  --screen-glow: rgb(from var(--primitive-crimson-350) r g b / 40%);
+  --screen-glow-active: rgb(from var(--primitive-crimson-350) r g b / 85%);
   --screen-bg: radial-gradient(
     135% 120% at 50% 5%,
-    var(--primitive-siren-500) 0%,
+    var(--primitive-siren-550) 0%,
     var(--primitive-siren-650) 45%,
     var(--primitive-siren-850) 90%
   );
@@ -317,11 +360,24 @@
     var(--primitive-siren-850) 100%
   );
   --screen-text: var(--primitive-siren-50);
-  --screen-text-glow: color-mix(
-    in srgb,
-    var(--primitive-crimson-350) 80%,
-    transparent
+  --screen-text-glow: rgb(from var(--primitive-crimson-350) r g b / 80%);
+
+  --btn-bezel: linear-gradient(
+    180deg,
+    var(--primitive-titanium-600) 0%,
+    var(--primitive-titanium-650) 50%,
+    var(--primitive-titanium-750) 100%
   );
+  --btn-well: var(--primitive-titanium-900);
+  --btn-cap: linear-gradient(
+    180deg,
+    var(--primitive-titanium-700) 0%,
+    var(--primitive-titanium-750) 50%,
+    var(--primitive-titanium-800) 100%
+  );
+  --btn-cap-border-b: rgb(from var(--primitive-ceramic-950) r g b / 80%);
+  --btn-cap-shadow: var(--primitive-titanium-950);
+  --btn-screw: rgb(from white r g b / 20%);
 }
 
 @theme {
@@ -333,10 +389,22 @@
   --color-border-accent: var(--border-accent);
 
   --color-panel: var(--bg-panel);
-  --color-status-safe: var(--status-safe);
-  --color-status-warn: var(--status-warn);
+  --color-screen-safe: var(--screen-safe);
+  --color-hull-safe: var(--hull-safe);
+  --color-screen-warn: var(--screen-warn);
+  --color-hull-warn: var(--hull-warn);
+  --color-screen-danger: var(--screen-danger);
+  --color-hull-danger: var(--hull-danger);
+  --color-warning-stripe: var(--warning-stripe);
 
-  --color-deep-blue: #0018ff;
+  --background-image-btn-bezel: var(--btn-bezel);
+  --background-image-btn-cap: var(--btn-cap);
+
+  /* Colores sólidos del botón: Mapeados a color */
+  --color-btn-well: var(--btn-well);
+  --color-btn-cap-border-b: var(--btn-cap-border-b);
+  --color-btn-cap-shadow: var(--btn-cap-shadow);
+  --color-btn-screw: var(--btn-screw);
 
   --breakpoint-*: initial;
   --breakpoint-xs: 360px;
@@ -370,17 +438,17 @@
 }
 
 @utility screen-drop {
-  filter: drop-shadow(0 2px 2px #00000059)
+  filter: drop-shadow(0 2px 2px rgb(from black r g b / 35%))
     drop-shadow(0 0px 6px var(--screen-glow));
   transition: transform 0.3s ease;
 
   &:hover {
-    filter: drop-shadow(0 3px 2px #00000073)
+    filter: drop-shadow(0 3px 2px rgb(from black r g b / 45%))
       drop-shadow(0 0 10px var(--screen-glow));
   }
 
   &[data-active="true"] {
-    filter: drop-shadow(0 3px 2px #00000073)
+    filter: drop-shadow(0 3px 2px rgb(from black r g b / 45%))
       drop-shadow(0 0 12px var(--screen-glow-active));
   }
 }
@@ -393,21 +461,19 @@
   --layer-glare: none;
   --layer-dot-left: none;
   --layer-dot-right: none;
-  --layer-scanlines: none;
   --layer-bg: var(--screen-bg);
 
   --size-glare: 100% 100%;
   --size-dot-left: 100% 100%;
   --size-dot-right: 100% 100%;
-  --size-scanlines: 100% 4px;
   --size-bg: 100% 100%;
 
   background-image:
     var(--layer-glare), var(--layer-dot-left), var(--layer-dot-right),
-    var(--layer-scanlines), var(--layer-bg);
+    var(--layer-bg);
   background-size:
     var(--size-glare), var(--size-dot-left), var(--size-dot-right),
-    var(--size-scanlines), var(--size-bg);
+    var(--size-bg);
 
   /* State: Active HUD Override */
   &[data-active="true"] {
@@ -422,15 +488,15 @@
   /* --- DYNAMIC STATS OVERRIDES --- */
   /* Override --dot-color based on component status */
   &[data-status="danger"] {
-    --dot-color: var(--color-red-500);
+    --dot-color: var(--color-screen-danger);
   }
 
   &[data-status="warning"] {
-    --dot-color: var(--color-status-warn);
+    --dot-color: var(--color-screen-warn);
   }
 
   &[data-status="safe"] {
-    --dot-color: var(--color-status-safe);
+    --dot-color: var(--color-screen-safe);
   }
 
   &[data-status="info"] {
@@ -441,8 +507,8 @@
 @utility screen-glare {
   --layer-glare: linear-gradient(
     180deg,
-    #ffffff40 0%,
-    #ffffff0d 50%,
+    rgb(from white r g b / 25%) 0%,
+    rgb(from white r g b / 5%) 50%,
     transparent 75%
   );
 }
@@ -463,17 +529,13 @@
   );
 }
 
-@utility screen-scanlines {
-  --layer-scanlines: linear-gradient(to bottom, #ffffff05 50%, #00000003 51%);
-}
-
-@utility warning-lines {
+@utility warning-lines-md {
   background-image: repeating-linear-gradient(
     135deg,
-    #c9a81d,
-    #c9a81d 6px,
-    #0c0e12 6px,
-    #0c0e12 12px
+    var(--color-warning-stripe),
+    var(--color-warning-stripe) 6px,
+    var(--primitive-ceramic-850) 6px,
+    var(--primitive-ceramic-850) 12px
   );
 }
 

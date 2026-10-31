@@ -1,0 +1,32 @@
+{
+  "shipName": "AEGIS BB-0057 BOLD DRAGON",
+  "navigationData": {
+    "home": "Command Bridge",
+    "projects": "Systems Bay",
+    "experience": "Magellanic Hall",
+    "skills": "Armory",
+    "contact": "Agora"
+  },
+  "quickActions": {
+    "resume": {
+      "label": "See resume",
+      "toastMsg": null
+    },
+    "email": {
+      "label": "Copy email",
+      "toastMsg": "Email copied!"
+    },
+    "phone": {
+      "label": "Copy phone number",
+      "toastMsg": "Phone number copied!"
+    },
+    "github": {
+      "label": "Visit GitHub",
+      "toastMsg": null
+    },
+    "linkedin": {
+      "label": "Visit LinkedIn",
+      "toastMsg": null
+    }
+  }
+}

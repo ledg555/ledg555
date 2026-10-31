@@ -1,74 +1,113 @@
-# Software developer portfolio with starship theme
+# Agent Directives: Starship Developer Portfolio
 
-## Functional requirements
+## 1. System Identity & Creative Vision
 
-Five sections in 2.5D scenarios:
+Interactive developer portfolio inspired by the Starship Enterprise interior from Star Trek's Kelvin timeline.
 
-1. "Command bridge" (home page)
-2. "Systems Bay" (projects page)
-3. "Magellanic Hall" (job experience trajectory page)
-4. "Armory" (skills page)
-5. "Agora" (contact page)
+- Aesthetic: Seamless high-gloss ceramic composite hull panels, polished titanium bezels, illuminated controls, volumetric holographic screens, and directional tactical overlays.
+- Dual Operational States:
+  - **Exploration Mode (Light)**: Ceramic white walls (`--primitive-ceramic-50`/`100`), vibrant aqua & azure screens, with mints, sulfur & siren indicators.
+  - **Red Alert Mode (Dark)**: Deep graphite armor (`--primitive-ceramic-900`), siren reds, crimson glows, with topaz, tangerine & siren indicators, and high-visibility hazards (`--warning-lines-*`).
 
-### Background and Ceiling
+## 2. Technical Stack & Architecture
 
-- Space background will be a static image of a nebula, with a 3D star field on top of it.
-- Inside the starship there'll always be a HUD-like header (the ship's ceiling) with:
-  - quick actions speed dial: copy email, copy whatsapp, see resume, my linkedin, my github
-  - quick screen-like buttons (navlinks) to each section
-  - Toogle buttons for: communications (sounds and music), language (en-es), and "Exploration" (light) - "Red alert" (dark) modes
+- **Core**: React 19, TypeScript (~5.6), Vite.
+- **Styling**: Tailwind CSS v4 (`@import "tailwindcss"` engine with `@theme` and `@utility`).
+- **Motion & 3D**: `motion` (v12+), Three.js (`@react-three/fiber`, `@react-three/drei`).
+- **State Management**: Zustand (ship alert status, audio subsystem, active modal, etc.).
+- **Internationalization**: `react-i18next`, `i18next-resources-for-ts`, `i18next-http-backend`.
+- **Icons**: `@heroicons/react` (primary), `react-icons` stroke compatible (Lucide, Material Design, etc.) for fallbacks and specific tech stack logos.
 
-### Command Bridge
+### Directory Organization
 
-Image will feature links to each section:
+```text
+src/
+├── @types/ # i18n resources interfaces
+├── app/ # Ship views (Bridge, Systems, Hall, Armory, Agora)
+├── assets/ # Fonts, audio files, static textures, local SVGs
+├── components/ # Global components used across all sections
+│ ├── cabin/ # Structural diegetic elements (Doors, Ceilings, Consoles)
+│ ├── layout/ # HUD Header, Nav minimap, Starfield, etc.
+│ ├── feedback/ # Glassmorphic sci-fi modals & snacks
+│ └── ui/ # Reusable primitives (Buttons, ScreenWrappers)
+├── constants/ # Static immutable data (IDs, URLs, tech tags, metrics)
+├── features/ # Section subfolders with own components, hooks, types, etc. folders.
+├── hooks/ # Custom hooks (audio, ship state, viewport queries)
+└── store/ # Zustand global stores (useShipStore, useAudioStore)
+```
 
-- Left door will take us to Systems Bay
-- Right door: to the Agora
-- A mini stellar map next to a crew member's seat will take us to the Magellanic Hall
-- A hatch on the floor, next to the captain's seat will take us to the Armory.
+## 3. Design System & CSS Token Guidelines
 
-Also, captain's seat itself will be clickable and display a glassmorphic modal with their profile details as set in the translation files. In a corner of the bridge we'll display a navigation minimap of the current section whenever viewport's dimensions make us need it.
+Strictly obey the 3-layer architecture defined in index.css:
 
-### Systems Bay
+1.  Layer 1: Color Primitives (--primitive-\*): 6-digit hex values. Do not consume primitives directly in components.
+2.  Layer 2: Semantic Tokens: Defined in :root and .dark (e.g., --bg-base, --accent-base, --screen-bg).
+3.  Layer 3: Tailwind Theme Aliases & Utilities: Use @theme tokens (bg-base, text-fg, border-border-accent) and custom utilities (screen, screen-drop, screen-glare, screen-dots-left, octagon-sm, octagon-lg, rhombus, warning-lines).
 
-Background image will be a server room. But instead of racks of black boxes with led lights and no screens, its corridors will be filled with scifi terminals. Each terminal will represent a single system (project) and display its details in a glassmorphic screen when clicked, and there will be a console in a corner of the rool to filter out projects by sector, licensing, stack & platform.
+### Component Styling Rules
 
-### Magellanic Hall
+- No Arbitrary Hex Codes: **NEVER** hardcode arbitrary color values (e.g., bg-[#00d5eb]) inside TSX files.
+- Glassmorphic Consoles: Use custom utility screen alongside screen-glare and screen-drop. Override borders or indicators dynamically using data-status="safe" | "warning" | "danger" | "info".
+- Transparency Rules: Use Tailwind v4 opacity modifiers (e.g., bg-(--accent-base)/40) or CSS RCS. Never append raw alpha digits to hex tokens.
+- Hardware-Accelerated Shapes: Apply clip-path like in .octagon-\*, .rhombus or other irregular sci-fi shapes.
 
-Each job will be a clickable stellar system in a giant 3D stellar map, displaying another glassmorphic screen with info like start and end dates, company name, roles and main achievements.
+## 4. Starship Topology & Sections (Layer 2)
 
-### Armory
+All sections are 2.5D interactive environments with Layer 0 (Nebula image), Layer 1 (3D R3F Starfield), Layer 2 (Section bg image), and Layer 3 (Fixed Ship HUD Ceiling and interactive elements).
 
-Each skill should be a clickable tool, powerup or weapon, displaying another glassmorphic screen with info like certificates, projects or jobs related to that skill.
+### 1. Command Bridge (Home - /{en,es})
 
-### Agora
+- Navigational Access Points:
+  - Left Gate -> /systems-bay
+  - Right Gate -> /agora
+  - Floor Service Hatch -> /armory
+  - Stellar Console -> /magellanic-hall
+- Interactive Props:
+  - Captain's Seat Console: Opens OfficerCard glassmorphic modal with profile summary.
+  - Tactical Minimap: Dynamic overlay rendering current ship section coordinates on some aspect ratios.
 
-A high command briefing room. It will feature a central table with 8 seats and holographic crew members displayed in three of them. At the nearest end of the table there will be a terminal the user can click to display another glassmorphic screen to fill and send an email.
+### 2. Systems Bay (Projects - /{en,es}/projects)
 
-## Style requirements
+- Visuals: Futuristic server room filled with interactive terminals.
+- Interactions: Each terminal represents an active project. Clicking opens terminal screen with repo metrics, stack tags, live preview link, and architectural highlights.
+- Filtering Unit: Standing console to filter projects by sector, licensing, stack, and platform.
 
-### Color
+### 3. Magellanic Hall (Experience - /{en,es}/experience)
 
-Starship will resemble the inside of the Enterprise in Star Trek's Kelvin timeline. Unlike the old ones, this Enterprise is filled with brilliant, ceramic-like walls and lots of colorish buttons and led lights everywhere in control panels. In "Exploration" mode, those colorish elements are gonna always have shades of blues, reds, greens and yellows. In "Red Alert" mode, all walls will turn to deep shades of grays and all colorish buttons and led lights will turn to more faint shades of only reds, yellows and oranges. Some directives:
+- Visuals: Giant 3D astrometrics map powered by React Three Fiber.
+- Interactions: Career stops are rendered as illuminated star systems. Clicking a star system projects an orbital telemetry panel showing role, company, duration, and achievements.
 
-1. We'll need a css token palette for each group of shades (no need to define all 50 to 950 values, though: just as we need them).
-2. Use **ONLY** 6-digit hex values for css tokens. Leverage Tailwind to apply alpha channel (e.g. "bg-screen/60") when really needed (like in glassmorphic elements or holographic effects).
-3. You always must define whatever new color you need instead of hardcoding it. However, always be critical about if there's not an already existing shade that could do the job. If that's the case, give it a semantic name and a tiny comment about where it's used (with concise alpha channel usage explanations if needed) and other places where it could be used in the future, to stay aware of it.
-4. If for any reason a color token needs rename for UI consistency and clarity, leave suggestion in chat and I'll perform rename task by myself.
+### 4. Armory (Skills - /{en,es}/skills)
 
-### Animations & Icons
+- Visuals: Tactical armory rack with modular sci-fi modules, tools, and weapons.
+- Interactions: Each weapon/device corresponds to a core skill. Clicking inspects certification status, proficiency level, and references to related projects in the Systems Bay.
 
-We'll leverage mostly Motion library for the 'simple' 2D animations, and maybe more complex 3D tricks for the hardest or more striking ones that will need so. Our preferred icon pack is Hero Icons, but we can use alternatives in cases where no appropriate Hero Icon exists and the alternative pairs well enough with Hero Icons style.
+### 5. Agora (Contact - /{en,es}/contact)
 
-## Skills Directive
+- Visuals: High command strategic briefing room. Central round table with holographic crew members in designated seats.
+- Interactions: Tactical table terminal brings up a subspace comms screen with a working contact email form.
 
-- glassmorphism: Invoke when building panels, sci-fi console modals, overlays, or floating components over ship scenes. Implements frosted glass with specular borders, anti-banding grain for dark backgrounds, liquid refraction, and GPU/accessibility optimizations.
-- svg-animation: Invoke for interactive and programmatic vector manipulation using CSS or GSAP. Use for drawing cybernetic reticles over clickable objects (stroke draw-on), tracing navigation routes on the star map (motion path), and transitioning between icon states (morphing).
-- 3dsvg-interactive-react: Invoke to transform 2D SVG paths into extruded 3D components in React/Three.js (<SVG3D>). Ideal for ship insignias, emblems with metallic/holographic finishes, and interactive volumetric icons without requiring external GLTF models.
-- svg-animation-engineer: Invoke to generate pure vector micro-illustrations with looping physics-based animations using exclusively CSS keyframes. Use for continuous ambient elements (such as steam from mugs in the Agora or air-reactive vegetation) without overloading the JavaScript main thread.
+## 5. Screen Transitions & Navigation Protocol
 
-## Other notes
+- Do not use instant cuts between ship chambers.
+- Route changes could use motion's AnimatePresence with directional shifts matching the ship's physical layout:
+  - Lateral movements (Bridge <-> Systems Bay, Bridge <-> Agora) could slide horizontally (translateX).
+  - Vertical drops (Bridge <-> Armory) could slide vertically (translateY).
+  - Deep scans (Bridge <-> Magellanic Hall) could use optical zoom-in (scale + anamorphic glare wipe).
+- Transitions should only animate transform, opacity, and filter: blur to maintain 60 FPS on low end devices.
 
-- Textures: Although we have tile patterns in the public folder and I love some of them, we'll maybe end up changing all by a handful of PBR textures.
-- Translations: i18next will be extremely important for spanish and english translations. I'll provide proposals for namespace keys whose data varies per language, and keep all constant data in @src/constants.
-- Performance: Since the website is intended to display nicely also on mobile devices, be aware of any expensive computations that could casuse frame drops. The obvious ones (though there may be more) are geometric prop animations (use Motion most of the time, and scale(), tanslate() or its respective tailwind classes for extremely simple or extremely customized ones) as well as filter animations (use pseudo-element opacity for things like drop-shadow() if animation is absolutely necessary; otherwise, we can completely forget about it).
+## 6. Internationalization (i18n) Rules
+
+- Zero Hardcoded Strings: All UI labels, titles, error states, and descriptive copy must use useTranslation().
+- Separation of Concerns:
+  - All static data (URLs, dates, technology IDs, numerical stats) must reside in @src/constants/<section>.constants.ts.
+  - All localized strings must reside in public/locales/{en,es}/<section>.json.
+- Entity Identification: Match constant entities with translated entities using deterministic string IDs (e.g., skill.id === "typescript" maps to t('armory:skills.typescript.description')).
+- Strict Typing: Run npm run toc and npm run interface after modifying translation keys to guarantee full autocompletion and compile-time verification.
+
+## 7. Performance & Optimization
+
+- Mobile First: Target smooth 60 FPS on low-power devices.
+- Three.js Isolation: R3F <Canvas> components must be memoized and isolated from frequent React DOM re-renders. Use frameloop="demand" for scenes that do not require constant delta frame updates.
+- Animation Restrictions: Never animate layout-triggering properties (width, height, top, margin, padding). Animate exclusively transform and opacity.
+- Drop Shadows: Heavy filter: drop-shadow should not be animated continuously. Use pre-rendered pseudo-elements with fading opacity or CSS variables calibrated on hover.

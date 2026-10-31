@@ -1,3 +1,5 @@
+/* This file is deprecated, but we'll delete it later  */
+
 import { useEffect, useRef } from "react";
 
 interface Star {

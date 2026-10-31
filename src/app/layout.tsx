@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import { Canvas } from "@react-three/fiber";
-import { Header } from "../components/header/header";
-import { SceneController } from "../components/3D/scene-controller";
+import { Header } from "../components/layout/header/header";
+import { SceneController } from "../components/layout/scene-controller";
 
 export function RootLayout() {
   return (

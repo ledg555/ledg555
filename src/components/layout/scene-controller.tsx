@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { WarpDriveStars } from "./warp-drive-stars";
+import { StarField } from "./star-field";
 
 export function SceneController() {
   return (
@@ -19,7 +19,7 @@ export function SceneController() {
 
       {/* Suspense is required for any async 3D loading (like models or textures later) */}
       <Suspense fallback={null}>
-        <WarpDriveStars />
+        <StarField />
       </Suspense>
     </>
   );
